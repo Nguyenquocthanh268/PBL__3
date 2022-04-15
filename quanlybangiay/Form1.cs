@@ -19,6 +19,7 @@ namespace quanlybangiay
         public Form1()
         {
             InitializeComponent();
+        
         }
 
         
@@ -105,17 +106,23 @@ namespace quanlybangiay
 
         private void button6_Click(object sender, EventArgs e)
         {
-            bt_color(sender);
+            khuyenmai x = new khuyenmai();
+            openform(x, sender);
+            lb_ten.Text = "QUẢN LÝ CHƯƠNG TRÌNH KHUYẾN MÃI";
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            bt_color(sender);
+            doanhthu1 x = new doanhthu1();
+            openform(x, sender);
+            lb_ten.Text = "QUẢN LÝ DOANG THU";
 
         }
         private void button8_Click(object sender, EventArgs e)
         {
-            bt_color(sender);
+           taikhoan x = new taikhoan();
+            openform(x, sender);
+            lb_ten.Text = "QUẢN LÝ TÀI KHOẢN";
         }
     }
 }

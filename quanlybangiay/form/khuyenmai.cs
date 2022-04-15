@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace quanlybangiay.form
 {
-    public partial class khogiay : Form
+    public partial class khuyenmai : Form
     {
-        public khogiay()
+        public khuyenmai()
         {
             InitializeComponent();
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

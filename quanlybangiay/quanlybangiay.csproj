@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +59,30 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\doanhthu1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\doanhthu1.Designer.cs">
+      <DependentUpon>doanhthu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\doanhthu_nam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\doanhthu_nam.Designer.cs">
+      <DependentUpon>doanhthu_nam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\doanhthu_ngay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\doanhthu_ngay.Designer.cs">
+      <DependentUpon>doanhthu_ngay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\doanhthu_thang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\doanhthu_thang.Designer.cs">
+      <DependentUpon>doanhthu_thang.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\hoadon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +101,23 @@
     <Compile Include="form\khogiay.Designer.cs">
       <DependentUpon>khogiay.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\khuyenmai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\khuyenmai.Designer.cs">
+      <DependentUpon>khuyenmai.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form\nhanvien.Designer.cs">
       <DependentUpon>nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\taikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\taikhoan.Designer.cs">
+      <DependentUpon>taikhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="form\xuhuong.cs">
       <SubType>Form</SubType>
@@ -93,6 +130,18 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\doanhthu1.resx">
+      <DependentUpon>doanhthu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\doanhthu_nam.resx">
+      <DependentUpon>doanhthu_nam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\doanhthu_ngay.resx">
+      <DependentUpon>doanhthu_ngay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\doanhthu_thang.resx">
+      <DependentUpon>doanhthu_thang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\hoadon.resx">
       <DependentUpon>hoadon.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,8 +151,14 @@
     <EmbeddedResource Include="form\khogiay.resx">
       <DependentUpon>khogiay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\khuyenmai.resx">
+      <DependentUpon>khuyenmai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\nhanvien.resx">
       <DependentUpon>nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\taikhoan.resx">
+      <DependentUpon>taikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\xuhuong.resx">
       <DependentUpon>xuhuong.cs</DependentUpon>
@@ -187,6 +242,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-sneakers-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pouch-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pouch-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-order-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sneaker-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-dollar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-dollar-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-improve-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-profit-analysis-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

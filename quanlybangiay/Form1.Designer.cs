@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pn_menu = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_ten = new System.Windows.Forms.Label();
             this.pn_desktop = new System.Windows.Forms.Panel();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pn_menu.SuspendLayout();
             this.pn_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +65,7 @@
             this.pn_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pn_menu.Location = new System.Drawing.Point(0, 0);
             this.pn_menu.Name = "pn_menu";
-            this.pn_menu.Size = new System.Drawing.Size(186, 702);
+            this.pn_menu.Size = new System.Drawing.Size(186, 770);
             this.pn_menu.TabIndex = 0;
             // 
             // button8
@@ -180,6 +182,7 @@
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -221,7 +224,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(186, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1091, 70);
+            this.panel1.Size = new System.Drawing.Size(1228, 70);
             this.panel1.TabIndex = 1;
             // 
             // lb_ten
@@ -239,19 +242,30 @@
             this.pn_desktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_desktop.Location = new System.Drawing.Point(186, 70);
             this.pn_desktop.Name = "pn_desktop";
-            this.pn_desktop.Size = new System.Drawing.Size(1091, 632);
+            this.pn_desktop.Size = new System.Drawing.Size(1228, 700);
             this.pn_desktop.TabIndex = 2;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             // 
             // Form1
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 702);
+            this.CancelButton = this.button1;
+            this.ClientSize = new System.Drawing.Size(1414, 770);
             this.Controls.Add(this.pn_desktop);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_menu);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.ShowIcon = false;
+            this.TransparencyKey = System.Drawing.Color.Yellow;
             this.pn_menu.ResumeLayout(false);
             this.pn_logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -277,6 +291,7 @@
         private System.Windows.Forms.Panel pn_desktop;
         private System.Windows.Forms.Label lb_ten;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
