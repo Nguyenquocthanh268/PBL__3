@@ -59,6 +59,36 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\DetailHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DetailHoaDon.Designer.cs">
+      <DependentUpon>DetailHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\DetailKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DetailKH.Designer.cs">
+      <DependentUpon>DetailKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\DetailKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DetailKhachHang.Designer.cs">
+      <DependentUpon>DetailKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\DetailKhoGiay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DetailKhoGiay.Designer.cs">
+      <DependentUpon>DetailKhoGiay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\DetailNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DetailNV.Designer.cs">
+      <DependentUpon>DetailNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\doanhthu1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +113,23 @@
     <Compile Include="form\doanhthu_thang.Designer.cs">
       <DependentUpon>doanhthu_thang.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\Doanh_Thu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Doanh_Thu.Designer.cs">
+      <DependentUpon>Doanh_Thu.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\hoadon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form\hoadon.Designer.cs">
       <DependentUpon>hoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Hoa_Don.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Hoa_Don.Designer.cs">
+      <DependentUpon>Hoa_Don.cs</DependentUpon>
     </Compile>
     <Compile Include="form\khachhang.cs">
       <SubType>Form</SubType>
@@ -95,11 +137,23 @@
     <Compile Include="form\khachhang.Designer.cs">
       <DependentUpon>khachhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\Khach_Hang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Khach_Hang.Designer.cs">
+      <DependentUpon>Khach_Hang.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\khogiay.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form\khogiay.Designer.cs">
       <DependentUpon>khogiay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Kho_Giay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Kho_Giay.Designer.cs">
+      <DependentUpon>Kho_Giay.cs</DependentUpon>
     </Compile>
     <Compile Include="form\khuyenmai.cs">
       <SubType>Form</SubType>
@@ -107,11 +161,29 @@
     <Compile Include="form\khuyenmai.Designer.cs">
       <DependentUpon>khuyenmai.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\Khuyen_Mai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Khuyen_Mai.Designer.cs">
+      <DependentUpon>Khuyen_Mai.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form\nhanvien.Designer.cs">
       <DependentUpon>nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Nhan_Vien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Nhan_Vien.Designer.cs">
+      <DependentUpon>Nhan_Vien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\NhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\NhapKho.Designer.cs">
+      <DependentUpon>NhapKho.cs</DependentUpon>
     </Compile>
     <Compile Include="form\taikhoan.cs">
       <SubType>Form</SubType>
@@ -119,16 +191,55 @@
     <Compile Include="form\taikhoan.Designer.cs">
       <DependentUpon>taikhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\Tai_Khoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Tai_Khoan.Designer.cs">
+      <DependentUpon>Tai_Khoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\xuhuong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form\xuhuong.Designer.cs">
       <DependentUpon>xuhuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\Xu_Huong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Xu_Huong.Designer.cs">
+      <DependentUpon>Xu_Huong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainNV.Designer.cs">
+      <DependentUpon>MainNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DetailHoaDon.resx">
+      <DependentUpon>DetailHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DetailKH.resx">
+      <DependentUpon>DetailKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DetailKhachHang.resx">
+      <DependentUpon>DetailKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DetailKhoGiay.resx">
+      <DependentUpon>DetailKhoGiay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DetailNV.resx">
+      <DependentUpon>DetailNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\doanhthu1.resx">
       <DependentUpon>doanhthu1.cs</DependentUpon>
@@ -142,41 +253,74 @@
     <EmbeddedResource Include="form\doanhthu_thang.resx">
       <DependentUpon>doanhthu_thang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\Doanh_Thu.resx">
+      <DependentUpon>Doanh_Thu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\hoadon.resx">
       <DependentUpon>hoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Hoa_Don.resx">
+      <DependentUpon>Hoa_Don.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\khachhang.resx">
       <DependentUpon>khachhang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\Khach_Hang.resx">
+      <DependentUpon>Khach_Hang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\khogiay.resx">
       <DependentUpon>khogiay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Kho_Giay.resx">
+      <DependentUpon>Kho_Giay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\khuyenmai.resx">
       <DependentUpon>khuyenmai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\Khuyen_Mai.resx">
+      <DependentUpon>Khuyen_Mai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\nhanvien.resx">
       <DependentUpon>nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Nhan_Vien.resx">
+      <DependentUpon>Nhan_Vien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\NhapKho.resx">
+      <DependentUpon>NhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\taikhoan.resx">
       <DependentUpon>taikhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\Tai_Khoan.resx">
+      <DependentUpon>Tai_Khoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\xuhuong.resx">
       <DependentUpon>xuhuong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\Xu_Huong.resx">
+      <DependentUpon>Xu_Huong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainNV.resx">
+      <DependentUpon>MainNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -187,85 +331,112 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-warehouse-48.png" />
+    <None Include="Resources\account_blue.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-bill-60.png" />
+    <None Include="Resources\home_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-bill-50.png" />
+    <None Include="Resources\home_white1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-staff-50.png" />
+    <None Include="Resources\home_white2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-customer-48.png" />
+    <None Include="Resources\customer_green.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-sale-48.png" />
+    <None Include="Resources\customer_green1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-account-50.png" />
+    <None Include="Resources\home_green.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-test-account-50.png" />
+    <None Include="Resources\bill_pink.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-account-32.png" />
+    <None Include="Resources\sale_yellow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-account-24.png" />
+    <None Include="Resources\profit_red.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-discount-24.png" />
+    <None Include="Resources\staff_blue.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-bill-24.png" />
+    <None Include="Resources\trending_green.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-warehouse-24.png" />
+    <None Include="Resources\staff_blue1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-staff-24.png" />
+    <None Include="Resources\account_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-customer-24.png" />
+    <None Include="Resources\customer_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-trending-64 %281%29.png" />
+    <None Include="Resources\profit_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\community %281%29.png" />
+    <None Include="Resources\trending_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\community %281%291.png" />
+    <None Include="Resources\staff_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-sneakers-64.png" />
+    <None Include="Resources\sale_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-pouch-50.png" />
+    <None Include="Resources\bill_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-pouch-50 %281%29.png" />
+    <None Include="Resources\home_white3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-order-64 %281%29.png" />
+    <None Include="Resources\kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 %281%29 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-sneaker-64 %281%29.png" />
+    <None Include="Resources\kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 %281%29 %282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-add-dollar-50.png" />
+    <None Include="Resources\home_Orange.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-add-dollar-50 %281%29.png" />
+    <None Include="Resources\kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 %281%29 %281%29 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-improve-64 %281%29.png" />
+    <None Include="Resources\kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 %281%29 %281%29 %281%291.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-profit-analysis-32.png" />
+    <None Include="Resources\kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 %281%29 %282%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61103071_2361422507447925_6222318223514140672_n_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bin-64 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bin-64 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-giay-sneaker-cmt8-2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
