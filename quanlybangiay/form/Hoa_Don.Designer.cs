@@ -155,7 +155,7 @@ namespace quanlybangiay.form
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(126, 32);
             this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "Search";
+            this.btnSearch.Text = "Xem";
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // textBox1
