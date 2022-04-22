@@ -33,12 +33,18 @@ namespace quanlybangiay
             dtGV_Trangchu.DataSource = d1;
         }
 
+<<<<<<< HEAD
         private void MainNV_FormClosed(object sender, FormClosedEventArgs e)
         {
             Login f = new Login();
             this.Hide();
             f.Show();
             this.Activate();
+=======
+        private void MainNV_Load(object sender, EventArgs e)
+        {
+
+>>>>>>> 8f7eff3 (test1)
         }
         //AAAAAA
     }
