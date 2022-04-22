@@ -32,6 +32,14 @@ namespace quanlybangiay
             });
             dtGV_Trangchu.DataSource = d1;
         }
+
+        private void MainNV_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login f = new Login();
+            this.Hide();
+            f.Show();
+            this.Activate();
+        }
         //AAAAAA
     }
 }

@@ -221,5 +221,19 @@ namespace quanlybangiay
             lb_tenphu.Text = "";
             
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+   
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login f = new Login();
+            this.Hide();
+            f.Show();
+            this.Activate();
+        }
     }
 }

@@ -22,7 +22,9 @@ namespace quanlybangiay
             if (txtuser.Text == "admin")
             {
                 Form1 f = new Form1();
+                this.Hide();
                 f.Show();
+                this.Activate();
 
             }
             if (txtuser.Text == "nv")
