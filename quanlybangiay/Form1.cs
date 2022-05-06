@@ -145,6 +145,7 @@ namespace quanlybangiay
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //khogiay k = new khogiay():
             Kho_Giay k = new Kho_Giay();
             openform(k, sender);
             lb_ten.Text = "KHO GIÀY";

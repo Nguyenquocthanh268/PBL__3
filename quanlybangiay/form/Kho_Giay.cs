@@ -12,7 +12,7 @@ namespace quanlybangiay.form
 {
     public partial class Kho_Giay : Form
     {
-        private Button CurrentButton;
+        //private Button CurrentButton;
         public Kho_Giay()
         {
             InitializeComponent();

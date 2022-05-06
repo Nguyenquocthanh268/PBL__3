@@ -31,6 +31,7 @@ namespace quanlybangiay.form
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tai_Khoan));
             this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox21 = new System.Windows.Forms.TextBox();
@@ -40,11 +41,10 @@ namespace quanlybangiay.form
             this.label32 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
             this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel9
@@ -58,6 +58,16 @@ namespace quanlybangiay.form
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(505, 431);
             this.panel9.TabIndex = 5;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(72, 79);
+            this.pictureBox6.TabIndex = 25;
+            this.pictureBox6.TabStop = false;
             // 
             // label22
             // 
@@ -86,7 +96,6 @@ namespace quanlybangiay.form
             // 
             // textBox21
             // 
-            this.textBox21.Enabled = false;
             this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox21.Location = new System.Drawing.Point(235, 155);
             this.textBox21.Name = "textBox21";
@@ -95,7 +104,6 @@ namespace quanlybangiay.form
             // 
             // textBox13
             // 
-            this.textBox13.Enabled = false;
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.Location = new System.Drawing.Point(235, 99);
             this.textBox13.Name = "textBox13";
@@ -104,7 +112,6 @@ namespace quanlybangiay.form
             // 
             // textBox12
             // 
-            this.textBox12.Enabled = false;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.Location = new System.Drawing.Point(235, 44);
             this.textBox12.Name = "textBox12";
@@ -158,16 +165,6 @@ namespace quanlybangiay.form
             this.label41.TabIndex = 4;
             this.label41.Text = "Nhập lại mật khẩu";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(72, 79);
-            this.pictureBox6.TabIndex = 25;
-            this.pictureBox6.TabStop = false;
-            // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
@@ -195,9 +192,9 @@ namespace quanlybangiay.form
             this.Text = "Tai_Khoan";
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
