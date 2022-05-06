@@ -30,45 +30,45 @@ namespace quanlybangiay.form
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbSort = new System.Windows.Forms.ComboBox();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.butSort = new System.Windows.Forms.Button();
+            this.butDel = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.cbView = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbDiemTL = new System.Windows.Forms.TextBox();
+            this.datetimeNgayDK = new System.Windows.Forms.DateTimePicker();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbSdt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.comboBox2);
+            this.panel4.Controls.Add(this.cbSort);
             this.panel4.Controls.Add(this.btnEdit);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.butSort);
+            this.panel4.Controls.Add(this.butDel);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(879, 77);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
@@ -76,14 +76,14 @@ namespace quanlybangiay.form
             this.panel4.Size = new System.Drawing.Size(190, 601);
             this.panel4.TabIndex = 9;
             // 
-            // comboBox2
+            // cbSort
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(41, 153);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(109, 21);
-            this.comboBox2.TabIndex = 6;
+            this.cbSort.FormattingEnabled = true;
+            this.cbSort.Location = new System.Drawing.Point(41, 153);
+            this.cbSort.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSort.Name = "cbSort";
+            this.cbSort.Size = new System.Drawing.Size(109, 21);
+            this.cbSort.TabIndex = 6;
             // 
             // btnEdit
             // 
@@ -98,46 +98,49 @@ namespace quanlybangiay.form
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(109, 41);
             this.btnEdit.TabIndex = 9;
-            this.btnEdit.Text = "Chỉnh sửa";
+            this.btnEdit.Text = "Cập nhật";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // button2
+            // butSort
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.button2.Location = new System.Drawing.Point(41, 106);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 41);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Sắp xếp";
-            this.button2.UseVisualStyleBackColor = false;
+            this.butSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.butSort.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.butSort.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
+            this.butSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
+            this.butSort.Location = new System.Drawing.Point(41, 106);
+            this.butSort.Margin = new System.Windows.Forms.Padding(2);
+            this.butSort.Name = "butSort";
+            this.butSort.Size = new System.Drawing.Size(109, 41);
+            this.butSort.TabIndex = 10;
+            this.butSort.Text = "Sắp xếp";
+            this.butSort.UseVisualStyleBackColor = false;
+            this.butSort.Click += new System.EventHandler(this.butSort_Click);
             // 
-            // button3
+            // butDel
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.button3.Location = new System.Drawing.Point(41, 59);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 41);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = false;
+            this.butDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.butDel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.butDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
+            this.butDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
+            this.butDel.Location = new System.Drawing.Point(41, 59);
+            this.butDel.Margin = new System.Windows.Forms.Padding(2);
+            this.butDel.Name = "butDel";
+            this.butDel.Size = new System.Drawing.Size(109, 41);
+            this.butDel.TabIndex = 11;
+            this.butDel.Text = "Xóa";
+            this.butDel.UseVisualStyleBackColor = false;
+            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnSearch);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.tbSearch);
+            this.panel5.Controls.Add(this.cbView);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
@@ -162,30 +165,28 @@ namespace quanlybangiay.form
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Xem";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // tbSearch
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(118, 42);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(619, 27);
-            this.textBox1.TabIndex = 3;
+            this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.Location = new System.Drawing.Point(118, 42);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(619, 27);
+            this.tbSearch.TabIndex = 3;
             // 
-            // comboBox1
+            // cbView
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Tên",
-            "Số ĐT "});
-            this.comboBox1.Location = new System.Drawing.Point(12, 41);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(102, 28);
-            this.comboBox1.TabIndex = 2;
+            this.cbView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbView.FormattingEnabled = true;
+            this.cbView.Location = new System.Drawing.Point(12, 41);
+            this.cbView.Margin = new System.Windows.Forms.Padding(2);
+            this.cbView.Name = "cbView";
+            this.cbView.Size = new System.Drawing.Size(102, 28);
+            this.cbView.TabIndex = 2;
             // 
             // panel2
             // 
@@ -196,34 +197,6 @@ namespace quanlybangiay.form
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(879, 601);
             this.panel2.TabIndex = 10;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1069, 678);
-            this.panel1.TabIndex = 9;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(879, 406);
-            this.panel3.TabIndex = 176;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(855, 379);
-            this.dataGridView1.TabIndex = 9;
             // 
             // panel6
             // 
@@ -237,11 +210,11 @@ namespace quanlybangiay.form
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.textBox4);
-            this.panel7.Controls.Add(this.dateTimePicker2);
-            this.panel7.Controls.Add(this.textBox2);
+            this.panel7.Controls.Add(this.tbDiemTL);
+            this.panel7.Controls.Add(this.datetimeNgayDK);
+            this.panel7.Controls.Add(this.tbName);
             this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.textBox5);
+            this.panel7.Controls.Add(this.tbSdt);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.label1);
@@ -251,21 +224,31 @@ namespace quanlybangiay.form
             this.panel7.Size = new System.Drawing.Size(855, 171);
             this.panel7.TabIndex = 0;
             // 
-            // dateTimePicker2
+            // tbDiemTL
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(617, 70);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(207, 20);
-            this.dateTimePicker2.TabIndex = 199;
+            this.tbDiemTL.Enabled = false;
+            this.tbDiemTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDiemTL.Location = new System.Drawing.Point(728, 113);
+            this.tbDiemTL.Name = "tbDiemTL";
+            this.tbDiemTL.Size = new System.Drawing.Size(96, 26);
+            this.tbDiemTL.TabIndex = 200;
             // 
-            // textBox2
+            // datetimeNgayDK
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(195, 113);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(345, 26);
-            this.textBox2.TabIndex = 197;
+            this.datetimeNgayDK.Enabled = false;
+            this.datetimeNgayDK.Location = new System.Drawing.Point(617, 70);
+            this.datetimeNgayDK.Margin = new System.Windows.Forms.Padding(2);
+            this.datetimeNgayDK.Name = "datetimeNgayDK";
+            this.datetimeNgayDK.Size = new System.Drawing.Size(207, 20);
+            this.datetimeNgayDK.TabIndex = 199;
+            // 
+            // tbName
+            // 
+            this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.Location = new System.Drawing.Point(195, 113);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(345, 26);
+            this.tbName.TabIndex = 197;
             // 
             // label6
             // 
@@ -278,13 +261,14 @@ namespace quanlybangiay.form
             this.label6.TabIndex = 194;
             this.label6.Text = "Tên khách hàng";
             // 
-            // textBox5
+            // tbSdt
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(195, 64);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(108, 26);
-            this.textBox5.TabIndex = 195;
+            this.tbSdt.Enabled = false;
+            this.tbSdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSdt.Location = new System.Drawing.Point(195, 64);
+            this.tbSdt.Name = "tbSdt";
+            this.tbSdt.Size = new System.Drawing.Size(108, 26);
+            this.tbSdt.TabIndex = 195;
             // 
             // label5
             // 
@@ -330,13 +314,35 @@ namespace quanlybangiay.form
             this.label18.TabIndex = 188;
             this.label18.Text = "*Thông tin khách hàng";
             // 
-            // textBox4
+            // panel3
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(728, 113);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(96, 26);
-            this.textBox4.TabIndex = 200;
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(879, 406);
+            this.panel3.TabIndex = 176;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(855, 379);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1069, 678);
+            this.panel1.TabIndex = 9;
             // 
             // Khach_Hang
             // 
@@ -352,12 +358,12 @@ namespace quanlybangiay.form
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -365,28 +371,28 @@ namespace quanlybangiay.form
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbSort;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button butSort;
+        private System.Windows.Forms.Button butDel;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.ComboBox cbView;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker datetimeNgayDK;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbSdt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbDiemTL;
     }
 }
