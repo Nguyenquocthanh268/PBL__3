@@ -41,5 +41,7 @@ namespace quanlybangiay
             this.Activate();
         }
         //AAAAAA
+        //hello
+        //thanks
     }
 }
