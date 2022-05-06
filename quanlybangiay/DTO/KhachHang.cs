@@ -28,5 +28,5 @@ namespace quanlybangiay.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
-}
-//hihi
+} 
+//ta co biet debug dau
