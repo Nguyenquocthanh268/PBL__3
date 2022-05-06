@@ -16,9 +16,9 @@ namespace quanlybangiay.DTO
     {
         public int Stt { get; set; }
         public string ID_Giay { get; set; }
-        public Nullable<int> Size { get; set; }
         public Nullable<int> SoLuongNhap { get; set; }
-        public Nullable<System.DateTime> NhayNhap { get; set; }
+        public Nullable<System.DateTime> NgayNhap { get; set; }
+        public Nullable<double> GiaNhap { get; set; }
     
         public virtual Kho Kho { get; set; }
     }

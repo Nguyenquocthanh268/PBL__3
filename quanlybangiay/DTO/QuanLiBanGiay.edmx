@@ -92,9 +92,9 @@
           </Key>
           <Property Name="Stt" Type="int" Nullable="false" />
           <Property Name="ID_Giay" Type="varchar" MaxLength="10" />
-          <Property Name="Size" Type="int" />
           <Property Name="SoLuongNhap" Type="int" />
-          <Property Name="NhayNhap" Type="datetime" />
+          <Property Name="NgayNhap" Type="datetime" />
+          <Property Name="GiaNhap" Type="float" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -386,9 +386,11 @@
           </Key>
           <Property Name="Stt" Type="Int32" Nullable="false" />
           <Property Name="ID_Giay" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Size" Type="Int32" />
+
           <Property Name="SoLuongNhap" Type="Int32" />
-          <Property Name="NhayNhap" Type="DateTime" Precision="3" />
+          <Property Name="NgayNhap" Type="DateTime" Precision="3" />
+          <Property Name="GiaNhap" Type="Double" />
+
           <NavigationProperty Name="Kho" Relationship="Self.fk_nhapkho" FromRole="NhapKho" ToRole="Kho" />
         </EntityType>
         <EntityType Name="TaiKhoan">
@@ -674,9 +676,9 @@
               <MappingFragment StoreEntitySet="NhapKho">
                 <ScalarProperty Name="Stt" ColumnName="Stt" />
                 <ScalarProperty Name="ID_Giay" ColumnName="ID_Giay" />
-                <ScalarProperty Name="Size" ColumnName="Size" />
                 <ScalarProperty Name="SoLuongNhap" ColumnName="SoLuongNhap" />
-                <ScalarProperty Name="NhayNhap" ColumnName="NhayNhap" />
+                <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+                <ScalarProperty Name="GiaNhap" ColumnName="GiaNhap" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
