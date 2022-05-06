@@ -48,11 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB_Helper.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="MainQL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainQL.Designer.cs">
+      <DependentUpon>MainQL.cs</DependentUpon>
     </Compile>
     <Compile Include="form\DetailHoaDon.cs">
       <SubType>Form</SubType>
@@ -126,12 +126,6 @@
     <Compile Include="form\Hoa_Don.Designer.cs">
       <DependentUpon>Hoa_Don.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\khachhang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\khachhang.Designer.cs">
-      <DependentUpon>khachhang.cs</DependentUpon>
-    </Compile>
     <Compile Include="form\Khach_Hang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,23 +144,11 @@
     <Compile Include="form\Kho_Giay.Designer.cs">
       <DependentUpon>Kho_Giay.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\khuyenmai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\khuyenmai.Designer.cs">
-      <DependentUpon>khuyenmai.cs</DependentUpon>
-    </Compile>
     <Compile Include="form\Khuyen_Mai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form\Khuyen_Mai.Designer.cs">
       <DependentUpon>Khuyen_Mai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\nhanvien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\nhanvien.Designer.cs">
-      <DependentUpon>nhanvien.cs</DependentUpon>
     </Compile>
     <Compile Include="form\Nhan_Vien.cs">
       <SubType>Form</SubType>
@@ -179,12 +161,6 @@
     </Compile>
     <Compile Include="form\NhapKho.Designer.cs">
       <DependentUpon>NhapKho.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\taikhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\taikhoan.Designer.cs">
-      <DependentUpon>taikhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="form\Tai_Khoan.cs">
       <SubType>Form</SubType>
@@ -218,8 +194,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainQL.resx">
+      <DependentUpon>MainQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\DetailHoaDon.resx">
       <DependentUpon>DetailHoaDon.cs</DependentUpon>
@@ -257,9 +233,6 @@
     <EmbeddedResource Include="form\Hoa_Don.resx">
       <DependentUpon>Hoa_Don.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\khachhang.resx">
-      <DependentUpon>khachhang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="form\Khach_Hang.resx">
       <DependentUpon>Khach_Hang.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,23 +242,14 @@
     <EmbeddedResource Include="form\Kho_Giay.resx">
       <DependentUpon>Kho_Giay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\khuyenmai.resx">
-      <DependentUpon>khuyenmai.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="form\Khuyen_Mai.resx">
       <DependentUpon>Khuyen_Mai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form\nhanvien.resx">
-      <DependentUpon>nhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\Nhan_Vien.resx">
       <DependentUpon>Nhan_Vien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\NhapKho.resx">
       <DependentUpon>NhapKho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form\taikhoan.resx">
-      <DependentUpon>taikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\Tai_Khoan.resx">
       <DependentUpon>Tai_Khoan.cs</DependentUpon>
@@ -432,6 +396,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shop-giay-sneaker-cmt8-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View_main\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

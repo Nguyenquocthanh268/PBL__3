@@ -36,8 +36,6 @@ namespace quanlybangiay.form
             this.btnOK = new System.Windows.Forms.Button();
             this.txtSLTon = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtGiaBanTaishop = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtSLDaBan = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtGiaBan = new System.Windows.Forms.TextBox();
@@ -47,19 +45,15 @@ namespace quanlybangiay.form
             this.txtGiaNhap = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtSale = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtColor = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtHang = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDGiay = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,8 +76,6 @@ namespace quanlybangiay.form
             this.panel3.Controls.Add(this.btnOK);
             this.panel3.Controls.Add(this.txtSLTon);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.txtGiaBanTaishop);
-            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtSLDaBan);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.txtGiaBan);
@@ -137,7 +129,7 @@ namespace quanlybangiay.form
             // txtSLTon
             // 
             this.txtSLTon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSLTon.Location = new System.Drawing.Point(731, 153);
+            this.txtSLTon.Location = new System.Drawing.Point(717, 153);
             this.txtSLTon.Name = "txtSLTon";
             this.txtSLTon.Size = new System.Drawing.Size(145, 26);
             this.txtSLTon.TabIndex = 73;
@@ -147,30 +139,11 @@ namespace quanlybangiay.form
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Info;
-            this.label11.Location = new System.Drawing.Point(727, 130);
+            this.label11.Location = new System.Drawing.Point(713, 130);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(106, 20);
             this.label11.TabIndex = 72;
             this.label11.Text = "SL tồn kho";
-            // 
-            // txtGiaBanTaishop
-            // 
-            this.txtGiaBanTaishop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaBanTaishop.Location = new System.Drawing.Point(731, 75);
-            this.txtGiaBanTaishop.Name = "txtGiaBanTaishop";
-            this.txtGiaBanTaishop.Size = new System.Drawing.Size(145, 26);
-            this.txtGiaBanTaishop.TabIndex = 71;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(727, 52);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 20);
-            this.label6.TabIndex = 70;
-            this.label6.Text = "Giá bán tại shop";
             // 
             // txtSLDaBan
             // 
@@ -250,12 +223,8 @@ namespace quanlybangiay.form
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtSale);
-            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtColor);
-            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.txtHang);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtIDGiay);
@@ -269,29 +238,10 @@ namespace quanlybangiay.form
             this.panel2.Size = new System.Drawing.Size(984, 258);
             this.panel2.TabIndex = 0;
             // 
-            // txtSale
-            // 
-            this.txtSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSale.Location = new System.Drawing.Point(527, 211);
-            this.txtSale.Name = "txtSale";
-            this.txtSale.Size = new System.Drawing.Size(145, 26);
-            this.txtSale.TabIndex = 77;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Info;
-            this.label9.Location = new System.Drawing.Point(523, 188);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 20);
-            this.label9.TabIndex = 76;
-            this.label9.Text = "Sale";
-            // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(333, 211);
+            this.txtName.Location = new System.Drawing.Point(717, 111);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(145, 26);
             this.txtName.TabIndex = 59;
@@ -301,35 +251,16 @@ namespace quanlybangiay.form
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(329, 188);
+            this.label2.Location = new System.Drawing.Point(713, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 58;
             this.label2.Text = "Tên giày";
             // 
-            // txtColor
-            // 
-            this.txtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColor.Location = new System.Drawing.Point(731, 211);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(145, 26);
-            this.txtColor.TabIndex = 75;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Info;
-            this.label10.Location = new System.Drawing.Point(727, 188);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 20);
-            this.label10.TabIndex = 74;
-            this.label10.Text = "Màu";
-            // 
             // txtHang
             // 
             this.txtHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHang.Location = new System.Drawing.Point(333, 133);
+            this.txtHang.Location = new System.Drawing.Point(412, 211);
             this.txtHang.Name = "txtHang";
             this.txtHang.Size = new System.Drawing.Size(145, 26);
             this.txtHang.TabIndex = 57;
@@ -339,7 +270,7 @@ namespace quanlybangiay.form
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(329, 37);
+            this.label1.Location = new System.Drawing.Point(408, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 56;
@@ -348,7 +279,7 @@ namespace quanlybangiay.form
             // txtIDGiay
             // 
             this.txtIDGiay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDGiay.Location = new System.Drawing.Point(333, 60);
+            this.txtIDGiay.Location = new System.Drawing.Point(412, 111);
             this.txtIDGiay.Name = "txtIDGiay";
             this.txtIDGiay.Size = new System.Drawing.Size(145, 26);
             this.txtIDGiay.TabIndex = 55;
@@ -358,16 +289,26 @@ namespace quanlybangiay.form
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.SystemColors.Info;
-            this.label56.Location = new System.Drawing.Point(329, 110);
+            this.label56.Location = new System.Drawing.Point(408, 188);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(55, 20);
             this.label56.TabIndex = 54;
             this.label56.Text = "Hãng";
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(60, 37);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 53;
+            this.pictureBox7.TabStop = false;
+            // 
             // txtSize
             // 
             this.txtSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSize.Location = new System.Drawing.Point(527, 133);
+            this.txtSize.Location = new System.Drawing.Point(717, 211);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(145, 26);
             this.txtSize.TabIndex = 61;
@@ -377,21 +318,11 @@ namespace quanlybangiay.form
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(523, 110);
+            this.label5.Location = new System.Drawing.Point(713, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 60;
             this.label5.Text = "Size";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(88, 37);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 53;
-            this.pictureBox7.TabStop = false;
             // 
             // DetailKhoGiay
             // 
@@ -433,16 +364,10 @@ namespace quanlybangiay.form
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox txtSLTon;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtGiaBanTaishop;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtSLDaBan;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtGiaBan;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSale;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtColor;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
     }

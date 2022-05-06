@@ -21,7 +21,7 @@ namespace quanlybangiay
         {
             if (txtuser.Text == "admin")
             {
-                Form1 f = new Form1();
+                MainQL f = new MainQL();
                 this.Hide();
                 f.Show();
                 this.Activate();

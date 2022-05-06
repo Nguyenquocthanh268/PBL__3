@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace quanlybangiay
 {
-    public partial class Form1 : Form
+    public partial class MainQL : Form
     {
         private Button currentButton;
         private Form dad_form;
         private Panel LeftBorderBtn;
-        public Form1()
+        public MainQL()
         {
             InitializeComponent();
 
