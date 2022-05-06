@@ -386,9 +386,11 @@
           </Key>
           <Property Name="Stt" Type="Int32" Nullable="false" />
           <Property Name="ID_Giay" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+
           <Property Name="SoLuongNhap" Type="Int32" />
           <Property Name="NgayNhap" Type="DateTime" Precision="3" />
           <Property Name="GiaNhap" Type="Double" />
+
           <NavigationProperty Name="Kho" Relationship="Self.fk_nhapkho" FromRole="NhapKho" ToRole="Kho" />
         </EntityType>
         <EntityType Name="TaiKhoan">
