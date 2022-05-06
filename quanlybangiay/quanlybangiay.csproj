@@ -32,9 +32,21 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,7 +59,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL_AD\BLL_CTKM.cs" />
+    <Compile Include="DTO\ChiTietHoaDon.cs">
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\CTKM.cs">
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB_Helper.cs" />
+    <Compile Include="DTO\Giay.cs">
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\HinhAnh.cs">
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\HoaDon.cs">
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\KhachHang.cs">
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\Kho.cs">
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainQL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,8 +226,32 @@
     <Compile Include="MainNV.Designer.cs">
       <DependentUpon>MainNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\NhanVien.cs">
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\NhapKho.cs">
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DTO\QuanLiBanGiay.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiBanGiay.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\QuanLiBanGiay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\QuanLiBanGiay.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TaiKhoan.cs">
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainQL.resx">
       <DependentUpon>MainQL.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +329,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -290,6 +349,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="DTO\QuanLiBanGiay.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLiBanGiay.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DTO\QuanLiBanGiay.edmx.diagram">
+      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
+    </None>
     <None Include="Resources\account_blue.png" />
   </ItemGroup>
   <ItemGroup>
@@ -398,7 +464,23 @@
     <None Include="Resources\shop-giay-sneaker-cmt8-2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BLL\BLL_NV\" />
     <Folder Include="View_main\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DTO\QuanLiBanGiay.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QuanLiBanGiay.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
+    </Content>
+    <Content Include="DTO\QuanLiBanGiay.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
+      <LastGenOutput>QuanLiBanGiay.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
