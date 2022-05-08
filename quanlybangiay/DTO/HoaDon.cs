@@ -22,8 +22,8 @@ namespace quanlybangiay.DTO
         public Nullable<double> TongTien { get; set; }
         public string ID_NhanVien { get; set; }
     
-        public virtual ChiTietHoaDon ChiTietHoaDon { get; set; }
         public virtual CTKM CTKM { get; set; }
+        public virtual ChiTietHoaDon ChiTietHoaDon { get; set; }
         public virtual KhachHang KhachHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
     }

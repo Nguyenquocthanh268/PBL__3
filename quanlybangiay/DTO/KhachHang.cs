@@ -22,8 +22,8 @@ namespace quanlybangiay.DTO
     
         public string TenKhachHang { get; set; }
         public string SoDienThoai { get; set; }
-        public Nullable<int> DiemTichLuy { get; set; }
         public Nullable<System.DateTime> NgayDangKy { get; set; }
+        public Nullable<int> DiemTichLuy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
