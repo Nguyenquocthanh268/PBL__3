@@ -14,7 +14,6 @@ namespace quanlybangiay.DTO
     
     public partial class TaiKhoan
     {
-        public string ID_TaiKhoan { get; set; }
         public string Username { get; set; }
         public string Pass { get; set; }
         public Nullable<bool> ChucVu { get; set; }
