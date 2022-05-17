@@ -69,10 +69,13 @@ namespace quanlybangiay.form
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string ID = dataGridView1.SelectedRows[0].Cells["ID_KhuyenMai"].Value.ToString();
-            GUI(ID);
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                string ID = dataGridView1.SelectedRows[0].Cells["ID_KhuyenMai"].Value.ToString();
+                GUI(ID);
 
-            Khoa();
+                Khoa();
+            }
         }
         private CTKM getCTKM()
         {

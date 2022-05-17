@@ -30,10 +30,10 @@ namespace quanlybangiay.form
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cbb_size = new System.Windows.Forms.ComboBox();
+            this.cbb_hang = new System.Windows.Forms.ComboBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.txt_tengiay = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@ namespace quanlybangiay.form
             this.btnDetail = new System.Windows.Forms.Button();
             this.btnInput = new System.Windows.Forms.Button();
             this.btnAddnew = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbb_sort = new System.Windows.Forms.ComboBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -59,10 +59,10 @@ namespace quanlybangiay.form
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.comboBox1);
-            this.panel5.Controls.Add(this.comboBox5);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.cbb_size);
+            this.panel5.Controls.Add(this.cbb_hang);
+            this.panel5.Controls.Add(this.txt_id);
+            this.panel5.Controls.Add(this.txt_tengiay);
             this.panel5.Controls.Add(this.btnSearch);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label1);
@@ -75,53 +75,47 @@ namespace quanlybangiay.form
             this.panel5.Size = new System.Drawing.Size(1069, 77);
             this.panel5.TabIndex = 5;
             // 
-            // comboBox1
+            // cbb_size
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "ID hóa đơn",
-            "ID nhân viên"});
-            this.comboBox1.Location = new System.Drawing.Point(488, 42);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(67, 28);
-            this.comboBox1.TabIndex = 9;
+            this.cbb_size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbb_size.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_size.FormattingEnabled = true;
+            this.cbb_size.Location = new System.Drawing.Point(488, 42);
+            this.cbb_size.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_size.Name = "cbb_size";
+            this.cbb_size.Size = new System.Drawing.Size(67, 28);
+            this.cbb_size.TabIndex = 9;
             // 
-            // comboBox5
+            // cbb_hang
             // 
-            this.comboBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "ID hóa đơn",
-            "ID nhân viên"});
-            this.comboBox5.Location = new System.Drawing.Point(622, 42);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(102, 28);
-            this.comboBox5.TabIndex = 8;
+            this.cbb_hang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbb_hang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_hang.FormattingEnabled = true;
+            this.cbb_hang.Location = new System.Drawing.Point(622, 42);
+            this.cbb_hang.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_hang.Name = "cbb_hang";
+            this.cbb_hang.Size = new System.Drawing.Size(102, 28);
+            this.cbb_hang.TabIndex = 8;
             // 
-            // textBox1
+            // txt_id
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(67, 43);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 27);
-            this.textBox1.TabIndex = 6;
+            this.txt_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_id.Location = new System.Drawing.Point(67, 43);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(139, 27);
+            this.txt_id.TabIndex = 6;
             // 
-            // textBox3
+            // txt_tengiay
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(292, 42);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 27);
-            this.textBox3.TabIndex = 5;
+            this.txt_tengiay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_tengiay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tengiay.Location = new System.Drawing.Point(292, 42);
+            this.txt_tengiay.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_tengiay.Name = "txt_tengiay";
+            this.txt_tengiay.Size = new System.Drawing.Size(139, 27);
+            this.txt_tengiay.TabIndex = 5;
             // 
             // btnSearch
             // 
@@ -199,7 +193,7 @@ namespace quanlybangiay.form
             this.panel4.Controls.Add(this.btnDetail);
             this.panel4.Controls.Add(this.btnInput);
             this.panel4.Controls.Add(this.btnAddnew);
-            this.panel4.Controls.Add(this.comboBox3);
+            this.panel4.Controls.Add(this.cbb_sort);
             this.panel4.Controls.Add(this.btnEdit);
             this.panel4.Controls.Add(this.btnSort);
             this.panel4.Controls.Add(this.btnDelete);
@@ -264,14 +258,14 @@ namespace quanlybangiay.form
             this.btnAddnew.UseVisualStyleBackColor = false;
             this.btnAddnew.Click += new System.EventHandler(this.btnAddnew_Click_1);
             // 
-            // comboBox3
+            // cbb_sort
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(41, 292);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(109, 21);
-            this.comboBox3.TabIndex = 2;
+            this.cbb_sort.FormattingEnabled = true;
+            this.cbb_sort.Location = new System.Drawing.Point(41, 292);
+            this.cbb_sort.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_sort.Name = "cbb_sort";
+            this.cbb_sort.Size = new System.Drawing.Size(109, 21);
+            this.cbb_sort.TabIndex = 2;
             // 
             // btnEdit
             // 
@@ -346,6 +340,7 @@ namespace quanlybangiay.form
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -384,16 +379,16 @@ namespace quanlybangiay.form
         private System.Windows.Forms.Button btnDetail;
         private System.Windows.Forms.Button btnInput;
         private System.Windows.Forms.Button btnAddnew;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbb_sort;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox txt_tengiay;
+        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.ComboBox cbb_size;
+        private System.Windows.Forms.ComboBox cbb_hang;
     }
 }

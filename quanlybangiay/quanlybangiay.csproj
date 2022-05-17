@@ -75,53 +75,51 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLL_AD\BLL_CTKM.cs" />
+    <Compile Include="BLL\BLL_AD\BLL_KhoGiay.cs" />
     <Compile Include="BLL\BLL_AD\BLL_NV.cs" />
     <Compile Include="BLL\BLL_AD\BLL_QLKH.cs" />
     <Compile Include="DB_Helper.cs" />
     <Compile Include="DTO\ChiTietHoaDon.cs">
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\CTKM.cs">
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Giay.cs">
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DTO\HinhAnh.cs">
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\HoaDon.cs">
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\KhachHang.cs">
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Kho.cs">
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\NhanVien.cs">
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\NhapKho.cs">
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\QuanLiBanGiay.Context.cs">
+    <Compile Include="DTO\QuanLiKhoGiay.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiBanGiay.Context.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\QuanLiBanGiay.cs">
+    <Compile Include="DTO\QuanLiKhoGiay.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\QuanLiBanGiay.Designer.cs">
+    <Compile Include="DTO\QuanLiKhoGiay.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.edmx</DependentUpon>
     </Compile>
     <Compile Include="DTO\TaiKhoan.cs">
-      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="MainQL.cs">
       <SubType>Form</SubType>
@@ -346,13 +344,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DTO\QuanLiBanGiay.edmx">
+    <EntityDeploy Include="DTO\QuanLiKhoGiay.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuanLiBanGiay.Designer.cs</LastGenOutput>
+      <LastGenOutput>QuanLiKhoGiay.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config" />
-    <None Include="DTO\QuanLiBanGiay.edmx.diagram">
-      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
+    <None Include="DTO\QuanLiKhoGiay.edmx.diagram">
+      <DependentUpon>QuanLiKhoGiay.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -498,15 +496,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DTO\QuanLiBanGiay.Context.tt">
+    <Content Include="DTO\QuanLiKhoGiay.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QuanLiBanGiay.Context.cs</LastGenOutput>
-      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
+      <DependentUpon>QuanLiKhoGiay.edmx</DependentUpon>
+      <LastGenOutput>QuanLiKhoGiay.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DTO\QuanLiBanGiay.tt">
+    <Content Include="DTO\QuanLiKhoGiay.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
-      <LastGenOutput>QuanLiBanGiay.cs</LastGenOutput>
+      <DependentUpon>QuanLiKhoGiay.edmx</DependentUpon>
+      <LastGenOutput>QuanLiKhoGiay.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

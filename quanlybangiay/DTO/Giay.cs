@@ -18,7 +18,6 @@ namespace quanlybangiay.DTO
         public Giay()
         {
             this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
-            this.HinhAnhs = new HashSet<HinhAnh>();
         }
     
         public string ID_Giay { get; set; }
@@ -27,11 +26,10 @@ namespace quanlybangiay.DTO
         public Nullable<int> Size { get; set; }
         public Nullable<double> GiaNhap { get; set; }
         public Nullable<double> GiaBan { get; set; }
+        public byte[] AnhSP { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HinhAnh> HinhAnhs { get; set; }
         public virtual Kho Kho { get; set; }
     }
 }
