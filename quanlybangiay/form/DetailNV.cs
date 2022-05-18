@@ -39,6 +39,7 @@ namespace quanlybangiay.form
                     txtSDT.Enabled = false;
                     txtTK.Enabled = false;
                     dateTimePicker1.Enabled = false;
+                    btnUpload.Enabled = false;
                     btnOK.Enabled = false;
                     btnCancel.Enabled = false;
                     btnReset.Enabled = false;
@@ -53,6 +54,7 @@ namespace quanlybangiay.form
                     radNam.Checked = true;
                 }
                 else radNu.Checked = true;
+                pictureBox1.Image = BLL_NV.Instance.BytetoPicter(BLL_NV.Instance.GetNVByID(ID).AnhNV);
                 dateTimePicker1.Value = Convert.ToDateTime(BLL_NV.Instance.GetNVByID(ID).NgaySinh.ToString());
                 txtTK.Text = BLL_NV.Instance.GetTKByIDNV(ID).Username.ToString();
                 txtMK.Text = BLL_NV.Instance.GetTKByIDNV(ID).Pass.ToString();
@@ -62,6 +64,7 @@ namespace quanlybangiay.form
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            byte[] file = BLL_NV.Instance.ImagetoByte(pictureBox1.Image);
             NhanVien nv = new NhanVien()
             {
                 ID_NhanVien = txtID.Text,
@@ -69,6 +72,7 @@ namespace quanlybangiay.form
                 DiaChi = txtDiaChi.Text,
                 SoDienThoai = txtSDT.Text,
                 NgaySinh = dateTimePicker1.Value,
+                AnhNV = file,
                 GioiTinh = Convert.ToBoolean(radNam.Checked),
             };
 
@@ -81,13 +85,16 @@ namespace quanlybangiay.form
             };
             BLL_NV.Instance.Execute(nv, tk);
             d();
-            if(txtID.Enabled == false)
+            if (txtID.Enabled == false)
             {
                 GUI(index);
-            } else {
+                MessageBox.Show("Thay đổi thành công!");
+            }
+            else
+            {
                 this.Close();
             }
-            
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -97,7 +104,8 @@ namespace quanlybangiay.form
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            if (txtID.Enabled) {
+            if (txtID.Enabled)
+            {
                 MessageBox.Show("Không thể reset mật khẩu!");
             }
             else
@@ -106,7 +114,21 @@ namespace quanlybangiay.form
                 BLL_NV.Instance.ResetMK(Username);
                 GUI(index);
             }
-            
+
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            PictureBox ptr = new PictureBox();
+            string fileName = null;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                fileName = dlg.FileName;
+            }
+            pictureBox1.Image = Image.FromFile(fileName.ToString());
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
         }
     }
 }

@@ -5,7 +5,8 @@ using System.Text;
 using System.Data;
 using System.Threading.Tasks;
 using quanlybangiay.DTO;
-
+using System.IO;
+using System.Drawing;
 
 namespace quanlybangiay.BLL.BLL_AD
 {
@@ -33,6 +34,7 @@ namespace quanlybangiay.BLL.BLL_AD
         public List<string> CBBSearch()
         {
             List<string> list = new List<string>();
+            list.Add("Tất cả");
             list.Add("ID Nhân viên");
             list.Add("Tên Nhân viên");
             return list;
@@ -63,6 +65,12 @@ namespace quanlybangiay.BLL.BLL_AD
             return db.NhanViens.Find(ID);
         }
 
+        public dynamic GetUsername(string ID)
+        {
+            return db.TaiKhoans.Where(p => p.ID_NhanVien == ID)
+                                    .Select(p => p.Username).ToList();
+        }
+
         public TaiKhoan GetTKByIDNV(string ID)
         {
             TaiKhoan s = new TaiKhoan();
@@ -86,6 +94,7 @@ namespace quanlybangiay.BLL.BLL_AD
                 nv.NgaySinh = s.NgaySinh;
                 nv.DiaChi = s.DiaChi;
                 nv.GioiTinh = s.GioiTinh;
+                nv.AnhNV = s.AnhNV;
                 nv.SoDienThoai = s.SoDienThoai;
 
                 TaiKhoan tk = db.TaiKhoans.Find(t.Username);
@@ -111,6 +120,11 @@ namespace quanlybangiay.BLL.BLL_AD
         {
             NhanVien nv = db.NhanViens.Find(ID);
             db.NhanViens.Remove(nv);
+            foreach (string i in GetUsername(ID))
+            {
+                TaiKhoan tk = db.TaiKhoans.Find(i); ;
+                db.TaiKhoans.Remove(tk);
+            }
             db.SaveChanges();
 
         }
@@ -124,9 +138,13 @@ namespace quanlybangiay.BLL.BLL_AD
         {
             if (index == 0)
             {
-                return db.NhanViens.Where(p => p.ID_NhanVien.Contains(txt)).Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai }).ToList();
+                return (db.NhanViens.Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai })).ToList();
             }
             else if (index == 1)
+            {
+                return db.NhanViens.Where(p => p.ID_NhanVien.Contains(txt)).Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai }).ToList();
+            }
+            else if (index == 2)
             {
                 return db.NhanViens.Where(p => p.TenNhanVien.Contains(txt)).Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai }).ToList();
             }
@@ -139,10 +157,25 @@ namespace quanlybangiay.BLL.BLL_AD
         public void ResetMK(string Username)
         {
 
-                TaiKhoan s = db.TaiKhoans.Find(Username);
-                s.Pass = "1";
-                db.SaveChanges();
-            
+            TaiKhoan s = db.TaiKhoans.Find(Username);
+            s.Pass = "1";
+            db.SaveChanges();
+
+        }
+        public byte[] ImagetoByte(Image imageIn)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+        public Image BytetoPicter(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
     }
