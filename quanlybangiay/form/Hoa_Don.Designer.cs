@@ -29,39 +29,41 @@ namespace quanlybangiay.form
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgHD = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnDetail = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbbSort = new System.Windows.Forms.ComboBox();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cbbSearch = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dateBegin = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHD)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgHD
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(855, 577);
-            this.dataGridView1.TabIndex = 9;
+            this.dtgHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgHD.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgHD.Location = new System.Drawing.Point(12, 12);
+            this.dtgHD.Name = "dtgHD";
+            this.dtgHD.Size = new System.Drawing.Size(855, 577);
+            this.dtgHD.TabIndex = 9;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dtgHD);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 77);
             this.panel2.Name = "panel2";
@@ -71,7 +73,7 @@ namespace quanlybangiay.form
             // panel4
             // 
             this.panel4.Controls.Add(this.btnDetail);
-            this.panel4.Controls.Add(this.comboBox3);
+            this.panel4.Controls.Add(this.cbbSort);
             this.panel4.Controls.Add(this.btnSort);
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -99,14 +101,14 @@ namespace quanlybangiay.form
             this.btnDetail.UseVisualStyleBackColor = false;
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
-            // comboBox3
+            // cbbSort
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(41, 152);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(109, 21);
-            this.comboBox3.TabIndex = 2;
+            this.cbbSort.FormattingEnabled = true;
+            this.cbbSort.Location = new System.Drawing.Point(41, 152);
+            this.cbbSort.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbSort.Name = "cbbSort";
+            this.cbbSort.Size = new System.Drawing.Size(109, 21);
+            this.cbbSort.TabIndex = 2;
             // 
             // btnSort
             // 
@@ -123,6 +125,7 @@ namespace quanlybangiay.form
             this.btnSort.TabIndex = 4;
             this.btnSort.Text = "Sắp xếp";
             this.btnSort.UseVisualStyleBackColor = false;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // btnDelete
             // 
@@ -139,6 +142,7 @@ namespace quanlybangiay.form
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearch
             // 
@@ -157,30 +161,28 @@ namespace quanlybangiay.form
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Xem";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(118, 42);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(619, 27);
-            this.textBox1.TabIndex = 3;
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(118, 42);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(619, 27);
+            this.txtSearch.TabIndex = 3;
             // 
-            // comboBox1
+            // cbbSearch
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "ID hóa đơn",
-            "ID nhân viên"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 41);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(102, 28);
-            this.comboBox1.TabIndex = 2;
+            this.cbbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSearch.FormattingEnabled = true;
+            this.cbbSearch.Location = new System.Drawing.Point(12, 41);
+            this.cbbSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbSearch.Name = "cbbSearch";
+            this.cbbSearch.Size = new System.Drawing.Size(102, 28);
+            this.cbbSearch.TabIndex = 2;
             // 
             // panel1
             // 
@@ -195,12 +197,12 @@ namespace quanlybangiay.form
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.dateTimePicker2);
+            this.panel5.Controls.Add(this.dateEnd);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.dateTimePicker1);
+            this.panel5.Controls.Add(this.dateBegin);
             this.panel5.Controls.Add(this.btnSearch);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.txtSearch);
+            this.panel5.Controls.Add(this.cbbSearch);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
@@ -208,13 +210,14 @@ namespace quanlybangiay.form
             this.panel5.Size = new System.Drawing.Size(1069, 77);
             this.panel5.TabIndex = 5;
             // 
-            // dateTimePicker2
+            // dateEnd
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(475, 11);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(204, 20);
-            this.dateTimePicker2.TabIndex = 83;
+            this.dateEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateEnd.Location = new System.Drawing.Point(475, 11);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(2);
+            this.dateEnd.Name = "dateEnd";
+            this.dateEnd.Size = new System.Drawing.Size(204, 20);
+            this.dateEnd.TabIndex = 83;
             // 
             // label3
             // 
@@ -227,13 +230,15 @@ namespace quanlybangiay.form
             this.label3.TabIndex = 85;
             this.label3.Text = "TO";
             // 
-            // dateTimePicker1
+            // dateBegin
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(183, 11);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(204, 20);
-            this.dateTimePicker1.TabIndex = 84;
+            this.dateBegin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateBegin.Location = new System.Drawing.Point(183, 11);
+            this.dateBegin.Margin = new System.Windows.Forms.Padding(2);
+            this.dateBegin.Name = "dateBegin";
+            this.dateBegin.Size = new System.Drawing.Size(204, 20);
+            this.dateBegin.TabIndex = 84;
+            this.dateBegin.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // Hoa_Don
             // 
@@ -245,7 +250,7 @@ namespace quanlybangiay.form
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Hoa_Don";
             this.Text = "Hoa_Don";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHD)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -257,20 +262,20 @@ namespace quanlybangiay.form
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgHD;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnDetail;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbbSort;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ComboBox cbbSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateEnd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateBegin;
     }
 }

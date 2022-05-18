@@ -27,6 +27,7 @@ namespace quanlybangiay.DTO
         public Nullable<System.DateTime> NgaySinh { get; set; }
         public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }
+        public byte[] AnhNV { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }

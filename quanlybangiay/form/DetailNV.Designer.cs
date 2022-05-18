@@ -47,6 +47,7 @@ namespace quanlybangiay.form
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnUpload = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnReset = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -55,8 +56,8 @@ namespace quanlybangiay.form
             this.label14 = new System.Windows.Forms.Label();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtLink = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -269,15 +270,33 @@ namespace quanlybangiay.form
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnUpload);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.txtLink);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(984, 258);
             this.panel2.TabIndex = 125;
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.btnUpload.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnUpload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnUpload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
+            this.btnUpload.Location = new System.Drawing.Point(149, 228);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(101, 30);
+            this.btnUpload.TabIndex = 169;
+            this.btnUpload.Text = "Tải lên";
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // panel4
             // 
@@ -372,24 +391,20 @@ namespace quanlybangiay.form
             this.pictureBox1.TabIndex = 150;
             this.pictureBox1.TabStop = false;
             // 
-            // txtLink
-            // 
-            this.txtLink.Location = new System.Drawing.Point(149, 230);
-            this.txtLink.Margin = new System.Windows.Forms.Padding(2);
-            this.txtLink.Name = "txtLink";
-            this.txtLink.Size = new System.Drawing.Size(101, 20);
-            this.txtLink.TabIndex = 152;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.Info;
-            this.label17.Location = new System.Drawing.Point(46, 230);
+            this.label17.Location = new System.Drawing.Point(46, 232);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(98, 20);
             this.label17.TabIndex = 151;
             this.label17.Text = "Thêm ảnh";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // DetailNV
             // 
@@ -426,7 +441,6 @@ namespace quanlybangiay.form
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtMK;
-        private System.Windows.Forms.TextBox txtLink;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtSDT;
@@ -443,5 +457,7 @@ namespace quanlybangiay.form
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
