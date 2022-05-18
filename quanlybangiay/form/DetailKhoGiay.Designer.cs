@@ -128,6 +128,7 @@ namespace quanlybangiay.form
             // 
             // txtSLTon
             // 
+            this.txtSLTon.Enabled = false;
             this.txtSLTon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSLTon.Location = new System.Drawing.Point(717, 153);
             this.txtSLTon.Name = "txtSLTon";
@@ -147,6 +148,7 @@ namespace quanlybangiay.form
             // 
             // txtSLDaBan
             // 
+            this.txtSLDaBan.Enabled = false;
             this.txtSLDaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSLDaBan.Location = new System.Drawing.Point(412, 153);
             this.txtSLDaBan.Name = "txtSLDaBan";
@@ -298,12 +300,13 @@ namespace quanlybangiay.form
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(60, 37);
+            this.pictureBox7.Location = new System.Drawing.Point(24, 21);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(200, 200);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // txtSize
             // 
