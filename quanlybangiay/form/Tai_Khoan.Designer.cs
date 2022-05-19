@@ -34,9 +34,11 @@ namespace quanlybangiay.form
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.lb_check = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_nlmk = new System.Windows.Forms.TextBox();
+            this.txt_mkm = new System.Windows.Forms.TextBox();
+            this.txt_mkc = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
@@ -56,7 +58,7 @@ namespace quanlybangiay.form
             this.panel9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel9.Location = new System.Drawing.Point(284, 92);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(505, 431);
+            this.panel9.Size = new System.Drawing.Size(627, 431);
             this.panel9.TabIndex = 5;
             // 
             // pictureBox6
@@ -82,41 +84,66 @@ namespace quanlybangiay.form
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.textBox21);
-            this.panel10.Controls.Add(this.textBox13);
-            this.panel10.Controls.Add(this.textBox12);
+            this.panel10.Controls.Add(this.lb_check);
+            this.panel10.Controls.Add(this.label1);
+            this.panel10.Controls.Add(this.txt_nlmk);
+            this.panel10.Controls.Add(this.txt_mkm);
+            this.panel10.Controls.Add(this.txt_mkc);
             this.panel10.Controls.Add(this.button7);
             this.panel10.Controls.Add(this.label32);
             this.panel10.Controls.Add(this.label40);
             this.panel10.Controls.Add(this.label41);
+            this.panel10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel10.Location = new System.Drawing.Point(37, 88);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(435, 310);
+            this.panel10.Size = new System.Drawing.Size(568, 310);
             this.panel10.TabIndex = 3;
             // 
-            // textBox21
+            // lb_check
             // 
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(235, 155);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(153, 26);
-            this.textBox21.TabIndex = 24;
+            this.lb_check.AutoSize = true;
+            this.lb_check.ForeColor = System.Drawing.Color.SlateGray;
+            this.lb_check.Location = new System.Drawing.Point(394, 107);
+            this.lb_check.Name = "lb_check";
+            this.lb_check.Size = new System.Drawing.Size(0, 13);
+            this.lb_check.TabIndex = 26;
             // 
-            // textBox13
+            // label1
             // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(235, 99);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(153, 26);
-            this.textBox13.TabIndex = 23;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(459, 213);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 25;
             // 
-            // textBox12
+            // txt_nlmk
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(235, 44);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(153, 26);
-            this.textBox12.TabIndex = 22;
+            this.txt_nlmk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nlmk.Location = new System.Drawing.Point(235, 155);
+            this.txt_nlmk.Name = "txt_nlmk";
+            this.txt_nlmk.PasswordChar = '*';
+            this.txt_nlmk.Size = new System.Drawing.Size(153, 26);
+            this.txt_nlmk.TabIndex = 24;
+            // 
+            // txt_mkm
+            // 
+            this.txt_mkm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mkm.Location = new System.Drawing.Point(235, 99);
+            this.txt_mkm.Name = "txt_mkm";
+            this.txt_mkm.PasswordChar = '*';
+            this.txt_mkm.Size = new System.Drawing.Size(153, 26);
+            this.txt_mkm.TabIndex = 23;
+            this.txt_mkm.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_mkm_MouseClick);
+            // 
+            // txt_mkc
+            // 
+            this.txt_mkc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mkc.Location = new System.Drawing.Point(235, 44);
+            this.txt_mkc.Name = "txt_mkc";
+            this.txt_mkc.PasswordChar = '*';
+            this.txt_mkc.Size = new System.Drawing.Size(153, 26);
+            this.txt_mkc.TabIndex = 22;
             // 
             // button7
             // 
@@ -131,6 +158,7 @@ namespace quanlybangiay.form
             this.button7.TabIndex = 21;
             this.button7.Text = "Lưu";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label32
             // 
@@ -178,6 +206,7 @@ namespace quanlybangiay.form
             this.button10.TabIndex = 23;
             this.button10.Text = "Đăng xuất";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Tai_Khoan
             // 
@@ -205,13 +234,15 @@ namespace quanlybangiay.form
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txt_nlmk;
+        private System.Windows.Forms.TextBox txt_mkm;
+        private System.Windows.Forms.TextBox txt_mkc;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label lb_check;
+        private System.Windows.Forms.Label label1;
     }
 }

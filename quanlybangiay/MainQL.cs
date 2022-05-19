@@ -16,10 +16,12 @@ namespace quanlybangiay
         private Button currentButton;
         private Form dad_form;
         private Panel LeftBorderBtn;
-        public MainQL()
+       
+        private string User { get; set; }
+        public MainQL(string user)
         {
             InitializeComponent();
-
+           User = user;
             LeftBorderBtn = new Panel();
             LeftBorderBtn.Size = new Size(7, 72);
             pn_menu.Controls.Add(LeftBorderBtn);
@@ -34,7 +36,7 @@ namespace quanlybangiay
         }
 
 
-        private void setButton_UI(Button b, Color c, Image a,Panel p)
+        private void setButton_UI(Button b, Color c, Image a, Panel p)
         {
             b.Image = a;
             b.BackColor = Color.FromArgb(42, 40, 86);
@@ -43,9 +45,9 @@ namespace quanlybangiay
         }
         private void bt_color(object sender)
         {
-            if(sender != null)
+            if (sender != null)
             {
-                if(currentButton !=(Button)sender)
+                if (currentButton != (Button)sender)
                 {
                     //Button - UI
                     Disable();
@@ -95,7 +97,7 @@ namespace quanlybangiay
                     currentButton.TextAlign = ContentAlignment.MiddleCenter;
                     currentButton.ImageAlign = ContentAlignment.MiddleRight;
                     currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-                    
+
                     //LeftBorder
                     LeftBorderBtn.Location = new Point(0, currentButton.Location.Y);
                     LeftBorderBtn.Visible = true;
@@ -106,7 +108,7 @@ namespace quanlybangiay
         }
         private void Disable()
         {
-            if(currentButton != null)
+            if (currentButton != null)
             {
 
                 currentButton.BackColor = Color.FromArgb(31, 35, 70);
@@ -126,9 +128,9 @@ namespace quanlybangiay
 
             }
         }
-        private void openform(Form childform,object sender)
+        private void openform(Form childform, object sender)
         {
-            if(dad_form != null)
+            if (dad_form != null)
             {
                 dad_form.Close();
             }
@@ -206,7 +208,8 @@ namespace quanlybangiay
         private void button8_Click(object sender, EventArgs e)
         {
             //taikhoan x = new taikhoan();
-            Tai_Khoan x = new Tai_Khoan();           
+            Tai_Khoan x = new Tai_Khoan(User);
+            x.d = new Tai_Khoan.MyDel(Dong);
             openform(x, sender);
             lb_ten.Text = "TÀI KHOẢN";
             lb_tenphu.Text = "";
@@ -220,21 +223,24 @@ namespace quanlybangiay
             lbImage.Image = quanlybangiay.Properties.Resources.home_green;
             lb_ten.Text = "TRANG CHỦ";
             lb_tenphu.Text = "";
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-   
+        public void Dong()
+        {
+            this.Hide();
+        }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        private void MainQL_FormClosed(object sender, FormClosedEventArgs e)
         {
             Login f = new Login();
             this.Hide();
             f.Show();
-            this.Activate();
+           
         }
     }
 }
