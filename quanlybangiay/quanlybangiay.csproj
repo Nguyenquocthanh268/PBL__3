@@ -81,6 +81,7 @@
     <Compile Include="BLL\BLL_AD\BLL_NV.cs" />
     <Compile Include="BLL\BLL_AD\BLL_QLKH.cs" />
     <Compile Include="BLL\BLL_Login.cs" />
+    <Compile Include="BLL\BLL_NV\BLL_KiemkhoNV.cs" />
     <Compile Include="DB_Helper.cs" />
     <Compile Include="DTO\ChiTietHoaDon.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
@@ -480,7 +481,6 @@
     <None Include="Resources\shop-giay-sneaker-cmt8-2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\BLL_NV\" />
     <Folder Include="View_main\" />
   </ItemGroup>
   <ItemGroup>
