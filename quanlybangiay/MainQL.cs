@@ -34,7 +34,7 @@ namespace quanlybangiay
         }
 
 
-        private void setButton_UI(Button b, Color c, Image a,Panel p)
+        private void setButton_UI(Button b, Color c, Image a, Panel p)
         {
             b.Image = a;
             b.BackColor = Color.FromArgb(42, 40, 86);
@@ -43,9 +43,9 @@ namespace quanlybangiay
         }
         private void bt_color(object sender)
         {
-            if(sender != null)
+            if (sender != null)
             {
-                if(currentButton !=(Button)sender)
+                if (currentButton != (Button)sender)
                 {
                     //Button - UI
                     Disable();
@@ -95,7 +95,7 @@ namespace quanlybangiay
                     currentButton.TextAlign = ContentAlignment.MiddleCenter;
                     currentButton.ImageAlign = ContentAlignment.MiddleRight;
                     currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-                    
+
                     //LeftBorder
                     LeftBorderBtn.Location = new Point(0, currentButton.Location.Y);
                     LeftBorderBtn.Visible = true;
@@ -106,10 +106,10 @@ namespace quanlybangiay
         }
         private void Disable()
         {
-            if(currentButton != null)
+            if (currentButton != null)
             {
 
-                currentButton.BackColor = Color.FromArgb(31, 35, 70);
+                currentButton.BackColor = Color.FromArgb(31, 30, 65);
                 currentButton.ForeColor = Color.Gainsboro;
                 currentButton.TextAlign = ContentAlignment.MiddleLeft;
                 currentButton.ImageAlign = ContentAlignment.MiddleLeft;
@@ -126,9 +126,9 @@ namespace quanlybangiay
 
             }
         }
-        private void openform(Form childform,object sender)
+        private void openform(Form childform, object sender)
         {
-            if(dad_form != null)
+            if (dad_form != null)
             {
                 dad_form.Close();
             }
@@ -198,7 +198,8 @@ namespace quanlybangiay
 
         private void button7_Click(object sender, EventArgs e)
         {
-            doanhthu1 x = new doanhthu1();
+            Doanh_Thu x = new Doanh_Thu();
+            //doanhthu1 x = new doanhthu1();
             openform(x, sender);
             lb_ten.Text = "DOANH THU";
             lb_tenphu.Text = "";
@@ -206,7 +207,7 @@ namespace quanlybangiay
         private void button8_Click(object sender, EventArgs e)
         {
             //taikhoan x = new taikhoan();
-            Tai_Khoan x = new Tai_Khoan();           
+            Tai_Khoan x = new Tai_Khoan();
             openform(x, sender);
             lb_ten.Text = "TÀI KHOẢN";
             lb_tenphu.Text = "";
@@ -220,14 +221,14 @@ namespace quanlybangiay
             lbImage.Image = quanlybangiay.Properties.Resources.home_green;
             lb_ten.Text = "TRANG CHỦ";
             lb_tenphu.Text = "";
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-   
+
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {

@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLL_AD\BLL_CTKM.cs" />
+    <Compile Include="BLL\BLL_AD\BLL_DoanhThu.cs" />
     <Compile Include="BLL\BLL_AD\BLL_HD.cs" />
     <Compile Include="BLL\BLL_AD\BLL_KhoGiay.cs" />
     <Compile Include="BLL\BLL_AD\BLL_NV.cs" />
@@ -495,6 +496,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-64 %283%29.png" />
+    <None Include="Resources\icons8-warehouse-651.png" />
+    <None Include="Resources\icons8-sneakers-651.png" />
+    <None Include="Resources\icons8-customer-601.png" />
+    <None Include="Resources\icons8-profit-651.png" />
+    <None Include="Resources\icons8-revenue-652.png" />
+    <None Include="Resources\icons8-revenue-651.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DTO\QuanLiBanGiay.Context.tt">
