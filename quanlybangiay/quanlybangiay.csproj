@@ -81,7 +81,9 @@
     <Compile Include="BLL\BLL_AD\BLL_NV.cs" />
     <Compile Include="BLL\BLL_AD\BLL_QLKH.cs" />
     <Compile Include="BLL\BLL_Login.cs" />
+    <Compile Include="BLL\BLL_NV\BLL_BanHang.cs" />
     <Compile Include="BLL\BLL_NV\BLL_KiemkhoNV.cs" />
+    <Compile Include="DataSP.cs" />
     <Compile Include="DB_Helper.cs" />
     <Compile Include="DTO\ChiTietHoaDon.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>

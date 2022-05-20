@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using quanlybangiay.BLL.BLL_AD;
 using quanlybangiay.BLL;
+using quanlybangiay.DTO;
 using quanlybangiay.BLL.BLL_NV;
 
 namespace quanlybangiay
@@ -17,6 +18,7 @@ namespace quanlybangiay
     {  
         private string USer { get; set; }
         private string ID { get; set; }
+        //private DataTable d1 { get; set; }
         public MainNV(string user ,string id)
         {
             ID = id;
@@ -28,18 +30,19 @@ namespace quanlybangiay
         }
         private void ShowdtGV_Trangchu()
         {
-            DataTable d1 = new DataTable();
-            d1.Columns.AddRange(new DataColumn[]
-            {
-                new DataColumn{ColumnName = "Mã giày",DataType =typeof(string)},
-                new DataColumn{ColumnName = "Hãng",DataType =typeof(string)},
-                new DataColumn{ColumnName = "Tên SP",DataType =typeof(string)},
-                new DataColumn{ColumnName = "Size",DataType =typeof(int)},
-                new DataColumn{ColumnName = "Giá(VNĐ)",DataType =typeof(int)},
-                new DataColumn{ColumnName = "SL",DataType =typeof(int)},
-                new DataColumn{ColumnName = "Thành tiền(VNĐ)",DataType =typeof(int)}
-            });
-            dtGV_Trangchu.DataSource = d1;
+            
+            //d1 = new DataTable();
+            //d1.Columns.AddRange(new DataColumn[]
+            //{
+            //    new DataColumn{ColumnName = "Mã giày",DataType =typeof(string)},
+            //    new DataColumn{ColumnName = "Hãng",DataType =typeof(string)},
+            //    new DataColumn{ColumnName = "Tên SP",DataType =typeof(string)},
+            //    new DataColumn{ColumnName = "Size",DataType =typeof(int)},
+            //    new DataColumn{ColumnName = "Giá(VNĐ)",DataType =typeof(double)},
+            //    new DataColumn{ColumnName = "SL",DataType =typeof(int)},
+            //    new DataColumn{ColumnName = "Thành tiền(VNĐ)",DataType =typeof(double)}
+            //});
+            dtGV_Trangchu.DataSource = DataSP.Instance.d1;
         }
 
         private void MainNV_FormClosed(object sender, FormClosedEventArgs e)
@@ -121,7 +124,6 @@ namespace quanlybangiay
 
         private void txt_mkm_MouseClick(object sender, MouseEventArgs e)
         {
-            lb_check.Enabled = false;
             lb_check.Text = "Nhập mật khẩu có tối thiểu 6 ký tự";
         }
 
@@ -228,6 +230,183 @@ namespace quanlybangiay
                 txt_SLkho.Text = "";
 
             }
+            if (tabControl1.SelectedIndex == 0)
+            {
+                setCBBCTKM();
+            }
+        }
+        //------------------------------------------------------------------------------------------------------------------------
+        //Form Dang Ky Khach Hang
+
+        private void butLuu_DangKyKhachHang_Click(object sender, EventArgs e)
+        {
+            //note: bổ sung sdt chỉ chứa kí tự số
+            if(txtSdtKhachHang.Text.Length == 10)
+            {
+                if (BLL_QLKH.Instance.Check(txtSdtKhachHang.Text))
+                {
+                    lbCheckSdt.Text = "So dien thoai da ton tai trong he thong...";
+                }
+                else
+                {
+                    BLL_QLKH.Instance.AddKH(txtSdtKhachHang.Text, txtNameKhachHang.Text);
+                    MessageBox.Show("Dang Ky Thanh Cong !!!");
+                    txtSdtKhachHang.Text = "";
+                    txtNameKhachHang.Text = "";
+                    lbCheckSdt.Text = "";
+                }
+            }
+            else
+            {
+                lbCheckSdt.Text = "Số điện thoại phải đủ 10 kí tự, chỉ chứa kí tự số ";
+            }
+
+        }
+
+        private void txtSdtKhachHang_MouseClick(object sender, MouseEventArgs e)
+        {
+            lbCheckSdt.Text = "Số điện thoại phải đủ 10 kí tự, chỉ chứa kí tự số ";
+        }
+
+        private void txtSdtKhachHang_TextChanged(object sender, EventArgs e)
+        {
+            lbCheckSdt.Text = "";
+        }
+
+        //------------------------------------------------------------------------------------------------------------------------
+
+
+        //------------------------------------------------------------------------------------------------------------------------
+        //Form Ban Hang
+        //Thong tin khach hang
+        private void but_CheckKH_Click(object sender, EventArgs e)
+        {
+            if (txtSdt_BanHang.Text.Length == 10)
+            {
+                if (BLL_QLKH.Instance.Check(txtSdt_BanHang.Text))
+                {
+                    KhachHang a = BLL_QLKH.Instance.Get1KH(txtSdt_BanHang.Text);
+                    txtNameKH_BanHang.Text = a.TenKhachHang;
+                    txtNgayDK_BanHang.Text =Convert.ToString(a.NgayDangKy);
+                    txtDiemTL_BanHang.Text = Convert.ToString(a.DiemTichLuy);
+                    txtSale_BanHang.Text = Convert.ToString(GiamGiaTheoDiemTichLuy((int)a.DiemTichLuy));
+                }
+                else
+                {
+                    lbKTthongTin_BanHang.Text = "Số điện thoại khách hàng không tồn tại...";
+                }
+            }
+            else
+            {
+                lbKTthongTin_BanHang.Text = "Số điện thoại phải đủ 10 kí tự, chỉ chứa kí tự số ";
+            }
+        }
+        //Xuli diem tich luy : 100.000d ~ 1d ; DTL < 100d : giam 2% ;100d <= DTL < 200d :giam 5%; 200d <= DTL < 500d : giam 10%; DTL >= 500 : giam 20%
+        public int GiamGiaTheoDiemTichLuy(int DTL)
+        {
+            DataPBL3 db = new DataPBL3();
+            if (DTL < 100) return 2;
+            else if (DTL >= 100 && DTL < 200) return 5;
+            else if (DTL >= 200 && DTL < 500) return 10;
+            else return 20;
+
+        }
+
+        private void txtSdt_TextChanged(object sender, EventArgs e)
+        {
+            lbKTthongTin_BanHang.Text = "";
+        }
+
+        //Thong tin CTKM
+        public void setCBBCTKM()
+        {
+            cbbCTKM_BanHang.Items.AddRange(BLL_CTKM.Instance.GetListNameCTKM().ToArray());
+        }
+
+        private void cbbCTKM_BanHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butCheckIDGiay_Click(object sender, EventArgs e)
+        {
+            
+            if (BLL_KhoGiay.Instance.check(txtIDGiay_BanHang.Text))
+            {
+                but_AddGiay.Enabled = true;
+                Giay a = BLL_KhoGiay.Instance.GetGiayByID(txtIDGiay_BanHang.Text);
+                txtNameSP_BanHang.Text = a.TenGiay;
+                txtHang_BanHang.Text = a.HangGiay;
+                txtSize_BanHang.Text = Convert.ToString(a.Size);
+                txtSL_BanHang.Text = "4";
+                if(Convert.ToInt32(txtSL_BanHang.Text) > 0)
+                {
+                    rdConHang.Checked = true;
+                    rdConHang.ForeColor = Color.Green;
+                }
+                else
+                {
+                    rdHetHang.Checked = true;
+                    rdHetHang.ForeColor = Color.Red;
+                }
+            }
+            else
+            {
+                lbKTthongTinID_BanHang.Text = "ID giày không tồn tại...";
+            }
+        }
+
+        private void but_AddGiay_Click(object sender, EventArgs e)
+        {
+            if(Convert.ToInt32(txtSL_BanHang.Text) > 0)
+            {
+                BLL_BanHang.Instance.AddDL(txtIDGiay_BanHang.Text, txtHang_BanHang.Text, txtNameSP_BanHang.Text, Convert.ToInt32(txtSize_BanHang.Text), BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text), 1, BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text) * 1);
+                ResetDataSP();
+                but_AddGiay.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Sản phẩm bạn cần tìm đã hết hàng, vui lòng kiểm tra lại...");
+            }
+        }
+        public void ResetDataSP()
+        {
+            txtIDGiay_BanHang.Text = "";
+            txtNameSP_BanHang.Text = "";
+            txtHang_BanHang.Text = "";
+            txtSize_BanHang.Text = "";
+            txtSL_BanHang.Text = "";
+            rdConHang.Checked = false;
+            rdHetHang.Checked = false;
+        }
+
+        private void butdel_Click(object sender, EventArgs e)
+        {
+            if (dtGV_Trangchu.SelectedRows.Count > 0)
+            {
+                String s = "Bạn có muốn xóa mặt hàng ??";
+                String s1 = "Delete";
+                MessageBoxButtons ok = MessageBoxButtons.OKCancel;
+                DialogResult d = MessageBox.Show(s, s1, ok);
+                if (d == DialogResult.OK)
+                {
+                    foreach (DataGridViewRow i in dtGV_Trangchu.SelectedRows)
+                    {
+                        String MaSP = i.Cells["Mã giày"].Value.ToString();
+                        BLL_BanHang.Instance.DelSP(MaSP);
+                    }
+                    ShowdtGV_Trangchu();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn dòng cần xóa !!!");
+            }
+        }
+
+        private void txtIDGiay_BanHang_TextChanged(object sender, EventArgs e)
+        {
+            lbKTthongTinID_BanHang.Text = "";
         }
     }
 }

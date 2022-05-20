@@ -36,6 +36,10 @@ namespace quanlybangiay.BLL.BLL_AD
         {
             return db.Giays.Find(ID);
         }
+        public double GetGiaBanGiayByID(string ID)
+        {
+            return (double)db.Giays.Find(ID).GiaBan;
+        }
         public Kho GetkhoByID(string ID)
         {
             return db.Khoes.Find(ID);

@@ -85,5 +85,32 @@ namespace quanlybangiay.BLL.BLL_AD
                 return null;
             }
         }
+        public bool Check(string Sdt)
+        {
+            DataPBL3 db = new DataPBL3();
+            bool check = false;
+            foreach (KhachHang i in db.KhachHangs)
+            {
+                if (i.SoDienThoai == Sdt)
+                {
+                    check = true;
+                }
+            }
+            return check;
+        }
+        public void AddKH(string Sdt,string name)
+        {
+            DataPBL3 db = new DataPBL3();
+            KhachHang a = new KhachHang
+            {
+                SoDienThoai = Sdt,
+                TenKhachHang = name,
+                DiemTichLuy = 0,
+                NgayDangKy = DateTime.Now
+            };
+            db.KhachHangs.Add(a);
+            db.SaveChanges();
+        }
+
     }
 }
