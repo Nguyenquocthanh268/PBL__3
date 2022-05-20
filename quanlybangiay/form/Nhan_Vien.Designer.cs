@@ -163,6 +163,8 @@ namespace quanlybangiay.form
             // 
             // dtgNV
             // 
+            this.dtgNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgNV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgNV.Location = new System.Drawing.Point(12, 12);
             this.dtgNV.Name = "dtgNV";
