@@ -146,23 +146,22 @@ namespace quanlybangiay
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel21 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
+            this.lbTen = new System.Windows.Forms.Label();
+            this.lbUsername = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.txtSohoadon = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label49 = new System.Windows.Forms.Label();
             this.dtGV_Chitiethd = new System.Windows.Forms.DataGridView();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.dateBegin = new System.Windows.Forms.DateTimePicker();
+            this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btn_out = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -195,6 +194,7 @@ namespace quanlybangiay
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.txtTongtien = new System.Windows.Forms.TextBox();
             this.panel17.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1130,7 +1130,7 @@ namespace quanlybangiay
             this.tabPage3.Controls.Add(this.panel22);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1344, 760);
+            this.tabPage3.Size = new System.Drawing.Size(1344, 754);
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "Đăng ký khách hàng";
             // 
@@ -1382,6 +1382,7 @@ namespace quanlybangiay
             // dtGV_Kiemkho
             // 
             this.dtGV_Kiemkho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtGV_Kiemkho.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtGV_Kiemkho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGV_Kiemkho.Location = new System.Drawing.Point(31, 65);
             this.dtGV_Kiemkho.Name = "dtGV_Kiemkho";
@@ -1529,7 +1530,7 @@ namespace quanlybangiay
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1344, 760);
+            this.tabPage5.Size = new System.Drawing.Size(1344, 754);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Chi tiết hóa đơn";
             // 
@@ -1537,8 +1538,8 @@ namespace quanlybangiay
             // 
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.panel21.Controls.Add(this.pictureBox7);
-            this.panel21.Controls.Add(this.label58);
-            this.panel21.Controls.Add(this.label59);
+            this.panel21.Controls.Add(this.lbTen);
+            this.panel21.Controls.Add(this.lbUsername);
             this.panel21.Controls.Add(this.label60);
             this.panel21.Controls.Add(this.label61);
             this.panel21.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -1557,29 +1558,29 @@ namespace quanlybangiay
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
             // 
-            // label58
+            // lbTen
             // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label58.Location = new System.Drawing.Point(235, 63);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(162, 25);
-            this.label58.TabIndex = 50;
-            this.label58.Text = "Nguyen Van A";
-            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTen.AutoSize = true;
+            this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTen.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbTen.Location = new System.Drawing.Point(235, 63);
+            this.lbTen.Name = "lbTen";
+            this.lbTen.Size = new System.Drawing.Size(162, 25);
+            this.lbTen.TabIndex = 50;
+            this.lbTen.Text = "Nguyen Van A";
+            this.lbTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label59
+            // lbUsername
             // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label59.Location = new System.Drawing.Point(235, 17);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(142, 25);
-            this.label59.TabIndex = 49;
-            this.label59.Text = "0123456789";
-            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbUsername.Location = new System.Drawing.Point(235, 17);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(142, 25);
+            this.lbUsername.TabIndex = 49;
+            this.lbUsername.Text = "0123456789";
+            this.lbUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label60
             // 
@@ -1604,10 +1605,10 @@ namespace quanlybangiay
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.panel15.Controls.Add(this.txtTongtien);
             this.panel15.Controls.Add(this.label48);
-            this.panel15.Controls.Add(this.textBox20);
             this.panel15.Controls.Add(this.label47);
-            this.panel15.Controls.Add(this.textBox25);
+            this.panel15.Controls.Add(this.txtSohoadon);
             this.panel15.Controls.Add(this.label51);
             this.panel15.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel15.Location = new System.Drawing.Point(6, 624);
@@ -1626,47 +1627,34 @@ namespace quanlybangiay
             this.label48.TabIndex = 52;
             this.label48.Text = "Tổng";
             // 
-            // textBox20
-            // 
-            this.textBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox20.Location = new System.Drawing.Point(219, 83);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(123, 24);
-            this.textBox20.TabIndex = 49;
-            this.textBox20.Text = "$240.00";
-            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label47
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(100, 85);
+            this.label47.Location = new System.Drawing.Point(52, 85);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(90, 24);
             this.label47.TabIndex = 48;
             this.label47.Text = "Tổng tiền";
             // 
-            // textBox25
+            // txtSohoadon
             // 
-            this.textBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.textBox25.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox25.Location = new System.Drawing.Point(219, 42);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(123, 24);
-            this.textBox25.TabIndex = 47;
-            this.textBox25.Text = "3";
-            this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSohoadon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.txtSohoadon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSohoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSohoadon.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.txtSohoadon.Location = new System.Drawing.Point(195, 42);
+            this.txtSohoadon.Name = "txtSohoadon";
+            this.txtSohoadon.Size = new System.Drawing.Size(123, 24);
+            this.txtSohoadon.TabIndex = 47;
+            this.txtSohoadon.Text = "3";
+            this.txtSohoadon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label51
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(100, 43);
+            this.label51.Location = new System.Drawing.Point(52, 43);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(109, 24);
             this.label51.TabIndex = 47;
@@ -1695,6 +1683,8 @@ namespace quanlybangiay
             // 
             // dtGV_Chitiethd
             // 
+            this.dtGV_Chitiethd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtGV_Chitiethd.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtGV_Chitiethd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGV_Chitiethd.Location = new System.Drawing.Point(31, 64);
             this.dtGV_Chitiethd.Name = "dtGV_Chitiethd";
@@ -1705,44 +1695,45 @@ namespace quanlybangiay
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.panel14.Controls.Add(this.button4);
-            this.panel14.Controls.Add(this.dateTimePicker4);
-            this.panel14.Controls.Add(this.dateTimePicker3);
+            this.panel14.Controls.Add(this.btnOK);
+            this.panel14.Controls.Add(this.dateBegin);
+            this.panel14.Controls.Add(this.dateEnd);
             this.panel14.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel14.Location = new System.Drawing.Point(435, 6);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(866, 105);
             this.panel14.TabIndex = 2;
             // 
-            // button4
+            // btnOK
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(225)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(771, 36);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(35, 28);
-            this.button4.TabIndex = 49;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(225)))));
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.btnOK.Image = ((System.Drawing.Image)(resources.GetObject("btnOK.Image")));
+            this.btnOK.Location = new System.Drawing.Point(771, 36);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(35, 28);
+            this.btnOK.TabIndex = 49;
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // dateTimePicker4
+            // dateBegin
             // 
-            this.dateTimePicker4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Location = new System.Drawing.Point(43, 35);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(341, 29);
-            this.dateTimePicker4.TabIndex = 47;
+            this.dateBegin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateBegin.Location = new System.Drawing.Point(43, 35);
+            this.dateBegin.Name = "dateBegin";
+            this.dateBegin.Size = new System.Drawing.Size(341, 29);
+            this.dateBegin.TabIndex = 47;
             // 
-            // dateTimePicker3
+            // dateEnd
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(410, 35);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(341, 29);
-            this.dateTimePicker3.TabIndex = 48;
+            this.dateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateEnd.Location = new System.Drawing.Point(410, 35);
+            this.dateEnd.Name = "dateEnd";
+            this.dateEnd.Size = new System.Drawing.Size(341, 29);
+            this.dateEnd.TabIndex = 48;
             // 
             // tabPage2
             // 
@@ -1754,7 +1745,7 @@ namespace quanlybangiay
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1344, 760);
+            this.tabPage2.Size = new System.Drawing.Size(1344, 754);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản lý tài khoản";
             // 
@@ -1986,7 +1977,7 @@ namespace quanlybangiay
             this.Nam.Enabled = false;
             this.Nam.Location = new System.Drawing.Point(222, 165);
             this.Nam.Name = "Nam";
-            this.Nam.Size = new System.Drawing.Size(57, 20);
+            this.Nam.Size = new System.Drawing.Size(58, 20);
             this.Nam.TabIndex = 14;
             this.Nam.TabStop = true;
             this.Nam.Text = "Nam";
@@ -2103,6 +2094,19 @@ namespace quanlybangiay
             this.panel18.Size = new System.Drawing.Size(1312, 778);
             this.panel18.TabIndex = 50;
             // 
+            // txtTongtien
+            // 
+            this.txtTongtien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.txtTongtien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongtien.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.txtTongtien.Location = new System.Drawing.Point(148, 84);
+            this.txtTongtien.Name = "txtTongtien";
+            this.txtTongtien.Size = new System.Drawing.Size(218, 24);
+            this.txtTongtien.TabIndex = 53;
+            this.txtTongtien.Text = "$240.00";
+            this.txtTongtien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // MainNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2206,7 +2210,7 @@ namespace quanlybangiay
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox txtSohoadon;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.DataGridView dtGV_Chitiethd;
@@ -2223,12 +2227,11 @@ namespace quanlybangiay
         private System.Windows.Forms.TextBox txt_giaKHO;
         private System.Windows.Forms.TextBox txt_sizeKHO;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label lbTen;
+        private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Button btn_out;
         private System.Windows.Forms.Panel panel9;
@@ -2271,9 +2274,9 @@ namespace quanlybangiay
         private System.Windows.Forms.Button btn_timkiemKHO;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.DateTimePicker dateBegin;
+        private System.Windows.Forms.DateTimePicker dateEnd;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Panel panel6;
@@ -2348,6 +2351,7 @@ namespace quanlybangiay
         private System.Windows.Forms.DateTimePicker ngaysinh;
         private System.Windows.Forms.Label lb_check;
         private System.Windows.Forms.TextBox txt_IDgiayKHO;
+        private System.Windows.Forms.TextBox txtTongtien;
     }
 }
 

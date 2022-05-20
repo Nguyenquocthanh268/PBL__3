@@ -53,7 +53,8 @@ namespace quanlybangiay
         private void tabControl1_Click(object sender, EventArgs e)
         {
             GUI();
-         
+            GUI_HD(USer);
+
         }
         public void GUI()
         {
@@ -228,6 +229,27 @@ namespace quanlybangiay
                 txt_SLkho.Text = "";
 
             }
+        }
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            double sum = 0;
+            string ID = BLL_NV_HD.Instance.GetNVByUsername(USer).ID_NhanVien.ToString();
+            DateTime begin = dateBegin.Value;
+            DateTime end = dateEnd.Value;
+            dtGV_Chitiethd.DataSource = BLL_NV_HD.Instance.Search(ID, begin, end);
+            txtSohoadon.Text = dtGV_Chitiethd.Rows.Count.ToString();
+            foreach (DataGridViewRow dr in dtGV_Chitiethd.Rows)
+            {
+                sum += Convert.ToDouble(dr.Cells["TongTien"].Value);
+            }
+            txtTongtien.Text = sum.ToString() + " VND";
+        }
+
+        public void GUI_HD(string Username)
+        {
+            lbUsername.Text = Username.ToString();
+            lbTen.Text = BLL_NV_HD.Instance.GetNVByUsername(Username).TenNhanVien.ToString();
+            txtSohoadon.Text = dtGV_Chitiethd.Rows.Count.ToString();
         }
     }
 }
