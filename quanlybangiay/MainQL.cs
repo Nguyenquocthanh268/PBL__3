@@ -16,10 +16,12 @@ namespace quanlybangiay
         private Button currentButton;
         private Form dad_form;
         private Panel LeftBorderBtn;
-        public MainQL()
+       
+        private string User { get; set; }
+        public MainQL(string user)
         {
             InitializeComponent();
-
+           User = user;
             LeftBorderBtn = new Panel();
             LeftBorderBtn.Size = new Size(7, 72);
             pn_menu.Controls.Add(LeftBorderBtn);
@@ -207,7 +209,10 @@ namespace quanlybangiay
         private void button8_Click(object sender, EventArgs e)
         {
             //taikhoan x = new taikhoan();
-            Tai_Khoan x = new Tai_Khoan();
+
+            Tai_Khoan x = new Tai_Khoan(User);
+            x.d = new Tai_Khoan.MyDel(Dong);
+
             openform(x, sender);
             lb_ten.Text = "TÀI KHOẢN";
             lb_tenphu.Text = "";
@@ -229,13 +234,18 @@ namespace quanlybangiay
 
         }
 
+        public void Dong()
+        {
+            this.Hide();
+        }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void MainQL_FormClosed(object sender, FormClosedEventArgs e)
         {
             Login f = new Login();
             this.Hide();
             f.Show();
-            this.Activate();
+           
         }
     }
 }
