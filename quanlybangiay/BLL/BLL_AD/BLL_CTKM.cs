@@ -63,10 +63,10 @@ namespace quanlybangiay.BLL.BLL_AD
             }
          
         }
-        public CTKM GetCTKM(string MSSV)
+        public CTKM GetCTKM(string a)
         {
             DataPBL3 db = new DataPBL3();
-            return db.CTKMs.Find(MSSV);
+            return db.CTKMs.Find(a);
         }
         public bool KT (string s)
         {
@@ -152,6 +152,21 @@ namespace quanlybangiay.BLL.BLL_AD
                               ).ToList();
             }
         }
-        
+        public List<string> GetListNameCTKM()
+        {
+            DataPBL3 db = new DataPBL3();
+            List<string> data = new List<string>();
+            foreach (CTKM i in db.CTKMs)
+            {
+                data.Add(i.TenCT);
+            }
+            return data;
+        }
+        public KhachHang Get1KH(string SDT)
+        {
+            DataPBL3 db = new DataPBL3();
+            KhachHang a = db.KhachHangs.Find(SDT);
+            return a;
+        }
     }
 }
