@@ -111,7 +111,7 @@ namespace quanlybangiay
             if (currentButton != null)
             {
 
-                currentButton.BackColor = Color.FromArgb(31, 35, 70);
+                currentButton.BackColor = Color.FromArgb(31, 30, 65);
                 currentButton.ForeColor = Color.Gainsboro;
                 currentButton.TextAlign = ContentAlignment.MiddleLeft;
                 currentButton.ImageAlign = ContentAlignment.MiddleLeft;
@@ -200,7 +200,8 @@ namespace quanlybangiay
 
         private void button7_Click(object sender, EventArgs e)
         {
-            doanhthu1 x = new doanhthu1();
+            Doanh_Thu x = new Doanh_Thu();
+            //doanhthu1 x = new doanhthu1();
             openform(x, sender);
             lb_ten.Text = "DOANH THU";
             lb_tenphu.Text = "";
@@ -208,8 +209,10 @@ namespace quanlybangiay
         private void button8_Click(object sender, EventArgs e)
         {
             //taikhoan x = new taikhoan();
+
             Tai_Khoan x = new Tai_Khoan(User);
             x.d = new Tai_Khoan.MyDel(Dong);
+
             openform(x, sender);
             lb_ten.Text = "TÀI KHOẢN";
             lb_tenphu.Text = "";
@@ -230,10 +233,12 @@ namespace quanlybangiay
         {
 
         }
+
         public void Dong()
         {
             this.Hide();
         }
+
 
         private void MainQL_FormClosed(object sender, FormClosedEventArgs e)
         {

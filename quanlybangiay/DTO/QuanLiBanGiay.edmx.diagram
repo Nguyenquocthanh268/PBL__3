@@ -4,15 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="80af1e557a3a4b329f8c2ada4bba1869" Name="Diagram1">
+
+      <Diagram DiagramId="5ca3eaee8d034bc9b6c22e622da2cb77" Name="Diagram1">
+
         <EntityTypeShape EntityType="DataPBL3Model.ChiTietHoaDon" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.CTKM" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.Giay" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.HoaDon" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.KhachHang" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataPBL3Model.Kho" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataPBL3Model.Kho" Width="2.125" PointX="5.25" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.NhanVien" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataPBL3Model.NhapKho" Width="1.5" PointX="7.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataPBL3Model.NhapKho" Width="1.5" PointX="9.5" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.TaiKhoan" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="DataPBL3Model.fk_chitiethoadon" ManuallyRouted="false" />
         <AssociationConnector Association="DataPBL3Model.fk_giay" ManuallyRouted="false" />
