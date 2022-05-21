@@ -74,5 +74,15 @@ namespace quanlybangiay
                 }
             }
         }
+        public double TongTienThanhToan()
+        {
+            double sum = 0;
+            for (int i = 0;i < d1.Rows.Count; i++)
+            {
+                sum += Convert.ToDouble(d1.Rows[i]["Thành tiền(VNĐ)"]);
+
+            }
+            return sum;
+        }
     }
 }

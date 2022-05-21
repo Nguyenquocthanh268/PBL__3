@@ -58,7 +58,6 @@ namespace quanlybangiay.form
 
         private void txt_mkm_MouseClick(object sender, MouseEventArgs e)
         {
-            lb_check.Enabled = false;
             lb_check.Text = "Nhập mật khẩu có tối thiểu 6 ký tự";
             lb_check.ForeColor =Color.Red;
         }

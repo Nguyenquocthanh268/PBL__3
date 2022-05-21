@@ -56,7 +56,7 @@ namespace quanlybangiay.form
             this.panel9.Controls.Add(this.label22);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel9.Location = new System.Drawing.Point(284, 92);
+            this.panel9.Location = new System.Drawing.Point(221, 92);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(627, 431);
             this.panel9.TabIndex = 5;
@@ -102,8 +102,8 @@ namespace quanlybangiay.form
             // lb_check
             // 
             this.lb_check.AutoSize = true;
-            this.lb_check.ForeColor = System.Drawing.Color.SlateGray;
-            this.lb_check.Location = new System.Drawing.Point(394, 107);
+            this.lb_check.ForeColor = System.Drawing.Color.Red;
+            this.lb_check.Location = new System.Drawing.Point(237, 130);
             this.lb_check.Name = "lb_check";
             this.lb_check.Size = new System.Drawing.Size(0, 13);
             this.lb_check.TabIndex = 26;
@@ -200,7 +200,7 @@ namespace quanlybangiay.form
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.button10.Location = new System.Drawing.Point(453, 572);
+            this.button10.Location = new System.Drawing.Point(463, 569);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(152, 57);
             this.button10.TabIndex = 23;

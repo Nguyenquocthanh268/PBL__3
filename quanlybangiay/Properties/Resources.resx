@@ -139,11 +139,11 @@
   <data name="customer_green1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer_green1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="warehouse_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warehouse_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-sneakers-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-sneakers-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-bill-64 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-bill-64 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-bill-60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-bill-60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,17 +172,11 @@
   <data name="61103071_2361422507447925_6222318223514140672_n_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\61103071_2361422507447925_6222318223514140672_n_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trending_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trending_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-running-shoes-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-running-shoes-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-account-32 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-account-32 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-customer-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-customer-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-add-dollar-50 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-add-dollar-50 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,6 +235,9 @@
   <data name="icons8-boots-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-boots-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="warehouse_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warehouse_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-warehouse-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-warehouse-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -277,14 +274,14 @@
   <data name="staff_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\staff_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="warehouse_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warehouse_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-customer-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-customer-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-revenue-65" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-revenue-651.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-trending-64 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-trending-64 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="community (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\community (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-customer-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-customer-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,8 +301,8 @@
   <data name="icons8-sale-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-sale-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home_white3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_white3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="warehouse_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warehouse_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-account-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-account-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,14 +310,20 @@
   <data name="sale_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sale_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="home_white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_white2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-running-shoes-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-running-shoes-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 (1) (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 (1) (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="community (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\community (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trending_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trending_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-improve-64 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-improve-64 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 (1) (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-sneakers-shoe-computer-icons-footwear-vector-graph-prism-3-icon-5be165ccdc88b7.1167525215414983169033 (1) (1) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -361,14 +364,14 @@
   <data name="icons8-bin-64 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-bin-64 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-improve-64 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-improve-64 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-trending-64 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-trending-64 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="community (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\community (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home_white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_white2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home_white3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_white3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -379,7 +382,7 @@
   <data name="icons8-profit-analysis-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-profit-analysis-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-bill-64 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-bill-64 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-tick-box-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-tick-box-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

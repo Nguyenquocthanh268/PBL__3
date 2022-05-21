@@ -306,7 +306,7 @@ namespace quanlybangiay
         public int GiamGiaTheoDiemTichLuy(int DTL)
         {
             DataPBL3 db = new DataPBL3();
-            if (DTL < 100) return 2;
+            if (DTL < 100 && DTL > 0) return 2;
             else if (DTL >= 100 && DTL < 200) return 5;
             else if (DTL >= 200 && DTL < 500) return 10;
             else return 20;
@@ -322,11 +322,6 @@ namespace quanlybangiay
         public void setCBBCTKM()
         {
             cbbCTKM_BanHang.Items.AddRange(BLL_CTKM.Instance.GetListNameCTKM().ToArray());
-        }
-
-        private void cbbCTKM_BanHang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void butCheckIDGiay_Click(object sender, EventArgs e)
@@ -379,6 +374,11 @@ namespace quanlybangiay
             txtSL_BanHang.Text = "";
             rdConHang.Checked = false;
             rdHetHang.Checked = false;
+            tb_Tongcong.Text = BLL_BanHang.Instance.TongTien().ToString();
+            //tb_Phantramck.Text = (Convert.ToInt32(txtSale_BanHang.Text)+ Convert.ToInt32(txtChietKhauCTKM_BanHang.Text)).ToString();
+            tb_Phantramck.Text = (Convert.ToInt32(txtSale_BanHang.Text)).ToString();
+            tb_Chietkhau.Text = (Convert.ToInt32(tb_Phantramck.Text) * Convert.ToDouble(tb_Tongcong.Text)/100).ToString();
+            tb_Thanhtien.Text = (Convert.ToDouble(tb_Tongcong.Text) - Convert.ToDouble(tb_Chietkhau.Text)).ToString();
         }
 
         private void butdel_Click(object sender, EventArgs e)
@@ -430,5 +430,39 @@ namespace quanlybangiay
             lbTen.Text = BLL_NV_HD.Instance.GetNVByUsername(Username).TenNhanVien.ToString();
             txtSohoadon.Text = dtGV_Chitiethd.Rows.Count.ToString();
         }
+
+        private void tb_Tienkhachdua_TextChanged(object sender, EventArgs e)
+        {
+            tb_Tientralai.Text = (Convert.ToDouble(tb_Tienkhachdua.Text) - Convert.ToDouble(tb_Thanhtien.Text)).ToString();
+        }
+        //Xuli diem tich luy : 100.000d ~ 1d ; DTL < 100d : giam 2% ;100d <= DTL < 200d :giam 5%; 200d <= DTL < 500d : giam 10%; DTL >= 500 : giam 20%
+        private void butSAVE_Click(object sender, EventArgs e)
+        {
+            if (BLL_QLKH.Instance.Check(txtSdt_BanHang.Text))
+            {
+                tb_Mahoadon.Text = "HD1014";
+                KhachHang a = BLL_QLKH.Instance.Get1KH(txtSdt_BanHang.Text);
+                a.DiemTichLuy += Convert.ToInt32(tb_Thanhtien.Text) / 100000;
+                BLL_QLKH.Instance.UpdateKH(a);
+                BLL_BanHang.Instance.AddHD(tb_Mahoadon.Text, txtSdt_BanHang.Text, DateTime.Now, Convert.ToDouble(tb_Thanhtien.Text),ID,null);
+                MessageBox.Show("Da luu va xuat hoa don!!!");
+            }
+        }
+
+        private void txtHang_BanHang_TextChanged(object sender, EventArgs e)
+        {
+            DateTime d = DateTime.Now;
+            foreach (string i in BLL_BanHang.Instance.GetCBBKhuyenmai(d, txtHang_BanHang.Text))
+            {
+                cbbCTKM_BanHang.Items.Add(i);
+            }
+        }
+
+        private void cbbCTKM_BanHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string name = cbbCTKM_BanHang.SelectedItem.ToString();
+            txtChietKhauCTKM_BanHang.Text = BLL_BanHang.Instance.GetChietkhauByName(name).ToString();
+        }
+
     }
 }

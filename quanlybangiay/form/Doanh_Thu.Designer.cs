@@ -441,6 +441,7 @@ namespace quanlybangiay.form
             this.butOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butOK.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.butOK.Image = global::quanlybangiay.Properties.Resources.icons8_tick_box_48;
             this.butOK.Location = new System.Drawing.Point(415, 17);
             this.butOK.Name = "butOK";
             this.butOK.Size = new System.Drawing.Size(38, 41);

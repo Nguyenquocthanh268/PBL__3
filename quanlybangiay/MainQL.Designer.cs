@@ -36,7 +36,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pn_logo = new System.Windows.Forms.Panel();
@@ -65,7 +64,6 @@
             this.pn_menu.Controls.Add(this.button6);
             this.pn_menu.Controls.Add(this.button5);
             this.pn_menu.Controls.Add(this.button4);
-            this.pn_menu.Controls.Add(this.button3);
             this.pn_menu.Controls.Add(this.button2);
             this.pn_menu.Controls.Add(this.button1);
             this.pn_menu.Controls.Add(this.pn_logo);
@@ -86,7 +84,7 @@
             this.button8.Image = global::quanlybangiay.Properties.Resources.account_white;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button8.Location = new System.Drawing.Point(0, 646);
+            this.button8.Location = new System.Drawing.Point(0, 574);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 15, 0);
@@ -108,7 +106,7 @@
             this.button7.Image = global::quanlybangiay.Properties.Resources.profit_white;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button7.Location = new System.Drawing.Point(0, 574);
+            this.button7.Location = new System.Drawing.Point(0, 502);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(10, 0, 15, 0);
@@ -130,7 +128,7 @@
             this.button6.Image = global::quanlybangiay.Properties.Resources.sale_white;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button6.Location = new System.Drawing.Point(0, 502);
+            this.button6.Location = new System.Drawing.Point(0, 430);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 15, 0);
@@ -152,7 +150,7 @@
             this.button5.Image = global::quanlybangiay.Properties.Resources.customer_white;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button5.Location = new System.Drawing.Point(0, 430);
+            this.button5.Location = new System.Drawing.Point(0, 358);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 15, 0);
@@ -174,7 +172,7 @@
             this.button4.Image = global::quanlybangiay.Properties.Resources.staff_white;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button4.Location = new System.Drawing.Point(0, 358);
+            this.button4.Location = new System.Drawing.Point(0, 286);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 15, 0);
@@ -185,28 +183,6 @@
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12.75F);
-            this.button3.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button3.Image = global::quanlybangiay.Properties.Resources.trending_white;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(0, 286);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 15, 0);
-            this.button3.Size = new System.Drawing.Size(243, 72);
-            this.button3.TabIndex = 4;
-            this.button3.Text = " XU HƯỚNG";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -414,7 +390,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pn_logo;
