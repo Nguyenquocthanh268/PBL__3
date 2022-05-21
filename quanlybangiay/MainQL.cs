@@ -63,11 +63,6 @@ namespace quanlybangiay
                         setButton_UI(currentButton, Color_Icon.Pink, global::quanlybangiay.Properties.Resources.bill_pink, LeftBorderBtn);
                         lbImage.Image = quanlybangiay.Properties.Resources.bill_pink;
                     }
-                    if (currentButton == button3)
-                    {
-                        setButton_UI(currentButton, Color_Icon.Green, global::quanlybangiay.Properties.Resources.trending_green, LeftBorderBtn);
-                        lbImage.Image = quanlybangiay.Properties.Resources.trending_green;
-                    }
                     if (currentButton == button4)
                     {
                         setButton_UI(currentButton, Color_Icon.Blue, global::quanlybangiay.Properties.Resources.staff_blue, LeftBorderBtn);
@@ -119,7 +114,6 @@ namespace quanlybangiay
                 LeftBorderBtn.Visible = false;
                 if (currentButton == button1) button1.Image = global::quanlybangiay.Properties.Resources.warehouse_white;
                 if (currentButton == button2) button2.Image = global::quanlybangiay.Properties.Resources.bill_white;
-                if (currentButton == button3) button3.Image = global::quanlybangiay.Properties.Resources.trending_white;
                 if (currentButton == button4) button4.Image = global::quanlybangiay.Properties.Resources.staff_white;
                 if (currentButton == button5) button5.Image = global::quanlybangiay.Properties.Resources.customer_white;
                 if (currentButton == button6) button6.Image = global::quanlybangiay.Properties.Resources.sale_white;
@@ -162,15 +156,6 @@ namespace quanlybangiay
             lb_ten.Text = "HÓA ĐƠN";
             lb_tenphu.Text = "";
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            xuhuong x = new xuhuong();
-            openform(x, sender);
-            lb_ten.Text = "";
-            lb_tenphu.Text = "XU HƯỚNG THỊ TRƯỜNG";
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             //nhanvien n = new nhanvien();

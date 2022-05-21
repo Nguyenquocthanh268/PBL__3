@@ -144,6 +144,7 @@ namespace quanlybangiay
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.txtTongtien = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.txtSohoadon = new System.Windows.Forms.TextBox();
@@ -187,7 +188,6 @@ namespace quanlybangiay
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.txtTongtien = new System.Windows.Forms.TextBox();
             this.panel17.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -876,6 +876,7 @@ namespace quanlybangiay
             this.butSAVE.Text = "Lưu và In";
             this.butSAVE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.butSAVE.UseVisualStyleBackColor = false;
+            this.butSAVE.Click += new System.EventHandler(this.butSAVE_Click);
             // 
             // tb_Phantramck
             // 
@@ -998,12 +999,12 @@ namespace quanlybangiay
             // 
             // tb_Tienkhachdua
             // 
-            this.tb_Tienkhachdua.Enabled = false;
             this.tb_Tienkhachdua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Tienkhachdua.Location = new System.Drawing.Point(274, 289);
             this.tb_Tienkhachdua.Name = "tb_Tienkhachdua";
             this.tb_Tienkhachdua.Size = new System.Drawing.Size(181, 26);
             this.tb_Tienkhachdua.TabIndex = 11;
+            this.tb_Tienkhachdua.TextChanged += new System.EventHandler(this.tb_Tienkhachdua_TextChanged);
             // 
             // label3
             // 
@@ -1044,7 +1045,7 @@ namespace quanlybangiay
             this.tabPage3.Controls.Add(this.panel22);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1344, 754);
+            this.tabPage3.Size = new System.Drawing.Size(1344, 760);
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "Đăng ký khách hàng";
             // 
@@ -1458,7 +1459,7 @@ namespace quanlybangiay
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1344, 754);
+            this.tabPage5.Size = new System.Drawing.Size(1344, 760);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Chi tiết hóa đơn";
             // 
@@ -1543,6 +1544,19 @@ namespace quanlybangiay
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(369, 117);
             this.panel15.TabIndex = 4;
+            // 
+            // txtTongtien
+            // 
+            this.txtTongtien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.txtTongtien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongtien.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.txtTongtien.Location = new System.Drawing.Point(195, 84);
+            this.txtTongtien.Name = "txtTongtien";
+            this.txtTongtien.Size = new System.Drawing.Size(123, 24);
+            this.txtTongtien.TabIndex = 53;
+            this.txtTongtien.Text = "3";
+            this.txtTongtien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label48
             // 
@@ -1673,7 +1687,7 @@ namespace quanlybangiay
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1344, 754);
+            this.tabPage2.Size = new System.Drawing.Size(1344, 760);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản lý tài khoản";
             // 
@@ -2024,19 +2038,6 @@ namespace quanlybangiay
             this.panel18.Size = new System.Drawing.Size(1312, 778);
             this.panel18.TabIndex = 50;
             // 
-            // txtTongtien
-            // 
-            this.txtTongtien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.txtTongtien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongtien.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.txtTongtien.Location = new System.Drawing.Point(148, 84);
-            this.txtTongtien.Name = "txtTongtien";
-            this.txtTongtien.Size = new System.Drawing.Size(218, 24);
-            this.txtTongtien.TabIndex = 53;
-            this.txtTongtien.Text = "$240.00";
-            this.txtTongtien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // MainNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2273,7 +2274,7 @@ namespace quanlybangiay
         private System.Windows.Forms.RadioButton rdHetHang;
         private System.Windows.Forms.RadioButton rdConHang;
         private System.Windows.Forms.Label lbKTthongTinID_BanHang;
-
+        private System.Windows.Forms.TextBox txtTongtien;
     }
 }
 

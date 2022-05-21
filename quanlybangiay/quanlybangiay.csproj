@@ -83,11 +83,8 @@
     <Compile Include="BLL\BLL_Login.cs" />
     <Compile Include="BLL\BLL_NV\BLL_BanHang.cs" />
     <Compile Include="BLL\BLL_NV\BLL_KiemkhoNV.cs" />
-
     <Compile Include="DataSP.cs" />
-
     <Compile Include="BLL\BLL_NV\BLL_NV_HoaDon.cs" />
-
     <Compile Include="DB_Helper.cs" />
     <Compile Include="DTO\ChiTietHoaDon.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
@@ -524,6 +521,7 @@
       <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
       <LastGenOutput>QuanLiBanGiay.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-tick-box-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

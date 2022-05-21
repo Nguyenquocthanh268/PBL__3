@@ -54,6 +54,7 @@ namespace quanlybangiay.BLL.BLL_AD
             DataPBL3 db = new DataPBL3();
             KhachHang kh = db.KhachHangs.Find(a.SoDienThoai);
             kh.TenKhachHang = a.TenKhachHang;
+            kh.DiemTichLuy = a.DiemTichLuy;
             db.SaveChanges();
         }
         public void DelKH(string Sdt)
