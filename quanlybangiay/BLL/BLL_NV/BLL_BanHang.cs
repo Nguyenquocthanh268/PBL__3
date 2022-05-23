@@ -39,11 +39,11 @@ namespace quanlybangiay.BLL.BLL_NV
         //    }
         //    return Add;
         //}
-        public List<String> GetCBBKhuyenmai(DateTime timeNow, string Hang)
+        public List<String> GetCBBKhuyenmai(DateTime timeNow)
         {
             List<String> list = new List<String>();
             List<CTKM> ctkms = new List<CTKM>();
-            var l = db.CTKMs.Where(p => p.NgayBatDau < timeNow && p.NgayKetThuc > timeNow && p.HangGiay == Hang)
+            var l = db.CTKMs.Where(p => p.NgayBatDau < timeNow && p.NgayKetThuc > timeNow)
                     .Select(p => p);
             ctkms = l.ToList();
             foreach (CTKM i in ctkms)
@@ -65,6 +65,29 @@ namespace quanlybangiay.BLL.BLL_NV
             }
             return value;
         }
+
+        public string GetID_KMByName(string name)
+        {
+            string ID = "";
+            foreach(CTKM i in db.CTKMs)
+            {
+                if(i.TenCT == name)
+                {
+                    ID = i.ID_KhuyenMai.ToString();
+                }
+            }
+            return ID;
+        }
+
+        public double GetGiaNhapByID(string ID)
+        {
+            Giay s = db.Giays.Find(ID);
+            return (double)s.GiaNhap;
+        }
+        public Kho GetGiay_Kho(string ID)
+        {
+            return db.Khoes.Find(ID);
+        }
         public void AddDL(string MaGiay, string Hang, string TenSP, int Size, double Gia, int SL, double ThanhTien)
         {
             DataSP.Instance.AddRow(MaGiay, Hang, TenSP, Size, Gia, SL, ThanhTien);
@@ -77,34 +100,80 @@ namespace quanlybangiay.BLL.BLL_NV
         {
             return DataSP.Instance.TongTienThanhToan();
         }
-        public void AddHD(string idhoadon, string sodienthoai, DateTime ngaytao, double tongtien, string idnhanvien, string idkhuyenmai = "")
+        public void AddHD(HoaDon s)
         {
             DataPBL3 db = new DataPBL3();
             HoaDon a = new HoaDon
             {
-                ID_HoaDon = idhoadon,
-                SoDienThoai = sodienthoai,
-                NgayTao = ngaytao,
-                TongTien = tongtien,
-                ID_NhanVien = idnhanvien,
-                ID_KhuyenMai = idkhuyenmai
+                ID_HoaDon = s.ID_HoaDon,
+                SoDienThoai = s.SoDienThoai,
+                Thanhvien = s.Thanhvien,
+                NgayTao = s.NgayTao,
+                TongTien = s.TongTien,
+                ID_NhanVien = s.ID_NhanVien,
+                ID_KhuyenMai = s.ID_KhuyenMai
             };
             db.HoaDons.Add(a);
             db.SaveChanges();
         }
-        public void AddChiTietHD(string idhoadon, string idgiay, int soluong, double gia)
+        public void AddChiTietHD(ChiTietHoaDon s)
         {
             DataPBL3 db = new DataPBL3();
             ChiTietHoaDon a = new ChiTietHoaDon
             {
-                ID_HoaDon = idhoadon,
-                ID_Giay = idgiay,
-                SoLuong = soluong,
-                Gia = gia,
+                ID_HoaDon = s.ID_HoaDon,
+                ID_Giay = s.ID_Giay,
+                SoLuong = s.SoLuong,
+                GiaBan = s.GiaBan,
+                GiaNhap = s.GiaNhap
             };
             db.ChiTietHoaDons.Add(a);
             db.SaveChanges();
         }
+        public string tachchuoi(string s)
+        {
+            string h = "";
+            char[] a = s.ToArray();
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] >= 48 && a[i] <= 57)
+                {
+                    h += a[i];
+                }
+            }
+            return h;
+        }
+        public string IDhoadon()
+        {
+            string ID = "HD";
+            string so = "";
+            string idhoadon = "0";
+            List<string> list = new List<string>();
+            foreach (HoaDon i in db.HoaDons)
+            {
+
+
+                list.Add(tachchuoi(i.ID_HoaDon));
+
+            }
+            foreach (string s in list)
+            {
+                if (Convert.ToInt32(s) > Convert.ToInt32(idhoadon))
+                {
+                    idhoadon = s;
+                }
+            }
+            return Convert.ToString(ID + Convert.ToString(Convert.ToInt32(idhoadon) + 1));
+        }
+
+        public void UpdateKho(string ID, int sl)
+        {
+            Kho kho = db.Khoes.Find(ID);
+            kho.SoLuongBan += sl;
+            kho.SoLuongCon -= sl;
+            db.SaveChanges();
+        }
+
 
     }
 }

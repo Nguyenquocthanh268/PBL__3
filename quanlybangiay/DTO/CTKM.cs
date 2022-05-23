@@ -23,7 +23,6 @@ namespace quanlybangiay.DTO
         public string ID_KhuyenMai { get; set; }
         public string TenCT { get; set; }
         public Nullable<double> ChietKhau { get; set; }
-        public string HangGiay { get; set; }
         public Nullable<System.DateTime> NgayBatDau { get; set; }
         public Nullable<System.DateTime> NgayKetThuc { get; set; }
         public string MoTa { get; set; }
