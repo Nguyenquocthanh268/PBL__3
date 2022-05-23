@@ -511,6 +511,9 @@
     <None Include="Resources\icons8-revenue-651.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-tick-box-48.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DTO\QuanLiBanGiay.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
@@ -521,7 +524,6 @@
       <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
       <LastGenOutput>QuanLiBanGiay.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\icons8-tick-box-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

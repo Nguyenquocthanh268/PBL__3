@@ -26,7 +26,7 @@ namespace quanlybangiay
             InitializeComponent();
             ShowdtGV_Trangchu();
             LoadCBBKHO();
-           
+            CBBKhuyenMai();
         }
         private void ShowdtGV_Trangchu()
         {
@@ -201,8 +201,7 @@ namespace quanlybangiay
             if (dtGV_Kiemkho.SelectedRows.Count == 1)
             {
                 string ID = dtGV_Kiemkho.SelectedRows[0].Cells["ID_Giay"].Value.ToString();
-                GUIkho(ID);
-                
+                GUIkho(ID);            
             }
         }
         public void GUIkho(string ID)
@@ -329,13 +328,14 @@ namespace quanlybangiay
             
             if (BLL_KhoGiay.Instance.check(txtIDGiay_BanHang.Text))
             {
+                int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
                 but_AddGiay.Enabled = true;
                 Giay a = BLL_KhoGiay.Instance.GetGiayByID(txtIDGiay_BanHang.Text);
                 txtNameSP_BanHang.Text = a.TenGiay;
                 txtHang_BanHang.Text = a.HangGiay;
                 txtSize_BanHang.Text = Convert.ToString(a.Size);
-                txtSL_BanHang.Text = "4";
-                if(Convert.ToInt32(txtSL_BanHang.Text) > 0)
+                txtSL_BanHang.Text = Soluong.ToString();
+                if(Soluong > 0)
                 {
                     rdConHang.Checked = true;
                     rdConHang.ForeColor = Color.Green;
@@ -354,15 +354,21 @@ namespace quanlybangiay
 
         private void but_AddGiay_Click(object sender, EventArgs e)
         {
-            if(Convert.ToInt32(txtSL_BanHang.Text) > 0)
+            int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
+            if (Soluong > 0)
             {
-                BLL_BanHang.Instance.AddDL(txtIDGiay_BanHang.Text, txtHang_BanHang.Text, txtNameSP_BanHang.Text, Convert.ToInt32(txtSize_BanHang.Text), BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text), 1, BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text) * 1);
+                BLL_BanHang.Instance.AddDL(txtIDGiay_BanHang.Text, txtHang_BanHang.Text, txtNameSP_BanHang.Text, Soluong, BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text), 1, BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text) * 1);
                 ResetDataSP();
                 but_AddGiay.Enabled = false;
             }
             else
             {
                 MessageBox.Show("Sản phẩm bạn cần tìm đã hết hàng, vui lòng kiểm tra lại...");
+            }
+
+            if(tb_Mahoadon.Text == "")
+            {
+                tb_Mahoadon.Text = BLL_BanHang.Instance.IDhoadon();
             }
         }
         public void ResetDataSP()
@@ -438,21 +444,52 @@ namespace quanlybangiay
         //Xuli diem tich luy : 100.000d ~ 1d ; DTL < 100d : giam 2% ;100d <= DTL < 200d :giam 5%; 200d <= DTL < 500d : giam 10%; DTL >= 500 : giam 20%
         private void butSAVE_Click(object sender, EventArgs e)
         {
+            string ID_HoaDon = BLL_BanHang.Instance.IDhoadon();
             if (BLL_QLKH.Instance.Check(txtSdt_BanHang.Text))
             {
-                tb_Mahoadon.Text = "HD1014";
+                
                 KhachHang a = BLL_QLKH.Instance.Get1KH(txtSdt_BanHang.Text);
                 a.DiemTichLuy += Convert.ToInt32(tb_Thanhtien.Text) / 100000;
                 BLL_QLKH.Instance.UpdateKH(a);
-                BLL_BanHang.Instance.AddHD(tb_Mahoadon.Text, txtSdt_BanHang.Text, DateTime.Now, Convert.ToDouble(tb_Thanhtien.Text),ID,null);
-                MessageBox.Show("Da luu va xuat hoa don!!!");
+
+                {
+                    HoaDon hoadon = new HoaDon();
+                    hoadon.ID_HoaDon = ID_HoaDon;
+                    hoadon.SoDienThoai = txtSdt_BanHang.Text;
+                    hoadon.Thanhvien = Convert.ToInt32(txtSale_BanHang.Text);
+                    hoadon.NgayTao = DateTime.Now;
+                    hoadon.TongTien = Convert.ToDouble(tb_Thanhtien.Text);
+                    hoadon.ID_NhanVien = ID;
+                    hoadon.ID_KhuyenMai = BLL_BanHang.Instance.GetID_KMByName(cbbCTKM_BanHang.SelectedItem.ToString());
+                    BLL_BanHang.Instance.AddHD(hoadon);
+                }
+
+                foreach(DataGridViewRow i in dtGV_Trangchu.Rows)
+                {
+                    string IDGiay = i.Cells["Mã giày"].Value.ToString();
+                    int Soluong = Convert.ToInt32(i.Cells["SL"].Value.ToString());
+                    ChiTietHoaDon chitiet = new ChiTietHoaDon
+                    {
+                        ID_HoaDon = ID_HoaDon,
+                        ID_Giay = IDGiay,
+                        SoLuong = Soluong,
+                        GiaBan = Convert.ToDouble(i.Cells["Giá(VNĐ)"].Value.ToString()),
+                        GiaNhap = BLL_BanHang.Instance.GetGiaNhapByID(i.Cells["Mã giày"].Value.ToString())
+                    };
+                    BLL_BanHang.Instance.AddChiTietHD(chitiet);
+                    BLL_BanHang.Instance.UpdateKho(IDGiay, Soluong);
+
+                }
+                MessageBox.Show("Đã lưu và xuất hoá đơn!!!");
             }
+
         }
 
-        private void txtHang_BanHang_TextChanged(object sender, EventArgs e)
+
+        private void CBBKhuyenMai()
         {
             DateTime d = DateTime.Now;
-            foreach (string i in BLL_BanHang.Instance.GetCBBKhuyenmai(d, txtHang_BanHang.Text))
+            foreach (string i in BLL_BanHang.Instance.GetCBBKhuyenmai(d))
             {
                 cbbCTKM_BanHang.Items.Add(i);
             }

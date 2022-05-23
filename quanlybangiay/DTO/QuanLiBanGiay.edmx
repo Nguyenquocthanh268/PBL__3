@@ -12,7 +12,6 @@
           <Property Name="ID_KhuyenMai" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="TenCT" Type="nvarchar(max)" />
           <Property Name="ChietKhau" Type="float" />
-          <Property Name="HangGiay" Type="nvarchar(max)" />
           <Property Name="NgayBatDau" Type="datetime" />
           <Property Name="NgayKetThuc" Type="datetime" />
           <Property Name="MoTa" Type="nvarchar(max)" />
@@ -25,7 +24,8 @@
           <Property Name="ID_HoaDon" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ID_Giay" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="SoLuong" Type="int" />
-          <Property Name="Gia" Type="float" />
+          <Property Name="GiaBan" Type="float" />
+          <Property Name="GiaNhap" Type="float" />
         </EntityType>
         <EntityType Name="Giay">
           <Key>
@@ -45,6 +45,7 @@
           </Key>
           <Property Name="ID_HoaDon" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ID_KhuyenMai" Type="varchar" MaxLength="10" />
+          <Property Name="Thanhvien" Type="int" />
           <Property Name="SoDienThoai" Type="char" MaxLength="10" />
           <Property Name="NgayTao" Type="datetime" />
           <Property Name="TongTien" Type="float" />
@@ -264,7 +265,6 @@
           <Property Name="ID_KhuyenMai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenCT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ChietKhau" Type="Double" />
-          <Property Name="HangGiay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NgayBatDau" Type="DateTime" Precision="3" />
           <Property Name="NgayKetThuc" Type="DateTime" Precision="3" />
           <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -278,7 +278,8 @@
           <Property Name="ID_HoaDon" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ID_Giay" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" />
-          <Property Name="Gia" Type="Double" />
+          <Property Name="GiaBan" Type="Double" />
+          <Property Name="GiaNhap" Type="Double" />
           <NavigationProperty Name="HoaDon" Relationship="Self.fk_chitiethoadon" FromRole="ChiTietHoaDon" ToRole="HoaDon" />
           <NavigationProperty Name="Giay" Relationship="Self.fk_giay" FromRole="ChiTietHoaDon" ToRole="Giay" />
         </EntityType>
@@ -302,6 +303,7 @@
           </Key>
           <Property Name="ID_HoaDon" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ID_KhuyenMai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Thanhvien" Type="Int32" />
           <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="NgayTao" Type="DateTime" Precision="3" />
           <Property Name="TongTien" Type="Double" />
@@ -532,7 +534,6 @@
                 <ScalarProperty Name="ID_KhuyenMai" ColumnName="ID_KhuyenMai" />
                 <ScalarProperty Name="TenCT" ColumnName="TenCT" />
                 <ScalarProperty Name="ChietKhau" ColumnName="ChietKhau" />
-                <ScalarProperty Name="HangGiay" ColumnName="HangGiay" />
                 <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
                 <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
                 <ScalarProperty Name="MoTa" ColumnName="MoTa" />
@@ -545,7 +546,8 @@
                 <ScalarProperty Name="ID_HoaDon" ColumnName="ID_HoaDon" />
                 <ScalarProperty Name="ID_Giay" ColumnName="ID_Giay" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="GiaBan" ColumnName="GiaBan" />
+                <ScalarProperty Name="GiaNhap" ColumnName="GiaNhap" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -567,6 +569,7 @@
               <MappingFragment StoreEntitySet="HoaDon">
                 <ScalarProperty Name="ID_HoaDon" ColumnName="ID_HoaDon" />
                 <ScalarProperty Name="ID_KhuyenMai" ColumnName="ID_KhuyenMai" />
+                <ScalarProperty Name="Thanhvien" ColumnName="Thanhvien" />
                 <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
                 <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
                 <ScalarProperty Name="TongTien" ColumnName="TongTien" />
