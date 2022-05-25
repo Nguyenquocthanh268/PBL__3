@@ -43,9 +43,9 @@ namespace quanlybangiay.BLL.BLL_NV
         {
             List<String> list = new List<String>();
             List<CTKM> ctkms = new List<CTKM>();
-            var l = db.CTKMs.Where(p => p.NgayBatDau < timeNow && p.NgayKetThuc > timeNow)
-                    .Select(p => p);
-            ctkms = l.ToList();
+            ctkms = db.CTKMs.Where(p => p.NgayBatDau < timeNow && p.NgayKetThuc > timeNow)
+                    .Select(p => p).ToList();
+            
             foreach (CTKM i in ctkms)
             {
                 list.Add(i.TenCT.ToString());
@@ -95,6 +95,10 @@ namespace quanlybangiay.BLL.BLL_NV
         public void DelSP(string MaSP)
         {
             DataSP.Instance.DelRow(MaSP);
+        }
+        public void DelAllData()
+        {
+            DataSP.Instance.ResetData();
         }
         public double TongTien()
         {
