@@ -177,6 +177,53 @@ namespace quanlybangiay.BLL.BLL_AD
                 return Image.FromStream(ms);
             }
         }
+        public string tachchuoi(string s)
+        {
+            string h = "";
+            char[] a = s.ToArray();
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] >= 48 && a[i] <= 57)
+                {
+                    h += a[i];
+                }
+            }
+            return h;
+        }
+        public string IDNV()
+        {
+            
+            string so = "";
+            string id = "0";
+            List<string> list = new List<string>();
+            foreach (TaiKhoan i in db.TaiKhoans)
+            {
 
+
+                list.Add(tachchuoi(i.Username));
+
+            }
+            foreach (string s in list)
+            {
+                if (Convert.ToInt32(s) > Convert.ToInt32(id))
+                {
+                    id = s;
+                }
+            }
+            if (Convert.ToInt32(id) <= 8)
+            {
+                return Convert.ToString("NV00" + Convert.ToString(Convert.ToInt32(id) + 1));
+            }
+            else if (Convert.ToInt32(id) >= 9 && Convert.ToInt32(id) <= 98)
+            {
+                return Convert.ToString("NV0" + Convert.ToString(Convert.ToInt32(id) + 1));
+            }
+            
+            else
+            {
+                return Convert.ToString("NV" + Convert.ToString(Convert.ToInt32(id) + 1));
+            }
+
+        }
     }
 }
