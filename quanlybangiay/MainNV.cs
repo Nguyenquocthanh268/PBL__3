@@ -557,5 +557,6 @@ namespace quanlybangiay
         {
             lb_check.Text = "";
         }
+        ///okla
     }
 }
