@@ -18,7 +18,6 @@ namespace quanlybangiay
     {  
         private string USer { get; set; }
         private string ID { get; set; }
-        public int ChietKhau = 0;
         //private DataTable d1 { get; set; }
         public MainNV(string user ,string id)
         {
@@ -48,7 +47,7 @@ namespace quanlybangiay
             GUI_HD(USer);
 
         }
-
+        
         //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //Form Quan Ly Tai Khoan 
         public void GUI()
@@ -68,6 +67,8 @@ namespace quanlybangiay
             txt_daichi.Text = BLL_NV.Instance.GetNVByID(ID).DiaChi.ToString();
             ngaysinh.Value = Convert.ToDateTime(BLL_NV.Instance.GetNVByID(ID).NgaySinh.ToString());
         }
+
+
         private void btn_luu_Click(object sender, EventArgs e)
         {
             string mkc = txt_mkc.Text;
@@ -94,7 +95,7 @@ namespace quanlybangiay
         {
             this.Hide();
             Login a = new Login();
-
+       
             a.Show();
         }
 
@@ -123,6 +124,7 @@ namespace quanlybangiay
                 cb_tenKHO.Items.Add(i);
             }
         }
+
         private void btn_timkiemKHO_Click(object sender, EventArgs e)
         {
             int indexTen = cb_tenKHO.SelectedIndex;
@@ -209,6 +211,7 @@ namespace quanlybangiay
             tb_ten.ForeColor = Color.Gold;
             tb_ten.Font= new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         }
+
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(tabControl1.SelectedIndex == 2)
@@ -229,12 +232,9 @@ namespace quanlybangiay
                 ResetAllDataBanHang();
             }
         }
-
-
         //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
+        
+        
         //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //Form Chi tiet hoa don
         public void GUI_HD(string Username)
@@ -260,8 +260,7 @@ namespace quanlybangiay
         //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
-        //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------
         //Form Dang Ky Khach Hang
 
         private void butLuu_DangKyKhachHang_Click(object sender, EventArgs e)
@@ -299,12 +298,12 @@ namespace quanlybangiay
             lbCheckSdt.Text = "";
         }
 
-        //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------
 
 
-        //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------
         //Form Ban Hang
-
+        
         //******************************************************************************************************
         //Thong tin khach hang
         private void but_CheckKH_Click(object sender, EventArgs e)
@@ -342,13 +341,13 @@ namespace quanlybangiay
         public int GiamGiaTheoDiemTichLuy(int DTL)
         {
             DataPBL3 db = new DataPBL3();
-            if (DTL <= 0) return 0;
-            else if (DTL < 100 && DTL > 0) return 2;
+            if (DTL < 100 && DTL > 0) return 2;
             else if (DTL >= 100 && DTL < 200) return 5;
             else if (DTL >= 200 && DTL < 500) return 10;
             else return 20;
 
         }
+
         private void txtSdt_TextChanged(object sender, EventArgs e)
         {
             lbKTthongTin_BanHang.Text = "";
@@ -357,12 +356,12 @@ namespace quanlybangiay
 
 
         //******************************************************************************************************
-        //Thong tin CTKM
-        //public void setCBBCTKM()
-        //{
-        //    cbbCTKM_BanHang.Items.AddRange(BLL_CTKM.Instance.GetListNameCTKM().ToArray());
-        //}
 
+        //Thong tin CTKM
+//         public void setCBBCTKM()
+//         {
+//             cbbCTKM_BanHang.Items.AddRange(BLL_CTKM.Instance.GetListNameCTKM().ToArray());
+//         }
         private void CBBKhuyenMai()
         {
             DateTime d = DateTime.Now;
@@ -371,6 +370,7 @@ namespace quanlybangiay
                 cbbCTKM_BanHang.Items.Add(i);
             }
         }
+        
         private void cbbCTKM_BanHang_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbCTKM_BanHang.SelectedItem != null)
@@ -389,11 +389,12 @@ namespace quanlybangiay
                 ResetData();
             }
         }
+        
         //******************************************************************************************************
         //Thong tin giay
         private void butCheckIDGiay_Click(object sender, EventArgs e)
         {
-            ResetDataSP();
+            
             if (BLL_KhoGiay.Instance.check(txtIDGiay_BanHang.Text))
             {
                 int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
@@ -477,11 +478,11 @@ namespace quanlybangiay
             rdConHang.Checked = false;
             rdHetHang.Checked = false;
         }
+
         //******************************************************************************************************
 
         //******************************************************************************************************
         //Danh sach SP
-
         private void butdel_Click(object sender, EventArgs e)
         {
             if (dtGV_Trangchu.SelectedRows.Count > 0)
@@ -505,23 +506,18 @@ namespace quanlybangiay
                 MessageBox.Show("Vui lòng chọn dòng cần xóa !!!");
             }
         }
-
+        
         //******************************************************************************************************
         //Thanh toan 
-
         private void tb_Tienkhachdua_TextChanged(object sender, EventArgs e)
         {
-            if(tb_Tienkhachdua.Text != "")
-            {
-                tb_Tientralai.Text = (Convert.ToDouble(tb_Tienkhachdua.Text) - Convert.ToDouble(tb_Thanhtien.Text)).ToString();
-            }
+            tb_Tientralai.Text = (Convert.ToDouble(tb_Tienkhachdua.Text) - Convert.ToDouble(tb_Thanhtien.Text)).ToString();
         }
         //Xuli diem tich luy : 100.000d ~ 1d ; DTL < 100d : giam 2% ;100d <= DTL < 200d :giam 5%; 200d <= DTL < 500d : giam 10%; DTL >= 500 : giam 20%
         private void butSAVE_Click(object sender, EventArgs e)
         {
-            if (tb_Tienkhachdua.Text != "")
-            {
-
+           if (tb_Tienkhachdua.Text != "")
+           {
                 if (Convert.ToDouble(tb_Tientralai.Text) > 0)
                 {
                     String s = "Bạn có xác nhận lưu hóa đơn và in chưa ??";
@@ -589,9 +585,7 @@ namespace quanlybangiay
                 MessageBox.Show("Vui lòng nhập số tiền khách đưa ...");
             }
 
-
         }
-
         public void ResetAllDataBanHang()
         {
             txtSdt_BanHang.Text = "";
@@ -612,10 +606,12 @@ namespace quanlybangiay
             BLL_BanHang.Instance.DelAllData();
         }
 
+
+
         private void txt_mkm_TextChanged(object sender, EventArgs e)
         {
-            lb_check.Text = "hello";
+            lb_check.Text = "";
         }
-        //abcxyz
+
     }
 }
