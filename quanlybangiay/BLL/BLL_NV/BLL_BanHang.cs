@@ -96,6 +96,10 @@ namespace quanlybangiay.BLL.BLL_NV
         {
             DataSP.Instance.DelRow(MaSP);
         }
+        public int GetSLSP(string MaSP)
+        {
+            return DataSP.Instance.GetSLSPRow(MaSP);
+        }
         public void DelAllData()
         {
             DataSP.Instance.ResetData();
