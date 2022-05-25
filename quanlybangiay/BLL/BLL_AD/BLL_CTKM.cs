@@ -168,5 +168,56 @@ namespace quanlybangiay.BLL.BLL_AD
             KhachHang a = db.KhachHangs.Find(SDT);
             return a;
         }
+        public string tachchuoi(string s)
+        {
+            string h = "";
+            char[] a = s.ToArray();
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] >= 48 && a[i] <= 57)
+                {
+                    h += a[i];
+                }
+            }
+            return h;
+        }
+        public string IDKM()
+        {
+            DataPBL3 db = new DataPBL3();
+            string so = "";
+            string id = "0";
+            List<string> list = new List<string>();
+            foreach (CTKM i in db.CTKMs)
+            {
+
+
+                list.Add(tachchuoi(i.ID_KhuyenMai));
+
+            }
+            foreach (string s in list)
+            {
+                if (Convert.ToInt32(s) > Convert.ToInt32(id))
+                {
+                    id = s;
+                }
+            }
+            if (Convert.ToInt32(id) <= 8)
+            {
+                return Convert.ToString("KM000" + Convert.ToString(Convert.ToInt32(id) + 1));
+            }
+            else if (Convert.ToInt32(id) >= 9 && Convert.ToInt32(id) <= 98)
+            {
+                return Convert.ToString("KM00" + Convert.ToString(Convert.ToInt32(id) + 1));
+            }
+            else if (Convert.ToInt32(id) >= 99 && Convert.ToInt32(id) <= 998)
+            {
+                return Convert.ToString("KM0" + Convert.ToString(Convert.ToInt32(id) + 1));
+            }
+            else
+            {
+                return Convert.ToString("KM" + Convert.ToString(Convert.ToInt32(id) + 1));
+            }
+
+        }
     }
 }

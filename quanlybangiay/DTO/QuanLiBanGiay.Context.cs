@@ -25,8 +25,8 @@ namespace quanlybangiay.DTO
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CTKM> CTKMs { get; set; }
         public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public virtual DbSet<CTKM> CTKMs { get; set; }
         public virtual DbSet<Giay> Giays { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }

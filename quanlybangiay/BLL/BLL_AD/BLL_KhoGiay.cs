@@ -96,6 +96,17 @@ namespace quanlybangiay.BLL.BLL_AD
             }
             db.SaveChanges();
         }
+        public void UpdateKho(string ID, int sl)
+        {
+            Kho kho = db.Khoes.Find(ID);
+            kho.SoLuongBan += sl;
+            kho.SoLuongCon -= sl;
+            db.SaveChanges();
+        }
+        public string ID_giay(string ten , string size)
+        {
+            return ten + size;
+        }
         public void NhapKho(Giay g, Kho k, NhapKho n)
         {
 

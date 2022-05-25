@@ -1783,6 +1783,7 @@ namespace quanlybangiay
             this.txt_mkm.Size = new System.Drawing.Size(153, 26);
             this.txt_mkm.TabIndex = 23;
             this.txt_mkm.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_mkm_MouseClick);
+            this.txt_mkm.TextChanged += new System.EventHandler(this.txt_mkm_TextChanged);
             // 
             // txt_mkc
             // 

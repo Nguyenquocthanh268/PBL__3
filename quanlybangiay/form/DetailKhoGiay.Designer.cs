@@ -247,6 +247,7 @@ namespace quanlybangiay.form
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(145, 26);
             this.txtName.TabIndex = 59;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label2
             // 
@@ -266,6 +267,7 @@ namespace quanlybangiay.form
             this.txtHang.Name = "txtHang";
             this.txtHang.Size = new System.Drawing.Size(145, 26);
             this.txtHang.TabIndex = 57;
+            this.txtHang.Leave += new System.EventHandler(this.txtHang_Leave);
             // 
             // label1
             // 
@@ -280,6 +282,7 @@ namespace quanlybangiay.form
             // 
             // txtIDGiay
             // 
+            this.txtIDGiay.Enabled = false;
             this.txtIDGiay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDGiay.Location = new System.Drawing.Point(412, 111);
             this.txtIDGiay.Name = "txtIDGiay";
@@ -315,6 +318,7 @@ namespace quanlybangiay.form
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(145, 26);
             this.txtSize.TabIndex = 61;
+            this.txtSize.TextChanged += new System.EventHandler(this.txtSize_TextChanged);
             // 
             // label5
             // 

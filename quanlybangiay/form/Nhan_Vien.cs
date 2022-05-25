@@ -89,8 +89,17 @@ namespace quanlybangiay.form
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            string txt = cbbSort.SelectedItem.ToString();
-            dtgNV.DataSource = BLL_NV.Instance.Sort(txt);
+            int index = cbbSort.SelectedIndex;
+            if(index >= 0)
+            {
+                string txt = cbbSort.SelectedItem.ToString();
+                dtgNV.DataSource = BLL_NV.Instance.Sort(txt);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn Item ...");
+            }
+        
         }
     }
 }
