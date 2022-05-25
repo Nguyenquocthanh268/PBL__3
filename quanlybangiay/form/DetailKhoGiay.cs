@@ -49,12 +49,14 @@ namespace quanlybangiay.form
                 if (index == 1)
                 {
                     pictureBox7.Enabled = false;
-                    txtName.Enabled = false;
+                
                     txtHang.Enabled = false;
-                    txtSize.Enabled = false;
+                   
                     txtGiaBan.Enabled = false;
                     btnOK.Enabled = false;
                 }
+                txtName.Enabled = false;
+                txtSize.Enabled = false;
                 txtGiaNhap.Enabled = false;
                 txtSLTon.Enabled = false;
                 txtSLNhap.Enabled = false;
@@ -129,6 +131,36 @@ namespace quanlybangiay.form
                 return null;
             }
         }
-      
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSize.Text != "" && index ==2)
+            {
+                txtSize.Enabled = true;
+                txtName.Enabled = true;
+                txtIDGiay.Text=BLL_KhoGiay.Instance.ID_giay(txtName.Text,txtSize.Text);
+            }
+        }
+
+        private void txtSize_TextChanged(object sender, EventArgs e)
+        {
+            if (txtName.Text != "" && index == 2)
+            {
+                txtSize.Enabled = true;
+                txtName.Enabled = true;
+                txtIDGiay.Text = BLL_KhoGiay.Instance.ID_giay(txtName.Text, txtSize.Text);
+            }
+        }
+
+        private void txtHang_Leave(object sender, EventArgs e)
+        {
+            if(index == 2)
+            {
+                if (BLL_KhoGiay.Instance.check(txtIDGiay.Text))
+                {
+                    MessageBox.Show("ID đã tồn tại ....");
+                }
+            }
+        }
     }
 }

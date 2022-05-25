@@ -76,22 +76,22 @@ namespace quanlybangiay.form
             // 
             this.panel4.Controls.Add(this.dtgDetailHD);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 194);
+            this.panel4.Location = new System.Drawing.Point(0, 209);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(984, 367);
+            this.panel4.Size = new System.Drawing.Size(984, 352);
             this.panel4.TabIndex = 4;
             // 
             // dtgDetailHD
             // 
-            this.dtgDetailHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dtgDetailHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgDetailHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDetailHD.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgDetailHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDetailHD.Location = new System.Drawing.Point(12, 13);
+            this.dtgDetailHD.Location = new System.Drawing.Point(12, 27);
             this.dtgDetailHD.Name = "dtgDetailHD";
-            this.dtgDetailHD.Size = new System.Drawing.Size(960, 340);
+            this.dtgDetailHD.Size = new System.Drawing.Size(960, 311);
             this.dtgDetailHD.TabIndex = 3;
             // 
             // panel2
@@ -111,7 +111,7 @@ namespace quanlybangiay.form
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(984, 194);
+            this.panel2.Size = new System.Drawing.Size(984, 209);
             this.panel2.TabIndex = 3;
             // 
             // txtTong
@@ -155,7 +155,7 @@ namespace quanlybangiay.form
             // txtTen_NV
             // 
             this.txtTen_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen_NV.Location = new System.Drawing.Point(397, 140);
+            this.txtTen_NV.Location = new System.Drawing.Point(397, 129);
             this.txtTen_NV.Name = "txtTen_NV";
             this.txtTen_NV.Size = new System.Drawing.Size(168, 26);
             this.txtTen_NV.TabIndex = 81;
@@ -165,7 +165,7 @@ namespace quanlybangiay.form
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(393, 117);
+            this.label7.Location = new System.Drawing.Point(393, 106);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 20);
             this.label7.TabIndex = 80;
