@@ -84,6 +84,7 @@ namespace quanlybangiay.form
                 ID_NhanVien = txtID.Text
             };
             BLL_NV.Instance.Execute(nv, tk);
+            MessageBox.Show("Đã thêm thông tin nhân viên mới !!!");
             d();
             if (txtID.Enabled == false)
             {
