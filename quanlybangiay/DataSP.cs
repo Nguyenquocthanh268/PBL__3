@@ -84,5 +84,9 @@ namespace quanlybangiay
             }
             return sum;
         }
+        public void ResetData()
+        {
+            d1.Clear();
+        }
     }
 }
