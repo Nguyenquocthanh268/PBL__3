@@ -117,9 +117,6 @@ namespace quanlybangiay.BLL.BLL_AD
             kho.SoLuongCon = kho.SoLuongCon + k.SoLuongCon;
             db.NhapKhoes.Add(n);
 
-
-
-
             db.SaveChanges();
         }
         public void Delete(string ID)

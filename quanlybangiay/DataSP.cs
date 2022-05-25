@@ -74,6 +74,18 @@ namespace quanlybangiay
                 }
             }
         }
+        public int GetSLSPRow(String MaSP)
+        {
+            foreach (DataRow i in d1.Rows)
+            {
+                if (i["Mã giày"].ToString() == MaSP)
+                {
+                    return Convert.ToInt32(i["SL"]);
+                    break;
+                }
+            }
+            return 0;
+        }
         public double TongTienThanhToan()
         {
             double sum = 0;
