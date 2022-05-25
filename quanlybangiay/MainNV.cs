@@ -501,5 +501,12 @@ namespace quanlybangiay
             txtChietKhauCTKM_BanHang.Text = BLL_BanHang.Instance.GetChietkhauByName(name).ToString();
         }
 
+
+        private void txt_mkm_TextChanged(object sender, EventArgs e)
+        {
+            lb_check.Text = "";
+        }
+        ///okla
+
     }
 }
