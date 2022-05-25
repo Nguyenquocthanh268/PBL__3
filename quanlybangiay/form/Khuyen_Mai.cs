@@ -25,7 +25,7 @@ namespace quanlybangiay.form
         private void btnSearch_Click(object sender, EventArgs e)
         {
             int index = cbItem.SelectedIndex;
-            if (index >=0)
+            if (index >= 0)
 
             {
                 Show(index, txt_search.Text);
@@ -34,9 +34,9 @@ namespace quanlybangiay.form
             {
                 MessageBox.Show("Vui lòng chọn Item");
             }
-            
+
         }
-        public void Show(int id,string txt )
+        public void Show(int id, string txt)
         {
             dataGridView1.DataSource = BLL_CTKM.Instance.search(id, txt);
         }
@@ -44,11 +44,11 @@ namespace quanlybangiay.form
         {
             txt_ID.Text = (BLL_CTKM.Instance.GetCTKM(ID)).ID_KhuyenMai.ToString();
             txt_tenchuongtrinh.Text = (BLL_CTKM.Instance.GetCTKM(ID)).TenCT.ToString();
-            txt_chietkhau.Text=(BLL_CTKM.Instance.GetCTKM(ID)).ChietKhau.ToString();
-            dt_ngaybatdau.Value=Convert.ToDateTime((BLL_CTKM.Instance.GetCTKM(ID)).NgayBatDau.ToString());
-            dt_ngaykt.Value=Convert.ToDateTime((BLL_CTKM.Instance.GetCTKM(ID)).NgayKetThuc.ToString());
+            txt_chietkhau.Text = (BLL_CTKM.Instance.GetCTKM(ID)).ChietKhau.ToString();
+            dt_ngaybatdau.Value = Convert.ToDateTime((BLL_CTKM.Instance.GetCTKM(ID)).NgayBatDau.ToString());
+            dt_ngaykt.Value = Convert.ToDateTime((BLL_CTKM.Instance.GetCTKM(ID)).NgayKetThuc.ToString());
             richTextBox1.Text = (BLL_CTKM.Instance.GetCTKM(ID)).MoTa.ToString();
-           
+
 
         }
 
@@ -100,22 +100,22 @@ namespace quanlybangiay.form
         }
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            if(txt_ID.Text !="" && txt_chietkhau.Text !="" && txt_tenchuongtrinh.Text !=""  && richTextBox1.Text != "")
+            if (txt_ID.Text != "" && txt_chietkhau.Text != "" && txt_tenchuongtrinh.Text != "" && richTextBox1.Text != "")
             {
-                if(getCTKM() != null)
+                if (getCTKM() != null)
                 {
                     BLL_CTKM.Instance.ExcuteDB(getCTKM());
                     Show(0, "");
                     Khoa();
                 }
-                
+
             }
             else
             {
                 MessageBox.Show("Điền thông tin đầy đủ");
             }
-            
-            
+
+
         }
         public void Reset()
         {
@@ -124,7 +124,7 @@ namespace quanlybangiay.form
             txt_chietkhau.Text = "";
             dt_ngaybatdau.Value = DateTime.Now;
             dt_ngaykt.Value = DateTime.Now;
-            richTextBox1.Text = ""; 
+            richTextBox1.Text = "";
         }
         public void MK()
         {
@@ -153,8 +153,13 @@ namespace quanlybangiay.form
 
         private void butAdd_Click(object sender, EventArgs e)
         {
-            txt_ID.Enabled = true;
+            txt_ID.Enabled = false;
             Reset();
+            if (txt_ID.Text == "")
+            {
+                txt_ID.Text = BLL_CTKM.Instance.IDKM();
+            }
+
             btn_ok.Enabled = true;
             MK();
         }
@@ -176,7 +181,7 @@ namespace quanlybangiay.form
 
 
                 }
-                Show(0,"");
+                Show(0, "");
             }
             else
             {
@@ -186,8 +191,8 @@ namespace quanlybangiay.form
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            int index =cbb_sort.SelectedIndex;
-            if(index >= 0)
+            int index = cbb_sort.SelectedIndex;
+            if (index >= 0)
             {
                 dataGridView1.DataSource = BLL_CTKM.Instance.sort(index);
             }
@@ -195,7 +200,7 @@ namespace quanlybangiay.form
             {
                 MessageBox.Show("Vui long chon Item");
             }
-           
+
         }
     }
 }

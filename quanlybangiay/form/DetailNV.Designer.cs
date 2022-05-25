@@ -231,6 +231,7 @@ namespace quanlybangiay.form
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(204, 26);
             this.txtID.TabIndex = 163;
+            this.txtID.Leave += new System.EventHandler(this.txtID_Leave);
             // 
             // btnCancel
             // 
@@ -378,7 +379,6 @@ namespace quanlybangiay.form
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(145, 26);
             this.txtMK.TabIndex = 104;
-            this.txtMK.Text = "******";
             this.txtMK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1

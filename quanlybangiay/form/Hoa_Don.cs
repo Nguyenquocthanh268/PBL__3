@@ -36,7 +36,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn nhân viên muốn chỉnh sửa!");
+                MessageBox.Show("Vui lòng chọn hóa đơn chỉnh sửa!");
                 ShowDtg();
             }
         }
@@ -70,7 +70,15 @@ namespace quanlybangiay.form
         private void btnSort_Click(object sender, EventArgs e)
         {
             int index = cbbSort.SelectedIndex;
-            dtgHD.DataSource = BLL_HD.Instance.Sort(index);
+            if(index >= 0)
+            {
+                dtgHD.DataSource = BLL_HD.Instance.Sort(index);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn Item ...");
+            }
+            
         }
     }
 }

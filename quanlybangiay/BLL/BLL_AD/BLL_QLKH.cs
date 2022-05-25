@@ -25,17 +25,22 @@ namespace quanlybangiay.BLL.BLL_AD
         {
 
         }
-        public List<KhachHang> GetKH(int A, string txt = "")
+        public dynamic GetKH(int A, string txt = "")
         {
             DataPBL3 db = new DataPBL3();
             if(A == 0)
             {
-                var l1 = db.KhachHangs.Where(p => p.SoDienThoai.Contains(txt)).Select(p => p);
+                var l1 = db.KhachHangs.Select(p =>new {p.TenKhachHang,p.SoDienThoai,p.NgayDangKy,p.DiemTichLuy} );
                 return l1.ToList();
             }
             else if(A == 1)
             {
-                var l1 = db.KhachHangs.Where(p => p.TenKhachHang.Contains(txt)).Select(p => p);
+                var l1 = db.KhachHangs.Where(p => p.SoDienThoai.Contains(txt)).Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy });
+                return l1.ToList();
+            }
+            else if (A == 2)
+            {
+                var l1 = db.KhachHangs.Where(p => p.TenKhachHang.Contains(txt)).Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy });
                 return l1.ToList();
             }
             else
@@ -64,21 +69,22 @@ namespace quanlybangiay.BLL.BLL_AD
             db.KhachHangs.Remove(s);
             db.SaveChanges();
         }
-        public List<KhachHang> sortKH(int indexcbbView, string txtSearch, int indexcbbSort)
+        public dynamic sortKH(int indexcbbView, string txtSearch, int indexcbbSort)
         {
+            DataPBL3 db = new DataPBL3();
             if (indexcbbSort == 0)
             {
-                var l1 = GetKH(indexcbbView, txtSearch).OrderBy(p => p.SoDienThoai);
+                var l1 = db.KhachHangs.Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy }).OrderBy(p => p.SoDienThoai);
                 return l1.ToList();
             }
             else if (indexcbbSort == 1)
             {
-                var l1 = GetKH(indexcbbView, txtSearch).OrderBy(p => p.TenKhachHang);
+                var l1 = db.KhachHangs.Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy }).OrderBy(p => p.TenKhachHang);
                 return l1.ToList();
             }
             else if (indexcbbSort == 2)
             {
-                var l1 = GetKH(indexcbbView, txtSearch).OrderBy(p => p.DiemTichLuy);
+                var l1 = db.KhachHangs.Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy }).OrderBy(p => p.DiemTichLuy);
                 return l1.ToList();
             }
             else

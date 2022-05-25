@@ -78,7 +78,8 @@ namespace quanlybangiay.form
                 }
                
             }
-           
+            cbb_hang.SelectedIndex = -1;
+            cbb_size.SelectedIndex = -1;
            
         }
 
@@ -111,14 +112,14 @@ namespace quanlybangiay.form
             {
                 string ID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
 
-                DetailKhoGiay f = new DetailKhoGiay(ID, 2);
+                DetailKhoGiay f = new DetailKhoGiay(ID, 3);
                 f.d = new DetailKhoGiay.Mydel(show);
                 f.Show();
             }
             else
             {
                 MessageBox.Show("Vui lòng chọn giay chỉnh sửa!");
-                show();
+               
             }
         }
 
@@ -151,7 +152,7 @@ namespace quanlybangiay.form
             else
             {
                 MessageBox.Show("Vui lòng chọn giay de nhap!");
-                show();
+              
             }
         }
 

@@ -62,6 +62,9 @@ namespace quanlybangiay.form
             lb_check.ForeColor =Color.Red;
         }
 
-    
+        private void txt_mkm_TextChanged(object sender, EventArgs e)
+        {
+            lb_check.Text = "";
+        }
     }
 }

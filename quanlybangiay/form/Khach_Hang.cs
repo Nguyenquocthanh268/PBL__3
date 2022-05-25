@@ -37,6 +37,7 @@ namespace quanlybangiay.form
         }
         public void SetCBB()
         {
+            cbView.Items.Add("Chọn tất cả");
             cbView.Items.Add("Số ĐT");
             cbView.Items.Add("Tên");
             cbSort.Items.Add("Số ĐT");
@@ -94,6 +95,10 @@ namespace quanlybangiay.form
             if(cbSort.SelectedIndex >= 0)
             {
                 dataGridView1.DataSource = BLL_QLKH.Instance.sortKH(cbView.SelectedIndex, tbSearch.Text, cbSort.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn Item ...");
             }
         }
     }

@@ -31,7 +31,13 @@ namespace quanlybangiay.BLL.BLL_NV
 
         public dynamic Search(string ID, DateTime begin, DateTime end)
         {
-            return db.HoaDons.Where(p => p.ID_NhanVien == ID && p.NgayTao >= begin && p.NgayTao <= end).Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien }).ToList(); ;
+        
+           
+                return db.HoaDons.Where(p => p.ID_NhanVien == ID && p.NgayTao >= begin && p.NgayTao.Value <= end).Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien }).ToList();
+          
+            
+            
+           
         }
 
         public NhanVien GetNVByUsername(string Username)

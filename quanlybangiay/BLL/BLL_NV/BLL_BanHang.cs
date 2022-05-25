@@ -69,9 +69,9 @@ namespace quanlybangiay.BLL.BLL_NV
         public string GetID_KMByName(string name)
         {
             string ID = "";
-            foreach(CTKM i in db.CTKMs)
+            foreach (CTKM i in db.CTKMs)
             {
-                if(i.TenCT == name)
+                if (i.TenCT == name)
                 {
                     ID = i.ID_KhuyenMai.ToString();
                 }
@@ -149,7 +149,7 @@ namespace quanlybangiay.BLL.BLL_NV
         }
         public string IDhoadon()
         {
-            string ID = "HD";
+            
             string so = "";
             string idhoadon = "0";
             List<string> list = new List<string>();
@@ -167,17 +167,46 @@ namespace quanlybangiay.BLL.BLL_NV
                     idhoadon = s;
                 }
             }
-            return Convert.ToString(ID + Convert.ToString(Convert.ToInt32(idhoadon) + 1));
+            if(Convert.ToInt32(idhoadon) <=8)
+            {
+                return Convert.ToString("HD000" + Convert.ToString(Convert.ToInt32(idhoadon) + 1));
+            }
+            else if(Convert.ToInt32(idhoadon) >=9 && Convert.ToInt32(idhoadon) <=98)
+            {
+                return Convert.ToString("HD00" + Convert.ToString(Convert.ToInt32(idhoadon) + 1));
+            }
+            else if(Convert.ToInt32(idhoadon) >= 99 && Convert.ToInt32(idhoadon) <=998)
+            {
+                return Convert.ToString("HD0" + Convert.ToString(Convert.ToInt32(idhoadon) + 1));
+            }
+            else
+            {
+                return Convert.ToString("HD" + Convert.ToString(Convert.ToInt32(idhoadon) + 1));
+            }
+            
         }
 
-        public void UpdateKho(string ID, int sl)
+       
+
+        public bool checkSDT(string s)
         {
-            Kho kho = db.Khoes.Find(ID);
-            kho.SoLuongBan += sl;
-            kho.SoLuongCon -= sl;
-            db.SaveChanges();
+            int dem = 0;
+            char[] a = s.ToArray();
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] < 48 || a[i] > 57)
+                {
+                    dem++;
+                }
+            }
+            if (dem > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
-
-
     }
 }

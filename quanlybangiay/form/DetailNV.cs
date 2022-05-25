@@ -126,10 +126,19 @@ namespace quanlybangiay.form
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 fileName = dlg.FileName;
+                pictureBox1.Image = Image.FromFile(fileName.ToString());
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-            pictureBox1.Image = Image.FromFile(fileName.ToString());
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            
 
+        }
+
+        private void txtID_Leave(object sender, EventArgs e)
+        {
+            if (BLL_NV.Instance.Check(txtID.Text))
+            {
+                MessageBox.Show("ID nhân viên đã tồn tại ...");
+            }
         }
     }
 }
