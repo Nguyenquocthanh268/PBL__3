@@ -53,7 +53,7 @@ namespace quanlybangiay.form
             if (dtgNV.SelectedRows.Count == 1)
             {
                 string ID = dtgNV.SelectedRows[0].Cells["ID_NhanVien"].Value.ToString();
-                DetailNV f = new DetailNV(ID, 2);
+                DetailNV f = new DetailNV(ID, 3);
                 f.d = new DetailNV.Mydel(ShowDtg);
                 f.Show();
             } else
@@ -100,7 +100,7 @@ namespace quanlybangiay.form
             if(index >= 0)
             {
                 string txt = cbbSort.SelectedItem.ToString();
-                dtgNV.DataSource = BLL_NV.Instance.Sort(txt);
+                dtgNV.DataSource = BLL_NV.Instance.Sort(txt,index);
             }
             else
             {

@@ -58,6 +58,8 @@ namespace quanlybangiay.form
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lb_notify = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -302,6 +304,8 @@ namespace quanlybangiay.form
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.panel4.Controls.Add(this.lb_notify);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.btnReset);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.txtTK);
@@ -322,7 +326,7 @@ namespace quanlybangiay.form
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btnReset.Location = new System.Drawing.Point(98, 159);
+            this.btnReset.Location = new System.Drawing.Point(105, 156);
             this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(140, 33);
@@ -336,7 +340,7 @@ namespace quanlybangiay.form
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Info;
-            this.label12.Location = new System.Drawing.Point(48, 21);
+            this.label12.Location = new System.Drawing.Point(48, 9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(231, 24);
             this.label12.TabIndex = 109;
@@ -345,7 +349,7 @@ namespace quanlybangiay.form
             // txtTK
             // 
             this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTK.Location = new System.Drawing.Point(168, 68);
+            this.txtTK.Location = new System.Drawing.Point(168, 53);
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(145, 26);
             this.txtTK.TabIndex = 101;
@@ -355,7 +359,7 @@ namespace quanlybangiay.form
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.Info;
-            this.label13.Location = new System.Drawing.Point(22, 71);
+            this.label13.Location = new System.Drawing.Point(22, 56);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(98, 20);
             this.label13.TabIndex = 96;
@@ -380,6 +384,7 @@ namespace quanlybangiay.form
             this.txtMK.Size = new System.Drawing.Size(145, 26);
             this.txtMK.TabIndex = 104;
             this.txtMK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMK.Click += new System.EventHandler(this.txtMK_Click);
             // 
             // pictureBox1
             // 
@@ -405,6 +410,28 @@ namespace quanlybangiay.form
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(168, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 170;
+            // 
+            // lb_notify
+            // 
+            this.lb_notify.AutoSize = true;
+            this.lb_notify.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_notify.ForeColor = System.Drawing.Color.Red;
+            this.lb_notify.Location = new System.Drawing.Point(168, 86);
+            this.lb_notify.Name = "lb_notify";
+            this.lb_notify.Size = new System.Drawing.Size(150, 13);
+            this.lb_notify.TabIndex = 171;
+            this.lb_notify.Text = "*Tên tài khoản đã tồn tại";
+            this.lb_notify.Visible = false;
             // 
             // DetailNV
             // 
@@ -459,5 +486,7 @@ namespace quanlybangiay.form
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label lb_notify;
+        private System.Windows.Forms.Label label1;
     }
 }

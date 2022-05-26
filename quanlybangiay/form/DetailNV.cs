@@ -44,7 +44,11 @@ namespace quanlybangiay.form
                     btnOK.Enabled = false;
                     btnCancel.Enabled = false;
                     btnReset.Enabled = false;
-
+                    lb_notify.Enabled = false;
+                }
+                if(index == 3)
+                { 
+                    txtMK.Enabled = false;
                 }
                 txtID.Text = BLL_NV.Instance.GetNVByID(ID).ID_NhanVien.ToString();
                 txtTen.Text = BLL_NV.Instance.GetNVByID(ID).TenNhanVien.ToString();
@@ -84,18 +88,28 @@ namespace quanlybangiay.form
                 ChucVu = false,
                 ID_NhanVien = txtID.Text
             };
-            BLL_NV.Instance.Execute(nv, tk);
-            MessageBox.Show("Đã thêm thông tin nhân viên mới !!!");
-            d();
-            if (txtID.Enabled == false)
+               if(txtID.Text == "" || txtSDT.Text == "" || txtTen.Text == "" || txtDiaChi.Text == ""
+                  || txtMK.Text == "" || txtTK.Text == "" || lb_notify.Visible == true )
             {
-                GUI(index);
-                MessageBox.Show("Thay đổi thành công!");
-            }
-            else
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+            } else
             {
-                this.Close();
+                BLL_NV.Instance.Execute(nv, tk);            
+                d();
+                if (txtID.Enabled == false)
+                {
+                    GUI(index);
+                    MessageBox.Show("Thay đổi thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Đã thêm thông tin nhân viên mới !!!");
+                    this.Close();
+                }
             }
+
+
+            
 
         }
 
@@ -141,5 +155,17 @@ namespace quanlybangiay.form
                 MessageBox.Show("ID nhân viên đã tồn tại ...");
             }
         }
+
+        private void txtMK_Click(object sender, EventArgs e)
+        {
+            if (BLL_NV.Instance.CheckUsername(txtTK.Text) == false)
+            {
+                lb_notify.Visible = true;
+            } else
+            {
+                lb_notify.Visible = false;
+            }
+        }
+
     }
 }
