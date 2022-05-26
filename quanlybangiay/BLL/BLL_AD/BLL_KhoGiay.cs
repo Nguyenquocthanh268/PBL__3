@@ -244,6 +244,10 @@ namespace quanlybangiay.BLL.BLL_AD
         {
             return (db.Giays.Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
         }
+        public Kho GetGiay_INKho(string ID)
+        {
+            return db.Khoes.Find(ID);
+        }
 
     }
 }

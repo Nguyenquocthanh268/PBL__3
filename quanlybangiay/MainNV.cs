@@ -415,7 +415,7 @@ namespace quanlybangiay
             ResetDataSP();
             if (BLL_KhoGiay.Instance.check(txtIDGiay_BanHang.Text))
             {
-                int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
+                int Soluong = Convert.ToInt32(BLL_KhoGiay.Instance.GetGiay_INKho(txtIDGiay_BanHang.Text).SoLuongCon);
                 //but_AddGiay.Enabled = true;
                 Giay a = BLL_KhoGiay.Instance.GetGiayByID(txtIDGiay_BanHang.Text);
                 txtNameSP_BanHang.Text = a.TenGiay;
