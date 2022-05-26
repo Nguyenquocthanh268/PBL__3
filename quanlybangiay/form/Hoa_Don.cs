@@ -54,17 +54,26 @@ namespace quanlybangiay.form
         {
             if (dtgHD.SelectedRows.Count > 0)
             {
-                foreach (DataGridViewRow i in dtgHD.SelectedRows)
+                String s = "Bạn có muốn xóa hóa đơn ??";
+                String s1 = "Delete";
+                MessageBoxButtons ok = MessageBoxButtons.OKCancel;
+                DialogResult d = MessageBox.Show(s, s1, ok);
+                if (d == DialogResult.OK)
                 {
-                    string ID = i.Cells["ID_HoaDon"].Value.ToString();
-                    BLL_HD.Instance.Delete(ID);
+                    foreach (DataGridViewRow i in dtgHD.SelectedRows)
+                    {
+                        string ID = i.Cells["ID_HoaDon"].Value.ToString();
+                        BLL_HD.Instance.Delete(ID);
+                    }
+                    ShowDtg();
                 }
+
             }
             else
             {
                 MessageBox.Show("Vui lòng chọn hoá đơn muốn xoá!");
             }
-            ShowDtg();
+            
         }
 
         private void btnSort_Click(object sender, EventArgs e)

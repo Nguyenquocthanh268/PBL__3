@@ -169,17 +169,24 @@ namespace quanlybangiay.form
 
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                List<string> list = new List<string>();
-                foreach (DataGridViewRow i in dataGridView1.SelectedRows)
+                String s = "Bạn có muốn xóa CTKM ??";
+                String s1 = "Delete";
+                MessageBoxButtons ok = MessageBoxButtons.OKCancel;
+                DialogResult d = MessageBox.Show(s, s1, ok);
+                if (d == DialogResult.OK)
                 {
-                    list.Add(i.Cells["ID_KhuyenMai"].Value.ToString());
+                    List<string> list = new List<string>();
+                    foreach (DataGridViewRow i in dataGridView1.SelectedRows)
+                    {
+                        list.Add(i.Cells["ID_KhuyenMai"].Value.ToString());
 
-                }
-                foreach (string s in list)
-                {
-                    BLL_CTKM.Instance.Del(s);
+                    }
+                    foreach (string k in list)
+                    {
+                        BLL_CTKM.Instance.Del(k);
 
 
+                    }
                 }
                 Show(0, "");
             }

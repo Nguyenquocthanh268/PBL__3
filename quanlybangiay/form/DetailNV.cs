@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using quanlybangiay.BLL.BLL_AD;
+using quanlybangiay.BLL;
 using quanlybangiay.DTO;
 
 namespace quanlybangiay.form
@@ -60,8 +61,8 @@ namespace quanlybangiay.form
                 else radNu.Checked = true;
                 pictureBox1.Image = BLL_NV.Instance.BytetoPicter(BLL_NV.Instance.GetNVByID(ID).AnhNV);
                 dateTimePicker1.Value = Convert.ToDateTime(BLL_NV.Instance.GetNVByID(ID).NgaySinh.ToString());
-                txtTK.Text = BLL_NV.Instance.GetTKByIDNV(ID).Username.ToString();
-                txtMK.Text = BLL_NV.Instance.GetTKByIDNV(ID).Pass.ToString();
+                txtTK.Text = BLL_Login.Instance.GetTKByID(ID).Username.ToString();
+                txtMK.Text = BLL_Login.Instance.GetTKByID(ID).Pass.ToString();
 
             }
         }
@@ -126,7 +127,7 @@ namespace quanlybangiay.form
             else
             {
                 string Username = txtTK.Text;
-                BLL_NV.Instance.ResetMK(Username);
+               BLL_Login.Instance.ResetMK(Username);
                 GUI(index);
             }
 

@@ -119,6 +119,12 @@ namespace quanlybangiay.BLL.BLL_AD
 
             db.SaveChanges();
         }
+        public void ADD_nhapkho(NhapKho n)
+        {
+            db.NhapKhoes.Add(n);
+
+            db.SaveChanges();
+        }
         public void Delete(string ID)
         {
             Giay g = db.Giays.Find(ID);

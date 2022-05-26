@@ -75,13 +75,18 @@ namespace quanlybangiay.form
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-
-                foreach (DataGridViewRow i in dataGridView1.SelectedRows)
+                String s = "Bạn có muốn xóa Khách Hàng ??";
+                String s1 = "Delete";
+                MessageBoxButtons ok = MessageBoxButtons.OKCancel;
+                DialogResult d = MessageBox.Show(s, s1, ok);
+                if (d == DialogResult.OK)
                 {
-                    String Sdt = i.Cells["SoDienThoai"].Value.ToString();
-                    BLL_QLKH.Instance.DelKH(Sdt);
+                    foreach (DataGridViewRow i in dataGridView1.SelectedRows)
+                    {
+                        String Sdt = i.Cells["SoDienThoai"].Value.ToString();
+                        BLL_QLKH.Instance.DelKH(Sdt);
+                    }
                 }
-                MessageBox.Show("Da xoa!!");
                 Show();
             }
             else

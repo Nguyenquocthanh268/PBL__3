@@ -97,11 +97,8 @@ namespace quanlybangiay.BLL.BLL_AD
                 nv.AnhNV = s.AnhNV;
                 nv.SoDienThoai = s.SoDienThoai;
 
-                TaiKhoan tk = db.TaiKhoans.Find(t.Username);
-                tk.Username = t.Username;
-                tk.Pass = t.Pass;
-                tk.ChucVu = false;
-                tk.ID_NhanVien = nv.ID_NhanVien;
+
+                BLL_Login.Instance.UpdateTK(t);
             }
             else
             {
@@ -162,14 +159,6 @@ namespace quanlybangiay.BLL.BLL_AD
             }
         }
 
-        public void ResetMK(string Username)
-        {
-
-            TaiKhoan s = db.TaiKhoans.Find(Username);
-            s.Pass = "1";
-            db.SaveChanges();
-
-        }
         public byte[] ImagetoByte(Image imageIn)
         {
             using (MemoryStream ms = new MemoryStream())

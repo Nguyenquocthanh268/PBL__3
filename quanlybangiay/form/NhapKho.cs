@@ -33,28 +33,34 @@ namespace quanlybangiay.form
             }
             else
             {
-                NhapKho n = new NhapKho()
+                try
                 {
-                    Stt = BLL_KhoGiay.Instance.STTNhap(),
-                    NgayNhap = DateTime.Now,
-                    ID_Giay = IDGiay,
-                    SoLuongNhap = Convert.ToInt32(txt_sln.Text.ToString()),
-                    GiaNhap = Convert.ToInt32(txt_gia.Text.ToString()),
-                };
-                Giay g = new Giay()
+                    NhapKho n = new NhapKho()
+                    {
+                        Stt = BLL_KhoGiay.Instance.STTNhap(),
+                        NgayNhap = DateTime.Now,
+                        ID_Giay = IDGiay,
+                        SoLuongNhap = Convert.ToInt32(txt_sln.Text.ToString()),
+                        GiaNhap = Convert.ToInt32(txt_gia.Text.ToString()),
+                    };
+                    Giay g = new Giay()
+                    {
+                        ID_Giay = IDGiay,
+                        GiaNhap = Convert.ToInt32(txt_gia.Text.ToString())
+                    };
+                    Kho k = new Kho()
+                    {
+                        ID_Giay = IDGiay,
+                        TongSoLuongNhap = Convert.ToInt32(txt_sln.Text.ToString()),
+                        SoLuongCon = Convert.ToInt32(txt_sln.Text.ToString()),
+                    };
+                    BLL_KhoGiay.Instance.NhapKho(g, k, n);
+                    show();
+                    MessageBox.Show("Da nhap thanh cong !!!");
+                }catch (Exception ex)
                 {
-                    ID_Giay = IDGiay,
-                    GiaNhap = Convert.ToInt32(txt_gia.Text.ToString())
-                };
-                Kho k = new Kho()
-                {
-                    ID_Giay = IDGiay,
-                    TongSoLuongNhap = Convert.ToInt32(txt_sln.Text.ToString()),
-                    SoLuongCon = Convert.ToInt32(txt_sln.Text.ToString()),
-                };
-                BLL_KhoGiay.Instance.NhapKho(g, k, n);
-                show();
-                MessageBox.Show("Da nhap thanh cong !!!");
+                    MessageBox.Show("Nhập vào không hợp lệ");
+                }
             }
 
         }
