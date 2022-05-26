@@ -29,10 +29,11 @@ namespace quanlybangiay.form
         {
             HoaDon s = BLL_HD.Instance.GetHDByID(ID);
             txtID_HD.Text = s.ID_HoaDon;
-            txtID_NV.Text = s.ID_NhanVien;
             txtNgaytao.Text = s.NgayTao.ToString();
             txtTen_KH.Text = BLL_HD.Instance.GetKHBySDT(s.SoDienThoai).TenKhachHang;
             txtTen_NV.Text = BLL_NV.Instance.GetNVByID(s.ID_NhanVien).TenNhanVien;
+            txt_KM.Text = BLL_HD.Instance.GetChietkhauByID(s.ID_KhuyenMai).ToString() + "%";
+            txt_TV.Text = s.Thanhvien.ToString() + "%";
             txtTong.Text = s.TongTien.ToString() + " VND";
             dtgDetailHD.DataSource = BLL_HD.Instance.GetChiTietHDByID(ID);
         }

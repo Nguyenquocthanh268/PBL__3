@@ -68,6 +68,19 @@ namespace quanlybangiay.BLL.BLL_AD
             return db.KhachHangs.Find(SDT);
         }
 
+        public double GetChietkhauByID(string ID)
+        {
+            double value = 0;
+            foreach (CTKM i in db.CTKMs)
+            {
+                if (i.ID_KhuyenMai == ID)
+                {
+                    value = Convert.ToDouble(i.ChietKhau);
+                }
+            }
+            return value;
+        }
+
 
         public dynamic ShowAll()
         {
