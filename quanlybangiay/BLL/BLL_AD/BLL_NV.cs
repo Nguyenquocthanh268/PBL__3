@@ -128,9 +128,17 @@ namespace quanlybangiay.BLL.BLL_AD
             db.SaveChanges();
 
         }
-        public dynamic Sort(string txt)
+        public dynamic Sort(string txt, int index)
         {
-            return (db.NhanViens.Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai }).OrderBy(p => p.TenNhanVien)).ToList();
+            if(index == 0)
+            {
+                return (db.NhanViens.Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai }).OrderBy(p => p.ID_NhanVien)).ToList();
+            }
+            else
+            {
+                return (db.NhanViens.Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai }).OrderBy(p => p.TenNhanVien)).ToList();
+            }
+            
         }
 
 
@@ -225,5 +233,16 @@ namespace quanlybangiay.BLL.BLL_AD
             }
 
         }
+        public bool CheckUsername(string username)
+        {
+            bool check = false;
+            if (db.TaiKhoans.Find(username) == null)
+            {
+                check = true;
+            }
+            return check;
+        }
     }
+        
 }
+

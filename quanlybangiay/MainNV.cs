@@ -20,7 +20,6 @@ namespace quanlybangiay
         private string ID { get; set; }
         public int ChietKhau = 0;
         //private DataTable d1 { get; set; }
-        public int ChietKhau = 0;
         public MainNV(string user ,string id)
         {
             ID = id;
