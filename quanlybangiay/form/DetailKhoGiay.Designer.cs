@@ -168,6 +168,7 @@ namespace quanlybangiay.form
             // 
             // txtGiaBan
             // 
+            this.txtGiaBan.Enabled = false;
             this.txtGiaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaBan.Location = new System.Drawing.Point(412, 75);
             this.txtGiaBan.Name = "txtGiaBan";
@@ -192,6 +193,7 @@ namespace quanlybangiay.form
             this.txtSLNhap.Name = "txtSLNhap";
             this.txtSLNhap.Size = new System.Drawing.Size(145, 26);
             this.txtSLNhap.TabIndex = 65;
+            this.txtSLNhap.TextChanged += new System.EventHandler(this.txtSLNhap_TextChanged);
             // 
             // label3
             // 
@@ -206,9 +208,11 @@ namespace quanlybangiay.form
             // 
             // txtGiaNhap
             // 
+            this.txtGiaNhap.Enabled = false;
             this.txtGiaNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaNhap.Location = new System.Drawing.Point(88, 75);
             this.txtGiaNhap.Name = "txtGiaNhap";
+            this.txtGiaNhap.ShortcutsEnabled = false;
             this.txtGiaNhap.Size = new System.Drawing.Size(145, 26);
             this.txtGiaNhap.TabIndex = 63;
             // 
@@ -267,7 +271,7 @@ namespace quanlybangiay.form
             this.txtHang.Name = "txtHang";
             this.txtHang.Size = new System.Drawing.Size(145, 26);
             this.txtHang.TabIndex = 57;
-            this.txtHang.Leave += new System.EventHandler(this.txtHang_Leave);
+            this.txtHang.TextChanged += new System.EventHandler(this.txtHang_TextChanged);
             // 
             // label1
             // 

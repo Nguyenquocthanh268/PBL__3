@@ -17,13 +17,13 @@ namespace quanlybangiay.form
         {
             InitializeComponent();
             cbb_sort.Items.AddRange(BLL_KhoGiay.Instance.CBBsort().ToArray());
-           foreach(string i in BLL_KhoGiay.Instance.CBBsize().Distinct())
+            foreach (string i in BLL_KhoGiay.Instance.CBBsize().Distinct())
             {
                 cbb_size.Items.Add(i);
             }
             foreach (string i in BLL_KhoGiay.Instance.CBBhang().Distinct())
             {
-               cbb_hang.Items.Add(i);
+                cbb_hang.Items.Add(i);
             }
         }
 
@@ -44,22 +44,22 @@ namespace quanlybangiay.form
             {
                 int size = Convert.ToInt32(cbb_size.SelectedItem.ToString());
 
-                dataGridView1.DataSource = BLL_KhoGiay.Instance.searh_Size(ten,size);
+                dataGridView1.DataSource = BLL_KhoGiay.Instance.searh_Size(ten, size);
             }
-            
+
             else if (index2 >= 0 && index1 < 0)
             {
                 string hang = cbb_hang.SelectedItem.ToString();
-                dataGridView1.DataSource = BLL_KhoGiay.Instance.search_Hang(ten,hang);
+                dataGridView1.DataSource = BLL_KhoGiay.Instance.search_Hang(ten, hang);
             }
             else if (id == "" && ten == "" && index2 < 0 && index1 < 0)
             {
                 show();
             }
-            
-            else if(id == "" )
+
+            else if (id == "")
             {
-                if(index1 < 0 && index2 <0)
+                if (index1 < 0 && index2 < 0)
                 {
                     dataGridView1.DataSource = BLL_KhoGiay.Instance.search_Size_Hang(ten, "", 0);
                 }
@@ -72,15 +72,15 @@ namespace quanlybangiay.form
             }
             else
             {
-               if(index1 < 0 && index2 < 0)
+                if (index1 < 0 && index2 < 0)
                 {
-                    dataGridView1.DataSource = BLL_KhoGiay.Instance.search(id,"","",0);
+                    dataGridView1.DataSource = BLL_KhoGiay.Instance.search(id, "", "", 0);
                 }
-               
+
             }
             cbb_hang.SelectedIndex = -1;
             cbb_size.SelectedIndex = -1;
-           
+
         }
 
         private void btnDetail_Click(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace quanlybangiay.form
             else
             {
                 MessageBox.Show("Vui lòng chọn giay chỉnh sửa!");
-               
+
             }
         }
 
@@ -127,10 +127,17 @@ namespace quanlybangiay.form
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                foreach (DataGridViewRow i in dataGridView1.SelectedRows)
+                String s = "Bạn có muốn xóa mặt hàng ??";
+                String s1 = "Delete";
+                MessageBoxButtons ok = MessageBoxButtons.OKCancel;
+                DialogResult d = MessageBox.Show(s, s1, ok);
+                if (d == DialogResult.OK)
                 {
-                    string ID = i.Cells["ID_Giay"].Value.ToString();
-                    BLL_KhoGiay.Instance.Delete(ID);
+                    foreach (DataGridViewRow i in dataGridView1.SelectedRows)
+                    {
+                        string ID = i.Cells["ID_Giay"].Value.ToString();
+                        BLL_KhoGiay.Instance.Delete(ID);
+                    }
                 }
             }
             else
@@ -138,38 +145,39 @@ namespace quanlybangiay.form
                 MessageBox.Show("Vui lòng chọn giay muốn xoá!");
             }
             show();
-        }
+          
+    }
 
-        private void btnInput_Click_1(object sender, EventArgs e)
+    private void btnInput_Click_1(object sender, EventArgs e)
+    {
+        if (dataGridView1.SelectedRows.Count == 1)
         {
-            if (dataGridView1.SelectedRows.Count == 1)
-            {
-                string ID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            string ID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
 
-                Nhap_kho f = new Nhap_kho(ID);
-                f.Show();
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn giay de nhap!");
-              
-            }
+            Nhap_kho f = new Nhap_kho(ID);
+            f.Show();
         }
-
-        private void btnSort_Click_1(object sender, EventArgs e)
+        else
         {
-            int index = cbb_sort.SelectedIndex;
-            if (index >= 0)
-            {
-                dataGridView1.DataSource = BLL_KhoGiay.Instance.sort(index);
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn Item!");
-            }
+            MessageBox.Show("Vui lòng chọn giay de nhap!");
 
         }
+    }
 
+    private void btnSort_Click_1(object sender, EventArgs e)
+    {
+        int index = cbb_sort.SelectedIndex;
+        if (index >= 0)
+        {
+            dataGridView1.DataSource = BLL_KhoGiay.Instance.sort(index);
+        }
+        else
+        {
+            MessageBox.Show("Vui lòng chọn Item!");
+        }
 
     }
+
+
+}
 }

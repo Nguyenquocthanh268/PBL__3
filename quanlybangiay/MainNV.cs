@@ -15,13 +15,13 @@ using quanlybangiay.BLL.BLL_NV;
 namespace quanlybangiay
 {
     public partial class MainNV : Form
-    {  
+    {
         private string USer { get; set; }
         private string ID { get; set; }
         public int ChietKhau = 0;
         //private DataTable d1 { get; set; }
-        public int ChietKhau = 0;
-        public MainNV(string user ,string id)
+
+        public MainNV(string user, string id)
         {
             ID = id;
             USer = user;
@@ -54,7 +54,7 @@ namespace quanlybangiay
         //Form Quan Ly Tai Khoan 
         public void GUI()
         {
-            txt_id.Text =BLL_NV.Instance.GetNVByID(ID).ID_NhanVien.ToString();
+            txt_id.Text = BLL_NV.Instance.GetNVByID(ID).ID_NhanVien.ToString();
             txt_ten.Text = BLL_NV.Instance.GetNVByID(ID).TenNhanVien.ToString();
             txt_sdt.Text = BLL_NV.Instance.GetNVByID(ID).SoDienThoai.ToString();
             bool gender = Convert.ToBoolean(BLL_NV.Instance.GetNVByID(ID).GioiTinh.ToString());
@@ -127,29 +127,29 @@ namespace quanlybangiay
         private void btn_timkiemKHO_Click(object sender, EventArgs e)
         {
             int indexTen = cb_tenKHO.SelectedIndex;
-            int indexHang =cb_hangKHO.SelectedIndex;
-            int indexSize =cb_sizeKHO.SelectedIndex;
+            int indexHang = cb_hangKHO.SelectedIndex;
+            int indexSize = cb_sizeKHO.SelectedIndex;
             string ID = txt_IDgiayKHO.Text;
             if (ID == "")
             {
-                if(indexTen < 0)
+                if (indexTen < 0)
                 {
-                    if (indexHang >= 0 && indexSize < 0 )
+                    if (indexHang >= 0 && indexSize < 0)
                     {
                         string hang = cb_hangKHO.SelectedItem.ToString();
-                        dtGV_Kiemkho.DataSource= BLL_KiemkhoNV.Instance.search_Hang("", hang);
+                        dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.search_Hang("", hang);
                     }
                     else if (indexHang < 0 && indexSize >= 0)
                     {
                         int size = Convert.ToInt32(cb_sizeKHO.SelectedItem.ToString());
                         dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.searh_Size("", size);
                     }
-                    
-                    else if (indexHang < 0 && indexSize < 0 )
+
+                    else if (indexHang < 0 && indexSize < 0)
                     {
                         dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.showAll();
                     }
-                    else if (indexHang >= 0 && indexSize >= 0 )
+                    else if (indexHang >= 0 && indexSize >= 0)
 
                     {
                         int size = Convert.ToInt32(cb_sizeKHO.SelectedItem.ToString());
@@ -157,36 +157,36 @@ namespace quanlybangiay
                         dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.search_Size_Hang("", hang, size);
                     }
                 }
-                else if(indexTen >= 0)
+                else if (indexTen >= 0)
                 {
-                     if (indexHang >= 0 && indexSize >= 0)
+                    if (indexHang >= 0 && indexSize >= 0)
                     {
                         string ten = cb_tenKHO.SelectedItem.ToString();
                         int size = Convert.ToInt32(cb_sizeKHO.SelectedItem.ToString());
                         string hang = cb_hangKHO.SelectedItem.ToString();
                         dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.search_Size_Hang(ten, hang, size);
                     }
-                    else if (indexHang < 0 && indexSize < 0 )
+                    else if (indexHang < 0 && indexSize < 0)
                     {
                         string ten = cb_tenKHO.SelectedItem.ToString();
                         dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.search_Size_Hang(ten, "", 0);
                     }
-                     else if(indexHang >= 0 && indexSize < 0)
+                    else if (indexHang >= 0 && indexSize < 0)
                     {
                         string ten = cb_tenKHO.SelectedItem.ToString();
                         string hang = cb_hangKHO.SelectedItem.ToString();
                         dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.search_Hang(ten, hang);
                     }
-                     else if(indexHang < 0 && indexSize >= 0)
+                    else if (indexHang < 0 && indexSize >= 0)
                     {
                         string ten = cb_tenKHO.SelectedItem.ToString();
                         int size = Convert.ToInt32(cb_sizeKHO.SelectedItem.ToString());
                         dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.searh_Size(ten, size);
                     }
-                    
+
                 }
             }
-            else 
+            else
             {
                 dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.search(ID, "", "", 0);
             }
@@ -198,24 +198,24 @@ namespace quanlybangiay
 
         private void dtGV_Kiemkho_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-           
-                string ID = dtGV_Kiemkho.Rows[e.RowIndex].Cells["ID_Giay"].FormattedValue.ToString(); ;
-                GUIkho(ID);            
-            
+
+            string ID = dtGV_Kiemkho.Rows[e.RowIndex].Cells["ID_Giay"].FormattedValue.ToString(); ;
+            GUIkho(ID);
+
         }
         public void GUIkho(string ID)
         {
-            pic_kho.Image =BLL_KhoGiay.Instance.BytetoPicter(BLL_KhoGiay.Instance.GetGiayByID(ID).AnhSP);
+            pic_kho.Image = BLL_KhoGiay.Instance.BytetoPicter(BLL_KhoGiay.Instance.GetGiayByID(ID).AnhSP);
             txt_giaKHO.Text = BLL_KhoGiay.Instance.GetGiayByID(ID).GiaBan.ToString();
-            txt_sizeKHO.Text= BLL_KhoGiay.Instance.GetGiayByID(ID).Size.ToString();
-            txt_SLkho.Text= BLL_KhoGiay.Instance.GetkhoByID(ID).SoLuongCon.ToString();
-            tb_ten.Text=BLL_KhoGiay.Instance.GetGiayByID(ID).TenGiay.ToString();
+            txt_sizeKHO.Text = BLL_KhoGiay.Instance.GetGiayByID(ID).Size.ToString();
+            txt_SLkho.Text = BLL_KhoGiay.Instance.GetkhoByID(ID).SoLuongCon.ToString();
+            tb_ten.Text = BLL_KhoGiay.Instance.GetGiayByID(ID).TenGiay.ToString();
             tb_ten.ForeColor = Color.Gold;
-            tb_ten.Font= new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tb_ten.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         }
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(tabControl1.SelectedIndex == 2)
+            if (tabControl1.SelectedIndex == 2)
             {
                 txt_IDgiayKHO.Text = "";
                 cb_hangKHO.SelectedIndex = -1;
@@ -232,7 +232,7 @@ namespace quanlybangiay
             {
                 ResetAllDataBanHang();
             }
-            if(tabControl1.SelectedIndex == 3)
+            if (tabControl1.SelectedIndex == 3)
             {
                 dtGV_Chitiethd.DataSource = null;
                 txtTongtien.Text = "";
@@ -452,40 +452,43 @@ namespace quanlybangiay
         {
             int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
 
-         if(txtSdt_BanHang.Text != "")
+            if (txtSdt_BanHang.Text != "")
             {
                 if (BLL_QLKH.Instance.Check(txtSdt_BanHang.Text))
                 {
-                      if (Convert.ToInt32(txtSL_BanHang.Text) > 0)
-            {
-                BLL_BanHang.Instance.AddDL(txtIDGiay_BanHang.Text, txtHang_BanHang.Text, txtNameSP_BanHang.Text,Convert.ToInt32(txtSize_BanHang.Text), BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text), 1, BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text) * 1);
-                ResetData();
-                //but_AddGiay.Enabled = false;
-                int a = BLL_BanHang.Instance.GetSLSP(txtIDGiay_BanHang.Text);
-                txtSL_BanHang.Text = Convert.ToString(Soluong - a);
-                if (Convert.ToInt32(txtSL_BanHang.Text) == 0)
-                {
-                    rdHetHang.Checked = true;
-                    rdConHang.ForeColor = Color.SlateGray;
-                    rdHetHang.ForeColor = Color.Red;
-                }
-                else
-                {
-                    rdConHang.Checked = true;
-                    rdConHang.ForeColor = Color.Green;
-                    rdHetHang.ForeColor = Color.SlateGray;
-                    but_AddGiay.Enabled = true;
-                }
+                    if (Convert.ToInt32(txtSL_BanHang.Text) > 0)
+                    {
+                        BLL_BanHang.Instance.AddDL(txtIDGiay_BanHang.Text, txtHang_BanHang.Text, txtNameSP_BanHang.Text, Convert.ToInt32(txtSize_BanHang.Text), BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text), 1, BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text) * 1);
+                        ResetData();
+                        //but_AddGiay.Enabled = false;
+                        int a = BLL_BanHang.Instance.GetSLSP(txtIDGiay_BanHang.Text);
+                        txtSL_BanHang.Text = Convert.ToString(Soluong - a);
+                        if (Convert.ToInt32(txtSL_BanHang.Text) == 0)
+                        {
+                            rdHetHang.Checked = true;
+                            rdConHang.ForeColor = Color.SlateGray;
+                            rdHetHang.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            rdConHang.Checked = true;
+                            rdConHang.ForeColor = Color.Green;
+                            rdHetHang.ForeColor = Color.SlateGray;
+                            but_AddGiay.Enabled = true;
+                        }
 
-            }
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Số điện thoại không tồn tại ...");
                 }
 
+                if (tb_Mahoadon.Text == "")
+                {
+                    tb_Mahoadon.Text = BLL_BanHang.Instance.IDhoadon();
+                }
 
-          
             }
             else
             {
@@ -499,17 +502,17 @@ namespace quanlybangiay
             tb_Tongcong.Text = BLL_BanHang.Instance.TongTien().ToString();
             //if (txtSale_BanHang.Text != "" )
             //{
-                //if (txtChietKhauCTKM_BanHang.Text != "")
-                //{
-                //    tb_Phantramck.Text = (Convert.ToInt32(txtSale_BanHang.Text) + Convert.ToInt32(txtChietKhauCTKM_BanHang.Text)).ToString();
-                //}
-                //else
-                //{
-                //    tb_Phantramck.Text = (Convert.ToInt32(txtSale_BanHang.Text)).ToString();
-                //}
-                tb_Phantramck.Text = Convert.ToString(ChietKhau);
-                tb_Chietkhau.Text = (Convert.ToInt32(tb_Phantramck.Text) * Convert.ToDouble(tb_Tongcong.Text) / 100).ToString();
-                tb_Thanhtien.Text = (Convert.ToDouble(tb_Tongcong.Text) - Convert.ToDouble(tb_Chietkhau.Text)).ToString();
+            //if (txtChietKhauCTKM_BanHang.Text != "")
+            //{
+            //    tb_Phantramck.Text = (Convert.ToInt32(txtSale_BanHang.Text) + Convert.ToInt32(txtChietKhauCTKM_BanHang.Text)).ToString();
+            //}
+            //else
+            //{
+            //    tb_Phantramck.Text = (Convert.ToInt32(txtSale_BanHang.Text)).ToString();
+            //}
+            tb_Phantramck.Text = Convert.ToString(ChietKhau);
+            tb_Chietkhau.Text = (Convert.ToInt32(tb_Phantramck.Text) * Convert.ToDouble(tb_Tongcong.Text) / 100).ToString();
+            tb_Thanhtien.Text = (Convert.ToDouble(tb_Tongcong.Text) - Convert.ToDouble(tb_Chietkhau.Text)).ToString();
             //}
             //else
             //{
@@ -518,7 +521,7 @@ namespace quanlybangiay
         }
         public void ResetDataSP()
         {
-            
+
             txtNameSP_BanHang.Text = "";
             txtHang_BanHang.Text = "";
             txtSize_BanHang.Text = "";
@@ -574,7 +577,7 @@ namespace quanlybangiay
 
         private void tb_Tienkhachdua_TextChanged(object sender, EventArgs e)
         {
-            if(tb_Tienkhachdua.Text != "" && tb_Thanhtien.Text != "")
+            if (tb_Tienkhachdua.Text != "" && tb_Thanhtien.Text != "")
             {
                 tb_Tientralai.Text = (Convert.ToDouble(tb_Tienkhachdua.Text) - Convert.ToDouble(tb_Thanhtien.Text)).ToString();
             }
@@ -600,7 +603,8 @@ namespace quanlybangiay
                         {
 
                             KhachHang a = BLL_QLKH.Instance.Get1KH(txtSdt_BanHang.Text);
-                            a.DiemTichLuy += Convert.ToInt32(tb_Thanhtien.Text) / 100000;
+                            int diem = (int)Convert.ToDouble(tb_Thanhtien.Text);
+                            a.DiemTichLuy += diem / 100000;
                             BLL_QLKH.Instance.UpdateKH(a);
 
                             {
@@ -690,7 +694,7 @@ namespace quanlybangiay
 
         }
 
-      
+
 
     }
 }

@@ -32,9 +32,17 @@ namespace quanlybangiay.form
             byte[] file = BLL_KhoGiay.Instance.ImagetoByte(pictureBox7.Image);
 
             
-            BLL_KhoGiay.Instance.Excute(getGiay(), getKhoGiay());
-            d();
-            this.Close();
+            if(getGiay() != null && getKhoGiay() != null  && getNhapKHO_Giay() !=null)
+            {
+                
+                BLL_KhoGiay.Instance.Excute(getGiay(), getKhoGiay());
+                if (Convert.ToInt32(txtSLNhap.Text) > 0 && index == 2)
+                {
+                    BLL_KhoGiay.Instance.ADD_nhapkho(getNhapKHO_Giay());
+                }
+                d();
+                this.Close();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -54,6 +62,10 @@ namespace quanlybangiay.form
                    
                     txtGiaBan.Enabled = false;
                     btnOK.Enabled = false;
+                }
+                if(index == 3)
+                {
+                    txtGiaBan.Enabled = true;
                 }
                 txtName.Enabled = false;
                 txtSize.Enabled = false;
@@ -92,6 +104,14 @@ namespace quanlybangiay.form
             try
                  
             {
+                if (txtSLNhap.Text == "")
+                {
+                    txtGiaNhap.Enabled = false;
+                    txtGiaBan.Enabled = false;
+                    txtGiaNhap.Text = "0";
+                    txtGiaBan.Text = "0";
+                    
+                }
                 byte[] file = BLL_KhoGiay.Instance.ImagetoByte(pictureBox7.Image);
                 Giay c = new Giay()
                 {
@@ -111,10 +131,35 @@ namespace quanlybangiay.form
                 return null;
             }
         }
+        private NhapKho getNhapKHO_Giay()
+        {
+            try
+            {
+                NhapKho n = new NhapKho()
+                {
+                    Stt = BLL_KhoGiay.Instance.STTNhap(),
+                    NgayNhap = DateTime.Now,
+                    ID_Giay = txtIDGiay.Text,
+                    SoLuongNhap = Convert.ToInt32(txtSLNhap.Text.ToString()),
+                    GiaNhap = Convert.ToInt32(txtGiaNhap.Text.ToString()),
+                };
+                return n;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Nhập vào không hợp lệ");
+                return null;
+            }
+        }
         private Kho getKhoGiay()
         {
             try
             {
+                if(txtSLNhap.Text == "")
+                {
+                    txtSLNhap.Text = "0";
+
+                }
                 Kho c = new Kho()
                 {
                     ID_Giay = txtIDGiay.Text,
@@ -152,13 +197,37 @@ namespace quanlybangiay.form
             }
         }
 
-        private void txtHang_Leave(object sender, EventArgs e)
+      
+
+        private void txtSLNhap_TextChanged(object sender, EventArgs e)
         {
-            if(index == 2)
+            if(txtSLNhap.Text != "" && index == 2)
             {
-                if (BLL_KhoGiay.Instance.check(txtIDGiay.Text))
+                txtGiaBan.Enabled = true;
+                txtGiaNhap.Enabled = true;
+            }
+              
+            
+        }
+
+        private void txtHang_TextChanged(object sender, EventArgs e)
+        {
+           if(index == 2)
+            {
+                if (txtName.Text != "" && txtSize.Text != "" )
                 {
-                    MessageBox.Show("ID đã tồn tại ....");
+                    if (index == 2)
+                    {
+                        if (BLL_KhoGiay.Instance.check(txtIDGiay.Text))
+                        {
+                            MessageBox.Show("ID đã tồn tại ....");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng điền ID và size đầu tiên");
+
                 }
             }
         }

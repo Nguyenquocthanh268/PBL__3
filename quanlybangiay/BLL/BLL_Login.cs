@@ -25,21 +25,21 @@ namespace quanlybangiay.BLL
 
         private BLL_Login()
         {
-
+          
         }
         public TaiKhoan GetTK(string user)
         {
-
-            TaiKhoan k = db.TaiKhoans.Find(user);
-            if (k != null)
-            {
-                return k;
-            }
-            else
-            {
-                return null;
-            }
-
+            
+                TaiKhoan k = db.TaiKhoans.Find(user);
+                if (k != null)
+                {
+                    return k;
+                }
+                else
+                {
+                    return null;
+                }
+           
         }
         public Boolean Kt(string pass, string user)
         {
@@ -61,24 +61,26 @@ namespace quanlybangiay.BLL
         }
         public bool Update(string user, string mkc, string mkm, string nlmk)
         {
-            TaiKhoan t = db.TaiKhoans.Find(user); ;
-            if (t.Pass != mkc)
-            {
-                return false;
-            }
-            else
-            {
-                if (mkm == nlmk)
-                {
-                    t.Pass = nlmk;
-                    db.SaveChanges();
-                    return true;
-                }
-                else
+            
+                TaiKhoan t = db.TaiKhoans.Find(user); ;
+                if (t.Pass != mkc)
                 {
                     return false;
                 }
-            }
+                else
+                {
+                    if (mkm == nlmk)
+                    {
+                        t.Pass = nlmk;
+                        db.SaveChanges();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            
         }
         public bool checkMK(string MK)
         {
@@ -91,6 +93,31 @@ namespace quanlybangiay.BLL
                 return true;
             }
         }
+        public void UpdateTK(TaiKhoan s)
+        {
+            TaiKhoan t = db.TaiKhoans.Find(s.Username);
+            t.Pass = s.Pass;
+        }
+        public TaiKhoan GetTKByID(string ID)
+        {
+            TaiKhoan s = new TaiKhoan();
+            foreach (TaiKhoan i in db.TaiKhoans)
+            {
+                if (ID == i.ID_NhanVien)
+                {
+                    s = i;
+                    break;
+                }
+            }
+            return s;
+        }
+        public void ResetMK(string Username)
+        {
 
+            TaiKhoan s = db.TaiKhoans.Find(Username);
+            s.Pass = "1";
+            db.SaveChanges();
+
+        }
     }
 }
