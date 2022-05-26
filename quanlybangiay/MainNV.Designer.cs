@@ -30,6 +30,10 @@ namespace quanlybangiay
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainNV));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel17 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -324,6 +328,8 @@ namespace quanlybangiay
             // dtGV_Trangchu
             // 
             this.dtGV_Trangchu.AllowUserToAddRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.dtGV_Trangchu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtGV_Trangchu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGV_Trangchu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGV_Trangchu.Location = new System.Drawing.Point(14, 47);
@@ -332,6 +338,7 @@ namespace quanlybangiay
             this.dtGV_Trangchu.RowHeadersWidth = 51;
             this.dtGV_Trangchu.Size = new System.Drawing.Size(976, 207);
             this.dtGV_Trangchu.TabIndex = 32;
+            this.dtGV_Trangchu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGV_Trangchu_CellClick);
             // 
             // panel5
             // 
@@ -409,7 +416,7 @@ namespace quanlybangiay
             this.rdHetHang.ForeColor = System.Drawing.Color.SlateGray;
             this.rdHetHang.Location = new System.Drawing.Point(265, 272);
             this.rdHetHang.Name = "rdHetHang";
-            this.rdHetHang.Size = new System.Drawing.Size(88, 20);
+            this.rdHetHang.Size = new System.Drawing.Size(87, 20);
             this.rdHetHang.TabIndex = 56;
             this.rdHetHang.TabStop = true;
             this.rdHetHang.Text = "Hết hàng";
@@ -422,7 +429,7 @@ namespace quanlybangiay
             this.rdConHang.ForeColor = System.Drawing.Color.SlateGray;
             this.rdConHang.Location = new System.Drawing.Point(155, 273);
             this.rdConHang.Name = "rdConHang";
-            this.rdConHang.Size = new System.Drawing.Size(91, 20);
+            this.rdConHang.Size = new System.Drawing.Size(90, 20);
             this.rdConHang.TabIndex = 55;
             this.rdConHang.TabStop = true;
             this.rdConHang.Text = "Còn hàng";
@@ -714,6 +721,7 @@ namespace quanlybangiay
             this.txtSdt_BanHang.Name = "txtSdt_BanHang";
             this.txtSdt_BanHang.Size = new System.Drawing.Size(145, 29);
             this.txtSdt_BanHang.TabIndex = 1;
+            this.txtSdt_BanHang.Click += new System.EventHandler(this.txtSdt_BanHang_Click);
             this.txtSdt_BanHang.TextChanged += new System.EventHandler(this.txtSdt_TextChanged);
             // 
             // label15
@@ -1311,6 +1319,8 @@ namespace quanlybangiay
             // 
             // dtGV_Kiemkho
             // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.dtGV_Kiemkho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dtGV_Kiemkho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGV_Kiemkho.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtGV_Kiemkho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1543,7 +1553,7 @@ namespace quanlybangiay
             this.panel15.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel15.Location = new System.Drawing.Point(6, 624);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(369, 117);
+            this.panel15.Size = new System.Drawing.Size(436, 117);
             this.panel15.TabIndex = 4;
             // 
             // txtTongtien
@@ -1554,7 +1564,7 @@ namespace quanlybangiay
             this.txtTongtien.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtTongtien.Location = new System.Drawing.Point(195, 84);
             this.txtTongtien.Name = "txtTongtien";
-            this.txtTongtien.Size = new System.Drawing.Size(123, 24);
+            this.txtTongtien.Size = new System.Drawing.Size(202, 24);
             this.txtTongtien.TabIndex = 53;
             this.txtTongtien.Text = "3";
             this.txtTongtien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1588,7 +1598,7 @@ namespace quanlybangiay
             this.txtSohoadon.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtSohoadon.Location = new System.Drawing.Point(195, 42);
             this.txtSohoadon.Name = "txtSohoadon";
-            this.txtSohoadon.Size = new System.Drawing.Size(123, 24);
+            this.txtSohoadon.Size = new System.Drawing.Size(202, 24);
             this.txtSohoadon.TabIndex = 47;
             this.txtSohoadon.Text = "3";
             this.txtSohoadon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1626,8 +1636,18 @@ namespace quanlybangiay
             // 
             // dtGV_Chitiethd
             // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.dtGV_Chitiethd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtGV_Chitiethd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGV_Chitiethd.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGV_Chitiethd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dtGV_Chitiethd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGV_Chitiethd.Location = new System.Drawing.Point(31, 64);
             this.dtGV_Chitiethd.Name = "dtGV_Chitiethd";
@@ -1911,7 +1931,7 @@ namespace quanlybangiay
             this.nu.Enabled = false;
             this.nu.Location = new System.Drawing.Point(319, 165);
             this.nu.Name = "nu";
-            this.nu.Size = new System.Drawing.Size(45, 20);
+            this.nu.Size = new System.Drawing.Size(44, 20);
             this.nu.TabIndex = 15;
             this.nu.TabStop = true;
             this.nu.Text = "Nữ";
@@ -1923,7 +1943,7 @@ namespace quanlybangiay
             this.Nam.Enabled = false;
             this.Nam.Location = new System.Drawing.Point(222, 165);
             this.Nam.Name = "Nam";
-            this.Nam.Size = new System.Drawing.Size(58, 20);
+            this.Nam.Size = new System.Drawing.Size(57, 20);
             this.Nam.TabIndex = 14;
             this.Nam.TabStop = true;
             this.Nam.Text = "Nam";

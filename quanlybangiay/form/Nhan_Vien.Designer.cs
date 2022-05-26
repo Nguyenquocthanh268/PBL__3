@@ -29,6 +29,7 @@ namespace quanlybangiay.form
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAddnew = new System.Windows.Forms.Button();
             this.cbbSort = new System.Windows.Forms.ComboBox();
@@ -163,6 +164,8 @@ namespace quanlybangiay.form
             // 
             // dtgNV
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.dtgNV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgNV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
