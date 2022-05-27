@@ -96,6 +96,7 @@ namespace quanlybangiay.form
             // 
             // panel7
             // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(88)))));
             this.panel7.Controls.Add(this.pictureBox3);
             this.panel7.Controls.Add(this.lbTongKhachHang);
@@ -152,6 +153,7 @@ namespace quanlybangiay.form
             // 
             // panel6
             // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(88)))));
             this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Controls.Add(this.lbTongGiayBan);
@@ -196,6 +198,7 @@ namespace quanlybangiay.form
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(88)))));
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.lbTongGiayTonKho);
@@ -217,6 +220,9 @@ namespace quanlybangiay.form
             // 
             // chartDoanhThu
             // 
+            this.chartDoanhThu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chartDoanhThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(88)))));
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.IsMarginVisible = false;
@@ -288,6 +294,7 @@ namespace quanlybangiay.form
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(88)))));
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.lbTongLoiNhuan);
@@ -332,6 +339,7 @@ namespace quanlybangiay.form
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(88)))));
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.lbTongDoanhThu);
@@ -421,6 +429,7 @@ namespace quanlybangiay.form
             // 
             // butTuyChinh
             // 
+            this.butTuyChinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.butTuyChinh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.butTuyChinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butTuyChinh.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -467,6 +476,7 @@ namespace quanlybangiay.form
             // 
             // but7days
             // 
+            this.but7days.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.but7days.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.but7days.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but7days.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -481,6 +491,7 @@ namespace quanlybangiay.form
             // 
             // butThismonth
             // 
+            this.butThismonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.butThismonth.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.butThismonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butThismonth.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -495,6 +506,7 @@ namespace quanlybangiay.form
             // 
             // butToday
             // 
+            this.butToday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.butToday.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.butToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butToday.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -509,6 +521,7 @@ namespace quanlybangiay.form
             // 
             // butThisyear
             // 
+            this.butThisyear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.butThisyear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.butThisyear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butThisyear.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

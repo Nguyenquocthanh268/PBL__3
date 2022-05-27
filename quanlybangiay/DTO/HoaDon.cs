@@ -22,15 +22,16 @@ namespace quanlybangiay.DTO
     
         public string ID_HoaDon { get; set; }
         public string ID_KhuyenMai { get; set; }
+        public Nullable<int> chietKhauKM { get; set; }
         public Nullable<int> Thanhvien { get; set; }
         public string SoDienThoai { get; set; }
         public Nullable<System.DateTime> NgayTao { get; set; }
         public Nullable<double> TongTien { get; set; }
         public string ID_NhanVien { get; set; }
     
-        public virtual CTKM CTKM { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public virtual CTKM CTKM { get; set; }
         public virtual KhachHang KhachHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
     }

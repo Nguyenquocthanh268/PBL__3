@@ -53,14 +53,14 @@ namespace quanlybangiay.BLL.BLL_NV
             return list;
         }
 
-        public double GetChietkhauByName(string Name)
+        public int GetChietkhauByName(string Name)
         {
-            double value = 1;
+            int value = 1;
             foreach (CTKM i in db.CTKMs)
             {
                 if (i.TenCT == Name)
                 {
-                    value = Convert.ToDouble(i.ChietKhau);
+                    value = Convert.ToInt32(i.ChietKhau);
                 }
             }
             return value;
@@ -113,6 +113,7 @@ namespace quanlybangiay.BLL.BLL_NV
             DataPBL3 db = new DataPBL3();
             HoaDon a = new HoaDon
             {
+                chietKhauKM=s.chietKhauKM,
                 ID_HoaDon = s.ID_HoaDon,
                 SoDienThoai = s.SoDienThoai,
                 Thanhvien = s.Thanhvien,
