@@ -129,6 +129,13 @@ namespace quanlybangiay.BLL.BLL_AD
         {
             Giay g = db.Giays.Find(ID);
             Kho k = db.Khoes.Find(ID);
+            foreach(NhapKho i in db.NhapKhoes)
+            {
+                if (i.ID_Giay == ID)
+                {
+                  db.NhapKhoes.Remove(i);
+                }
+            }
             db.Giays.Remove(g);
             db.Khoes.Remove(k);
             db.SaveChanges();

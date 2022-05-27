@@ -30,10 +30,26 @@ namespace quanlybangiay.form
             HoaDon s = BLL_HD.Instance.GetHDByID(ID);
             txtID_HD.Text = s.ID_HoaDon;
             txtNgaytao.Text = s.NgayTao.ToString();
-            txtTen_KH.Text = BLL_HD.Instance.GetKHBySDT(s.SoDienThoai).TenKhachHang;
-            txtTen_NV.Text = BLL_NV.Instance.GetNVByID(s.ID_NhanVien).TenNhanVien;
-            txt_KM.Text = BLL_HD.Instance.GetChietkhauByID(s.ID_KhuyenMai).ToString() + "%";
+            if (BLL_HD.Instance.GetKHBySDT(s.SoDienThoai) != null)
+            {
+                txtTen_KH.Text = BLL_HD.Instance.GetKHBySDT(s.SoDienThoai).TenKhachHang;
+            }
+            else
+            {
+                txtTen_KH.Text = "KHACH HANG BI XOA";
+            }
+            if (BLL_NV.Instance.GetNVByID(s.ID_NhanVien) != null)
+            {
+                txtTen_NV.Text = BLL_NV.Instance.GetNVByID(s.ID_NhanVien).TenNhanVien;
+            }
+            else
+            {
+                txtTen_NV.Text= "NHAN VIEN BI XOA";
+            }
+            txt_IDKM.Text = s.ID_KhuyenMai.ToString();
+            txt_KM.Text = s.chietKhauKM.ToString() + "%";
             txt_TV.Text = s.Thanhvien.ToString() + "%";
+            txt_tongck.Text= Convert.ToInt32(Convert.ToInt32(s.Thanhvien)+Convert.ToInt32(s.chietKhauKM)).ToString();
             txtTong.Text = s.TongTien.ToString() + " VND";
             dtgDetailHD.DataSource = BLL_HD.Instance.GetChiTietHDByID(ID);
         }

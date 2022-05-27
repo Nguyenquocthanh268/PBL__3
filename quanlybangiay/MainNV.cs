@@ -610,6 +610,7 @@ namespace quanlybangiay
                             {
                                 HoaDon hoadon = new HoaDon();
                                 hoadon.ID_HoaDon = ID_HoaDon;
+                                hoadon.chietKhauKM = Convert.ToInt32(txtChietKhauCTKM_BanHang.Text);
                                 hoadon.SoDienThoai = txtSdt_BanHang.Text;
                                 hoadon.Thanhvien = Convert.ToInt32(txtSale_BanHang.Text);
                                 hoadon.NgayTao = DateTime.Now;

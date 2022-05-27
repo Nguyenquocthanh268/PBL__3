@@ -32,6 +32,7 @@ namespace quanlybangiay.form
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dtgDetailHD = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_TV = new System.Windows.Forms.TextBox();
@@ -47,12 +48,15 @@ namespace quanlybangiay.form
             this.label3 = new System.Windows.Forms.Label();
             this.txtID_HD = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dtgDetailHD = new System.Windows.Forms.DataGridView();
+            this.txt_tongck = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_IDKM = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetailHD)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,8 +88,22 @@ namespace quanlybangiay.form
             this.panel4.Size = new System.Drawing.Size(984, 320);
             this.panel4.TabIndex = 4;
             // 
+            // dtgDetailHD
+            // 
+            this.dtgDetailHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgDetailHD.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgDetailHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDetailHD.Location = new System.Drawing.Point(22, 30);
+            this.dtgDetailHD.Name = "dtgDetailHD";
+            this.dtgDetailHD.Size = new System.Drawing.Size(941, 266);
+            this.dtgDetailHD.TabIndex = 0;
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txt_IDKM);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.txt_tongck);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txt_TV);
             this.panel2.Controls.Add(this.label1);
@@ -111,7 +129,7 @@ namespace quanlybangiay.form
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(723, 117);
+            this.label2.Location = new System.Drawing.Point(61, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 20);
             this.label2.TabIndex = 89;
@@ -120,7 +138,7 @@ namespace quanlybangiay.form
             // txt_TV
             // 
             this.txt_TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TV.Location = new System.Drawing.Point(729, 140);
+            this.txt_TV.Location = new System.Drawing.Point(65, 207);
             this.txt_TV.Name = "txt_TV";
             this.txt_TV.Size = new System.Drawing.Size(168, 26);
             this.txt_TV.TabIndex = 88;
@@ -132,14 +150,14 @@ namespace quanlybangiay.form
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
             this.label1.Location = new System.Drawing.Point(393, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 20);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 87;
-            this.label1.Text = "Chiết khấu KM";
+            this.label1.Text = "ID_KM";
             // 
             // txt_KM
             // 
             this.txt_KM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_KM.Location = new System.Drawing.Point(397, 140);
+            this.txt_KM.Location = new System.Drawing.Point(729, 140);
             this.txt_KM.Name = "txt_KM";
             this.txt_KM.Size = new System.Drawing.Size(168, 26);
             this.txt_KM.TabIndex = 86;
@@ -239,15 +257,43 @@ namespace quanlybangiay.form
             this.label4.TabIndex = 74;
             this.label4.Text = "*ID hóa đơn";
             // 
-            // dtgDetailHD
+            // txt_tongck
             // 
-            this.dtgDetailHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgDetailHD.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgDetailHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDetailHD.Location = new System.Drawing.Point(22, 30);
-            this.dtgDetailHD.Name = "dtgDetailHD";
-            this.dtgDetailHD.Size = new System.Drawing.Size(941, 266);
-            this.dtgDetailHD.TabIndex = 0;
+            this.txt_tongck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tongck.Location = new System.Drawing.Point(397, 207);
+            this.txt_tongck.Name = "txt_tongck";
+            this.txt_tongck.Size = new System.Drawing.Size(168, 26);
+            this.txt_tongck.TabIndex = 90;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Info;
+            this.label5.Location = new System.Drawing.Point(393, 184);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(155, 20);
+            this.label5.TabIndex = 91;
+            this.label5.Text = "Tổng chiết khấu";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Info;
+            this.label8.Location = new System.Drawing.Point(725, 117);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 20);
+            this.label8.TabIndex = 92;
+            this.label8.Text = "Chiết khấu KM";
+            // 
+            // txt_IDKM
+            // 
+            this.txt_IDKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_IDKM.Location = new System.Drawing.Point(397, 140);
+            this.txt_IDKM.Name = "txt_IDKM";
+            this.txt_IDKM.Size = new System.Drawing.Size(168, 26);
+            this.txt_IDKM.TabIndex = 93;
             // 
             // DetailHoaDon
             // 
@@ -262,9 +308,9 @@ namespace quanlybangiay.form
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDetailHD)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDetailHD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +336,9 @@ namespace quanlybangiay.form
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_KM;
         private System.Windows.Forms.DataGridView dtgDetailHD;
+        private System.Windows.Forms.TextBox txt_IDKM;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_tongck;
     }
 }
