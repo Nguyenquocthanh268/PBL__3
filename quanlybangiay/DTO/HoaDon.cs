@@ -22,6 +22,7 @@ namespace quanlybangiay.DTO
     
         public string ID_HoaDon { get; set; }
         public string ID_KhuyenMai { get; set; }
+        public Nullable<int> chietKhauKM { get; set; }
         public Nullable<int> Thanhvien { get; set; }
         public string SoDienThoai { get; set; }
         public Nullable<System.DateTime> NgayTao { get; set; }

@@ -65,17 +65,25 @@ namespace quanlybangiay.BLL.BLL_AD
 
         public KhachHang GetKHBySDT(string SDT)
         {
-            return db.KhachHangs.Find(SDT);
+            KhachHang k= db.KhachHangs.Find(SDT);
+            if (k != null)
+            {
+                return k;
+            }
+            else
+            {
+                return null;
+            }
         }
 
-        public double GetChietkhauByID(string ID)
+        public int GetChietkhauByID(string ID)
         {
-            double value = 0;
+           int value = 0;
             foreach (CTKM i in db.CTKMs)
             {
                 if (i.ID_KhuyenMai == ID)
                 {
-                    value = Convert.ToDouble(i.ChietKhau);
+                    value = Convert.ToInt32(i.ChietKhau);
                 }
             }
             return value;
@@ -84,24 +92,24 @@ namespace quanlybangiay.BLL.BLL_AD
 
         public dynamic ShowAll()
         {
-            return db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien }).ToList();
+            return db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien ,p.ID_NhanVien}).ToList();
         }
 
         public dynamic Search(int index, string txt, DateTime begin, DateTime end)
         {
             if (index == 0)
             {
-                return db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien }).ToList(); ;
+                return db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien, p.ID_NhanVien }).ToList(); ;
             }
             else if (index == 1)
             {
-                return db.HoaDons.Where(p => p.KhachHang.TenKhachHang.Contains(txt) && p.NgayTao >= begin && p.NgayTao <= end).Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien }).ToList(); ;
+                return db.HoaDons.Where(p => p.KhachHang.TenKhachHang.Contains(txt) && p.NgayTao >= begin && p.NgayTao <= end).Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien , p.ID_NhanVien }).ToList(); ;
             }
             else if (index == 2)
             {
-                return db.HoaDons.Where(p => p.SoDienThoai.Contains(txt) && p.NgayTao >= begin && p.NgayTao <= end).Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien }).ToList();
+                return db.HoaDons.Where(p => p.SoDienThoai.Contains(txt) && p.NgayTao >= begin && p.NgayTao <= end).Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien , p.ID_NhanVien }).ToList();
             }
-            else return db.HoaDons.Where(p => p.NgayTao >= begin && p.NgayTao <= end).Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien }).ToList();
+            else return db.HoaDons.Where(p => p.NgayTao >= begin && p.NgayTao <= end).Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien, p.ID_NhanVien }).ToList();
         }
 
         public void Delete(string ID)

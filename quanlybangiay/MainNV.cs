@@ -433,7 +433,7 @@ namespace quanlybangiay
             ResetDataSP();
             if (BLL_KhoGiay.Instance.check(txtIDGiay_BanHang.Text))
             {
-                int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
+                int Soluong = Convert.ToInt32(BLL_KhoGiay.Instance.GetGiay_INKho(txtIDGiay_BanHang.Text).SoLuongCon);
                 //but_AddGiay.Enabled = true;
                 Giay a = BLL_KhoGiay.Instance.GetGiayByID(txtIDGiay_BanHang.Text);
                 txtNameSP_BanHang.Text = a.TenGiay;
@@ -632,6 +632,7 @@ namespace quanlybangiay
                             {
                                 HoaDon hoadon = new HoaDon();
                                 hoadon.ID_HoaDon = ID_HoaDon;
+                                hoadon.chietKhauKM = Convert.ToInt32(txtChietKhauCTKM_BanHang.Text);
                                 hoadon.SoDienThoai = txtSdt_BanHang.Text;
                                 hoadon.Thanhvien = Convert.ToInt32(txtSale_BanHang.Text);
                                 hoadon.NgayTao = DateTime.Now;

@@ -22,7 +22,7 @@
           </Key>
           <Property Name="ID_KhuyenMai" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="TenCT" Type="nvarchar(max)" />
-          <Property Name="ChietKhau" Type="float" />
+          <Property Name="ChietKhau" Type="int" />
           <Property Name="NgayBatDau" Type="datetime" />
           <Property Name="NgayKetThuc" Type="datetime" />
           <Property Name="MoTa" Type="nvarchar(max)" />
@@ -45,6 +45,7 @@
           </Key>
           <Property Name="ID_HoaDon" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ID_KhuyenMai" Type="varchar" MaxLength="10" />
+          <Property Name="chietKhauKM" Type="int" />
           <Property Name="Thanhvien" Type="int" />
           <Property Name="SoDienThoai" Type="char" MaxLength="10" />
           <Property Name="NgayTao" Type="datetime" />
@@ -129,9 +130,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_khachhang">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KhachHang">
@@ -143,7 +142,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_kho">
-          <End Role="Giay" Type="Self.Giay" Multiplicity="1" />
+          <End Role="Giay" Type="Self.Giay" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Kho" Type="Self.Kho" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Giay">
@@ -155,9 +156,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_khuyenmai">
-          <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CTKM">
@@ -169,9 +168,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_nhanvien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -277,7 +274,7 @@
           </Key>
           <Property Name="ID_KhuyenMai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenCT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ChietKhau" Type="Double" />
+          <Property Name="ChietKhau" Type="Int32" />
           <Property Name="NgayBatDau" Type="DateTime" Precision="3" />
           <Property Name="NgayKetThuc" Type="DateTime" Precision="3" />
           <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -303,6 +300,7 @@
           </Key>
           <Property Name="ID_HoaDon" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ID_KhuyenMai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="chietKhauKM" Type="Int32" />
           <Property Name="Thanhvien" Type="Int32" />
           <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="NgayTao" Type="DateTime" Precision="3" />
@@ -397,10 +395,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_khuyenmai">
-          <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+        <Association Name="fk_khuyenmai"
+          <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CTKM">
@@ -412,7 +408,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_kho">
-          <End Role="Giay" Type="Self.Giay" Multiplicity="1" />
+          <End Role="Giay" Type="Self.Giay" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Kho" Type="Self.Kho" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Giay">
@@ -424,9 +422,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_khachhang">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KhachHang">
@@ -438,9 +434,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_nhanvien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -569,6 +563,7 @@
               <MappingFragment StoreEntitySet="HoaDon">
                 <ScalarProperty Name="ID_HoaDon" ColumnName="ID_HoaDon" />
                 <ScalarProperty Name="ID_KhuyenMai" ColumnName="ID_KhuyenMai" />
+                <ScalarProperty Name="chietKhauKM" ColumnName="chietKhauKM" />
                 <ScalarProperty Name="Thanhvien" ColumnName="Thanhvien" />
                 <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
                 <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
