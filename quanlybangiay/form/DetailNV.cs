@@ -47,7 +47,8 @@ namespace quanlybangiay.form
                     lb_notify.Enabled = false;
                 }
                 if(index == 3)
-                { 
+                {
+                    txtTK.Enabled = false;
                     txtMK.Enabled = false;
                 }
                 txtID.Text = BLL_NV.Instance.GetNVByID(ID).ID_NhanVien.ToString();
@@ -94,17 +95,24 @@ namespace quanlybangiay.form
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
             } else
             {
-                BLL_NV.Instance.Execute(nv, tk);            
-                d();
-                if (txtID.Enabled == false)
+                try
                 {
-                    GUI(index);
-                    MessageBox.Show("Thay đổi thành công!");
+                    BLL_NV.Instance.Execute(nv, tk);
+                    d();
+                    if (txtID.Enabled == false)
+                    {
+                        GUI(index);
+                        MessageBox.Show("Thay đổi thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã thêm thông tin nhân viên mới !!!");
+                        this.Close();
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Đã thêm thông tin nhân viên mới !!!");
-                    this.Close();
+                    MessageBox.Show("Vui long kiem tra du lieu");
                 }
             }
 

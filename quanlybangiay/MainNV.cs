@@ -276,32 +276,40 @@ namespace quanlybangiay
 
         private void butLuu_DangKyKhachHang_Click(object sender, EventArgs e)
         {
-            //note: bổ sung sdt chỉ chứa kí tự số
-            if (BLL_BanHang.Instance.checkSDT(txtSdtKhachHang.Text))
+            //note: bổ sung sdt chỉ chứa kí tự số'
+            if (txtSdtKhachHang.Text != "" && txtNameKhachHang.Text != "")
             {
-                if (txtSdtKhachHang.Text.Length == 10)
+                if (BLL_BanHang.Instance.checkSDT(txtSdtKhachHang.Text))
                 {
-                    if (BLL_QLKH.Instance.Check(txtSdtKhachHang.Text))
+                    if (txtSdtKhachHang.Text.Length == 10)
                     {
-                        lbCheckSdt.Text = "So dien thoai da ton tai trong he thong...";
+                        if (BLL_QLKH.Instance.Check(txtSdtKhachHang.Text))
+                        {
+                            lbCheckSdt.Text = "So dien thoai da ton tai trong he thong...";
+                        }
+                        else
+                        {
+
+                            BLL_QLKH.Instance.AddKH(txtSdtKhachHang.Text, txtNameKhachHang.Text);
+                            MessageBox.Show("Dang Ky Thanh Cong !!!");
+                            txtSdtKhachHang.Text = "";
+                            txtNameKhachHang.Text = "";
+                            lbCheckSdt.Text = "";
+                        }
                     }
                     else
                     {
-                        BLL_QLKH.Instance.AddKH(txtSdtKhachHang.Text, txtNameKhachHang.Text);
-                        MessageBox.Show("Dang Ky Thanh Cong !!!");
-                        txtSdtKhachHang.Text = "";
-                        txtNameKhachHang.Text = "";
-                        lbCheckSdt.Text = "";
+                        lbCheckSdt.Text = "Số điện thoại phải đủ 10 kí tự, chỉ chứa kí tự số ";
                     }
                 }
                 else
                 {
-                    lbCheckSdt.Text = "Số điện thoại phải đủ 10 kí tự, chỉ chứa kí tự số ";
+                    lbCheckSdt.Text = "Số điện thoại chỉ chứa ký tự số ... ";
                 }
             }
             else
             {
-                lbCheckSdt.Text = "Số điện thoại chỉ chứa ký tự số ... ";
+                lbCheckSdt.Text = "Vui lòng điền đầy đủ thông tin ... ";
             }
 
         }
@@ -415,7 +423,7 @@ namespace quanlybangiay
             ResetDataSP();
             if (BLL_KhoGiay.Instance.check(txtIDGiay_BanHang.Text))
             {
-                int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
+                int Soluong = Convert.ToInt32(BLL_KhoGiay.Instance.GetGiay_INKho(txtIDGiay_BanHang.Text).SoLuongCon);
                 //but_AddGiay.Enabled = true;
                 Giay a = BLL_KhoGiay.Instance.GetGiayByID(txtIDGiay_BanHang.Text);
                 txtNameSP_BanHang.Text = a.TenGiay;
@@ -610,6 +618,11 @@ namespace quanlybangiay
                             {
                                 HoaDon hoadon = new HoaDon();
                                 hoadon.ID_HoaDon = ID_HoaDon;
+                                if(txtChietKhauCTKM_BanHang.Text != "")
+                                {
+                                    hoadon.chietKhauKM = Convert.ToInt32(txtChietKhauCTKM_BanHang.Text);
+                                }
+                                hoadon.chietKhauKM = 0;
                                 hoadon.SoDienThoai = txtSdt_BanHang.Text;
                                 hoadon.Thanhvien = Convert.ToInt32(txtSale_BanHang.Text);
                                 hoadon.NgayTao = DateTime.Now;
