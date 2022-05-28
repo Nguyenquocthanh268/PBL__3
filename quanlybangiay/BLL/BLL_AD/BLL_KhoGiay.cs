@@ -140,9 +140,9 @@ namespace quanlybangiay.BLL.BLL_AD
             db.Khoes.Remove(k);
             db.SaveChanges();
         }
-        public dynamic showNhap()
+        public List<NhapKho> getListTimeNhapKhoByID(string id)
         {
-            return (db.NhapKhoes.Select(p => new { p.Stt, p.ID_Giay, p.Kho.Giay.TenGiay, p.SoLuongNhap, p.NgayNhap, p.GiaNhap })).ToList();
+            return db.NhapKhoes.Where(p => p.ID_Giay == id).Select(p => p).ToList();
         }
         public int STTNhap()
         {
