@@ -5,17 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="DataPBL3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="CTKM">
-          <Key>
-            <PropertyRef Name="ID_KhuyenMai" />
-          </Key>
-          <Property Name="ID_KhuyenMai" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenCT" Type="nvarchar(max)" />
-          <Property Name="ChietKhau" Type="float" />
-          <Property Name="NgayBatDau" Type="datetime" />
-          <Property Name="NgayKetThuc" Type="datetime" />
-          <Property Name="MoTa" Type="nvarchar(max)" />
-        </EntityType>
         <EntityType Name="ChiTietHoaDon">
           <Key>
             <PropertyRef Name="ID_HoaDon" />
@@ -26,6 +15,17 @@
           <Property Name="SoLuong" Type="int" />
           <Property Name="GiaBan" Type="float" />
           <Property Name="GiaNhap" Type="float" />
+        </EntityType>
+        <EntityType Name="CTKM">
+          <Key>
+            <PropertyRef Name="ID_KhuyenMai" />
+          </Key>
+          <Property Name="ID_KhuyenMai" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenCT" Type="nvarchar(max)" />
+          <Property Name="ChietKhau" Type="float" />
+          <Property Name="NgayBatDau" Type="datetime" />
+          <Property Name="NgayKetThuc" Type="datetime" />
+          <Property Name="MoTa" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Giay">
           <Key>
@@ -101,7 +101,9 @@
           <Property Name="ID_NhanVien" Type="varchar" MaxLength="10" />
         </EntityType>
         <Association Name="fk_chitiethoadon">
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HoaDon">
@@ -113,7 +115,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_giay">
-          <End Role="Giay" Type="Self.Giay" Multiplicity="1" />
+          <End Role="Giay" Type="Self.Giay" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Giay">
@@ -125,7 +129,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_khachhang">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KhachHang">
@@ -149,7 +155,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_khuyenmai">
-          <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1" />
+          <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CTKM">
@@ -161,7 +169,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_nhanvien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -173,7 +183,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_nhapkho">
-          <End Role="Kho" Type="Self.Kho" Multiplicity="0..1" />
+          <End Role="Kho" Type="Self.Kho" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="NhapKho" Type="Self.NhapKho" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Kho">
@@ -185,7 +197,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_tk">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -197,8 +211,8 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DataPBL3ModelStoreContainer">
-          <EntitySet Name="CTKM" EntityType="Self.CTKM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ChiTietHoaDon" EntityType="Self.ChiTietHoaDon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CTKM" EntityType="Self.CTKM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Giay" EntityType="Self.Giay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
@@ -244,18 +258,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DataPBL3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="CTKM">
-          <Key>
-            <PropertyRef Name="ID_KhuyenMai" />
-          </Key>
-          <Property Name="ID_KhuyenMai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TenCT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ChietKhau" Type="Double" />
-          <Property Name="NgayBatDau" Type="DateTime" Precision="3" />
-          <Property Name="NgayKetThuc" Type="DateTime" Precision="3" />
-          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="HoaDons" Relationship="Self.fk_khuyenmai" FromRole="CTKM" ToRole="HoaDon" />
-        </EntityType>
         <EntityType Name="ChiTietHoaDon">
           <Key>
             <PropertyRef Name="ID_HoaDon" />
@@ -268,6 +270,18 @@
           <Property Name="GiaNhap" Type="Double" />
           <NavigationProperty Name="HoaDon" Relationship="Self.fk_chitiethoadon" FromRole="ChiTietHoaDon" ToRole="HoaDon" />
           <NavigationProperty Name="Giay" Relationship="Self.fk_giay" FromRole="ChiTietHoaDon" ToRole="Giay" />
+        </EntityType>
+        <EntityType Name="CTKM">
+          <Key>
+            <PropertyRef Name="ID_KhuyenMai" />
+          </Key>
+          <Property Name="ID_KhuyenMai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenCT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChietKhau" Type="Double" />
+          <Property Name="NgayBatDau" Type="DateTime" Precision="3" />
+          <Property Name="NgayKetThuc" Type="DateTime" Precision="3" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HoaDons" Relationship="Self.fk_khuyenmai" FromRole="CTKM" ToRole="HoaDon" />
         </EntityType>
         <EntityType Name="Giay">
           <Key>
@@ -294,8 +308,8 @@
           <Property Name="NgayTao" Type="DateTime" Precision="3" />
           <Property Name="TongTien" Type="Double" />
           <Property Name="ID_NhanVien" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="CTKM" Relationship="Self.fk_khuyenmai" FromRole="HoaDon" ToRole="CTKM" />
           <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.fk_chitiethoadon" FromRole="HoaDon" ToRole="ChiTietHoaDon" />
+          <NavigationProperty Name="CTKM" Relationship="Self.fk_khuyenmai" FromRole="HoaDon" ToRole="CTKM" />
           <NavigationProperty Name="KhachHang" Relationship="Self.fk_khachhang" FromRole="HoaDon" ToRole="KhachHang" />
           <NavigationProperty Name="NhanVien" Relationship="Self.fk_nhanvien" FromRole="HoaDon" ToRole="NhanVien" />
         </EntityType>
@@ -355,22 +369,10 @@
           <Property Name="ID_NhanVien" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="NhanVien" Relationship="Self.fk_tk" FromRole="TaiKhoan" ToRole="NhanVien" />
         </EntityType>
-        <Association Name="fk_khuyenmai">
-          <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1">
+        <Association Name="fk_chitiethoadon">
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CTKM">
-              <PropertyRef Name="ID_KhuyenMai" />
-            </Principal>
-            <Dependent Role="HoaDon">
-              <PropertyRef Name="ID_KhuyenMai" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_chitiethoadon">
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
           <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HoaDon">
@@ -382,7 +384,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_giay">
-          <End Role="Giay" Type="Self.Giay" Multiplicity="1" />
+          <End Role="Giay" Type="Self.Giay" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Giay">
@@ -390,6 +394,20 @@
             </Principal>
             <Dependent Role="ChiTietHoaDon">
               <PropertyRef Name="ID_Giay" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_khuyenmai">
+          <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CTKM">
+              <PropertyRef Name="ID_KhuyenMai" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="ID_KhuyenMai" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -406,7 +424,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_khachhang">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KhachHang">
@@ -418,7 +438,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_nhanvien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -430,7 +452,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_nhapkho">
-          <End Role="Kho" Type="Self.Kho" Multiplicity="0..1" />
+          <End Role="Kho" Type="Self.Kho" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="NhapKho" Type="Self.NhapKho" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Kho">
@@ -442,7 +466,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_tk">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -454,8 +480,8 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DataPBL3" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="CTKMs" EntityType="Self.CTKM" />
           <EntitySet Name="ChiTietHoaDons" EntityType="Self.ChiTietHoaDon" />
+          <EntitySet Name="CTKMs" EntityType="Self.CTKM" />
           <EntitySet Name="Giays" EntityType="Self.Giay" />
           <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
           <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
@@ -463,10 +489,6 @@
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
           <EntitySet Name="NhapKhoes" EntityType="Self.NhapKho" />
           <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
-          <AssociationSet Name="fk_khuyenmai" Association="Self.fk_khuyenmai">
-            <End Role="CTKM" EntitySet="CTKMs" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
           <AssociationSet Name="fk_chitiethoadon" Association="Self.fk_chitiethoadon">
             <End Role="HoaDon" EntitySet="HoaDons" />
             <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
@@ -474,6 +496,10 @@
           <AssociationSet Name="fk_giay" Association="Self.fk_giay">
             <End Role="Giay" EntitySet="Giays" />
             <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="fk_khuyenmai" Association="Self.fk_khuyenmai">
+            <End Role="CTKM" EntitySet="CTKMs" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
           <AssociationSet Name="fk_kho" Association="Self.fk_kho">
             <End Role="Giay" EntitySet="Giays" />
@@ -502,6 +528,17 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DataPBL3ModelStoreContainer" CdmEntityContainer="DataPBL3">
+          <EntitySetMapping Name="ChiTietHoaDons">
+            <EntityTypeMapping TypeName="DataPBL3Model.ChiTietHoaDon">
+              <MappingFragment StoreEntitySet="ChiTietHoaDon">
+                <ScalarProperty Name="ID_HoaDon" ColumnName="ID_HoaDon" />
+                <ScalarProperty Name="ID_Giay" ColumnName="ID_Giay" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="GiaBan" ColumnName="GiaBan" />
+                <ScalarProperty Name="GiaNhap" ColumnName="GiaNhap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="CTKMs">
             <EntityTypeMapping TypeName="DataPBL3Model.CTKM">
               <MappingFragment StoreEntitySet="CTKM">
@@ -511,17 +548,6 @@
                 <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
                 <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
                 <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ChiTietHoaDons">
-            <EntityTypeMapping TypeName="DataPBL3Model.ChiTietHoaDon">
-              <MappingFragment StoreEntitySet="ChiTietHoaDon">
-                <ScalarProperty Name="ID_HoaDon" ColumnName="ID_HoaDon" />
-                <ScalarProperty Name="ID_Giay" ColumnName="ID_Giay" />
-                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-                <ScalarProperty Name="GiaBan" ColumnName="GiaBan" />
-                <ScalarProperty Name="GiaNhap" ColumnName="GiaNhap" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

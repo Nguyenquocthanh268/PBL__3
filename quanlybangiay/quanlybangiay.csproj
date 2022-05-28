@@ -87,46 +87,46 @@
     <Compile Include="BLL\BLL_NV\BLL_NV_HoaDon.cs" />
     <Compile Include="DB_Helper.cs" />
     <Compile Include="DTO\ChiTietHoaDon.cs">
-      <DependentUpon>QuaniBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\CTKM.cs">
-      <DependentUpon>QuaniBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Giay.cs">
-      <DependentUpon>QuaniBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\HoaDon.cs">
-      <DependentUpon>QuaniBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\KhachHang.cs">
-      <DependentUpon>QuaniBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Kho.cs">
-      <DependentUpon>QuaniBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\NhanVien.cs">
-      <DependentUpon>QuaniBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\NhapKho.cs">
-      <DependentUpon>QuaniBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\QuaniBanGiay.Context.cs">
+    <Compile Include="DTO\QuanLiBanGiay.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuaniBanGiay.Context.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\QuaniBanGiay.cs">
+    <Compile Include="DTO\QuanLiBanGiay.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuaniBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\QuaniBanGiay.Designer.cs">
+    <Compile Include="DTO\QuanLiBanGiay.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuaniBanGiay.edmx</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
     </Compile>
     <Compile Include="DTO\TaiKhoan.cs">
-      <DependentUpon>QuaniBanGiay.tt</DependentUpon>
+      <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="MainQL.cs">
       <SubType>Form</SubType>
@@ -164,30 +164,6 @@
     <Compile Include="form\DetailNV.Designer.cs">
       <DependentUpon>DetailNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\doanhthu1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\doanhthu1.Designer.cs">
-      <DependentUpon>doanhthu1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\doanhthu_nam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\doanhthu_nam.Designer.cs">
-      <DependentUpon>doanhthu_nam.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\doanhthu_ngay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\doanhthu_ngay.Designer.cs">
-      <DependentUpon>doanhthu_ngay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\doanhthu_thang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\doanhthu_thang.Designer.cs">
-      <DependentUpon>doanhthu_thang.cs</DependentUpon>
-    </Compile>
     <Compile Include="form\Doanh_Thu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,12 +187,6 @@
     </Compile>
     <Compile Include="form\Khach_Hang.Designer.cs">
       <DependentUpon>Khach_Hang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\khogiay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\khogiay.Designer.cs">
-      <DependentUpon>khogiay.cs</DependentUpon>
     </Compile>
     <Compile Include="form\Kho_Giay.cs">
       <SubType>Form</SubType>
@@ -247,18 +217,6 @@
     </Compile>
     <Compile Include="form\Tai_Khoan.Designer.cs">
       <DependentUpon>Tai_Khoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\xuhuong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\xuhuong.Designer.cs">
-      <DependentUpon>xuhuong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\Xu_Huong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\Xu_Huong.Designer.cs">
-      <DependentUpon>Xu_Huong.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -292,18 +250,6 @@
     <EmbeddedResource Include="form\DetailNV.resx">
       <DependentUpon>DetailNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\doanhthu1.resx">
-      <DependentUpon>doanhthu1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form\doanhthu_nam.resx">
-      <DependentUpon>doanhthu_nam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form\doanhthu_ngay.resx">
-      <DependentUpon>doanhthu_ngay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form\doanhthu_thang.resx">
-      <DependentUpon>doanhthu_thang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="form\Doanh_Thu.resx">
       <DependentUpon>Doanh_Thu.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,9 +261,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form\Khach_Hang.resx">
       <DependentUpon>Khach_Hang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form\khogiay.resx">
-      <DependentUpon>khogiay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\Kho_Giay.resx">
       <DependentUpon>Kho_Giay.cs</DependentUpon>
@@ -334,12 +277,6 @@
     <EmbeddedResource Include="form\Tai_Khoan.resx">
       <DependentUpon>Tai_Khoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\xuhuong.resx">
-      <DependentUpon>xuhuong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form\Xu_Huong.resx">
-      <DependentUpon>Xu_Huong.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,13 +288,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DTO\QuaniBanGiay.edmx">
+    <EntityDeploy Include="DTO\QuanLiBanGiay.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuaniBanGiay.Designer.cs</LastGenOutput>
+      <LastGenOutput>QuanLiBanGiay.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config" />
-    <None Include="DTO\QuaniBanGiay.edmx.diagram">
-      <DependentUpon>QuaniBanGiay.edmx</DependentUpon>
+    <None Include="DTO\QuanLiBanGiay.edmx.diagram">
+      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -514,15 +451,15 @@
     <None Include="Resources\icons8-tick-box-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DTO\QuaniBanGiay.Context.tt">
+    <Content Include="DTO\QuanLiBanGiay.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuaniBanGiay.edmx</DependentUpon>
-      <LastGenOutput>QuaniBanGiay.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
+      <LastGenOutput>QuanLiBanGiay.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DTO\QuaniBanGiay.tt">
+    <Content Include="DTO\QuanLiBanGiay.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuaniBanGiay.edmx</DependentUpon>
-      <LastGenOutput>QuaniBanGiay.cs</LastGenOutput>
+      <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
+      <LastGenOutput>QuanLiBanGiay.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

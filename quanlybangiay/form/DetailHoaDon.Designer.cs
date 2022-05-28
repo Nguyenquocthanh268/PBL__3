@@ -34,6 +34,10 @@ namespace quanlybangiay.form
             this.panel4 = new System.Windows.Forms.Panel();
             this.dtgDetailHD = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_TV = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_KM = new System.Windows.Forms.TextBox();
             this.txtTong = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtNgaytao = new System.Windows.Forms.TextBox();
@@ -44,10 +48,6 @@ namespace quanlybangiay.form
             this.label3 = new System.Windows.Forms.Label();
             this.txtID_HD = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_KM = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_TV = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -117,6 +117,44 @@ namespace quanlybangiay.form
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(984, 241);
             this.panel2.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Info;
+            this.label2.Location = new System.Drawing.Point(723, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(211, 20);
+            this.label2.TabIndex = 89;
+            this.label2.Text = "Chiết khấu thành viên";
+            // 
+            // txt_TV
+            // 
+            this.txt_TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TV.Location = new System.Drawing.Point(729, 140);
+            this.txt_TV.Name = "txt_TV";
+            this.txt_TV.Size = new System.Drawing.Size(168, 26);
+            this.txt_TV.TabIndex = 88;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Info;
+            this.label1.Location = new System.Drawing.Point(393, 117);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 20);
+            this.label1.TabIndex = 87;
+            this.label1.Text = "Chiết khấu KM";
+            // 
+            // txt_KM
+            // 
+            this.txt_KM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_KM.Location = new System.Drawing.Point(397, 140);
+            this.txt_KM.Name = "txt_KM";
+            this.txt_KM.Size = new System.Drawing.Size(168, 26);
+            this.txt_KM.TabIndex = 86;
             // 
             // txtTong
             // 
@@ -212,44 +250,6 @@ namespace quanlybangiay.form
             this.label4.Size = new System.Drawing.Size(121, 20);
             this.label4.TabIndex = 74;
             this.label4.Text = "*ID hóa đơn";
-            // 
-            // txt_KM
-            // 
-            this.txt_KM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_KM.Location = new System.Drawing.Point(397, 140);
-            this.txt_KM.Name = "txt_KM";
-            this.txt_KM.Size = new System.Drawing.Size(168, 26);
-            this.txt_KM.TabIndex = 86;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(393, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 20);
-            this.label1.TabIndex = 87;
-            this.label1.Text = "Chiết khấu KM";
-            // 
-            // txt_TV
-            // 
-            this.txt_TV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TV.Location = new System.Drawing.Point(729, 140);
-            this.txt_TV.Name = "txt_TV";
-            this.txt_TV.Size = new System.Drawing.Size(168, 26);
-            this.txt_TV.TabIndex = 88;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(723, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 20);
-            this.label2.TabIndex = 89;
-            this.label2.Text = "Chiết khấu thành viên";
             // 
             // DetailHoaDon
             // 

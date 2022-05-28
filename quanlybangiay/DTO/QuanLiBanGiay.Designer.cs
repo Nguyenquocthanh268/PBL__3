@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Admin\Source\Repos\PBL__3(done2505)\quanlybangiay\DTO\QuaniBanGiay.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Admin\Desktop\PBL_3\quanlybangiay\DTO\QuanLiBanGiay.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

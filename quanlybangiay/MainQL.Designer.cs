@@ -58,7 +58,7 @@
             // 
             // pn_menu
             // 
-            this.pn_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(70)))));
+            this.pn_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.pn_menu.Controls.Add(this.button8);
             this.pn_menu.Controls.Add(this.button7);
             this.pn_menu.Controls.Add(this.button6);
@@ -231,7 +231,7 @@
             // 
             // pn_logo
             // 
-            this.pn_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(70)))));
+            this.pn_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.pn_logo.Controls.Add(this.pictureBox1);
             this.pn_logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_logo.Location = new System.Drawing.Point(0, 0);

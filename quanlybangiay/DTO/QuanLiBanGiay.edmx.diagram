@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="64bfabaf68a74923b29d2f3322ad4d93" Name="Diagram1">
-        <EntityTypeShape EntityType="DataPBL3Model.CTKM" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+      <Diagram DiagramId="bca2dbc1134b47a28c32684fc7c0e286" Name="Diagram1">
         <EntityTypeShape EntityType="DataPBL3Model.ChiTietHoaDon" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataPBL3Model.CTKM" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.Giay" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.HoaDon" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.KhachHang" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
@@ -14,9 +14,9 @@
         <EntityTypeShape EntityType="DataPBL3Model.NhanVien" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.NhapKho" Width="1.5" PointX="7.5" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.TaiKhoan" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
-        <AssociationConnector Association="DataPBL3Model.fk_khuyenmai" ManuallyRouted="false" />
         <AssociationConnector Association="DataPBL3Model.fk_chitiethoadon" ManuallyRouted="false" />
         <AssociationConnector Association="DataPBL3Model.fk_giay" ManuallyRouted="false" />
+        <AssociationConnector Association="DataPBL3Model.fk_khuyenmai" ManuallyRouted="false" />
         <AssociationConnector Association="DataPBL3Model.fk_kho" ManuallyRouted="false" />
         <AssociationConnector Association="DataPBL3Model.fk_khachhang" ManuallyRouted="false" />
         <AssociationConnector Association="DataPBL3Model.fk_nhanvien" ManuallyRouted="false" />
