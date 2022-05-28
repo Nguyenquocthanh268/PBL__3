@@ -67,16 +67,7 @@ namespace quanlybangiay.form
             }
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count == 1)
-            {
-                string ID = dataGridView1.SelectedRows[0].Cells["ID_KhuyenMai"].Value.ToString();
-                GUI(ID);
-
-                Khoa();
-            }
-        }
+     
         private CTKM getCTKM()
         {
             try
@@ -210,9 +201,17 @@ namespace quanlybangiay.form
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+     
 
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                string ID = dataGridView1.SelectedRows[0].Cells["ID_KhuyenMai"].Value.ToString();
+                GUI(ID);
+
+                Khoa();
+            }
         }
     }
 }

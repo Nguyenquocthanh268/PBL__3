@@ -20,7 +20,7 @@ namespace quanlybangiay.form
             IDGiay = ID;
             InitializeComponent();
             GUI();
-            show();
+            show(IDGiay);
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace quanlybangiay.form
                         SoLuongCon = Convert.ToInt32(txt_sln.Text.ToString()),
                     };
                     BLL_KhoGiay.Instance.NhapKho(g, k, n);
-                    show();
+                    show(IDGiay);
                     MessageBox.Show("Da nhap thanh cong !!!");
                 }catch (Exception ex)
                 {
@@ -72,9 +72,9 @@ namespace quanlybangiay.form
             DateTime end = Convert.ToDateTime(dt_end.Value.ToString()); ;
             dataGridView1.DataSource = BLL_KhoGiay.Instance.SearchNhapKho(start, end);
         }
-        public void show()
+        public void show(string id)
         {
-            dataGridView1.DataSource = BLL_KhoGiay.Instance.showNhap();
+            dataGridView1.DataSource = BLL_KhoGiay.Instance.getListTimeNhapKhoByID(id);
         }
         public void GUI()
         {

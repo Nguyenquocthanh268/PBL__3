@@ -330,6 +330,7 @@ namespace quanlybangiay
         //Thong tin khach hang
         private void but_CheckKH_Click(object sender, EventArgs e)
         {
+            ResetDataKH();
             if (BLL_BanHang.Instance.checkSDT(txtSdt_BanHang.Text))
             {
                 if (txtSdt_BanHang.Text.Length == 10)
@@ -341,6 +342,15 @@ namespace quanlybangiay
                         txtNgayDK_BanHang.Text = Convert.ToString(a.NgayDangKy);
                         txtDiemTL_BanHang.Text = Convert.ToString(a.DiemTichLuy);
                         txtSale_BanHang.Text = Convert.ToString(GiamGiaTheoDiemTichLuy((int)a.DiemTichLuy));
+                        if (txtChietKhauCTKM_BanHang.Text != "")
+                        {
+                            ChietKhau = Convert.ToInt32(txtSale_BanHang.Text) + Convert.ToInt32(txtChietKhauCTKM_BanHang.Text);
+                        }
+                        else
+                        {
+                            ChietKhau = Convert.ToInt32(txtSale_BanHang.Text);
+                        }
+                        ResetData();
                     }
                     else
                     {
@@ -372,6 +382,14 @@ namespace quanlybangiay
         {
             lbKTthongTin_BanHang.Text = "";
         }
+        public void ResetDataKH()
+        {
+
+            txtNameKH_BanHang.Text = "";
+            txtNgayDK_BanHang.Text = "";
+            txtDiemTL_BanHang.Text = "";
+            txtSale_BanHang.Text = "";
+        }
         //******************************************************************************************************
 
 
@@ -396,7 +414,7 @@ namespace quanlybangiay
             {
                 string name = cbbCTKM_BanHang.SelectedItem.ToString();
                 txtChietKhauCTKM_BanHang.Text = BLL_BanHang.Instance.GetChietkhauByName(name).ToString();
-                ResetData();
+                //ResetData();
                 if (txtSale_BanHang.Text != "")
                 {
                     ChietKhau = Convert.ToInt32(txtSale_BanHang.Text) + Convert.ToInt32(txtChietKhauCTKM_BanHang.Text);
@@ -415,7 +433,7 @@ namespace quanlybangiay
             ResetDataSP();
             if (BLL_KhoGiay.Instance.check(txtIDGiay_BanHang.Text))
             {
-                int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
+                int Soluong = Convert.ToInt32(BLL_KhoGiay.Instance.GetGiay_INKho(txtIDGiay_BanHang.Text).SoLuongCon);
                 //but_AddGiay.Enabled = true;
                 Giay a = BLL_KhoGiay.Instance.GetGiayByID(txtIDGiay_BanHang.Text);
                 txtNameSP_BanHang.Text = a.TenGiay;
@@ -436,6 +454,7 @@ namespace quanlybangiay
                     rdHetHang.Checked = true;
                     rdConHang.ForeColor = Color.SlateGray;
                     rdHetHang.ForeColor = Color.Red;
+                    but_AddGiay.Enabled = false;
                 }
             }
             else
@@ -468,6 +487,7 @@ namespace quanlybangiay
                             rdHetHang.Checked = true;
                             rdConHang.ForeColor = Color.SlateGray;
                             rdHetHang.ForeColor = Color.Red;
+                            but_AddGiay.Enabled = false;
                         }
                         else
                         {
@@ -528,6 +548,8 @@ namespace quanlybangiay
             txtSL_BanHang.Text = "";
             rdConHang.Checked = false;
             rdHetHang.Checked = false;
+            rdConHang.ForeColor = Color.SlateGray;
+            rdHetHang.ForeColor = Color.SlateGray;
         }
         //******************************************************************************************************
 
@@ -610,6 +632,7 @@ namespace quanlybangiay
                             {
                                 HoaDon hoadon = new HoaDon();
                                 hoadon.ID_HoaDon = ID_HoaDon;
+                                hoadon.chietKhauKM = Convert.ToInt32(txtChietKhauCTKM_BanHang.Text);
                                 hoadon.SoDienThoai = txtSdt_BanHang.Text;
                                 hoadon.Thanhvien = Convert.ToInt32(txtSale_BanHang.Text);
                                 hoadon.NgayTao = DateTime.Now;
@@ -668,6 +691,7 @@ namespace quanlybangiay
             txtSale_BanHang.Text = "";
             cbbCTKM_BanHang.SelectedItem = null;
             txtChietKhauCTKM_BanHang.Text = "";
+            txtIDGiay_BanHang.Text = "";
             ResetDataSP();
             tb_Tongcong.Text = "";
             tb_Phantramck.Text = "";

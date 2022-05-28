@@ -129,13 +129,20 @@ namespace quanlybangiay.BLL.BLL_AD
         {
             Giay g = db.Giays.Find(ID);
             Kho k = db.Khoes.Find(ID);
+            foreach(NhapKho i in db.NhapKhoes)
+            {
+                if (i.ID_Giay == ID)
+                {
+                  db.NhapKhoes.Remove(i);
+                }
+            }
             db.Giays.Remove(g);
             db.Khoes.Remove(k);
             db.SaveChanges();
         }
-        public dynamic showNhap()
+        public List<NhapKho> getListTimeNhapKhoByID(string id)
         {
-            return (db.NhapKhoes.Select(p => new { p.Stt, p.ID_Giay, p.Kho.Giay.TenGiay, p.SoLuongNhap, p.NgayNhap, p.GiaNhap })).ToList();
+            return db.NhapKhoes.Where(p => p.ID_Giay == id).Select(p => p).ToList();
         }
         public int STTNhap()
         {
@@ -243,6 +250,10 @@ namespace quanlybangiay.BLL.BLL_AD
         public dynamic showAll()
         {
             return (db.Giays.Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+        }
+        public Kho GetGiay_INKho(string ID)
+        {
+            return db.Khoes.Find(ID);
         }
 
     }

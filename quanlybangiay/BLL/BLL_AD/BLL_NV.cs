@@ -62,7 +62,15 @@ namespace quanlybangiay.BLL.BLL_AD
 
         public NhanVien GetNVByID(string ID)
         {
-            return db.NhanViens.Find(ID);
+            NhanVien k= db.NhanViens.Find(ID);
+            if (k != null)
+            {
+                return k;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public dynamic GetUsername(string ID)
