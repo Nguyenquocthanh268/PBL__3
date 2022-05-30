@@ -70,7 +70,7 @@ namespace quanlybangiay.form
         {
             DateTime start = Convert.ToDateTime(dt_st.Value.ToString());
             DateTime end = Convert.ToDateTime(dt_end.Value.ToString()); ;
-            dataGridView1.DataSource = BLL_KhoGiay.Instance.SearchNhapKho(start, end);
+            dataGridView1.DataSource = BLL_KhoGiay.Instance.SearchNhapKho(start, end,IDGiay);
         }
         public void show(string id)
         {

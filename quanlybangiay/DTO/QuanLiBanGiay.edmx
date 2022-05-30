@@ -395,7 +395,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_khuyenmai"
+        <Association Name="fk_khuyenmai">
           <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>

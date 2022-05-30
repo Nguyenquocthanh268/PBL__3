@@ -75,7 +75,7 @@ namespace quanlybangiay.BLL.BLL_AD
                 foreach (ChiTietHoaDon i in GetChiTietHDByID(hd.ID_HoaDon))
                 {
                     gianhap = 0;
-                   List<NhapKho> a = BLL_KhoGiay.Instance.getListTimeNhapKhoByID(i.ID_Giay);
+                   var a = BLL_KhoGiay.Instance.getListTimeNhapKhoByID(i.ID_Giay);
                     for (int k = a.Count -1 ; k >= 0; k--)
                     {
                         if(hd.NgayTao > a[k].NgayNhap)

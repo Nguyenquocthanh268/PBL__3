@@ -60,7 +60,8 @@ namespace quanlybangiay.form
                 KhachHang s = new KhachHang
                 {
                     SoDienThoai = tbSdt.Text.ToString(),
-                    TenKhachHang = tbName.Text.ToString()
+                    TenKhachHang = tbName.Text.ToString(),
+                    DiemTichLuy =Convert.ToInt32(tbDiemTL.Text.ToString()),
                 };
                 BLL_QLKH.Instance.UpdateKH(s);
                 Show();
