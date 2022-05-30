@@ -35,9 +35,8 @@ namespace quanlybangiay.form
             } 
             else if (dtgNV.SelectedRows.Count == 1)
             {
-                int i = 1;
                 string ID = dtgNV.SelectedRows[0].Cells["ID_NhanVien"].Value.ToString();
-                DetailNV f = new DetailNV(ID, i);
+                DetailNV f = new DetailNV(ID, 1);
                 f.d = new DetailNV.Mydel(ShowDtg);
                 f.Show();
             }

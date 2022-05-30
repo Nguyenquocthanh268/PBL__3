@@ -48,6 +48,12 @@ namespace quanlybangiay.form
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dateBegin = new System.Windows.Forms.DateTimePicker();
+            this.ID_HoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHD)).BeginInit();
             this.panel4.SuspendLayout();
@@ -66,6 +72,7 @@ namespace quanlybangiay.form
             // 
             // dtgHD
             // 
+            this.dtgHD.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
             this.dtgHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -84,6 +91,13 @@ namespace quanlybangiay.form
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_HoaDon,
+            this.TenKhachHang,
+            this.SoDienThoai,
+            this.NgayTao,
+            this.TongTien,
+            this.ID_NhanVien});
             this.dtgHD.EnableHeadersVisualStyles = false;
             this.dtgHD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(112)))), ((int)(((byte)(144)))));
             this.dtgHD.Location = new System.Drawing.Point(12, 12);
@@ -284,6 +298,42 @@ namespace quanlybangiay.form
             this.dateBegin.TabIndex = 84;
             this.dateBegin.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             // 
+            // ID_HoaDon
+            // 
+            this.ID_HoaDon.DataPropertyName = "ID_HoaDon";
+            this.ID_HoaDon.HeaderText = "ID Hoá đơn";
+            this.ID_HoaDon.Name = "ID_HoaDon";
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.DataPropertyName = "TenKhachHang";
+            this.TenKhachHang.HeaderText = "Tên khách hàng";
+            this.TenKhachHang.Name = "TenKhachHang";
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            // 
+            // NgayTao
+            // 
+            this.NgayTao.DataPropertyName = "NgayTao";
+            this.NgayTao.HeaderText = "Ngày tạo đơn";
+            this.NgayTao.Name = "NgayTao";
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.Name = "TongTien";
+            // 
+            // ID_NhanVien
+            // 
+            this.ID_NhanVien.DataPropertyName = "ID_NhanVien";
+            this.ID_NhanVien.HeaderText = "ID Nhân viên";
+            this.ID_NhanVien.Name = "ID_NhanVien";
+            // 
             // Hoa_Don
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,5 +370,11 @@ namespace quanlybangiay.form
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateBegin;
         private System.Windows.Forms.DataGridView dtgHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_HoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhachHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_NhanVien;
     }
 }

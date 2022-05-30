@@ -57,6 +57,10 @@ namespace quanlybangiay.form
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemTichLuy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -360,6 +364,11 @@ namespace quanlybangiay.form
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenKhachHang,
+            this.SoDienThoai,
+            this.NgayDangKy,
+            this.DiemTichLuy});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(112)))), ((int)(((byte)(144)))));
             this.dataGridView1.Location = new System.Drawing.Point(11, 13);
@@ -396,6 +405,30 @@ namespace quanlybangiay.form
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 678);
             this.panel1.TabIndex = 9;
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.DataPropertyName = "TenKhachHang";
+            this.TenKhachHang.HeaderText = "Tên khách hàng";
+            this.TenKhachHang.Name = "TenKhachHang";
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            // 
+            // NgayDangKy
+            // 
+            this.NgayDangKy.DataPropertyName = "NgayDangKy";
+            this.NgayDangKy.HeaderText = "Ngày đăng ký";
+            this.NgayDangKy.Name = "NgayDangKy";
+            // 
+            // DiemTichLuy
+            // 
+            this.DiemTichLuy.DataPropertyName = "DiemTichLuy";
+            this.DiemTichLuy.HeaderText = "Điểm tích luỹ";
+            this.DiemTichLuy.Name = "DiemTichLuy";
             // 
             // Khach_Hang
             // 
@@ -447,5 +480,9 @@ namespace quanlybangiay.form
         private System.Windows.Forms.TextBox tbDiemTL;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhachHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDangKy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiemTichLuy;
     }
 }

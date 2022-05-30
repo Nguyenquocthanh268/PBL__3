@@ -64,6 +64,9 @@ namespace quanlybangiay.form
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ID_KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChietKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -453,6 +456,10 @@ namespace quanlybangiay.form
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_KhuyenMai,
+            this.TenCT,
+            this.ChietKhau});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(112)))), ((int)(((byte)(144)))));
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
@@ -478,7 +485,6 @@ namespace quanlybangiay.form
             this.dataGridView1.Size = new System.Drawing.Size(855, 291);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
-
             // 
             // panel1
             // 
@@ -490,6 +496,24 @@ namespace quanlybangiay.form
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 678);
             this.panel1.TabIndex = 10;
+            // 
+            // ID_KhuyenMai
+            // 
+            this.ID_KhuyenMai.DataPropertyName = "ID_KhuyenMai";
+            this.ID_KhuyenMai.HeaderText = "ID Khuyến mãi";
+            this.ID_KhuyenMai.Name = "ID_KhuyenMai";
+            // 
+            // TenCT
+            // 
+            this.TenCT.DataPropertyName = "TenCT";
+            this.TenCT.HeaderText = "Tên chương trình";
+            this.TenCT.Name = "TenCT";
+            // 
+            // ChietKhau
+            // 
+            this.ChietKhau.DataPropertyName = "ChietKhau";
+            this.ChietKhau.HeaderText = "Chiết khấu";
+            this.ChietKhau.Name = "ChietKhau";
             // 
             // Khuyen_Mai
             // 
@@ -548,5 +572,8 @@ namespace quanlybangiay.form
         private System.Windows.Forms.Button butAdd;
         private System.Windows.Forms.Button btn_ok;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_KhuyenMai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenCT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ChietKhau;
     }
 }

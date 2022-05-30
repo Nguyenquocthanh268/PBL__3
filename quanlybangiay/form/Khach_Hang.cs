@@ -38,6 +38,17 @@ namespace quanlybangiay.form
                 GUI(dataGridView1.SelectedRows[0].Cells["SoDienThoai"].Value.ToString());
             }
         }
+
+        public void SetCBB()
+        {
+            cbView.Items.Add("Tất cả");
+            cbView.Items.Add("Số ĐT");
+            cbView.Items.Add("Tên");
+            cbSort.Items.Add("Số ĐT");
+            cbSort.Items.Add("Tên");
+            cbSort.Items.Add("Điểm tích lũy");
+        }
+
         private void Show()
         {
             dataGridView1.DataSource = BLL.BLL_AD.BLL_QLKH.Instance.GetKH(cbView.SelectedIndex, tbSearch.Text);
