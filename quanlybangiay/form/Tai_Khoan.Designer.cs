@@ -109,7 +109,7 @@ namespace quanlybangiay.form
             // 
             this.lb_check.AutoSize = true;
             this.lb_check.ForeColor = System.Drawing.Color.Red;
-            this.lb_check.Location = new System.Drawing.Point(237, 130);
+            this.lb_check.Location = new System.Drawing.Point(267, 154);
             this.lb_check.Name = "lb_check";
             this.lb_check.Size = new System.Drawing.Size(0, 13);
             this.lb_check.TabIndex = 26;
@@ -129,7 +129,7 @@ namespace quanlybangiay.form
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nlmk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nlmk.Location = new System.Drawing.Point(270, 175);
+            this.txt_nlmk.Location = new System.Drawing.Point(270, 184);
             this.txt_nlmk.Name = "txt_nlmk";
             this.txt_nlmk.PasswordChar = '*';
             this.txt_nlmk.Size = new System.Drawing.Size(219, 26);
@@ -141,7 +141,7 @@ namespace quanlybangiay.form
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_mkm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mkm.Location = new System.Drawing.Point(270, 119);
+            this.txt_mkm.Location = new System.Drawing.Point(269, 115);
             this.txt_mkm.Name = "txt_mkm";
             this.txt_mkm.PasswordChar = '*';
             this.txt_mkm.Size = new System.Drawing.Size(219, 26);
@@ -169,7 +169,7 @@ namespace quanlybangiay.form
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.button7.Location = new System.Drawing.Point(205, 213);
+            this.button7.Location = new System.Drawing.Point(205, 239);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(110, 42);
             this.button7.TabIndex = 21;
@@ -199,7 +199,7 @@ namespace quanlybangiay.form
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.SlateGray;
-            this.label40.Location = new System.Drawing.Point(81, 119);
+            this.label40.Location = new System.Drawing.Point(80, 115);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(134, 24);
             this.label40.TabIndex = 3;
@@ -213,11 +213,12 @@ namespace quanlybangiay.form
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.SlateGray;
-            this.label41.Location = new System.Drawing.Point(81, 177);
+            this.label41.Location = new System.Drawing.Point(80, 186);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(177, 24);
             this.label41.TabIndex = 4;
             this.label41.Text = "Nhập lại mật khẩu";
+            this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // button10
             // 
