@@ -128,12 +128,15 @@ namespace quanlybangiay.form
             // 
             // txtSLTon
             // 
+            this.txtSLTon.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtSLTon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSLTon.Enabled = false;
             this.txtSLTon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSLTon.Location = new System.Drawing.Point(717, 153);
             this.txtSLTon.Name = "txtSLTon";
             this.txtSLTon.Size = new System.Drawing.Size(145, 26);
             this.txtSLTon.TabIndex = 73;
+            this.txtSLTon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
             // 
             // label11
             // 
@@ -148,19 +151,22 @@ namespace quanlybangiay.form
             // 
             // txtSLDaBan
             // 
+            this.txtSLDaBan.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtSLDaBan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSLDaBan.Enabled = false;
             this.txtSLDaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSLDaBan.Location = new System.Drawing.Point(412, 153);
+            this.txtSLDaBan.Location = new System.Drawing.Point(412, 76);
             this.txtSLDaBan.Name = "txtSLDaBan";
             this.txtSLDaBan.Size = new System.Drawing.Size(145, 26);
             this.txtSLDaBan.TabIndex = 69;
+            this.txtSLDaBan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(408, 130);
+            this.label7.Location = new System.Drawing.Point(408, 52);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 20);
             this.label7.TabIndex = 68;
@@ -168,19 +174,22 @@ namespace quanlybangiay.form
             // 
             // txtGiaBan
             // 
+            this.txtGiaBan.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtGiaBan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGiaBan.Enabled = false;
             this.txtGiaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaBan.Location = new System.Drawing.Point(412, 75);
+            this.txtGiaBan.Location = new System.Drawing.Point(412, 153);
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Size = new System.Drawing.Size(145, 26);
             this.txtGiaBan.TabIndex = 67;
+            this.txtGiaBan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Info;
-            this.label8.Location = new System.Drawing.Point(408, 52);
+            this.label8.Location = new System.Drawing.Point(408, 130);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 20);
             this.label8.TabIndex = 66;
@@ -188,11 +197,14 @@ namespace quanlybangiay.form
             // 
             // txtSLNhap
             // 
+            this.txtSLNhap.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtSLNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSLNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSLNhap.Location = new System.Drawing.Point(88, 153);
+            this.txtSLNhap.Location = new System.Drawing.Point(88, 75);
             this.txtSLNhap.Name = "txtSLNhap";
             this.txtSLNhap.Size = new System.Drawing.Size(145, 26);
             this.txtSLNhap.TabIndex = 65;
+            this.txtSLNhap.Text = "0";
             this.txtSLNhap.TextChanged += new System.EventHandler(this.txtSLNhap_TextChanged);
             // 
             // label3
@@ -200,7 +212,7 @@ namespace quanlybangiay.form
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(84, 130);
+            this.label3.Location = new System.Drawing.Point(84, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 64;
@@ -208,20 +220,23 @@ namespace quanlybangiay.form
             // 
             // txtGiaNhap
             // 
+            this.txtGiaNhap.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtGiaNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGiaNhap.Enabled = false;
             this.txtGiaNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaNhap.Location = new System.Drawing.Point(88, 75);
+            this.txtGiaNhap.Location = new System.Drawing.Point(88, 153);
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.ShortcutsEnabled = false;
             this.txtGiaNhap.Size = new System.Drawing.Size(145, 26);
             this.txtGiaNhap.TabIndex = 63;
+            this.txtGiaNhap.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(84, 52);
+            this.label4.Location = new System.Drawing.Point(84, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 20);
             this.label4.TabIndex = 62;
@@ -246,11 +261,14 @@ namespace quanlybangiay.form
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(717, 111);
+            this.txtName.Location = new System.Drawing.Point(412, 111);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(145, 26);
             this.txtName.TabIndex = 59;
+            this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label2
@@ -258,7 +276,7 @@ namespace quanlybangiay.form
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(713, 88);
+            this.label2.Location = new System.Drawing.Point(408, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 58;
@@ -266,11 +284,14 @@ namespace quanlybangiay.form
             // 
             // txtHang
             // 
+            this.txtHang.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHang.Location = new System.Drawing.Point(412, 211);
+            this.txtHang.Location = new System.Drawing.Point(717, 111);
             this.txtHang.Name = "txtHang";
             this.txtHang.Size = new System.Drawing.Size(145, 26);
             this.txtHang.TabIndex = 57;
+            this.txtHang.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
             this.txtHang.TextChanged += new System.EventHandler(this.txtHang_TextChanged);
             // 
             // label1
@@ -278,7 +299,7 @@ namespace quanlybangiay.form
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(408, 88);
+            this.label1.Location = new System.Drawing.Point(713, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 56;
@@ -286,19 +307,22 @@ namespace quanlybangiay.form
             // 
             // txtIDGiay
             // 
+            this.txtIDGiay.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtIDGiay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDGiay.Enabled = false;
             this.txtIDGiay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDGiay.Location = new System.Drawing.Point(412, 111);
+            this.txtIDGiay.Location = new System.Drawing.Point(717, 211);
             this.txtIDGiay.Name = "txtIDGiay";
             this.txtIDGiay.Size = new System.Drawing.Size(145, 26);
             this.txtIDGiay.TabIndex = 55;
+            this.txtIDGiay.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
             // 
             // label56
             // 
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.SystemColors.Info;
-            this.label56.Location = new System.Drawing.Point(408, 188);
+            this.label56.Location = new System.Drawing.Point(713, 88);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(55, 20);
             this.label56.TabIndex = 54;
@@ -317,11 +341,14 @@ namespace quanlybangiay.form
             // 
             // txtSize
             // 
+            this.txtSize.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSize.Location = new System.Drawing.Point(717, 211);
+            this.txtSize.Location = new System.Drawing.Point(412, 211);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(145, 26);
             this.txtSize.TabIndex = 61;
+            this.txtSize.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
             this.txtSize.TextChanged += new System.EventHandler(this.txtSize_TextChanged);
             // 
             // label5
@@ -329,7 +356,7 @@ namespace quanlybangiay.form
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(713, 188);
+            this.label5.Location = new System.Drawing.Point(408, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 60;

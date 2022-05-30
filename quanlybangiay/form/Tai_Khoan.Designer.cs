@@ -246,6 +246,7 @@ namespace quanlybangiay.form
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Tai_Khoan";
             this.Text = "Tai_Khoan";
+            this.Load += new System.EventHandler(this.Tai_Khoan_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

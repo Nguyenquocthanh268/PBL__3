@@ -29,6 +29,10 @@ namespace quanlybangiay.form
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if (txtSLNhap.Text == "")
+            {
+                txtSLNhap.Text = "0";
+            }
             byte[] file = BLL_KhoGiay.Instance.ImagetoByte(pictureBox7.Image);
 
             
@@ -40,6 +44,7 @@ namespace quanlybangiay.form
                 {
                     BLL_KhoGiay.Instance.ADD_nhapkho(getNhapKHO_Giay());
                 }
+                MessageBox.Show("Đã cập nhật !!!");
                 d();
                 this.Close();
             }
@@ -62,17 +67,29 @@ namespace quanlybangiay.form
                    
                     txtGiaBan.Enabled = false;
                     btnOK.Enabled = false;
+                    txtName.Enabled = false;
+                    txtSize.Enabled = false;
+                    txtGiaNhap.Enabled = false;
+                    txtSLTon.Enabled = false;
+                    txtSLNhap.Enabled = false;
+                    txtSLDaBan.Enabled = false;
                 }
                 if(index == 3)
                 {
                     txtGiaBan.Enabled = true;
+                    txtName.Enabled = true;
+                    txtSize.Enabled = true;
+                    txtHang.Enabled = true;
+                    txtGiaBan.BackColor = Color.FromArgb(255, 255, 255);
+                    txtName.BackColor = Color.FromArgb(255, 255, 255);
+                    txtSize.BackColor = Color.FromArgb(255, 255, 255);
+                    txtHang.BackColor = Color.FromArgb(255, 255, 255);
+
+                    txtGiaNhap.Enabled = false;
+                    txtSLTon.Enabled = false;
+                    txtSLNhap.Enabled = false;
+                    txtSLDaBan.Enabled = false;
                 }
-                txtName.Enabled = false;
-                txtSize.Enabled = false;
-                txtGiaNhap.Enabled = false;
-                txtSLTon.Enabled = false;
-                txtSLNhap.Enabled = false;
-                txtSLDaBan.Enabled = false;
                 txtIDGiay.Text = IDGiay;
                 txtHang.Text = BLL_KhoGiay.Instance.GetGiayByID(IDGiay).HangGiay.ToString();
                 txtName.Text = BLL_KhoGiay.Instance.GetGiayByID(IDGiay).TenGiay.ToString();
@@ -83,6 +100,13 @@ namespace quanlybangiay.form
                 txtSLDaBan.Text = BLL_KhoGiay.Instance.GetkhoByID(IDGiay).SoLuongBan.ToString();
                 txtSLTon.Text = BLL_KhoGiay.Instance.GetkhoByID(IDGiay).SoLuongCon.ToString();
                 pictureBox7.Image = BLL_KhoGiay.Instance.BytetoPicter(BLL_KhoGiay.Instance.GetGiayByID(IDGiay).AnhSP);
+            }
+            else
+            {
+                txtName.BackColor= Color.FromArgb(255,255,255);
+                txtSize.BackColor = Color.FromArgb(255, 255, 255);
+                txtHang.BackColor = Color.FromArgb(255, 255, 255);
+                txtSLNhap.BackColor = Color.FromArgb(255, 255, 255);
             }
 
         }
@@ -104,7 +128,7 @@ namespace quanlybangiay.form
             try
                  
             {
-                if (txtSLNhap.Text == "")
+                if (txtSLNhap.Text == "0")
                 {
                     txtGiaNhap.Enabled = false;
                     txtGiaBan.Enabled = false;
@@ -201,13 +225,42 @@ namespace quanlybangiay.form
 
         private void txtSLNhap_TextChanged(object sender, EventArgs e)
         {
-            if(txtSLNhap.Text != "" && index == 2)
+            try
             {
-                txtGiaBan.Enabled = true;
-                txtGiaNhap.Enabled = true;
+                if (txtSLNhap.Text == ""&& index == 2)
+                {
+                    txtGiaBan.Enabled = false;
+                    txtGiaNhap.Enabled = false;
+                }
+                else
+                if (Convert.ToInt32(txtSLNhap.Text) == 0 && index == 2)
+                {
+                    txtGiaBan.Enabled = false;
+                    txtGiaNhap.Enabled = false;
+                }
+                else 
+                if (Convert.ToInt32(txtSLNhap.Text) > 0 && index == 2)
+                {
+                    txtGiaBan.Enabled = true;
+                    txtGiaNhap.Enabled = true;
+                    txtGiaBan.BackColor = Color.FromArgb(255, 255, 255);
+                    txtGiaNhap.BackColor = Color.FromArgb(255, 255, 255);
+                }
             }
-              
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show("Chỉ nhập kí tự 0-9 ...");
+                txtGiaBan.BackColor = Color.FromArgb(171, 171, 171);
+                txtGiaNhap.BackColor = Color.FromArgb(171, 171, 171);
+                txtSLNhap.Text = "";
+                txtGiaBan.Text = "";
+                txtGiaBan.Enabled = false;
+                txtGiaNhap.Text = "";
+                txtGiaNhap.Enabled = false;
+            }
+
+
+
         }
 
         private void txtHang_TextChanged(object sender, EventArgs e)
@@ -229,6 +282,14 @@ namespace quanlybangiay.form
                     MessageBox.Show("Vui lòng điền ID và size đầu tiên");
 
                 }
+            }
+        }
+
+        private void txtSize_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(txtSLNhap.Text == "")
+            {
+                txtSLNhap.Text = "0";
             }
         }
     }
