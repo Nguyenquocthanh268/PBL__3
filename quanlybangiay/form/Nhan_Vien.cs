@@ -18,6 +18,8 @@ namespace quanlybangiay.form
             InitializeComponent();
             cbbSearch.Items.AddRange((BLL_NV.Instance.CBBSearch().ToArray()));
             cbbSort.Items.AddRange((BLL_NV.Instance.CBBSort().ToArray()));
+            cbbSearch.SelectedIndex = 0;
+            dtgNV.DataSource = BLL_NV.Instance.Search(0, "");
         }
 
         public void ShowDtg()
@@ -27,15 +29,20 @@ namespace quanlybangiay.form
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
-            if(dtgNV.SelectedRows.Count == 0)
+            if (dtgNV.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn nhân viên muốn xem chi tiết!");
-            } else
+            } 
+            else if (dtgNV.SelectedRows.Count == 1)
             {
                 string ID = dtgNV.SelectedRows[0].Cells["ID_NhanVien"].Value.ToString();
                 DetailNV f = new DetailNV(ID, 1);
                 f.d = new DetailNV.Mydel(ShowDtg);
                 f.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn 1 nhân viên mà bạn muốn xem chi tiết!");
             }
 
         }

@@ -296,7 +296,7 @@ namespace quanlybangiay.form
             this.dateBegin.Name = "dateBegin";
             this.dateBegin.Size = new System.Drawing.Size(204, 20);
             this.dateBegin.TabIndex = 84;
-            this.dateBegin.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dateBegin.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             // 
             // ID_HoaDon
             // 
