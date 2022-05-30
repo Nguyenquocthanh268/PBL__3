@@ -49,6 +49,8 @@ namespace quanlybangiay.form
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnUpload = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lb_notify = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTK = new System.Windows.Forms.TextBox();
@@ -58,8 +60,7 @@ namespace quanlybangiay.form
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lb_notify = new System.Windows.Forms.Label();
+            this.lbCheckID_NV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,6 +80,7 @@ namespace quanlybangiay.form
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lbCheckID_NV);
             this.panel3.Controls.Add(this.txtDiaChi);
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.radNu);
@@ -124,7 +126,7 @@ namespace quanlybangiay.form
             this.radNu.Location = new System.Drawing.Point(779, 44);
             this.radNu.Margin = new System.Windows.Forms.Padding(2);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(42, 20);
+            this.radNu.Size = new System.Drawing.Size(43, 20);
             this.radNu.TabIndex = 165;
             this.radNu.TabStop = true;
             this.radNu.Text = "Nữ";
@@ -138,7 +140,7 @@ namespace quanlybangiay.form
             this.radNam.Location = new System.Drawing.Point(699, 44);
             this.radNam.Margin = new System.Windows.Forms.Padding(2);
             this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(54, 20);
+            this.radNam.Size = new System.Drawing.Size(55, 20);
             this.radNam.TabIndex = 166;
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
@@ -233,6 +235,7 @@ namespace quanlybangiay.form
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(204, 26);
             this.txtID.TabIndex = 163;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             this.txtID.Leave += new System.EventHandler(this.txtID_Leave);
             // 
             // btnCancel
@@ -317,6 +320,26 @@ namespace quanlybangiay.form
             this.panel4.Size = new System.Drawing.Size(336, 200);
             this.panel4.TabIndex = 153;
             // 
+            // lb_notify
+            // 
+            this.lb_notify.AutoSize = true;
+            this.lb_notify.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_notify.ForeColor = System.Drawing.Color.Red;
+            this.lb_notify.Location = new System.Drawing.Point(168, 86);
+            this.lb_notify.Name = "lb_notify";
+            this.lb_notify.Size = new System.Drawing.Size(0, 13);
+            this.lb_notify.TabIndex = 171;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(168, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 170;
+            // 
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
@@ -353,6 +376,9 @@ namespace quanlybangiay.form
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(145, 26);
             this.txtTK.TabIndex = 101;
+            this.txtTK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTK.TextChanged += new System.EventHandler(this.txtTK_TextChanged);
+            this.txtTK.Leave += new System.EventHandler(this.txtTK_Leave);
             // 
             // label13
             // 
@@ -384,7 +410,6 @@ namespace quanlybangiay.form
             this.txtMK.Size = new System.Drawing.Size(145, 26);
             this.txtMK.TabIndex = 104;
             this.txtMK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMK.Click += new System.EventHandler(this.txtMK_Click);
             // 
             // pictureBox1
             // 
@@ -411,27 +436,15 @@ namespace quanlybangiay.form
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label1
+            // lbCheckID_NV
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(168, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 170;
-            // 
-            // lb_notify
-            // 
-            this.lb_notify.AutoSize = true;
-            this.lb_notify.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_notify.ForeColor = System.Drawing.Color.Red;
-            this.lb_notify.Location = new System.Drawing.Point(168, 86);
-            this.lb_notify.Name = "lb_notify";
-            this.lb_notify.Size = new System.Drawing.Size(150, 13);
-            this.lb_notify.TabIndex = 171;
-            this.lb_notify.Text = "*Tên tài khoản đã tồn tại";
-            this.lb_notify.Visible = false;
+            this.lbCheckID_NV.AutoSize = true;
+            this.lbCheckID_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCheckID_NV.ForeColor = System.Drawing.Color.Red;
+            this.lbCheckID_NV.Location = new System.Drawing.Point(206, 69);
+            this.lbCheckID_NV.Name = "lbCheckID_NV";
+            this.lbCheckID_NV.Size = new System.Drawing.Size(0, 13);
+            this.lbCheckID_NV.TabIndex = 172;
             // 
             // DetailNV
             // 
@@ -488,5 +501,6 @@ namespace quanlybangiay.form
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lb_notify;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbCheckID_NV;
     }
 }

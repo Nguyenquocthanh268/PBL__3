@@ -30,7 +30,7 @@ namespace quanlybangiay.BLL.BLL_AD
         public List<string> CBB()
         {
             List<string> list = new List<string>();
-            list.Add("All");
+            list.Add("Tất cả");
             list.Add("ID CTKM");
             list.Add("Tên CTKM");
             return list;

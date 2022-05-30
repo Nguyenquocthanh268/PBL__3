@@ -258,9 +258,6 @@ namespace quanlybangiay.form
                 txtGiaNhap.Text = "";
                 txtGiaNhap.Enabled = false;
             }
-
-
-
         }
 
         private void txtHang_TextChanged(object sender, EventArgs e)

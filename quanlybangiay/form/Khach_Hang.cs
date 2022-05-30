@@ -16,8 +16,11 @@ namespace quanlybangiay.form
         public Khach_Hang()
         {
             InitializeComponent();
-            SetCBB();
-            
+            cbView.Items.AddRange((BLL_QLKH.Instance.CBBView().ToArray()));
+            cbSort.Items.AddRange((BLL_QLKH.Instance.CBBSort().ToArray()));
+            cbView.SelectedIndex = 0;
+            Show();
+
         }
         public void GUI(string sdt)
         {
@@ -34,15 +37,6 @@ namespace quanlybangiay.form
             {
                 GUI(dataGridView1.SelectedRows[0].Cells["SoDienThoai"].Value.ToString());
             }
-        }
-        public void SetCBB()
-        {
-            cbView.Items.Add("Chọn tất cả");
-            cbView.Items.Add("Số ĐT");
-            cbView.Items.Add("Tên");
-            cbSort.Items.Add("Số ĐT");
-            cbSort.Items.Add("Tên");
-            cbSort.Items.Add("Điểm tích lũy");
         }
         private void Show()
         {
@@ -68,7 +62,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("*Vui long chon 1 khach hang de cap nhat thong tin.");
+                MessageBox.Show("*Vui lòng chọn 1 khách hàng để cập nhật thông tin ...");
             }
         }
 
@@ -92,7 +86,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui long chon dong can Xoa !!!");
+                MessageBox.Show("Vui lòng chọn dòng cần Xóa !!!");
             }
         }
 
