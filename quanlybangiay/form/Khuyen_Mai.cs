@@ -25,15 +25,9 @@ namespace quanlybangiay.form
         private void btnSearch_Click(object sender, EventArgs e)
         {
             int index = cbItem.SelectedIndex;
-            if (index >= 0)
-
-            {
+            
                 Show(index, txt_search.Text);
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn Item");
-            }
+            
 
         }
         public void Show(int id, string txt)

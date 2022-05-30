@@ -16,6 +16,7 @@ namespace quanlybangiay.form
         public Hoa_Don()
         {
             InitializeComponent();
+            dtgHD.AutoGenerateColumns = false;
             cbbSearch.Items.AddRange((BLL_HD.Instance.CBBSearch().ToArray()));
             cbbSort.Items.AddRange((BLL_HD.Instance.CBBSort().ToArray()));
         }
@@ -40,6 +41,7 @@ namespace quanlybangiay.form
                 ShowDtg();
             }
         }
+
 
         private void btnSearch_Click(object sender, EventArgs e)
         {

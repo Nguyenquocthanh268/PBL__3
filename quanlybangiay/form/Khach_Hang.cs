@@ -37,7 +37,7 @@ namespace quanlybangiay.form
         }
         public void SetCBB()
         {
-            cbView.Items.Add("Chọn tất cả");
+            cbView.Items.Add("Tất cả");
             cbView.Items.Add("Số ĐT");
             cbView.Items.Add("Tên");
             cbSort.Items.Add("Số ĐT");

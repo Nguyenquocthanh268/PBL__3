@@ -47,6 +47,9 @@ namespace quanlybangiay.form
             this.cbbSearch = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.ID_NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNV)).BeginInit();
@@ -195,6 +198,10 @@ namespace quanlybangiay.form
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_NhanVien,
+            this.TenNhanVien,
+            this.SoDienThoai});
             this.dtgNV.EnableHeadersVisualStyles = false;
             this.dtgNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(112)))), ((int)(((byte)(144)))));
             this.dtgNV.Location = new System.Drawing.Point(12, 12);
@@ -284,6 +291,24 @@ namespace quanlybangiay.form
             this.panel5.Size = new System.Drawing.Size(1069, 77);
             this.panel5.TabIndex = 5;
             // 
+            // ID_NhanVien
+            // 
+            this.ID_NhanVien.DataPropertyName = "ID_NhanVien";
+            this.ID_NhanVien.HeaderText = "ID Nhân viên";
+            this.ID_NhanVien.Name = "ID_NhanVien";
+            // 
+            // TenNhanVien
+            // 
+            this.TenNhanVien.DataPropertyName = "TenNhanVien";
+            this.TenNhanVien.HeaderText = "Tên nhân viên";
+            this.TenNhanVien.Name = "TenNhanVien";
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            // 
             // Nhan_Vien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,5 +345,8 @@ namespace quanlybangiay.form
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDetail;
         private System.Windows.Forms.DataGridView dtgNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_NhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
     }
 }

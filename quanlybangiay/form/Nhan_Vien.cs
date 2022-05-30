@@ -32,9 +32,8 @@ namespace quanlybangiay.form
                 MessageBox.Show("Vui lòng chọn nhân viên muốn xem chi tiết!");
             } else
             {
-                int i = 1;
                 string ID = dtgNV.SelectedRows[0].Cells["ID_NhanVien"].Value.ToString();
-                DetailNV f = new DetailNV(ID, i);
+                DetailNV f = new DetailNV(ID, 1);
                 f.d = new DetailNV.Mydel(ShowDtg);
                 f.Show();
             }

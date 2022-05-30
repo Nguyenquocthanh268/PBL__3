@@ -45,7 +45,8 @@ namespace quanlybangiay.BLL.BLL_AD
             }
             else
             {
-                return null;
+                var l1 = db.KhachHangs.Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy });
+                return l1.ToList();
             }
         }
         public KhachHang Get1KH(string SDT)
