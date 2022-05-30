@@ -60,7 +60,8 @@ namespace quanlybangiay.BLL.BLL_AD
             TongLoiNhuan = 0;
             TongGiayDaBan = 0;
             TongGiayTonKho = getSLcon();
-
+            double gianhap;
+            double Tonggianhap = 0;
 
             TongHoaDon = GetOrder().Count;
             List<String> ListSDTKH = new List<string>();
@@ -69,12 +70,25 @@ namespace quanlybangiay.BLL.BLL_AD
 
                 ListSDTKH.Add(hd.SoDienThoai);
                 TongDoanhThu += Convert.ToDouble(hd.TongTien.Value.ToString());
+                //int km =Convert.ToInt32(hd.Thanhvien) + Convert.ToInt32(BLL_HD.Instance.GetChietkhauByID(hd.ID_KhuyenMai));
 
                 foreach (ChiTietHoaDon i in GetChiTietHDByID(hd.ID_HoaDon))
                 {
-                    TongLoiNhuan += ((Convert.ToDouble(i.Giay.GiaBan) - Convert.ToDouble(i.Giay.GiaNhap)) * Convert.ToInt32(i.SoLuong));
+                    gianhap = 0;
+                   var a = BLL_KhoGiay.Instance.getListTimeNhapKhoByID(i.ID_Giay);
+                    for (int k = a.Count -1 ; k >= 0; k--)
+                    {
+                        if(hd.NgayTao > a[k].NgayNhap)
+                        {
+                            gianhap = (double)a[k].GiaNhap;
+                            break;
+                        }
+                    }
+                    Tonggianhap += gianhap * Convert.ToInt32(i.SoLuong);
+                        //TongLoiNhuan += ((Convert.ToDouble(i.GiaBan)*(100-km)/100 - gianhap) * Convert.ToInt32(i.SoLuong));
                     TongGiayDaBan += Convert.ToInt32(i.SoLuong);
                 }
+                TongLoiNhuan = TongDoanhThu - Tonggianhap;
             }
             TongKhachHang = ListSDTKH.Distinct().Count();
         }

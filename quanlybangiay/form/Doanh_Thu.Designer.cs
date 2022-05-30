@@ -125,7 +125,7 @@ namespace quanlybangiay.form
             this.lbTongKhachHang.Name = "lbTongKhachHang";
             this.lbTongKhachHang.Size = new System.Drawing.Size(33, 34);
             this.lbTongKhachHang.TabIndex = 1;
-            this.lbTongKhachHang.Text = "3";
+            this.lbTongKhachHang.Text = "0";
             this.lbTongKhachHang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbTongGiayBan
@@ -135,9 +135,9 @@ namespace quanlybangiay.form
             this.lbTongGiayBan.ForeColor = System.Drawing.SystemColors.Info;
             this.lbTongGiayBan.Location = new System.Drawing.Point(83, 43);
             this.lbTongGiayBan.Name = "lbTongGiayBan";
-            this.lbTongGiayBan.Size = new System.Drawing.Size(51, 34);
+            this.lbTongGiayBan.Size = new System.Drawing.Size(33, 34);
             this.lbTongGiayBan.TabIndex = 1;
-            this.lbTongGiayBan.Text = "51";
+            this.lbTongGiayBan.Text = "0";
             this.lbTongGiayBan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label10
@@ -180,9 +180,9 @@ namespace quanlybangiay.form
             this.lbTongGiayTonKho.ForeColor = System.Drawing.SystemColors.Info;
             this.lbTongGiayTonKho.Location = new System.Drawing.Point(83, 43);
             this.lbTongGiayTonKho.Name = "lbTongGiayTonKho";
-            this.lbTongGiayTonKho.Size = new System.Drawing.Size(51, 34);
+            this.lbTongGiayTonKho.Size = new System.Drawing.Size(33, 34);
             this.lbTongGiayTonKho.TabIndex = 1;
-            this.lbTongGiayTonKho.Text = "51";
+            this.lbTongGiayTonKho.Text = "0";
             this.lbTongGiayTonKho.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
@@ -276,9 +276,9 @@ namespace quanlybangiay.form
             this.lbTongLoiNhuan.ForeColor = System.Drawing.SystemColors.Info;
             this.lbTongLoiNhuan.Location = new System.Drawing.Point(83, 43);
             this.lbTongLoiNhuan.Name = "lbTongLoiNhuan";
-            this.lbTongLoiNhuan.Size = new System.Drawing.Size(51, 34);
+            this.lbTongLoiNhuan.Size = new System.Drawing.Size(33, 34);
             this.lbTongLoiNhuan.TabIndex = 1;
-            this.lbTongLoiNhuan.Text = "51";
+            this.lbTongLoiNhuan.Text = "0";
             this.lbTongLoiNhuan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label6
@@ -321,9 +321,9 @@ namespace quanlybangiay.form
             this.lbTongDoanhThu.ForeColor = System.Drawing.SystemColors.Info;
             this.lbTongDoanhThu.Location = new System.Drawing.Point(83, 43);
             this.lbTongDoanhThu.Name = "lbTongDoanhThu";
-            this.lbTongDoanhThu.Size = new System.Drawing.Size(51, 34);
+            this.lbTongDoanhThu.Size = new System.Drawing.Size(33, 34);
             this.lbTongDoanhThu.TabIndex = 1;
-            this.lbTongDoanhThu.Text = "51";
+            this.lbTongDoanhThu.Text = "0";
             this.lbTongDoanhThu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
@@ -366,9 +366,9 @@ namespace quanlybangiay.form
             this.lbTongDonHang.ForeColor = System.Drawing.SystemColors.Info;
             this.lbTongDonHang.Location = new System.Drawing.Point(83, 43);
             this.lbTongDonHang.Name = "lbTongDonHang";
-            this.lbTongDonHang.Size = new System.Drawing.Size(51, 34);
+            this.lbTongDonHang.Size = new System.Drawing.Size(33, 34);
             this.lbTongDonHang.TabIndex = 1;
-            this.lbTongDonHang.Text = "51";
+            this.lbTongDonHang.Text = "0";
             this.lbTongDonHang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
@@ -437,7 +437,7 @@ namespace quanlybangiay.form
             this.butTuyChinh.Location = new System.Drawing.Point(460, 17);
             this.butTuyChinh.Name = "butTuyChinh";
             this.butTuyChinh.Size = new System.Drawing.Size(115, 41);
-            this.butTuyChinh.TabIndex = 51;
+            this.butTuyChinh.TabIndex = 4;
             this.butTuyChinh.Text = "Tùy chỉnh";
             this.butTuyChinh.UseVisualStyleBackColor = true;
             this.butTuyChinh.Click += new System.EventHandler(this.butTuyChinh_Click);
@@ -454,7 +454,7 @@ namespace quanlybangiay.form
             this.butOK.Location = new System.Drawing.Point(415, 17);
             this.butOK.Name = "butOK";
             this.butOK.Size = new System.Drawing.Size(38, 41);
-            this.butOK.TabIndex = 50;
+            this.butOK.TabIndex = 3;
             this.butOK.UseVisualStyleBackColor = false;
             this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
@@ -464,7 +464,7 @@ namespace quanlybangiay.form
             this.dtEndday.Margin = new System.Windows.Forms.Padding(2);
             this.dtEndday.Name = "dtEndday";
             this.dtEndday.Size = new System.Drawing.Size(196, 20);
-            this.dtEndday.TabIndex = 4;
+            this.dtEndday.TabIndex = 2;
             // 
             // dtStartday
             // 
@@ -472,7 +472,7 @@ namespace quanlybangiay.form
             this.dtStartday.Margin = new System.Windows.Forms.Padding(2);
             this.dtStartday.Name = "dtStartday";
             this.dtStartday.Size = new System.Drawing.Size(196, 20);
-            this.dtStartday.TabIndex = 3;
+            this.dtStartday.TabIndex = 1;
             // 
             // but7days
             // 
@@ -484,7 +484,7 @@ namespace quanlybangiay.form
             this.but7days.Location = new System.Drawing.Point(690, 17);
             this.but7days.Name = "but7days";
             this.but7days.Size = new System.Drawing.Size(137, 41);
-            this.but7days.TabIndex = 2;
+            this.but7days.TabIndex = 6;
             this.but7days.Text = "7 ngày gần nhất";
             this.but7days.UseVisualStyleBackColor = true;
             this.but7days.Click += new System.EventHandler(this.but7days_Click);
@@ -499,7 +499,7 @@ namespace quanlybangiay.form
             this.butThismonth.Location = new System.Drawing.Point(827, 17);
             this.butThismonth.Name = "butThismonth";
             this.butThismonth.Size = new System.Drawing.Size(115, 41);
-            this.butThismonth.TabIndex = 2;
+            this.butThismonth.TabIndex = 7;
             this.butThismonth.Text = "Tháng này";
             this.butThismonth.UseVisualStyleBackColor = true;
             this.butThismonth.Click += new System.EventHandler(this.butThismonth_Click);
@@ -514,7 +514,7 @@ namespace quanlybangiay.form
             this.butToday.Location = new System.Drawing.Point(575, 17);
             this.butToday.Name = "butToday";
             this.butToday.Size = new System.Drawing.Size(115, 41);
-            this.butToday.TabIndex = 2;
+            this.butToday.TabIndex = 5;
             this.butToday.Text = "Hôm nay";
             this.butToday.UseVisualStyleBackColor = true;
             this.butToday.Click += new System.EventHandler(this.butToday_Click);
@@ -529,7 +529,7 @@ namespace quanlybangiay.form
             this.butThisyear.Location = new System.Drawing.Point(942, 17);
             this.butThisyear.Name = "butThisyear";
             this.butThisyear.Size = new System.Drawing.Size(115, 41);
-            this.butThisyear.TabIndex = 1;
+            this.butThisyear.TabIndex = 8;
             this.butThisyear.Text = "Năm này";
             this.butThisyear.UseVisualStyleBackColor = true;
             this.butThisyear.Click += new System.EventHandler(this.butThisyear_Click);

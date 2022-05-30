@@ -140,9 +140,9 @@ namespace quanlybangiay.BLL.BLL_AD
             db.Khoes.Remove(k);
             db.SaveChanges();
         }
-        public dynamic showNhap()
+        public dynamic getListTimeNhapKhoByID(string id)
         {
-            return (db.NhapKhoes.Select(p => new { p.Stt, p.ID_Giay, p.Kho.Giay.TenGiay, p.SoLuongNhap, p.NgayNhap, p.GiaNhap })).ToList();
+            return db.NhapKhoes.Where(p => p.ID_Giay == id).Select(p =>new { p.Stt, p.ID_Giay, p.Kho.Giay.TenGiay, p.SoLuongNhap, p.NgayNhap, p.GiaNhap }).ToList();
         }
         public int STTNhap()
         {
@@ -174,9 +174,9 @@ namespace quanlybangiay.BLL.BLL_AD
             list.Add("Size");
             return list;
         }
-        public dynamic SearchNhapKho(DateTime st, DateTime end)
+        public dynamic SearchNhapKho(DateTime st, DateTime end,string ID)
         {
-            return db.NhapKhoes.Where(p => p.NgayNhap >= st && p.NgayNhap <= end).Select(p => new { p.Stt, p.ID_Giay, p.Kho.Giay.TenGiay, p.SoLuongNhap, p.NgayNhap, p.GiaNhap }).ToList();
+            return db.NhapKhoes.Where(p => p.NgayNhap >= st && p.NgayNhap <= end && p.ID_Giay==ID).Select(p => new { p.Stt, p.ID_Giay, p.Kho.Giay.TenGiay, p.SoLuongNhap, p.NgayNhap, p.GiaNhap }).ToList();
         }
         public List<string> CBBsize()
         {

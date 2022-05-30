@@ -49,8 +49,15 @@ namespace quanlybangiay.form
             if(s.ID_KhuyenMai != null)
             {
                 txt_IDKM.Text = s.ID_KhuyenMai.ToString();
+                txt_KM.Text = s.chietKhauKM.ToString() + "%";
             }
-            txt_KM.Text = s.chietKhauKM.ToString() + "%";
+            else
+            {
+
+                txt_IDKM.Text = "KHONG CO CTKM";
+                txt_KM.Text = 0 + "%";
+            }
+           
             txt_TV.Text = s.Thanhvien.ToString() + "%";
             txt_tongck.Text= Convert.ToInt32(Convert.ToInt32(s.Thanhvien)+Convert.ToInt32(s.chietKhauKM)).ToString() +"%";
             txtTong.Text = s.TongTien.ToString() + " VND";
