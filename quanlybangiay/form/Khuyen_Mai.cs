@@ -18,6 +18,8 @@ namespace quanlybangiay.form
         {
             InitializeComponent();
             cbItem.Items.AddRange((BLL_CTKM.Instance.CBB().ToArray()));
+            cbItem.SelectedIndex = 0;
+            Show(0, txt_search.Text);
             cbb_sort.Items.AddRange((BLL_CTKM.Instance.CBB_sort().ToArray()));
             Khoa();
         }
@@ -96,10 +98,10 @@ namespace quanlybangiay.form
                 if (getCTKM() != null)
                 {
                     BLL_CTKM.Instance.ExcuteDB(getCTKM());
+                    MessageBox.Show("Đã cập nhật chương trình khuyến mãi !!!");
                     Show(0, "");
                     Khoa();
                 }
-
             }
             else
             {
