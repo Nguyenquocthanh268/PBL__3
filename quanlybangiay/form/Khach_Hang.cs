@@ -16,8 +16,11 @@ namespace quanlybangiay.form
         public Khach_Hang()
         {
             InitializeComponent();
-            SetCBB();
-            
+            cbView.Items.AddRange((BLL_QLKH.Instance.CBBView().ToArray()));
+            cbSort.Items.AddRange((BLL_QLKH.Instance.CBBSort().ToArray()));
+            cbView.SelectedIndex = 0;
+            Show();
+
         }
         public void GUI(string sdt)
         {
@@ -27,6 +30,9 @@ namespace quanlybangiay.form
             tbName.Text= a.TenKhachHang;
             tbDiemTL.Text = a.DiemTichLuy.ToString();
             datetimeNgayDK.Value = a.NgayDangKy.Value;
+            tbSdt.BackColor= Color.FromArgb(171, 171, 171);
+            tbDiemTL.BackColor = Color.FromArgb(171, 171, 171);
+            datetimeNgayDK.BackColor = Color.FromArgb(171, 171, 171);
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -35,15 +41,17 @@ namespace quanlybangiay.form
                 GUI(dataGridView1.SelectedRows[0].Cells["SoDienThoai"].Value.ToString());
             }
         }
+
         public void SetCBB()
         {
-            cbView.Items.Add("Chọn tất cả");
+            cbView.Items.Add("Tất cả");
             cbView.Items.Add("Số ĐT");
             cbView.Items.Add("Tên");
             cbSort.Items.Add("Số ĐT");
             cbSort.Items.Add("Tên");
             cbSort.Items.Add("Điểm tích lũy");
         }
+
         private void Show()
         {
             dataGridView1.DataSource = BLL.BLL_AD.BLL_QLKH.Instance.GetKH(cbView.SelectedIndex, tbSearch.Text);
@@ -55,20 +63,26 @@ namespace quanlybangiay.form
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 1)
-            {
-                KhachHang s = new KhachHang
+            if (tbName.Text != "") {
+                if (dataGridView1.SelectedRows.Count == 1)
                 {
-                    SoDienThoai = tbSdt.Text.ToString(),
-                    TenKhachHang = tbName.Text.ToString(),
-                    DiemTichLuy =Convert.ToInt32(tbDiemTL.Text.ToString()),
-                };
-                BLL_QLKH.Instance.UpdateKH(s);
-                Show();
+                    KhachHang s = new KhachHang
+                    {
+                        SoDienThoai = tbSdt.Text.ToString(),
+                        TenKhachHang = tbName.Text.ToString(),
+                        DiemTichLuy = Convert.ToInt32(tbDiemTL.Text.ToString()),
+                    };
+                    BLL_QLKH.Instance.UpdateKH(s);
+                    Show();
+                }
+                else
+                {
+                    MessageBox.Show("*Vui lòng chọn 1 khách hàng để cập nhật thông tin ...");
+                }
             }
             else
             {
-                MessageBox.Show("*Vui long chon 1 khach hang de cap nhat thong tin.");
+                MessageBox.Show("*Vui lòng chọn 1 khách hàng để cập nhật thông tin ...");
             }
         }
 
@@ -92,7 +106,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui long chon dong can Xoa !!!");
+                MessageBox.Show("Vui lòng chọn dòng cần Xóa !!!");
             }
         }
 

@@ -35,18 +35,25 @@ namespace quanlybangiay.form
             }
             byte[] file = BLL_KhoGiay.Instance.ImagetoByte(pictureBox7.Image);
 
-            
-            if(getGiay() != null && getKhoGiay() != null  && getNhapKHO_Giay() !=null)
+          if(txtIDGiay.Text !="" && txtName.Text !="" && txtSize.Text !="" && txtHang.Text != "")
             {
-                
-                BLL_KhoGiay.Instance.Excute(getGiay(), getKhoGiay());
-                if (Convert.ToInt32(txtSLNhap.Text) > 0 && index == 2)
+
+                if (getGiay() != null && getKhoGiay() != null && getNhapKHO_Giay() != null)
                 {
-                    BLL_KhoGiay.Instance.ADD_nhapkho(getNhapKHO_Giay());
+
+                    BLL_KhoGiay.Instance.Excute(getGiay(), getKhoGiay());
+                    if (Convert.ToInt32(txtSLNhap.Text) > 0 && index == 2)
+                    {
+                        BLL_KhoGiay.Instance.ADD_nhapkho(getNhapKHO_Giay());
+                    }
+                    MessageBox.Show("Đã cập nhật !!!");
+                    d();
+                    this.Close();
                 }
-                MessageBox.Show("Đã cập nhật !!!");
-                d();
-                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             }
         }
 
@@ -255,9 +262,6 @@ namespace quanlybangiay.form
                 txtGiaNhap.Text = "";
                 txtGiaNhap.Enabled = false;
             }
-
-
-
         }
 
         private void txtHang_TextChanged(object sender, EventArgs e)

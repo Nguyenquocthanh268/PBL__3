@@ -29,9 +29,9 @@ namespace quanlybangiay.DTO
         public Nullable<double> TongTien { get; set; }
         public string ID_NhanVien { get; set; }
     
+        public virtual CTKM CTKM { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
-        public virtual CTKM CTKM { get; set; }
         public virtual KhachHang KhachHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
     }

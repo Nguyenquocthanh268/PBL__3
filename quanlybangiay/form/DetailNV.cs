@@ -19,9 +19,12 @@ namespace quanlybangiay.form
         public Mydel d { get; set; }
         public string ID { get; set; }
         public int index;
+        public bool checkAddNV;
+        public bool checkTK;
         public DetailNV(string id, int i)
         {
             InitializeComponent();
+            checkAddNV = false;
             ID = id;
             index = i;
             GUI(index);
@@ -29,9 +32,11 @@ namespace quanlybangiay.form
 
         public void GUI(int index)
         {
+            btnReset.Enabled = false;
             if (BLL_NV.Instance.Check(ID))
             {
                 txtID.Enabled = false;
+                txtID.BackColor = Color.FromArgb(171, 171, 171);
                 if (index == 1)
                 {
                     txtTen.Enabled = false;
@@ -42,14 +47,23 @@ namespace quanlybangiay.form
                     dateTimePicker1.Enabled = false;
                     btnUpload.Enabled = false;
                     btnOK.Enabled = false;
-                    btnCancel.Enabled = false;
-                    btnReset.Enabled = false;
-                    lb_notify.Enabled = false;
+                    radNam.Enabled = false;
+                    radNu.Enabled = false;
+                    txtTen.BackColor = Color.FromArgb(171, 171, 171);
+                    txtDiaChi.BackColor = Color.FromArgb(171, 171, 171);
+                    txtMK.BackColor = Color.FromArgb(171, 171, 171);
+                    txtSDT.BackColor = Color.FromArgb(171, 171, 171);
+                    txtTK.BackColor = Color.FromArgb(171, 171, 171);
+                    dateTimePicker1.BackColor = Color.FromArgb(171, 171, 171); 
+                  
                 }
-                if(index == 3)
+                if (index == 3)
                 {
                     txtTK.Enabled = false;
                     txtMK.Enabled = false;
+                    btnReset.Enabled = true;
+                    txtTK.BackColor = Color.FromArgb(171, 171, 171);
+                    txtMK.BackColor = Color.FromArgb(171, 171, 171);
                 }
                 txtID.Text = BLL_NV.Instance.GetNVByID(ID).ID_NhanVien.ToString();
                 txtTen.Text = BLL_NV.Instance.GetNVByID(ID).TenNhanVien.ToString();
@@ -70,55 +84,68 @@ namespace quanlybangiay.form
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            byte[] file = BLL_NV.Instance.ImagetoByte(pictureBox1.Image);
-            NhanVien nv = new NhanVien()
-            {
-                ID_NhanVien = txtID.Text,
-                TenNhanVien = txtTen.Text,
-                DiaChi = txtDiaChi.Text,
-                SoDienThoai = txtSDT.Text,
-                NgaySinh = dateTimePicker1.Value,
-                AnhNV = file,
-                GioiTinh = Convert.ToBoolean(radNam.Checked),
-            };
-
-            TaiKhoan tk = new TaiKhoan()
-            {
-                Username = txtTK.Text,
-                Pass = txtMK.Text,
-                ChucVu = false,
-                ID_NhanVien = txtID.Text
-            };
-               if(txtID.Text == "" || txtSDT.Text == "" || txtTen.Text == "" || txtDiaChi.Text == ""
-                  || txtMK.Text == "" || txtTK.Text == "" || lb_notify.Visible == true )
+            if (txtID.Text == "" || txtSDT.Text == "" || txtTen.Text == "" || txtDiaChi.Text == ""
+            || txtMK.Text == "" || txtTK.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
-            } else
+            }
+            else
             {
-                try
+                if (checkAddNV == false)
                 {
-                    BLL_NV.Instance.Execute(nv, tk);
-                    d();
-                    if (txtID.Enabled == false)
+                    if (checkTK == false)
                     {
-                        GUI(index);
-                        MessageBox.Show("Thay đổi thành công!");
+                        byte[] file = BLL_NV.Instance.ImagetoByte(pictureBox1.Image);
+                        NhanVien nv = new NhanVien()
+                        {
+                            ID_NhanVien = txtID.Text,
+                            TenNhanVien = txtTen.Text,
+                            DiaChi = txtDiaChi.Text,
+                            SoDienThoai = txtSDT.Text,
+                            NgaySinh = dateTimePicker1.Value,
+                            AnhNV = file,
+                            GioiTinh = Convert.ToBoolean(radNam.Checked),
+                        };
+
+                        TaiKhoan tk = new TaiKhoan()
+                        {
+                            Username = txtTK.Text,
+                            Pass = txtMK.Text,
+                            ChucVu = false,
+                            ID_NhanVien = txtID.Text
+                        };
+                        try
+                        {
+                            BLL_NV.Instance.Execute(nv, tk);
+                            d();
+                            if (txtID.Enabled == false)
+                            {
+                                GUI(index);
+                                MessageBox.Show("Thay đổi thành công!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Đã thêm thông tin nhân viên mới !!!");
+                                checkAddNV = false;
+                                checkTK = false;
+                                this.Close();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Vui long kiem tra du lieu");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Đã thêm thông tin nhân viên mới !!!");
-                        this.Close();
+                        MessageBox.Show("Vui lòng kiểm tra lại thông tin Tài khoản ...");
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Vui long kiem tra du lieu");
+                    MessageBox.Show("Vui lòng kiểm tra lại thông tin ID nhân viên ...");
                 }
             }
-
-
-            
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -136,6 +163,7 @@ namespace quanlybangiay.form
             {
                 string Username = txtTK.Text;
                BLL_Login.Instance.ResetMK(Username);
+                MessageBox.Show("Đã reset mật khẩu thành công !");
                 GUI(index);
             }
 
@@ -160,20 +188,63 @@ namespace quanlybangiay.form
         {
             if (BLL_NV.Instance.Check(txtID.Text))
             {
-                MessageBox.Show("ID nhân viên đã tồn tại ...");
+                tb_2.Text = "*ID nhân viên đã tồn tại";
+                checkAddNV = true;
             }
+            else
+            {
+                checkAddNV = false;
+            }
+    }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+            tb_2.Text = "";
         }
 
-        private void txtMK_Click(object sender, EventArgs e)
+        private void txtTK_Leave(object sender, EventArgs e)
         {
             if (BLL_NV.Instance.CheckUsername(txtTK.Text) == false)
             {
-                lb_notify.Visible = true;
-            } else
+                lb_notify.Text = "*Tên tài khoản đã tồn tại";
+                checkTK = true;
+            }
+            else
             {
-                lb_notify.Visible = false;
+                lb_notify.Text = "";
+                checkTK = false;
             }
         }
 
+        private void txtTK_TextChanged(object sender, EventArgs e)
+        {
+            lb_notify.Text = "";
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            tb_2.Text = "";
+            try
+            {
+                if (txtSDT.Text == "")
+                {
+                    tb_2.Text = "";
+
+                }
+                else
+                if(Convert.ToInt32(txtSDT.Text) > 0)
+                {
+                    tb_2.Text = "";
+                }
+                else
+                if (txtSDT.Text.Length > 10)
+                {
+                    tb_2.Text = "";
+                }
+            }catch (Exception ex)
+            {
+                tb_2.Text = "Vui Lòng Kiểm tra lại SĐT";
+            }
+        }
     }
 }

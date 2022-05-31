@@ -108,6 +108,7 @@ namespace quanlybangiay.form
             // lb_check
             // 
             this.lb_check.AutoSize = true;
+            this.lb_check.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_check.ForeColor = System.Drawing.Color.Red;
             this.lb_check.Location = new System.Drawing.Point(267, 154);
             this.lb_check.Name = "lb_check";

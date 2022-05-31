@@ -42,6 +42,8 @@ namespace quanlybangiay.form
             this.dt_st = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tb_2 = new System.Windows.Forms.Label();
+            this.tb_1 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.txt_gia = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@ namespace quanlybangiay.form
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tb_1 = new System.Windows.Forms.Label();
-            this.tb_2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -212,6 +212,26 @@ namespace quanlybangiay.form
             this.panel3.Size = new System.Drawing.Size(219, 231);
             this.panel3.TabIndex = 2;
             // 
+            // tb_2
+            // 
+            this.tb_2.AutoSize = true;
+            this.tb_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_2.ForeColor = System.Drawing.Color.Red;
+            this.tb_2.Location = new System.Drawing.Point(59, 146);
+            this.tb_2.Name = "tb_2";
+            this.tb_2.Size = new System.Drawing.Size(0, 13);
+            this.tb_2.TabIndex = 83;
+            // 
+            // tb_1
+            // 
+            this.tb_1.AutoSize = true;
+            this.tb_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_1.ForeColor = System.Drawing.Color.Red;
+            this.tb_1.Location = new System.Drawing.Point(59, 76);
+            this.tb_1.Name = "tb_1";
+            this.tb_1.Size = new System.Drawing.Size(0, 13);
+            this.tb_1.TabIndex = 82;
+            // 
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
@@ -273,6 +293,7 @@ namespace quanlybangiay.form
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(501, 92);
             this.txtName.Name = "txtName";
@@ -293,6 +314,7 @@ namespace quanlybangiay.form
             // txtHang
             // 
             this.txtHang.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHang.Location = new System.Drawing.Point(296, 188);
             this.txtHang.Name = "txtHang";
@@ -313,6 +335,7 @@ namespace quanlybangiay.form
             // txtIDGiay
             // 
             this.txtIDGiay.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtIDGiay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDGiay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDGiay.Location = new System.Drawing.Point(296, 92);
             this.txtIDGiay.Name = "txtIDGiay";
@@ -343,6 +366,7 @@ namespace quanlybangiay.form
             // txtSize
             // 
             this.txtSize.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSize.Location = new System.Drawing.Point(501, 188);
             this.txtSize.Name = "txtSize";
@@ -359,26 +383,6 @@ namespace quanlybangiay.form
             this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 60;
             this.label5.Text = "Size";
-            // 
-            // tb_1
-            // 
-            this.tb_1.AutoSize = true;
-            this.tb_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_1.ForeColor = System.Drawing.Color.Red;
-            this.tb_1.Location = new System.Drawing.Point(59, 76);
-            this.tb_1.Name = "tb_1";
-            this.tb_1.Size = new System.Drawing.Size(0, 13);
-            this.tb_1.TabIndex = 82;
-            // 
-            // tb_2
-            // 
-            this.tb_2.AutoSize = true;
-            this.tb_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_2.ForeColor = System.Drawing.Color.Red;
-            this.tb_2.Location = new System.Drawing.Point(59, 146);
-            this.tb_2.Name = "tb_2";
-            this.tb_2.Size = new System.Drawing.Size(0, 13);
-            this.tb_2.TabIndex = 83;
             // 
             // Nhap_kho
             // 

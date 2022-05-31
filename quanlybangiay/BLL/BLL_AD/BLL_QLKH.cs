@@ -45,7 +45,8 @@ namespace quanlybangiay.BLL.BLL_AD
             }
             else
             {
-                return null;
+                var l1 = db.KhachHangs.Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy });
+                return l1.ToList();
             }
         }
         public KhachHang Get1KH(string SDT)
@@ -118,6 +119,21 @@ namespace quanlybangiay.BLL.BLL_AD
             db.KhachHangs.Add(a);
             db.SaveChanges();
         }
-
+        public List<string> CBBView()
+        {
+            List<string> list = new List<string>();
+            list.Add("Tất cả");
+            list.Add("Số ĐT");
+            list.Add("Tên");
+            return list;
+        }
+        public List<string> CBBSort()
+        {
+            List<string> list = new List<string>();
+            list.Add("Số ĐT");
+            list.Add("Tên");
+            list.Add("Điểm tích lũy");
+            return list;
+        }
     }
 }
