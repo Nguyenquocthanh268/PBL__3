@@ -409,24 +409,28 @@ namespace quanlybangiay.form
             this.ID_Giay.DataPropertyName = "ID_Giay";
             this.ID_Giay.HeaderText = "ID Giày";
             this.ID_Giay.Name = "ID_Giay";
+            this.ID_Giay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // TenGiay
             // 
             this.TenGiay.DataPropertyName = "TenGiay";
             this.TenGiay.HeaderText = "Tên giày";
             this.TenGiay.Name = "TenGiay";
+            this.TenGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // HangGiay
             // 
             this.HangGiay.DataPropertyName = "HangGiay";
             this.HangGiay.HeaderText = "Hãng giày";
             this.HangGiay.Name = "HangGiay";
+            this.HangGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Size
             // 
             this.Size.DataPropertyName = "Size";
             this.Size.HeaderText = "Size";
             this.Size.Name = "Size";
+            this.Size.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Kho_Giay
             // 

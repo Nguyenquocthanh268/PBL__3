@@ -89,6 +89,22 @@ namespace quanlybangiay.BLL.BLL_AD
             return value;
         }
 
+        public DateTime GetMinDate()
+        {
+            DateTime min = DateTime.Now;
+            foreach(HoaDon i in db.HoaDons)
+            {
+                 min = i.NgayTao.Value;
+                if(i.NgayTao <= min)
+                {
+                    min = i.NgayTao.Value;
+                }
+            }
+
+            return min;
+            
+        }
+
 
         public dynamic ShowAll()
         {
@@ -99,7 +115,7 @@ namespace quanlybangiay.BLL.BLL_AD
         {
             if (index == 0)
             {
-                return db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien, p.ID_NhanVien }).ToList(); ;
+                return db.HoaDons.Where(p => p.NgayTao >= begin && p.NgayTao <= end).Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien, p.ID_NhanVien }).ToList(); ;
             }
             else if (index == 1)
             {
