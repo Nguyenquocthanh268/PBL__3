@@ -285,13 +285,13 @@ namespace quanlybangiay
                     {
                         if (BLL_QLKH.Instance.Check(txtSdtKhachHang.Text))
                         {
-                            lbCheckSdt.Text = "So dien thoai da ton tai trong he thong...";
+                            lbCheckSdt.Text = "Số điện thoại đã tồn tại trong hệ thống...";
                         }
                         else
                         {
 
                             BLL_QLKH.Instance.AddKH(txtSdtKhachHang.Text, txtNameKhachHang.Text);
-                            MessageBox.Show("Dang Ky Thanh Cong !!!");
+                            MessageBox.Show("Đăng ký thành công !!!");
                             txtSdtKhachHang.Text = "";
                             txtNameKhachHang.Text = "";
                             lbCheckSdt.Text = "";
@@ -541,6 +541,8 @@ namespace quanlybangiay
             tb_Phantramck.Text = Convert.ToString(ChietKhau);
             tb_Chietkhau.Text = (Convert.ToInt32(tb_Phantramck.Text) * Convert.ToDouble(tb_Tongcong.Text) / 100).ToString();
             tb_Thanhtien.Text = (Convert.ToDouble(tb_Tongcong.Text) - Convert.ToDouble(tb_Chietkhau.Text)).ToString();
+            tb_Tienkhachdua.Text = "";
+            tb_Tientralai.Text = "0";
             //}
             //else
             //{
@@ -607,9 +609,17 @@ namespace quanlybangiay
 
         private void tb_Tienkhachdua_TextChanged(object sender, EventArgs e)
         {
-            if (tb_Tienkhachdua.Text != "" && tb_Thanhtien.Text != "")
+            try
             {
-                tb_Tientralai.Text = (Convert.ToDouble(tb_Tienkhachdua.Text) - Convert.ToDouble(tb_Thanhtien.Text)).ToString();
+                if (tb_Tienkhachdua.Text != "" && tb_Thanhtien.Text != "")
+                {
+                    tb_Tientralai.Text = (Convert.ToDouble(tb_Tienkhachdua.Text) - Convert.ToDouble(tb_Thanhtien.Text)).ToString();
+                }
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Dữ liệu nhập vào không hợp lệ");
+                tb_Tienkhachdua.Text = "";
+                tb_Tientralai.Text = "0";
             }
         }
         //Xuli diem tich luy : 100.000d ~ 1d ; DTL < 100d : giam 2% ;100d <= DTL < 200d :giam 5%; 200d <= DTL < 500d : giam 10%; DTL >= 500 : giam 20%
@@ -732,8 +742,5 @@ namespace quanlybangiay
 
 
         }
-
-
-
     }
 }

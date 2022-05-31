@@ -114,5 +114,19 @@ namespace quanlybangiay.form
             }
         
         }
+
+        private void cbbSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            if (cbbSearch.SelectedIndex <= 0)
+            {
+                txtSearch.Enabled = false;
+
+            }
+            else if (cbbSearch.SelectedIndex > 0)
+            {
+                txtSearch.Enabled = true;
+            }
+        }
     }
 }

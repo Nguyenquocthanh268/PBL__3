@@ -243,5 +243,19 @@ namespace quanlybangiay.form
                 tb.Text = "Chiết khấu không hợp lệ";
             }
         }
+
+        private void cbItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txt_search.Text = "";
+            if (cbItem.SelectedIndex <= 0)
+            {
+                txt_search.Enabled = false;
+
+            }
+            else if (cbItem.SelectedIndex > 0)
+            {
+                txt_search.Enabled = true;
+            }
+        }
     }
 }

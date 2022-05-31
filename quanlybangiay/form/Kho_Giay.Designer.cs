@@ -67,7 +67,9 @@ namespace quanlybangiay.form
             // 
             // panel5
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.panel5.Controls.Add(this.cbb_size);
             this.panel5.Controls.Add(this.cbb_hang);
             this.panel5.Controls.Add(this.txt_id);
@@ -77,19 +79,18 @@ namespace quanlybangiay.form
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Location = new System.Drawing.Point(12, 12);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1069, 77);
+            this.panel5.Size = new System.Drawing.Size(1045, 72);
             this.panel5.TabIndex = 5;
             // 
             // cbb_size
             // 
-            this.cbb_size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbb_size.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbb_size.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_size.FormattingEnabled = true;
-            this.cbb_size.Location = new System.Drawing.Point(486, 25);
+            this.cbb_size.Location = new System.Drawing.Point(591, 27);
             this.cbb_size.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_size.Name = "cbb_size";
             this.cbb_size.Size = new System.Drawing.Size(67, 28);
@@ -97,10 +98,10 @@ namespace quanlybangiay.form
             // 
             // cbb_hang
             // 
-            this.cbb_hang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbb_hang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbb_hang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_hang.FormattingEnabled = true;
-            this.cbb_hang.Location = new System.Drawing.Point(620, 26);
+            this.cbb_hang.Location = new System.Drawing.Point(754, 27);
             this.cbb_hang.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_hang.Name = "cbb_hang";
             this.cbb_hang.Size = new System.Drawing.Size(102, 28);
@@ -108,22 +109,22 @@ namespace quanlybangiay.form
             // 
             // txt_id
             // 
-            this.txt_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_id.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id.Location = new System.Drawing.Point(63, 26);
+            this.txt_id.Location = new System.Drawing.Point(90, 27);
             this.txt_id.Margin = new System.Windows.Forms.Padding(2);
             this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(139, 27);
+            this.txt_id.Size = new System.Drawing.Size(135, 27);
             this.txt_id.TabIndex = 6;
             // 
             // txt_tengiay
             // 
-            this.txt_tengiay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_tengiay.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_tengiay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tengiay.Location = new System.Drawing.Point(290, 26);
+            this.txt_tengiay.Location = new System.Drawing.Point(332, 28);
             this.txt_tengiay.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tengiay.Name = "txt_tengiay";
-            this.txt_tengiay.Size = new System.Drawing.Size(139, 27);
+            this.txt_tengiay.Size = new System.Drawing.Size(175, 27);
             this.txt_tengiay.TabIndex = 5;
             // 
             // btnSearch
@@ -136,7 +137,7 @@ namespace quanlybangiay.form
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btnSearch.Location = new System.Drawing.Point(740, 24);
+            this.btnSearch.Location = new System.Drawing.Point(893, 25);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(126, 32);
@@ -147,59 +148,61 @@ namespace quanlybangiay.form
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.label4.Location = new System.Drawing.Point(573, 30);
+            this.label4.Location = new System.Drawing.Point(693, 31);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 18);
+            this.label4.Size = new System.Drawing.Size(47, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "Hãng";
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.label1.Location = new System.Drawing.Point(7, 30);
+            this.label1.Location = new System.Drawing.Point(20, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 18);
+            this.label1.Size = new System.Drawing.Size(59, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID giày";
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.label3.Location = new System.Drawing.Point(445, 30);
+            this.label3.Location = new System.Drawing.Point(539, 31);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 18);
+            this.label3.Size = new System.Drawing.Size(41, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "Size";
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.label2.Location = new System.Drawing.Point(223, 30);
+            this.label2.Location = new System.Drawing.Point(252, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 18);
+            this.label2.Size = new System.Drawing.Size(71, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên giày";
             // 
             // panel4
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.panel4.Controls.Add(this.btnDetail);
             this.panel4.Controls.Add(this.btnInput);
             this.panel4.Controls.Add(this.btnAddnew);
@@ -207,11 +210,10 @@ namespace quanlybangiay.form
             this.panel4.Controls.Add(this.btnEdit);
             this.panel4.Controls.Add(this.btnSort);
             this.panel4.Controls.Add(this.btnDelete);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(879, 77);
+            this.panel4.Location = new System.Drawing.Point(879, 95);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(190, 601);
+            this.panel4.Size = new System.Drawing.Size(178, 571);
             this.panel4.TabIndex = 9;
             // 
             // btnDetail
@@ -223,7 +225,7 @@ namespace quanlybangiay.form
             this.btnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btnDetail.Location = new System.Drawing.Point(41, 12);
+            this.btnDetail.Location = new System.Drawing.Point(35, 12);
             this.btnDetail.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(109, 41);
@@ -241,7 +243,7 @@ namespace quanlybangiay.form
             this.btnInput.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btnInput.Location = new System.Drawing.Point(41, 200);
+            this.btnInput.Location = new System.Drawing.Point(35, 200);
             this.btnInput.Margin = new System.Windows.Forms.Padding(2);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(109, 41);
@@ -259,7 +261,7 @@ namespace quanlybangiay.form
             this.btnAddnew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddnew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btnAddnew.Location = new System.Drawing.Point(41, 59);
+            this.btnAddnew.Location = new System.Drawing.Point(35, 59);
             this.btnAddnew.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddnew.Name = "btnAddnew";
             this.btnAddnew.Size = new System.Drawing.Size(109, 41);
@@ -271,7 +273,7 @@ namespace quanlybangiay.form
             // cbb_sort
             // 
             this.cbb_sort.FormattingEnabled = true;
-            this.cbb_sort.Location = new System.Drawing.Point(41, 292);
+            this.cbb_sort.Location = new System.Drawing.Point(35, 292);
             this.cbb_sort.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_sort.Name = "cbb_sort";
             this.cbb_sort.Size = new System.Drawing.Size(109, 21);
@@ -285,7 +287,7 @@ namespace quanlybangiay.form
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btnEdit.Location = new System.Drawing.Point(41, 106);
+            this.btnEdit.Location = new System.Drawing.Point(35, 106);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(109, 41);
@@ -302,7 +304,7 @@ namespace quanlybangiay.form
             this.btnSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btnSort.Location = new System.Drawing.Point(41, 247);
+            this.btnSort.Location = new System.Drawing.Point(35, 247);
             this.btnSort.Margin = new System.Windows.Forms.Padding(2);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(109, 41);
@@ -319,7 +321,7 @@ namespace quanlybangiay.form
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btnDelete.Location = new System.Drawing.Point(41, 153);
+            this.btnDelete.Location = new System.Drawing.Point(35, 153);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(109, 41);
@@ -330,6 +332,7 @@ namespace quanlybangiay.form
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(70)))));
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel5);
@@ -341,11 +344,14 @@ namespace quanlybangiay.form
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 77);
+            this.panel2.Location = new System.Drawing.Point(12, 95);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(879, 601);
+            this.panel2.Size = new System.Drawing.Size(856, 571);
             this.panel2.TabIndex = 10;
             // 
             // dataGridView1
@@ -395,7 +401,7 @@ namespace quanlybangiay.form
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(86)))));
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(855, 577);
+            this.dataGridView1.Size = new System.Drawing.Size(832, 547);
             this.dataGridView1.TabIndex = 9;
             // 
             // ID_Giay

@@ -20,6 +20,7 @@ namespace quanlybangiay.form
             cbbSearch.Items.AddRange((BLL_HD.Instance.CBBSearch().ToArray()));
             cbbSort.Items.AddRange((BLL_HD.Instance.CBBSort().ToArray()));
             cbbSearch.SelectedIndex = 0;
+            //dateBegin = 
             dtgHD.DataSource = BLL_HD.Instance.Search(0, "", dateBegin.Value, dateEnd.Value);
         }
 
@@ -92,6 +93,20 @@ namespace quanlybangiay.form
                 MessageBox.Show("Vui lòng chọn Item ...");
             }
             
+        }
+
+        private void cbbSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            if (cbbSearch.SelectedIndex <= 0)
+            {
+                txtSearch.Enabled = false;
+
+            }
+            else if (cbbSearch.SelectedIndex > 0)
+            {
+                txtSearch.Enabled = true;
+            }
         }
     }
 }
