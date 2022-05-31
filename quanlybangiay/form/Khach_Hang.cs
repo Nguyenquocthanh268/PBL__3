@@ -42,23 +42,21 @@ namespace quanlybangiay.form
             }
         }
 
-        public void SetCBB()
-        {
-            cbView.Items.Add("Tất cả");
-            cbView.Items.Add("Số ĐT");
-            cbView.Items.Add("Tên");
-            cbSort.Items.Add("Số ĐT");
-            cbSort.Items.Add("Tên");
-            cbSort.Items.Add("Điểm tích lũy");
-        }
-
         private void Show()
         {
             dataGridView1.DataSource = BLL.BLL_AD.BLL_QLKH.Instance.GetKH(cbView.SelectedIndex, tbSearch.Text);
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            Show();
+            if(cbView.SelectedIndex >= 0)
+            {
+                Show();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn 1 thuộc tính cần tìm kiếm...");
+            }
+            //Show();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -119,6 +117,20 @@ namespace quanlybangiay.form
             else
             {
                 MessageBox.Show("Vui lòng chọn Item ...");
+            }
+        }
+
+        private void cbView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearch.Text = "";
+            if (cbView.SelectedIndex <= 0)
+            {
+                tbSearch.Enabled = false;
+                
+            }
+            else if(cbView.SelectedIndex > 0)
+            {
+                tbSearch.Enabled = true;
             }
         }
     }

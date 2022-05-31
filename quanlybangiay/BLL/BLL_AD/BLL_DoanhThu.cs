@@ -201,8 +201,8 @@ namespace quanlybangiay.BLL.BLL_AD
         {
             endDate = new DateTime(endDate.Year, endDate.Month, endDate.Day,
                 endDate.Hour, endDate.Minute, 59);
-            if (startDate != this.startDate || endDate != this.endDate)
-            {
+            //if (startDate != this.startDate || endDate != this.endDate)
+            //{
                 this.startDate = startDate;
                 this.endDate = endDate;
                 this.numberDays = (endDate - startDate).Days;
@@ -211,12 +211,12 @@ namespace quanlybangiay.BLL.BLL_AD
                 GetOrderAnalisys();
                 Console.WriteLine("Refreshed data: {0} - {1}", startDate.ToString(), endDate.ToString());
                 return true;
-            }
-            else
-            {
-                Console.WriteLine("Data not refreshed, same query: {0} - {1}", startDate.ToString(), endDate.ToString());
-                return false;
-            }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Data not refreshed, same query: {0} - {1}", startDate.ToString(), endDate.ToString());
+            //    return false;
+            //}
         }
     }
 }
