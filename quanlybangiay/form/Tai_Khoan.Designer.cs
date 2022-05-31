@@ -80,7 +80,7 @@ namespace quanlybangiay.form
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.Info;
-            this.label22.Location = new System.Drawing.Point(176, 28);
+            this.label22.Location = new System.Drawing.Point(187, 28);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(260, 37);
             this.label22.TabIndex = 22;
@@ -143,7 +143,7 @@ namespace quanlybangiay.form
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_mkm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mkm.Location = new System.Drawing.Point(269, 115);
+            this.txt_mkm.Location = new System.Drawing.Point(270, 125);
             this.txt_mkm.Name = "txt_mkm";
             this.txt_mkm.PasswordChar = '*';
             this.txt_mkm.Size = new System.Drawing.Size(219, 26);
@@ -201,7 +201,7 @@ namespace quanlybangiay.form
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.SlateGray;
-            this.label40.Location = new System.Drawing.Point(80, 115);
+            this.label40.Location = new System.Drawing.Point(81, 125);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(134, 24);
             this.label40.TabIndex = 3;
@@ -215,7 +215,7 @@ namespace quanlybangiay.form
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.SlateGray;
-            this.label41.Location = new System.Drawing.Point(80, 186);
+            this.label41.Location = new System.Drawing.Point(81, 186);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(177, 24);
             this.label41.TabIndex = 4;

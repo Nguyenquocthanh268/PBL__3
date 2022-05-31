@@ -73,7 +73,8 @@ namespace quanlybangiay.form
                     txtHang.Enabled = false;
                    
                     txtGiaBan.Enabled = false;
-                    btnOK.Enabled = false;
+                    //btnOK.Enabled = false;
+                    btnOK.Visible = false;
                     txtName.Enabled = false;
                     txtSize.Enabled = false;
                     txtGiaNhap.Enabled = false;

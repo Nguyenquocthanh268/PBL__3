@@ -20,13 +20,16 @@ namespace quanlybangiay.form
             cbbSearch.Items.AddRange((BLL_HD.Instance.CBBSearch().ToArray()));
             cbbSort.Items.AddRange((BLL_HD.Instance.CBBSort().ToArray()));
             cbbSearch.SelectedIndex = 0;
-            //dateBegin = 
+            //dateBegin 
+            dateBegin.Value = BLL_HD.Instance.GetMinDate();
             dtgHD.DataSource = BLL_HD.Instance.Search(0, "", dateBegin.Value, dateEnd.Value);
+
+           
         }
 
         public void ShowDtg()
         {
-            dtgHD.DataSource = BLL_HD.Instance.ShowAll();
+            dtgHD.DataSource = BLL_HD.Instance.ShowAll();   
         }
 
         private void btnDetail_Click(object sender, EventArgs e)

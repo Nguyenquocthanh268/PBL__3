@@ -32,7 +32,8 @@ namespace quanlybangiay.form
 
         public void GUI(int index)
         {
-            btnReset.Enabled = false;
+            //btnReset.Enabled = false;
+            btnReset.Visible = false;
             if (BLL_NV.Instance.Check(ID))
             {
                 txtID.Enabled = false;
@@ -45,8 +46,10 @@ namespace quanlybangiay.form
                     txtSDT.Enabled = false;
                     txtTK.Enabled = false;
                     dateTimePicker1.Enabled = false;
-                    btnUpload.Enabled = false;
-                    btnOK.Enabled = false;
+                    //btnUpload.Enabled = false;
+                    //btnOK.Enabled = false;
+                    btnUpload.Visible = false;
+                    btnOK.Visible = false;
                     radNam.Enabled = false;
                     radNu.Enabled = false;
                     txtTen.BackColor = Color.FromArgb(171, 171, 171);
@@ -62,6 +65,7 @@ namespace quanlybangiay.form
                     txtTK.Enabled = false;
                     txtMK.Enabled = false;
                     btnReset.Enabled = true;
+                    btnReset.Visible = true;
                     txtTK.BackColor = Color.FromArgb(171, 171, 171);
                     txtMK.BackColor = Color.FromArgb(171, 171, 171);
                 }
