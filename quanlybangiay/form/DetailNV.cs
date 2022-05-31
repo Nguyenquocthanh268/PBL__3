@@ -36,6 +36,7 @@ namespace quanlybangiay.form
             if (BLL_NV.Instance.Check(ID))
             {
                 txtID.Enabled = false;
+                txtID.BackColor = Color.FromArgb(171, 171, 171);
                 if (index == 1)
                 {
                     txtTen.Enabled = false;
@@ -46,12 +47,23 @@ namespace quanlybangiay.form
                     dateTimePicker1.Enabled = false;
                     btnUpload.Enabled = false;
                     btnOK.Enabled = false;
+                    radNam.Enabled = false;
+                    radNu.Enabled = false;
+                    txtTen.BackColor = Color.FromArgb(171, 171, 171);
+                    txtDiaChi.BackColor = Color.FromArgb(171, 171, 171);
+                    txtMK.BackColor = Color.FromArgb(171, 171, 171);
+                    txtSDT.BackColor = Color.FromArgb(171, 171, 171);
+                    txtTK.BackColor = Color.FromArgb(171, 171, 171);
+                    dateTimePicker1.BackColor = Color.FromArgb(171, 171, 171); 
+                  
                 }
                 if (index == 3)
                 {
                     txtTK.Enabled = false;
                     txtMK.Enabled = false;
                     btnReset.Enabled = true;
+                    txtTK.BackColor = Color.FromArgb(171, 171, 171);
+                    txtMK.BackColor = Color.FromArgb(171, 171, 171);
                 }
                 txtID.Text = BLL_NV.Instance.GetNVByID(ID).ID_NhanVien.ToString();
                 txtTen.Text = BLL_NV.Instance.GetNVByID(ID).TenNhanVien.ToString();
@@ -176,7 +188,7 @@ namespace quanlybangiay.form
         {
             if (BLL_NV.Instance.Check(txtID.Text))
             {
-                lbCheckID_NV.Text = "*ID nhân viên đã tồn tại";
+                tb_2.Text = "*ID nhân viên đã tồn tại";
                 checkAddNV = true;
             }
             else
@@ -187,7 +199,7 @@ namespace quanlybangiay.form
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-            lbCheckID_NV.Text = "";
+            tb_2.Text = "";
         }
 
         private void txtTK_Leave(object sender, EventArgs e)
@@ -207,6 +219,32 @@ namespace quanlybangiay.form
         private void txtTK_TextChanged(object sender, EventArgs e)
         {
             lb_notify.Text = "";
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            tb_2.Text = "";
+            try
+            {
+                if (txtSDT.Text == "")
+                {
+                    tb_2.Text = "";
+
+                }
+                else
+                if(Convert.ToInt32(txtSDT.Text) > 0)
+                {
+                    tb_2.Text = "";
+                }
+                else
+                if (txtSDT.Text.Length > 10)
+                {
+                    tb_2.Text = "";
+                }
+            }catch (Exception ex)
+            {
+                tb_2.Text = "Vui Lòng Kiểm tra lại SĐT";
+            }
         }
     }
 }

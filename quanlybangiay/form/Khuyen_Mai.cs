@@ -121,6 +121,9 @@ namespace quanlybangiay.form
             dt_ngaykt.Enabled = true;
             richTextBox1.Enabled = true;
             btn_ok.Enabled = true;
+
+            txt_tenchuongtrinh.BackColor = Color.FromArgb(255, 255, 255);
+            txt_chietkhau.BackColor = Color.FromArgb(255, 255, 255);
         }
         public void Khoa()
         {
@@ -131,6 +134,11 @@ namespace quanlybangiay.form
             dt_ngaykt.Enabled = false;
             richTextBox1.Enabled = false;
             btn_ok.Enabled = false;
+
+            
+            txt_tenchuongtrinh.BackColor = Color.FromArgb(171, 171, 171);
+            txt_chietkhau.BackColor = Color.FromArgb(171, 171, 171);
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -207,6 +215,32 @@ namespace quanlybangiay.form
                 GUI(ID);
 
                 Khoa();
+            }
+        }
+
+        private void dt_ngaybatdau_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_chietkhau_TextChanged(object sender, EventArgs e)
+        {
+            tb.Text = "";
+            try
+            {
+                if (txt_chietkhau.Text == "")
+                {
+                    tb.Text = "";
+                }
+                else
+                if (Convert.ToInt32(txt_chietkhau.Text) > 0)
+                {
+                    tb.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                tb.Text = "Chiết khấu không hợp lệ";
             }
         }
     }

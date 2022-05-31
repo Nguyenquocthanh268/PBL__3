@@ -25,6 +25,7 @@ namespace quanlybangiay.form
             {
                 cbb_hang.Items.Add(i);
             }
+            show();
         }
 
         public void show()

@@ -31,6 +31,7 @@ namespace quanlybangiay.form
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tb_2 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.radNu = new System.Windows.Forms.RadioButton();
@@ -60,7 +61,6 @@ namespace quanlybangiay.form
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.lbCheckID_NV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -80,7 +80,7 @@ namespace quanlybangiay.form
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.lbCheckID_NV);
+            this.panel3.Controls.Add(this.tb_2);
             this.panel3.Controls.Add(this.txtDiaChi);
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.radNu);
@@ -102,8 +102,19 @@ namespace quanlybangiay.form
             this.panel3.Size = new System.Drawing.Size(984, 303);
             this.panel3.TabIndex = 126;
             // 
+            // tb_2
+            // 
+            this.tb_2.AutoSize = true;
+            this.tb_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_2.ForeColor = System.Drawing.Color.Red;
+            this.tb_2.Location = new System.Drawing.Point(206, 203);
+            this.tb_2.Name = "tb_2";
+            this.tb_2.Size = new System.Drawing.Size(0, 13);
+            this.tb_2.TabIndex = 172;
+            // 
             // txtDiaChi
             // 
+            this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(663, 174);
             this.txtDiaChi.Name = "txtDiaChi";
@@ -126,7 +137,7 @@ namespace quanlybangiay.form
             this.radNu.Location = new System.Drawing.Point(779, 44);
             this.radNu.Margin = new System.Windows.Forms.Padding(2);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(43, 20);
+            this.radNu.Size = new System.Drawing.Size(42, 20);
             this.radNu.TabIndex = 165;
             this.radNu.TabStop = true;
             this.radNu.Text = "Nữ";
@@ -140,7 +151,7 @@ namespace quanlybangiay.form
             this.radNam.Location = new System.Drawing.Point(699, 44);
             this.radNam.Margin = new System.Windows.Forms.Padding(2);
             this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(55, 20);
+            this.radNam.Size = new System.Drawing.Size(54, 20);
             this.radNam.TabIndex = 166;
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
@@ -148,11 +159,13 @@ namespace quanlybangiay.form
             // 
             // txtSDT
             // 
+            this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(209, 174);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(204, 26);
             this.txtSDT.TabIndex = 162;
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
             // label21
             // 
@@ -222,6 +235,7 @@ namespace quanlybangiay.form
             // 
             // txtTen
             // 
+            this.txtTen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen.Location = new System.Drawing.Point(209, 107);
             this.txtTen.Name = "txtTen";
@@ -230,6 +244,7 @@ namespace quanlybangiay.form
             // 
             // txtID
             // 
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(209, 40);
             this.txtID.Name = "txtID";
@@ -247,7 +262,7 @@ namespace quanlybangiay.form
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btnCancel.Location = new System.Drawing.Point(559, 231);
+            this.btnCancel.Location = new System.Drawing.Point(559, 242);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(145, 41);
@@ -265,7 +280,7 @@ namespace quanlybangiay.form
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btnOK.Location = new System.Drawing.Point(259, 231);
+            this.btnOK.Location = new System.Drawing.Point(268, 242);
             this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(145, 41);
@@ -325,7 +340,7 @@ namespace quanlybangiay.form
             this.lb_notify.AutoSize = true;
             this.lb_notify.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_notify.ForeColor = System.Drawing.Color.Red;
-            this.lb_notify.Location = new System.Drawing.Point(168, 86);
+            this.lb_notify.Location = new System.Drawing.Point(165, 82);
             this.lb_notify.Name = "lb_notify";
             this.lb_notify.Size = new System.Drawing.Size(0, 13);
             this.lb_notify.TabIndex = 171;
@@ -335,7 +350,7 @@ namespace quanlybangiay.form
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(168, 86);
+            this.label1.Location = new System.Drawing.Point(165, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 170;
@@ -371,6 +386,7 @@ namespace quanlybangiay.form
             // 
             // txtTK
             // 
+            this.txtTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTK.Location = new System.Drawing.Point(168, 53);
             this.txtTK.Name = "txtTK";
@@ -404,6 +420,7 @@ namespace quanlybangiay.form
             // 
             // txtMK
             // 
+            this.txtMK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.Location = new System.Drawing.Point(168, 116);
             this.txtMK.Name = "txtMK";
@@ -435,16 +452,6 @@ namespace quanlybangiay.form
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // lbCheckID_NV
-            // 
-            this.lbCheckID_NV.AutoSize = true;
-            this.lbCheckID_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCheckID_NV.ForeColor = System.Drawing.Color.Red;
-            this.lbCheckID_NV.Location = new System.Drawing.Point(206, 69);
-            this.lbCheckID_NV.Name = "lbCheckID_NV";
-            this.lbCheckID_NV.Size = new System.Drawing.Size(0, 13);
-            this.lbCheckID_NV.TabIndex = 172;
             // 
             // DetailNV
             // 
@@ -501,6 +508,6 @@ namespace quanlybangiay.form
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lb_notify;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbCheckID_NV;
+        private System.Windows.Forms.Label tb_2;
     }
 }

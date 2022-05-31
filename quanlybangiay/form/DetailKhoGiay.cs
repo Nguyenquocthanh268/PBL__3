@@ -35,18 +35,25 @@ namespace quanlybangiay.form
             }
             byte[] file = BLL_KhoGiay.Instance.ImagetoByte(pictureBox7.Image);
 
-            
-            if(getGiay() != null && getKhoGiay() != null  && getNhapKHO_Giay() !=null)
+          if(txtIDGiay.Text !="" && txtName.Text !="" && txtSize.Text !="" && txtHang.Text != "")
             {
-                
-                BLL_KhoGiay.Instance.Excute(getGiay(), getKhoGiay());
-                if (Convert.ToInt32(txtSLNhap.Text) > 0 && index == 2)
+
+                if (getGiay() != null && getKhoGiay() != null && getNhapKHO_Giay() != null)
                 {
-                    BLL_KhoGiay.Instance.ADD_nhapkho(getNhapKHO_Giay());
+
+                    BLL_KhoGiay.Instance.Excute(getGiay(), getKhoGiay());
+                    if (Convert.ToInt32(txtSLNhap.Text) > 0 && index == 2)
+                    {
+                        BLL_KhoGiay.Instance.ADD_nhapkho(getNhapKHO_Giay());
+                    }
+                    MessageBox.Show("Đã cập nhật !!!");
+                    d();
+                    this.Close();
                 }
-                MessageBox.Show("Đã cập nhật !!!");
-                d();
-                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             }
         }
 
@@ -207,27 +214,23 @@ namespace quanlybangiay.form
             {
                 txtSize.Enabled = true;
                 txtName.Enabled = true;
-                txtIDGiay.Text=BLL_KhoGiay.Instance.ID_giay(txtName.Text,txtSize.Text);
-            }
+
+                if (txtName.Text.Length == 6)
+                {
+                    txtIDGiay.Text = BLL_KhoGiay.Instance.ID_giay(txtName.Text, txtSize.Text);
+                }
+               
+            }   
         }
 
-        private void txtSize_TextChanged(object sender, EventArgs e)
-        {
-            if (txtName.Text != "" && index == 2)
-            {
-                txtSize.Enabled = true;
-                txtName.Enabled = true;
-                txtIDGiay.Text = BLL_KhoGiay.Instance.ID_giay(txtName.Text, txtSize.Text);
-            }
-        }
-
+      
       
 
         private void txtSLNhap_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                if (txtSLNhap.Text == ""&& index == 2)
+                if (txtSLNhap.Text == "" && index == 2)
                 {
                     txtGiaBan.Enabled = false;
                     txtGiaNhap.Enabled = false;
@@ -238,9 +241,10 @@ namespace quanlybangiay.form
                     txtGiaBan.Enabled = false;
                     txtGiaNhap.Enabled = false;
                 }
-                else 
+                else
                 if (Convert.ToInt32(txtSLNhap.Text) > 0 && index == 2)
                 {
+                    tb4.Text = "";
                     txtGiaBan.Enabled = true;
                     txtGiaNhap.Enabled = true;
                     txtGiaBan.BackColor = Color.FromArgb(255, 255, 255);
@@ -249,7 +253,7 @@ namespace quanlybangiay.form
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Chỉ nhập kí tự 0-9 ...");
+                tb4.Text = "Chỉ nhập kí tự 0-9";
                 txtGiaBan.BackColor = Color.FromArgb(171, 171, 171);
                 txtGiaNhap.BackColor = Color.FromArgb(171, 171, 171);
                 txtSLNhap.Text = "";
@@ -287,6 +291,91 @@ namespace quanlybangiay.form
             if(txtSLNhap.Text == "")
             {
                 txtSLNhap.Text = "0";
+            }
+        }
+
+        private void txtSize_TextChanged(object sender, EventArgs e)
+        {
+          
+            try
+            {
+               
+                    if (txtSize.Text == "")
+                {
+                    
+                }
+                    else
+                    if (Convert.ToInt32(txtSize.Text) > 0)
+                {
+                    tb_1.Text = "";
+                    if (txtName.Text != "" && index ==2)
+                    {
+                        txtSize.Enabled = true;
+                        txtName.Enabled = true;
+
+                        if (txtSize.Text.Length == 2)
+                        {
+                            txtIDGiay.Text = BLL_KhoGiay.Instance.ID_giay(txtName.Text, txtSize.Text);
+                        }
+                        
+                    }
+                }
+         
+                
+            }
+            catch (Exception k)
+            {
+                tb_1.Text = "Chỉ nhập kí tự 0-9";
+                txtSize.Text = "";
+                
+            }
+        }
+
+        private void txtGiaNhap_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if(txtGiaNhap.Text == "")
+                {
+
+                }
+                else
+                if(Convert.ToInt32(txtGiaNhap.Text) > 0 && index ==2)
+                {
+                    tb2.Text = "";
+                }
+                
+           
+
+            }
+            catch(Exception k)
+            {
+                tb2.Text = "Chỉ nhập kí tự 0-9";
+                txtGiaNhap.Text = "";
+            }
+        }
+
+        private void txtGiaBan_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtGiaBan.Text == "")
+                {
+
+                }
+                else
+                if (Convert.ToInt32(txtGiaBan.Text) > 0 )
+                {
+                    tb3.Text = "";
+                }
+
+
+
+            }
+            catch (Exception k)
+            {
+                tb3.Text = "Chỉ nhập kí tự 0-9";
+                txtGiaBan.Text = "";
             }
         }
     }

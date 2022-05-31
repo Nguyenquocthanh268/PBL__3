@@ -89,5 +89,54 @@ namespace quanlybangiay.form
             txtSize.Enabled = false;
             pictureBox7.Enabled = false;
         }
+
+        private void txt_gia_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txt_gia.Text == "")
+                {
+
+                }
+                else
+                if (Convert.ToInt32(txt_gia.Text) > 0)
+                {
+                    tb_1.Text = "";
+                }
+
+
+
+            }
+            catch (Exception k)
+            {
+                tb_1.Text = "Chỉ nhập kí tự 0-9";
+                txt_gia.Text = "";
+            }
+        }
+
+        private void txt_sln_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txt_sln.Text == "")
+                {
+
+                }
+                else
+                if (Convert.ToInt32(txt_sln.Text) > 0)
+                {
+                    tb_2.Text = "";
+                }
+
+
+
+            }
+            catch (Exception k)
+            {
+                tb_2.Text = "Chỉ nhập kí tự 0-9";
+                txt_sln.Text = "";
+            }
+
+        }
     }
 }

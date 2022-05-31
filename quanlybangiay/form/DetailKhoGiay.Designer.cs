@@ -54,6 +54,10 @@ namespace quanlybangiay.form
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.tb_1 = new System.Windows.Forms.Label();
+            this.tb4 = new System.Windows.Forms.Label();
+            this.tb2 = new System.Windows.Forms.Label();
+            this.tb3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,6 +76,9 @@ namespace quanlybangiay.form
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.tb3);
+            this.panel3.Controls.Add(this.tb2);
+            this.panel3.Controls.Add(this.tb4);
             this.panel3.Controls.Add(this.btnCancel);
             this.panel3.Controls.Add(this.btnOK);
             this.panel3.Controls.Add(this.txtSLTon);
@@ -85,9 +92,9 @@ namespace quanlybangiay.form
             this.panel3.Controls.Add(this.txtGiaNhap);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 258);
+            this.panel3.Location = new System.Drawing.Point(0, 278);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 303);
+            this.panel3.Size = new System.Drawing.Size(984, 283);
             this.panel3.TabIndex = 1;
             // 
             // btnCancel
@@ -155,7 +162,7 @@ namespace quanlybangiay.form
             this.txtSLDaBan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSLDaBan.Enabled = false;
             this.txtSLDaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSLDaBan.Location = new System.Drawing.Point(412, 76);
+            this.txtSLDaBan.Location = new System.Drawing.Point(412, 60);
             this.txtSLDaBan.Name = "txtSLDaBan";
             this.txtSLDaBan.Size = new System.Drawing.Size(145, 26);
             this.txtSLDaBan.TabIndex = 69;
@@ -166,7 +173,7 @@ namespace quanlybangiay.form
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(408, 52);
+            this.label7.Location = new System.Drawing.Point(408, 37);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 20);
             this.label7.TabIndex = 68;
@@ -183,6 +190,7 @@ namespace quanlybangiay.form
             this.txtGiaBan.Size = new System.Drawing.Size(145, 26);
             this.txtGiaBan.TabIndex = 67;
             this.txtGiaBan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
+            this.txtGiaBan.TextChanged += new System.EventHandler(this.txtGiaBan_TextChanged);
             // 
             // label8
             // 
@@ -200,7 +208,7 @@ namespace quanlybangiay.form
             this.txtSLNhap.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtSLNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSLNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSLNhap.Location = new System.Drawing.Point(88, 75);
+            this.txtSLNhap.Location = new System.Drawing.Point(88, 60);
             this.txtSLNhap.Name = "txtSLNhap";
             this.txtSLNhap.Size = new System.Drawing.Size(145, 26);
             this.txtSLNhap.TabIndex = 65;
@@ -212,7 +220,7 @@ namespace quanlybangiay.form
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(84, 52);
+            this.label3.Location = new System.Drawing.Point(84, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 64;
@@ -230,6 +238,7 @@ namespace quanlybangiay.form
             this.txtGiaNhap.Size = new System.Drawing.Size(145, 26);
             this.txtGiaNhap.TabIndex = 63;
             this.txtGiaNhap.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
+            this.txtGiaNhap.TextChanged += new System.EventHandler(this.txtGiaNhap_TextChanged);
             // 
             // label4
             // 
@@ -244,6 +253,7 @@ namespace quanlybangiay.form
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.tb_1);
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtHang);
@@ -256,7 +266,7 @@ namespace quanlybangiay.form
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(984, 258);
+            this.panel2.Size = new System.Drawing.Size(984, 278);
             this.panel2.TabIndex = 0;
             // 
             // txtName
@@ -362,6 +372,46 @@ namespace quanlybangiay.form
             this.label5.TabIndex = 60;
             this.label5.Text = "Size";
             // 
+            // tb_1
+            // 
+            this.tb_1.AutoSize = true;
+            this.tb_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_1.ForeColor = System.Drawing.Color.Red;
+            this.tb_1.Location = new System.Drawing.Point(428, 250);
+            this.tb_1.Name = "tb_1";
+            this.tb_1.Size = new System.Drawing.Size(0, 13);
+            this.tb_1.TabIndex = 62;
+            // 
+            // tb4
+            // 
+            this.tb4.AutoSize = true;
+            this.tb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb4.ForeColor = System.Drawing.Color.Red;
+            this.tb4.Location = new System.Drawing.Point(100, 98);
+            this.tb4.Name = "tb4";
+            this.tb4.Size = new System.Drawing.Size(0, 13);
+            this.tb4.TabIndex = 63;
+            // 
+            // tb2
+            // 
+            this.tb2.AutoSize = true;
+            this.tb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb2.ForeColor = System.Drawing.Color.Red;
+            this.tb2.Location = new System.Drawing.Point(100, 193);
+            this.tb2.Name = "tb2";
+            this.tb2.Size = new System.Drawing.Size(0, 13);
+            this.tb2.TabIndex = 76;
+            // 
+            // tb3
+            // 
+            this.tb3.AutoSize = true;
+            this.tb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb3.ForeColor = System.Drawing.Color.Red;
+            this.tb3.Location = new System.Drawing.Point(428, 193);
+            this.tb3.Name = "tb3";
+            this.tb3.Size = new System.Drawing.Size(0, 13);
+            this.tb3.TabIndex = 77;
+            // 
             // DetailKhoGiay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,5 +458,9 @@ namespace quanlybangiay.form
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label tb_1;
+        private System.Windows.Forms.Label tb3;
+        private System.Windows.Forms.Label tb2;
+        private System.Windows.Forms.Label tb4;
     }
 }

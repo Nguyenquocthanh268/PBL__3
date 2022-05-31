@@ -36,7 +36,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                txtTen_KH.Text = "KHACH HANG BI XOA";
+                txtTen_KH.Text = "KHÁCH HÀNG BỊ XÓA";
             }
             if (BLL_NV.Instance.GetNVByID(s.ID_NhanVien) != null)
             {
@@ -44,7 +44,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                txtTen_NV.Text= "NHAN VIEN BI XOA";
+                txtTen_NV.Text= "NHÂN VIÊN BỊ XÓA";
             }
             if(s.ID_KhuyenMai != null)
             {
@@ -54,7 +54,7 @@ namespace quanlybangiay.form
             else
             {
 
-                txt_IDKM.Text = "KHONG CO CTKM";
+                txt_IDKM.Text = "KHÔNG CÓ CTKM";
                 txt_KM.Text = 0 + "%";
             }
            

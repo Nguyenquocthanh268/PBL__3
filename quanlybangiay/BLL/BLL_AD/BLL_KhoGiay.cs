@@ -105,7 +105,26 @@ namespace quanlybangiay.BLL.BLL_AD
         }
         public string ID_giay(string ten , string size)
         {
-            return ten + size;
+            string s = "",c="";
+            int dem = 0;
+            char[] a = ten.ToCharArray();
+          
+
+            for(int i = 0; i < a.Length; i++)
+            {
+                if(a[i] != 32)
+                {
+                    c+=a[i];
+                }
+                
+              
+            }
+            char[] b =c.ToCharArray();
+            for (int i=0;i < 4; i++)
+            {
+                s += c[i];
+            }
+            return s.ToUpper()+size;
         }
         public void NhapKho(Giay g, Kho k, NhapKho n)
         {

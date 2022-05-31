@@ -30,6 +30,9 @@ namespace quanlybangiay.form
             tbName.Text= a.TenKhachHang;
             tbDiemTL.Text = a.DiemTichLuy.ToString();
             datetimeNgayDK.Value = a.NgayDangKy.Value;
+            tbSdt.BackColor= Color.FromArgb(171, 171, 171);
+            tbDiemTL.BackColor = Color.FromArgb(171, 171, 171);
+            datetimeNgayDK.BackColor = Color.FromArgb(171, 171, 171);
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -60,16 +63,22 @@ namespace quanlybangiay.form
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 1)
-            {
-                KhachHang s = new KhachHang
+            if (tbName.Text != "") {
+                if (dataGridView1.SelectedRows.Count == 1)
                 {
-                    SoDienThoai = tbSdt.Text.ToString(),
-                    TenKhachHang = tbName.Text.ToString(),
-                    DiemTichLuy =Convert.ToInt32(tbDiemTL.Text.ToString()),
-                };
-                BLL_QLKH.Instance.UpdateKH(s);
-                Show();
+                    KhachHang s = new KhachHang
+                    {
+                        SoDienThoai = tbSdt.Text.ToString(),
+                        TenKhachHang = tbName.Text.ToString(),
+                        DiemTichLuy = Convert.ToInt32(tbDiemTL.Text.ToString()),
+                    };
+                    BLL_QLKH.Instance.UpdateKH(s);
+                    Show();
+                }
+                else
+                {
+                    MessageBox.Show("*Vui lòng chọn 1 khách hàng để cập nhật thông tin ...");
+                }
             }
             else
             {

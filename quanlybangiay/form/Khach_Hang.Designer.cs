@@ -56,11 +56,11 @@ namespace quanlybangiay.form
             this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemTichLuy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -239,6 +239,7 @@ namespace quanlybangiay.form
             // tbDiemTL
             // 
             this.tbDiemTL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbDiemTL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbDiemTL.Enabled = false;
             this.tbDiemTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDiemTL.Location = new System.Drawing.Point(728, 113);
@@ -280,6 +281,7 @@ namespace quanlybangiay.form
             // tbSdt
             // 
             this.tbSdt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbSdt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSdt.Enabled = false;
             this.tbSdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSdt.Location = new System.Drawing.Point(195, 64);
@@ -395,17 +397,6 @@ namespace quanlybangiay.form
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1069, 678);
-            this.panel1.TabIndex = 9;
-            // 
             // TenKhachHang
             // 
             this.TenKhachHang.DataPropertyName = "TenKhachHang";
@@ -429,6 +420,17 @@ namespace quanlybangiay.form
             this.DiemTichLuy.DataPropertyName = "DiemTichLuy";
             this.DiemTichLuy.HeaderText = "Điểm tích luỹ";
             this.DiemTichLuy.Name = "DiemTichLuy";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1069, 678);
+            this.panel1.TabIndex = 9;
             // 
             // Khach_Hang
             // 
