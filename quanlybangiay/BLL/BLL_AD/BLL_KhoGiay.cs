@@ -258,7 +258,7 @@ namespace quanlybangiay.BLL.BLL_AD
         {
           if(ten ==""  && hang =="" && size == 0)
             {
-                return (db.Giays.Where(p => p.ID_Giay==id).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.ID_Giay.Contains(id)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
             }
          
             else

@@ -339,6 +339,7 @@ namespace quanlybangiay
             this.dtGV_Trangchu.AllowUserToAddRows = false;
             this.dtGV_Trangchu.AllowUserToResizeColumns = false;
             this.dtGV_Trangchu.AllowUserToResizeRows = false;
+
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.dtGV_Trangchu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGV_Trangchu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -363,7 +364,7 @@ namespace quanlybangiay
             // 
             // pic_Giay
             // 
-            this.pic_Giay.Image = ((System.Drawing.Image)(resources.GetObject("pic_Giay.Image")));
+            this.pic_Giay.Image = global::quanlybangiay.Properties.Resources.img__1_1;
             this.pic_Giay.Location = new System.Drawing.Point(18, 47);
             this.pic_Giay.Name = "pic_Giay";
             this.pic_Giay.Size = new System.Drawing.Size(175, 175);
@@ -428,6 +429,7 @@ namespace quanlybangiay
             this.rdHetHang.Location = new System.Drawing.Point(265, 272);
             this.rdHetHang.Name = "rdHetHang";
             this.rdHetHang.Size = new System.Drawing.Size(90, 20);
+
             this.rdHetHang.TabIndex = 56;
             this.rdHetHang.TabStop = true;
             this.rdHetHang.Text = "Hết hàng";
@@ -441,6 +443,7 @@ namespace quanlybangiay
             this.rdConHang.Location = new System.Drawing.Point(155, 273);
             this.rdConHang.Name = "rdConHang";
             this.rdConHang.Size = new System.Drawing.Size(93, 20);
+
             this.rdConHang.TabIndex = 55;
             this.rdConHang.TabStop = true;
             this.rdConHang.Text = "Còn hàng";
@@ -1212,7 +1215,7 @@ namespace quanlybangiay
             // 
             // pic_kho
             // 
-            this.pic_kho.Image = ((System.Drawing.Image)(resources.GetObject("pic_kho.Image")));
+            this.pic_kho.Image = global::quanlybangiay.Properties.Resources.img__1_1;
             this.pic_kho.Location = new System.Drawing.Point(33, 65);
             this.pic_kho.Name = "pic_kho";
             this.pic_kho.Size = new System.Drawing.Size(200, 200);
@@ -1304,7 +1307,7 @@ namespace quanlybangiay
             this.tb_ten.Name = "tb_ten";
             this.tb_ten.Size = new System.Drawing.Size(261, 24);
             this.tb_ten.TabIndex = 26;
-            this.tb_ten.Text = "Giày Nike Air Force 1";
+            this.tb_ten.Text = "TÊN GIÀY";
             this.tb_ten.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel12
@@ -1370,9 +1373,10 @@ namespace quanlybangiay
             // 
             // txt_IDgiayKHO
             // 
+            this.txt_IDgiayKHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_IDgiayKHO.Location = new System.Drawing.Point(666, 17);
             this.txt_IDgiayKHO.Name = "txt_IDgiayKHO";
-            this.txt_IDgiayKHO.Size = new System.Drawing.Size(189, 22);
+            this.txt_IDgiayKHO.Size = new System.Drawing.Size(189, 26);
             this.txt_IDgiayKHO.TabIndex = 56;
             // 
             // btn_timkiemKHO
@@ -1405,6 +1409,8 @@ namespace quanlybangiay
             // 
             // cb_sizeKHO
             // 
+            this.cb_sizeKHO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_sizeKHO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_sizeKHO.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cb_sizeKHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_sizeKHO.FormattingEnabled = true;
@@ -1415,6 +1421,8 @@ namespace quanlybangiay
             // 
             // cb_tenKHO
             // 
+            this.cb_tenKHO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_tenKHO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_tenKHO.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cb_tenKHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_tenKHO.FormattingEnabled = true;
@@ -1425,6 +1433,8 @@ namespace quanlybangiay
             // 
             // cb_hangKHO
             // 
+            this.cb_hangKHO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_hangKHO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_hangKHO.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cb_hangKHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_hangKHO.FormattingEnabled = true;
@@ -1578,6 +1588,7 @@ namespace quanlybangiay
             // 
             this.txtTongtien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtTongtien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTongtien.Enabled = false;
             this.txtTongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongtien.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtTongtien.Location = new System.Drawing.Point(195, 84);
@@ -1612,6 +1623,7 @@ namespace quanlybangiay
             // 
             this.txtSohoadon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtSohoadon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSohoadon.Enabled = false;
             this.txtSohoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSohoadon.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtSohoadon.Location = new System.Drawing.Point(195, 42);
@@ -1969,7 +1981,7 @@ namespace quanlybangiay
             this.Nam.Enabled = false;
             this.Nam.Location = new System.Drawing.Point(222, 165);
             this.Nam.Name = "Nam";
-            this.Nam.Size = new System.Drawing.Size(58, 20);
+            this.Nam.Size = new System.Drawing.Size(57, 20);
             this.Nam.TabIndex = 14;
             this.Nam.TabStop = true;
             this.Nam.Text = "Nam";

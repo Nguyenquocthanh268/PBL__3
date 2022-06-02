@@ -283,10 +283,11 @@ namespace quanlybangiay.form
             // 
             // tb
             // 
+            this.tb.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tb.AutoSize = true;
             this.tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb.ForeColor = System.Drawing.Color.Red;
-            this.tb.Location = new System.Drawing.Point(439, 100);
+            this.tb.Location = new System.Drawing.Point(425, 85);
             this.tb.Name = "tb";
             this.tb.Size = new System.Drawing.Size(0, 13);
             this.tb.TabIndex = 201;

@@ -26,6 +26,7 @@ namespace quanlybangiay.form
             {
                 cbb_hang.Items.Add(i);
             }
+
             show();
         }
 
@@ -80,8 +81,7 @@ namespace quanlybangiay.form
                 }
 
             }
-            cbb_hang.SelectedIndex = -1;
-            cbb_size.SelectedIndex = -1;
+           
 
         }
 
@@ -105,7 +105,10 @@ namespace quanlybangiay.form
         {
             DetailKhoGiay f = new DetailKhoGiay("", 2);
             f.d = new DetailKhoGiay.Mydel(show);
+            f.d2 = new DetailKhoGiay.Mydel2(ResetCombo);
+            
             f.Show();
+   
         }
 
         private void btnEdit_Click_1(object sender, EventArgs e)
@@ -120,7 +123,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn giay chỉnh sửa!");
+                MessageBox.Show("Vui lòng chọn giày chỉnh sửa!");
 
             }
         }
@@ -144,7 +147,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn giay muốn xoá!");
+                MessageBox.Show("Vui lòng chọn giày muốn xoá!");
             }
             show();
           
@@ -161,7 +164,7 @@ namespace quanlybangiay.form
         }
         else
         {
-            MessageBox.Show("Vui lòng chọn giay de nhap!");
+            MessageBox.Show("Vui lòng chọn giày để nhập!");
 
         }
     }
@@ -179,7 +182,19 @@ namespace quanlybangiay.form
         }
 
     }
-
+     public void ResetCombo()
+        {
+            cbb_hang.Items.Clear();
+            cbb_size.Items.Clear();
+            foreach (string i in BLL_KhoGiay.Instance.CBBsize().Distinct())
+            {
+                cbb_size.Items.Add(i);
+            }
+            foreach (string i in BLL_KhoGiay.Instance.CBBhang().Distinct())
+            {
+                cbb_hang.Items.Add(i);
+            }
+        }
 
 }
 }
