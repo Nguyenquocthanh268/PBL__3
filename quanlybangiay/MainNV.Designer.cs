@@ -34,7 +34,6 @@ namespace quanlybangiay
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel17 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -130,6 +129,10 @@ namespace quanlybangiay
             this.panel12 = new System.Windows.Forms.Panel();
             this.label39 = new System.Windows.Forms.Label();
             this.dtGV_Kiemkho = new System.Windows.Forms.DataGridView();
+            this.ID_Giay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenGiay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HangGiay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txt_IDgiayKHO = new System.Windows.Forms.TextBox();
             this.btn_timkiemKHO = new System.Windows.Forms.Button();
@@ -157,6 +160,11 @@ namespace quanlybangiay
             this.panel13 = new System.Windows.Forms.Panel();
             this.label49 = new System.Windows.Forms.Label();
             this.dtGV_Chitiethd = new System.Windows.Forms.DataGridView();
+            this.ID_HoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14 = new System.Windows.Forms.Panel();
             this.btnOK = new System.Windows.Forms.Button();
             this.dateBegin = new System.Windows.Forms.DateTimePicker();
@@ -192,17 +200,6 @@ namespace quanlybangiay
             this.label35 = new System.Windows.Forms.Label();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.ID_HoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Giay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenGiay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HangGiay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel17.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -295,8 +292,7 @@ namespace quanlybangiay
             // 
             // panel16
             // 
-            this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.panel16.Controls.Add(this.butdel);
@@ -336,14 +332,13 @@ namespace quanlybangiay
             // dtGV_Trangchu
             // 
             this.dtGV_Trangchu.AllowUserToAddRows = false;
+            this.dtGV_Trangchu.AllowUserToResizeColumns = false;
+            this.dtGV_Trangchu.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.dtGV_Trangchu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGV_Trangchu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtGV_Trangchu.AllowUserToResizeColumns = false;
-            this.dtGV_Trangchu.AllowUserToResizeRows = false;
-
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.dtGV_Trangchu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGV_Trangchu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGV_Trangchu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGV_Trangchu.Location = new System.Drawing.Point(14, 47);
@@ -447,8 +442,7 @@ namespace quanlybangiay
             this.rdHetHang.ForeColor = System.Drawing.Color.SlateGray;
             this.rdHetHang.Location = new System.Drawing.Point(265, 272);
             this.rdHetHang.Name = "rdHetHang";
-            this.rdHetHang.Size = new System.Drawing.Size(90, 20);
-
+            this.rdHetHang.Size = new System.Drawing.Size(87, 20);
             this.rdHetHang.TabIndex = 56;
             this.rdHetHang.TabStop = true;
             this.rdHetHang.Text = "Hết hàng";
@@ -462,8 +456,7 @@ namespace quanlybangiay
             this.rdConHang.ForeColor = System.Drawing.Color.SlateGray;
             this.rdConHang.Location = new System.Drawing.Point(155, 273);
             this.rdConHang.Name = "rdConHang";
-            this.rdConHang.Size = new System.Drawing.Size(93, 20);
-
+            this.rdConHang.Size = new System.Drawing.Size(90, 20);
             this.rdConHang.TabIndex = 55;
             this.rdConHang.TabStop = true;
             this.rdConHang.Text = "Còn hàng";
@@ -1415,13 +1408,13 @@ namespace quanlybangiay
             // 
             // dtGV_Kiemkho
             // 
-            this.dtGV_Kiemkho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtGV_Kiemkho.AllowUserToResizeColumns = false;
             this.dtGV_Kiemkho.AllowUserToResizeRows = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.dtGV_Kiemkho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtGV_Kiemkho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtGV_Kiemkho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGV_Kiemkho.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtGV_Kiemkho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1436,6 +1429,34 @@ namespace quanlybangiay
             this.dtGV_Kiemkho.Size = new System.Drawing.Size(962, 538);
             this.dtGV_Kiemkho.TabIndex = 0;
             this.dtGV_Kiemkho.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtGV_Kiemkho_CellMouseClick);
+            // 
+            // ID_Giay
+            // 
+            this.ID_Giay.DataPropertyName = "ID_Giay";
+            this.ID_Giay.HeaderText = "ID Giày";
+            this.ID_Giay.Name = "ID_Giay";
+            this.ID_Giay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TenGiay
+            // 
+            this.TenGiay.DataPropertyName = "TenGiay";
+            this.TenGiay.HeaderText = "Tên giày";
+            this.TenGiay.Name = "TenGiay";
+            this.TenGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // HangGiay
+            // 
+            this.HangGiay.DataPropertyName = "HangGiay";
+            this.HangGiay.HeaderText = "Hãng giày";
+            this.HangGiay.Name = "HangGiay";
+            this.HangGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Size
+            // 
+            this.Size.DataPropertyName = "Size";
+            this.Size.HeaderText = "Size";
+            this.Size.Name = "Size";
+            this.Size.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // panel11
             // 
@@ -1759,13 +1780,13 @@ namespace quanlybangiay
             // 
             // dtGV_Chitiethd
             // 
-            this.dtGV_Chitiethd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtGV_Chitiethd.AllowUserToResizeColumns = false;
             this.dtGV_Chitiethd.AllowUserToResizeRows = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.dtGV_Chitiethd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtGV_Chitiethd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtGV_Chitiethd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGV_Chitiethd.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1788,6 +1809,41 @@ namespace quanlybangiay
             this.dtGV_Chitiethd.RowHeadersWidth = 51;
             this.dtGV_Chitiethd.Size = new System.Drawing.Size(1236, 406);
             this.dtGV_Chitiethd.TabIndex = 0;
+            // 
+            // ID_HoaDon
+            // 
+            this.ID_HoaDon.DataPropertyName = "ID_HoaDon";
+            this.ID_HoaDon.HeaderText = "ID Hoá đơn";
+            this.ID_HoaDon.Name = "ID_HoaDon";
+            this.ID_HoaDon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.DataPropertyName = "TenKhachHang";
+            this.TenKhachHang.HeaderText = "Tên khách hàng";
+            this.TenKhachHang.Name = "TenKhachHang";
+            this.TenKhachHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // NgayTao
+            // 
+            this.NgayTao.DataPropertyName = "NgayTao";
+            this.NgayTao.HeaderText = "Ngày tạo";
+            this.NgayTao.Name = "NgayTao";
+            this.NgayTao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.Name = "TongTien";
+            this.TongTien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // panel14
             // 
@@ -2193,78 +2249,6 @@ namespace quanlybangiay
             this.label34.Size = new System.Drawing.Size(117, 25);
             this.label34.TabIndex = 5;
             this.label34.Text = "Ngày sinh";
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.panel17);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(0, 0);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(1312, 778);
-            this.panel18.TabIndex = 50;
-            // 
-            // ID_HoaDon
-            // 
-            this.ID_HoaDon.DataPropertyName = "ID_HoaDon";
-            this.ID_HoaDon.HeaderText = "ID Hoá đơn";
-            this.ID_HoaDon.Name = "ID_HoaDon";
-            this.ID_HoaDon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TenKhachHang
-            // 
-            this.TenKhachHang.DataPropertyName = "TenKhachHang";
-            this.TenKhachHang.HeaderText = "Tên khách hàng";
-            this.TenKhachHang.Name = "TenKhachHang";
-            this.TenKhachHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // SoDienThoai
-            // 
-            this.SoDienThoai.DataPropertyName = "SoDienThoai";
-            this.SoDienThoai.HeaderText = "Số điện thoại";
-            this.SoDienThoai.Name = "SoDienThoai";
-            this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // NgayTao
-            // 
-            this.NgayTao.DataPropertyName = "NgayTao";
-            this.NgayTao.HeaderText = "Ngày tạo";
-            this.NgayTao.Name = "NgayTao";
-            this.NgayTao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.Name = "TongTien";
-            this.TongTien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ID_Giay
-            // 
-            this.ID_Giay.DataPropertyName = "ID_Giay";
-            this.ID_Giay.HeaderText = "ID Giày";
-            this.ID_Giay.Name = "ID_Giay";
-            this.ID_Giay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TenGiay
-            // 
-            this.TenGiay.DataPropertyName = "TenGiay";
-            this.TenGiay.HeaderText = "Tên giày";
-            this.TenGiay.Name = "TenGiay";
-            this.TenGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // HangGiay
-            // 
-            this.HangGiay.DataPropertyName = "HangGiay";
-            this.HangGiay.HeaderText = "Hãng giày";
-            this.HangGiay.Name = "HangGiay";
-            this.HangGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Size
-            // 
-            this.Size.DataPropertyName = "Size";
-            this.Size.HeaderText = "Size";
-            this.Size.Name = "Size";
-            this.Size.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // MainNV
             // 
