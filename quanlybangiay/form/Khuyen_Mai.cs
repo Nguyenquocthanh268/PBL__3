@@ -200,7 +200,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui long chon Item");
+                MessageBox.Show("Vui lòng chọn Item...");
             }
 
         }

@@ -461,6 +461,8 @@
       <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
       <LastGenOutput>QuanLiBanGiay.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\img %281%291.png" />
+    <None Include="Resources\img %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
