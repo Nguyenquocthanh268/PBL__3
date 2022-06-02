@@ -28,6 +28,7 @@ namespace quanlybangiay
             InitializeComponent();
             ShowdtGV_Trangchu();
             LoadCBBKHO();
+            //CBBKhuyenMai(cbbCTKM_BanHang.Text);
             CBBKhuyenMai();
         }
         private void ShowdtGV_Trangchu()
@@ -102,6 +103,10 @@ namespace quanlybangiay
         private void txt_mkm_MouseClick(object sender, MouseEventArgs e)
         {
             lb_check.Text = "Nhập mật khẩu có tối thiểu 6 ký tự";
+        }
+        private void txt_mkm_TextChanged(object sender, EventArgs e)
+        {
+            lb_check.Text = "";
         }
         //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -190,9 +195,9 @@ namespace quanlybangiay
             {
                 dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.search(ID, "", "", 0);
             }
-            cb_tenKHO.SelectedIndex = -1;
-            cb_hangKHO.SelectedIndex = -1;
-            cb_sizeKHO.SelectedIndex = -1;
+            //cb_tenKHO.SelectedIndex = -1;
+            //cb_hangKHO.SelectedIndex = -1;
+            //cb_sizeKHO.SelectedIndex = -1;
 
         }
 
@@ -226,6 +231,7 @@ namespace quanlybangiay
                 txt_sizeKHO.Text = "";
                 txt_giaKHO.Text = "";
                 txt_SLkho.Text = "";
+                tb_ten.Text = "Tên giày";
 
             }
             if (tabControl1.SelectedIndex == 0)
@@ -313,11 +319,6 @@ namespace quanlybangiay
             }
 
         }
-        private void txtSdt_BanHang_Click(object sender, EventArgs e)
-        {
-            lbKTthongTin_BanHang.Text = "Nhập sđt có 10 số ";
-        }
-
         private void txtSdtKhachHang_MouseClick(object sender, MouseEventArgs e)
         {
             lbCheckSdt.Text = "Số điện thoại phải đủ 10 kí tự, chỉ chứa kí tự số ";
@@ -336,6 +337,11 @@ namespace quanlybangiay
 
         //******************************************************************************************************
         //Thong tin khach hang
+        private void txtSdt_BanHang_Click(object sender, EventArgs e)
+        {
+            lbKTthongTin_BanHang.Text = "Nhập sđt có 10 số ";
+        }
+
         private void but_CheckKH_Click(object sender, EventArgs e)
         {
             ResetDataKH();
@@ -408,13 +414,14 @@ namespace quanlybangiay
         //    cbbCTKM_BanHang.Items.AddRange(BLL_CTKM.Instance.GetListNameCTKM().ToArray());
         //}
 
+        //private void CBBKhuyenMai(String a)
         private void CBBKhuyenMai()
         {
+            cbbCTKM_BanHang.Items.Clear();
             DateTime d = DateTime.Now;
-            foreach (string i in BLL_BanHang.Instance.GetCBBKhuyenmai(d).Distinct())
-            {
-                cbbCTKM_BanHang.Items.Add(i);
-            }
+            //cbbCTKM_BanHang.Items.AddRange(BLL_BanHang.Instance.GetCBBKhuyenmai(d,a).Distinct().ToArray());
+            cbbCTKM_BanHang.Items.AddRange(BLL_BanHang.Instance.GetCBBKhuyenmai(d).Distinct().ToArray());
+
         }
         private void cbbCTKM_BanHang_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -603,6 +610,13 @@ namespace quanlybangiay
                 MessageBox.Show("Vui lòng chọn dòng cần xóa !!!");
             }
         }
+        //chon cell xem anh
+        private void dtGV_Trangchu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string ID = dtGV_Trangchu.Rows[e.RowIndex].Cells["Mã giày"].FormattedValue.ToString();
+            pic_Giay.Image = BLL_KhoGiay.Instance.BytetoPicter(BLL_KhoGiay.Instance.GetGiayByID(ID).AnhSP);
+            txtNameGiay.Text = BLL_KhoGiay.Instance.GetGiayByID(ID).TenGiay;
+        }
 
         //******************************************************************************************************
         //Thanh toan 
@@ -726,21 +740,6 @@ namespace quanlybangiay
             tb_Tientralai.Text = "";
             tb_Mahoadon.Text = "";
             BLL_BanHang.Instance.DelAllData();
-        }
-        private void txt_mkm_TextChanged(object sender, EventArgs e)
-        {
-            lb_check.Text = "";
-        }
-
-
-        //chon cell xem anh
-        private void dtGV_Trangchu_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string ID = dtGV_Trangchu.Rows[e.RowIndex].Cells["Mã giày"].FormattedValue.ToString();
-            pic_Giay.Image = BLL_KhoGiay.Instance.BytetoPicter(BLL_KhoGiay.Instance.GetGiayByID(ID).AnhSP);
-            txtNameGiay.Text = BLL_KhoGiay.Instance.GetGiayByID(ID).TenGiay;
-
-
         }
     }
 }

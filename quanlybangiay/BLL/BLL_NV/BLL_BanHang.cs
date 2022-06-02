@@ -39,19 +39,33 @@ namespace quanlybangiay.BLL.BLL_NV
         //    }
         //    return Add;
         //}
+        //public List<String> GetCBBKhuyenmai(DateTime timeNow,String a)
+        //{
+        //    List<String> list = new List<String>();
+        //    List<CTKM> ctkms = new List<CTKM>();
+        //    ctkms = db.CTKMs.Where(p => p.NgayBatDau < timeNow && p.NgayKetThuc > timeNow && p.TenCT.Contains(a))
+        //            .Select(p => p).ToList();
+            
+        //    foreach (CTKM i in ctkms)
+        //    {
+        //        list.Add(i.TenCT.ToString());
+        //    }
+        //    return list;
+        //}
         public List<String> GetCBBKhuyenmai(DateTime timeNow)
         {
             List<String> list = new List<String>();
             List<CTKM> ctkms = new List<CTKM>();
             ctkms = db.CTKMs.Where(p => p.NgayBatDau < timeNow && p.NgayKetThuc > timeNow)
                     .Select(p => p).ToList();
-            
+
             foreach (CTKM i in ctkms)
             {
                 list.Add(i.TenCT.ToString());
             }
             return list;
         }
+
 
         public int GetChietkhauByName(string Name)
         {
