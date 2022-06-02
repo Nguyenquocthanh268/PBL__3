@@ -17,7 +17,16 @@ namespace quanlybangiay.form
         {
             InitializeComponent();
             cbb_sort.Items.AddRange(BLL_KhoGiay.Instance.CBBsort().ToArray());
-            ResetCombo();
+            dataGridView1.RowTemplate.Height = 40;
+            foreach (string i in BLL_KhoGiay.Instance.CBBsize().Distinct())
+            {
+                cbb_size.Items.Add(i);
+            }
+            foreach (string i in BLL_KhoGiay.Instance.CBBhang().Distinct())
+            {
+                cbb_hang.Items.Add(i);
+            }
+
             show();
         }
 

@@ -20,6 +20,7 @@ namespace quanlybangiay.form
             cbItem.Items.AddRange((BLL_CTKM.Instance.CBB().ToArray()));
             cbItem.SelectedIndex = 0;
             Show(0, txt_search.Text);
+            dataGridView1.RowTemplate.Height = 40;
             cbb_sort.Items.AddRange((BLL_CTKM.Instance.CBB_sort().ToArray()));
             Khoa();
         }

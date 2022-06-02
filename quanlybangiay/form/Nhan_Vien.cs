@@ -19,6 +19,7 @@ namespace quanlybangiay.form
             cbbSearch.Items.AddRange((BLL_NV.Instance.CBBSearch().ToArray()));
             cbbSort.Items.AddRange((BLL_NV.Instance.CBBSort().ToArray()));
             cbbSearch.SelectedIndex = 0;
+            dtgNV.RowTemplate.Height = 40;
             dtgNV.DataSource = BLL_NV.Instance.Search(0, "");
         }
 
