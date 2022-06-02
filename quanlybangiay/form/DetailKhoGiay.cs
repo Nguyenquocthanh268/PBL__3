@@ -16,7 +16,8 @@ namespace quanlybangiay.form
         //public delegate void Mydel
         public delegate void Mydel();
         public Mydel d { get; set; }
-
+        public delegate void Mydel2();
+        public Mydel2 d2 { get; set; }
         public String IDGiay { get; set; }
         private int index;
         public DetailKhoGiay(String id, int i)
@@ -25,6 +26,10 @@ namespace quanlybangiay.form
             IDGiay = id;
             index = i;
             GUI(index);
+            foreach (string k in BLL_KhoGiay.Instance.CBBhang().Distinct())
+            {
+                cb_hang.Items.Add(k);
+            }
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -35,7 +40,7 @@ namespace quanlybangiay.form
             }
             byte[] file = BLL_KhoGiay.Instance.ImagetoByte(pictureBox7.Image);
 
-          if(txtIDGiay.Text !="" && txtName.Text !="" && txtSize.Text !="" && txtHang.Text != "")
+            if (txtIDGiay.Text != "" && txtName.Text != "" && txtSize.Text != ""  && cb_hang.Text !="")
             {
 
                 if (getGiay() != null && getKhoGiay() != null && getNhapKHO_Giay() != null)
@@ -48,7 +53,9 @@ namespace quanlybangiay.form
                     }
                     MessageBox.Show("Đã cập nhật !!!");
                     d();
+                    
                     this.Close();
+                    d2();
                 }
             }
             else
@@ -69,11 +76,12 @@ namespace quanlybangiay.form
                 if (index == 1)
                 {
                     pictureBox7.Enabled = false;
-                
-                    txtHang.Enabled = false;
-                   
+
+                    //  txtHang.Enabled = false;
+                    cb_hang.Enabled = false;
                     txtGiaBan.Enabled = false;
                     //btnOK.Enabled = false;
+                    btnCancel.Location = new Point(398, 225);
                     btnOK.Visible = false;
                     txtName.Enabled = false;
                     txtSize.Enabled = false;
@@ -82,16 +90,18 @@ namespace quanlybangiay.form
                     txtSLNhap.Enabled = false;
                     txtSLDaBan.Enabled = false;
                 }
-                if(index == 3)
+                if (index == 3)
                 {
                     txtGiaBan.Enabled = true;
                     txtName.Enabled = true;
                     txtSize.Enabled = true;
-                    txtHang.Enabled = true;
+                    //  txtHang.Enabled = true;
+                    cb_hang.Enabled = true;
+                    cb_hang.BackColor = Color.FromArgb(255, 255, 255);
                     txtGiaBan.BackColor = Color.FromArgb(255, 255, 255);
                     txtName.BackColor = Color.FromArgb(255, 255, 255);
                     txtSize.BackColor = Color.FromArgb(255, 255, 255);
-                    txtHang.BackColor = Color.FromArgb(255, 255, 255);
+                    // txtHang.BackColor = Color.FromArgb(255, 255, 255);
 
                     txtGiaNhap.Enabled = false;
                     txtSLTon.Enabled = false;
@@ -99,7 +109,8 @@ namespace quanlybangiay.form
                     txtSLDaBan.Enabled = false;
                 }
                 txtIDGiay.Text = IDGiay;
-                txtHang.Text = BLL_KhoGiay.Instance.GetGiayByID(IDGiay).HangGiay.ToString();
+                //   txtHang.Text = BLL_KhoGiay.Instance.GetGiayByID(IDGiay).HangGiay.ToString();
+                cb_hang.Text = BLL_KhoGiay.Instance.GetGiayByID(IDGiay).HangGiay.ToString();
                 txtName.Text = BLL_KhoGiay.Instance.GetGiayByID(IDGiay).TenGiay.ToString();
                 txtSize.Text = BLL_KhoGiay.Instance.GetGiayByID(IDGiay).Size.ToString();
                 txtGiaNhap.Text = BLL_KhoGiay.Instance.GetGiayByID(IDGiay).GiaNhap.ToString();
@@ -111,9 +122,9 @@ namespace quanlybangiay.form
             }
             else
             {
-                txtName.BackColor= Color.FromArgb(255,255,255);
+                txtName.BackColor = Color.FromArgb(255, 255, 255);
                 txtSize.BackColor = Color.FromArgb(255, 255, 255);
-                txtHang.BackColor = Color.FromArgb(255, 255, 255);
+                cb_hang.BackColor = Color.FromArgb(255, 255, 255);
                 txtSLNhap.BackColor = Color.FromArgb(255, 255, 255);
             }
 
@@ -134,7 +145,7 @@ namespace quanlybangiay.form
         private Giay getGiay()
         {
             try
-                 
+
             {
                 if (txtSLNhap.Text == "0")
                 {
@@ -142,7 +153,7 @@ namespace quanlybangiay.form
                     txtGiaBan.Enabled = false;
                     txtGiaNhap.Text = "0";
                     txtGiaBan.Text = "0";
-                    
+
                 }
                 byte[] file = BLL_KhoGiay.Instance.ImagetoByte(pictureBox7.Image);
                 Giay c = new Giay()
@@ -150,7 +161,8 @@ namespace quanlybangiay.form
                     ID_Giay = txtIDGiay.Text,
                     TenGiay = txtName.Text,
                     Size = Convert.ToInt32(txtSize.Text.ToString()),
-                    HangGiay = txtHang.Text,
+                    //  HangGiay = txtHang.Text,
+                    HangGiay = cb_hang.Text,
                     GiaNhap = Convert.ToDouble(txtGiaNhap.Text.ToString()),
                     GiaBan = Convert.ToDouble(txtGiaBan.Text.ToString()),
                     AnhSP = file
@@ -177,7 +189,7 @@ namespace quanlybangiay.form
                 };
                 return n;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show("Nhập vào không hợp lệ");
                 return null;
@@ -187,7 +199,7 @@ namespace quanlybangiay.form
         {
             try
             {
-                if(txtSLNhap.Text == "")
+                if (txtSLNhap.Text == "")
                 {
                     txtSLNhap.Text = "0";
 
@@ -211,7 +223,7 @@ namespace quanlybangiay.form
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            if(txtSize.Text != "" && index ==2)
+            if (txtSize.Text != "" && index == 2)
             {
                 txtSize.Enabled = true;
                 txtName.Enabled = true;
@@ -220,12 +232,12 @@ namespace quanlybangiay.form
                 {
                     txtIDGiay.Text = BLL_KhoGiay.Instance.ID_giay(txtName.Text, txtSize.Text);
                 }
-               
-            }   
+
+            }
         }
 
-      
-      
+
+
 
         private void txtSLNhap_TextChanged(object sender, EventArgs e)
         {
@@ -265,31 +277,11 @@ namespace quanlybangiay.form
             }
         }
 
-        private void txtHang_TextChanged(object sender, EventArgs e)
-        {
-           if(index == 2)
-            {
-                if (txtName.Text != "" && txtSize.Text != "" )
-                {
-                    if (index == 2)
-                    {
-                        if (BLL_KhoGiay.Instance.check(txtIDGiay.Text))
-                        {
-                            MessageBox.Show("ID đã tồn tại ....");
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng điền ID và size đầu tiên");
-
-                }
-            }
-        }
+        
 
         private void txtSize_MouseClick(object sender, MouseEventArgs e)
         {
-            if(txtSLNhap.Text == "")
+            if (txtSLNhap.Text == "")
             {
                 txtSLNhap.Text = "0";
             }
@@ -297,19 +289,19 @@ namespace quanlybangiay.form
 
         private void txtSize_TextChanged(object sender, EventArgs e)
         {
-          
+
             try
             {
-               
-                    if (txtSize.Text == "")
+
+                if (txtSize.Text == "")
                 {
-                    
+
                 }
-                    else
-                    if (Convert.ToInt32(txtSize.Text) > 0)
+                else
+                if (Convert.ToInt32(txtSize.Text) > 0)
                 {
                     tb_1.Text = "";
-                    if (txtName.Text != "" && index ==2)
+                    if (txtName.Text != "" && index == 2)
                     {
                         txtSize.Enabled = true;
                         txtName.Enabled = true;
@@ -318,17 +310,17 @@ namespace quanlybangiay.form
                         {
                             txtIDGiay.Text = BLL_KhoGiay.Instance.ID_giay(txtName.Text, txtSize.Text);
                         }
-                        
+
                     }
                 }
-         
-                
+
+
             }
             catch (Exception k)
             {
                 tb_1.Text = "Chỉ nhập kí tự 0-9";
                 txtSize.Text = "";
-                
+
             }
         }
 
@@ -336,20 +328,20 @@ namespace quanlybangiay.form
         {
             try
             {
-                if(txtGiaNhap.Text == "")
+                if (txtGiaNhap.Text == "")
                 {
 
                 }
                 else
-                if(Convert.ToInt32(txtGiaNhap.Text) > 0 && index ==2)
+                if (Convert.ToInt32(txtGiaNhap.Text) > 0 && index == 2)
                 {
                     tb2.Text = "";
                 }
-                
-           
+
+
 
             }
-            catch(Exception k)
+            catch (Exception k)
             {
                 tb2.Text = "Chỉ nhập kí tự 0-9";
                 txtGiaNhap.Text = "";
@@ -365,7 +357,7 @@ namespace quanlybangiay.form
 
                 }
                 else
-                if (Convert.ToInt32(txtGiaBan.Text) > 0 )
+                if (Convert.ToInt32(txtGiaBan.Text) > 0)
                 {
                     tb3.Text = "";
                 }
@@ -379,5 +371,30 @@ namespace quanlybangiay.form
                 txtGiaBan.Text = "";
             }
         }
+
+        private void cb_hang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (index == 2)
+            {
+                if (txtName.Text != "" && txtSize.Text != "")
+                {
+                    if (index == 2)
+                    {
+                        if (BLL_KhoGiay.Instance.check(txtIDGiay.Text) && cb_hang.Text != "")
+                        {
+                            MessageBox.Show("ID đã tồn tại ....");
+                            cb_hang.SelectedIndex = -1;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng điền ID và size đầu tiên");
+                    cb_hang.Text = "";
+                }
+            }
+        }
+
+       
     }
 }

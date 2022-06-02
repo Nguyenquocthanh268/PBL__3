@@ -12,6 +12,7 @@ using quanlybangiay.BLL;
 using quanlybangiay.DTO;
 using quanlybangiay.BLL.BLL_NV;
 
+
 namespace quanlybangiay
 {
     public partial class MainNV : Form
@@ -190,17 +191,18 @@ namespace quanlybangiay
             {
                 dtGV_Kiemkho.DataSource = BLL_KiemkhoNV.Instance.search(ID, "", "", 0);
             }
-            cb_tenKHO.SelectedIndex = -1;
-            cb_hangKHO.SelectedIndex = -1;
-            cb_sizeKHO.SelectedIndex = -1;
+            
 
         }
 
         private void dtGV_Kiemkho_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
-            string ID = dtGV_Kiemkho.Rows[e.RowIndex].Cells["ID_Giay"].FormattedValue.ToString(); ;
-            GUIkho(ID);
+            try
+            {
+                string ID = dtGV_Kiemkho.Rows[e.RowIndex].Cells["ID_Giay"].FormattedValue.ToString(); ;
+                GUIkho(ID);
+            }catch(Exception ex) { }
 
         }
         public void GUIkho(string ID)
@@ -222,7 +224,8 @@ namespace quanlybangiay
                 cb_sizeKHO.SelectedIndex = -1;
                 cb_tenKHO.SelectedIndex = -1;
                 dtGV_Kiemkho.DataSource = null;
-                pic_kho.Image = null;
+                tb_ten.Text = "TÊN GIÀY";
+                pic_kho.Image= global::quanlybangiay.Properties.Resources.img__1_1;
                 txt_sizeKHO.Text = "";
                 txt_giaKHO.Text = "";
                 txt_SLkho.Text = "";
@@ -260,6 +263,7 @@ namespace quanlybangiay
             DateTime begin = dateBegin.Value;
             DateTime end = dateEnd.Value;
             dtGV_Chitiethd.DataSource = BLL_NV_HD.Instance.Search(ID, begin, end);
+            
             txtSohoadon.Text = dtGV_Chitiethd.Rows.Count.ToString();
             foreach (DataGridViewRow dr in dtGV_Chitiethd.Rows)
             {
@@ -717,6 +721,8 @@ namespace quanlybangiay
             cbbCTKM_BanHang.SelectedItem = null;
             txtChietKhauCTKM_BanHang.Text = "";
             txtIDGiay_BanHang.Text = "";
+            pic_Giay.Image= global::quanlybangiay.Properties.Resources.img__1_1;
+            txtNameGiay.Text = "TÊN SP";
             ResetDataSP();
             tb_Tongcong.Text = "";
             tb_Phantramck.Text = "";

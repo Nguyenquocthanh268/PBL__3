@@ -48,6 +48,8 @@ namespace quanlybangiay.form
                     dateTimePicker1.Enabled = false;
                     //btnUpload.Enabled = false;
                     //btnOK.Enabled = false;
+                    btnCancel.Location = new Point(384, 242);
+                    label17.Visible = false;
                     btnUpload.Visible = false;
                     btnOK.Visible = false;
                     radNam.Enabled = false;
@@ -137,7 +139,7 @@ namespace quanlybangiay.form
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Vui long kiem tra du lieu");
+                            MessageBox.Show("vui lòng kiểm tra dữ liệu");
                         }
                     }
                     else
@@ -192,7 +194,7 @@ namespace quanlybangiay.form
         {
             if (BLL_NV.Instance.Check(txtID.Text))
             {
-                tb_2.Text = "*ID nhân viên đã tồn tại";
+                tb3.Text = "*ID nhân viên đã tồn tại";
                 checkAddNV = true;
             }
             else
@@ -203,7 +205,7 @@ namespace quanlybangiay.form
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-            tb_2.Text = "";
+            tb3.Text = "";
         }
 
         private void txtTK_Leave(object sender, EventArgs e)
