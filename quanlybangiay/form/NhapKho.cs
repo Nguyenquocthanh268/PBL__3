@@ -20,6 +20,7 @@ namespace quanlybangiay.form
             IDGiay = ID;
             InitializeComponent();
             GUI();
+            dataGridView1.RowTemplate.Height = 30;
             show(IDGiay);
         }
 

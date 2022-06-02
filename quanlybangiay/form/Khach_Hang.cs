@@ -16,6 +16,7 @@ namespace quanlybangiay.form
         public Khach_Hang()
         {
             InitializeComponent();
+            dataGridView1.RowTemplate.Height = 40;
             cbView.Items.AddRange((BLL_QLKH.Instance.CBBView().ToArray()));
             cbSort.Items.AddRange((BLL_QLKH.Instance.CBBSort().ToArray()));
             cbView.SelectedIndex = 0;
