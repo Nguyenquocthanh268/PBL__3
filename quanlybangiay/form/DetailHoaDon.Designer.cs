@@ -96,6 +96,8 @@ namespace quanlybangiay.form
             // 
             // dtgDetailHD
             // 
+            this.dtgDetailHD.AllowUserToResizeColumns = false;
+            this.dtgDetailHD.AllowUserToResizeRows = false;
             this.dtgDetailHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDetailHD.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgDetailHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

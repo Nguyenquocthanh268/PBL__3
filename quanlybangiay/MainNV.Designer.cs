@@ -30,10 +30,11 @@ namespace quanlybangiay
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainNV));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel17 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -129,10 +130,6 @@ namespace quanlybangiay
             this.panel12 = new System.Windows.Forms.Panel();
             this.label39 = new System.Windows.Forms.Label();
             this.dtGV_Kiemkho = new System.Windows.Forms.DataGridView();
-            this.ID_Giay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenGiay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HangGiay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txt_IDgiayKHO = new System.Windows.Forms.TextBox();
             this.btn_timkiemKHO = new System.Windows.Forms.Button();
@@ -160,11 +157,6 @@ namespace quanlybangiay
             this.panel13 = new System.Windows.Forms.Panel();
             this.label49 = new System.Windows.Forms.Label();
             this.dtGV_Chitiethd = new System.Windows.Forms.DataGridView();
-            this.ID_HoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14 = new System.Windows.Forms.Panel();
             this.btnOK = new System.Windows.Forms.Button();
             this.dateBegin = new System.Windows.Forms.DateTimePicker();
@@ -200,6 +192,17 @@ namespace quanlybangiay
             this.label35 = new System.Windows.Forms.Label();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.ID_HoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Giay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenGiay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HangGiay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel17.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -333,11 +336,14 @@ namespace quanlybangiay
             // dtGV_Trangchu
             // 
             this.dtGV_Trangchu.AllowUserToAddRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.dtGV_Trangchu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dtGV_Trangchu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtGV_Trangchu.AllowUserToResizeColumns = false;
+            this.dtGV_Trangchu.AllowUserToResizeRows = false;
+
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.dtGV_Trangchu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGV_Trangchu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGV_Trangchu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGV_Trangchu.Location = new System.Drawing.Point(14, 47);
@@ -361,7 +367,7 @@ namespace quanlybangiay
             // 
             // pic_Giay
             // 
-            this.pic_Giay.Image = ((System.Drawing.Image)(resources.GetObject("pic_Giay.Image")));
+            this.pic_Giay.Image = global::quanlybangiay.Properties.Resources.img__1_1;
             this.pic_Giay.Location = new System.Drawing.Point(18, 47);
             this.pic_Giay.Name = "pic_Giay";
             this.pic_Giay.Size = new System.Drawing.Size(175, 175);
@@ -441,7 +447,8 @@ namespace quanlybangiay
             this.rdHetHang.ForeColor = System.Drawing.Color.SlateGray;
             this.rdHetHang.Location = new System.Drawing.Point(265, 272);
             this.rdHetHang.Name = "rdHetHang";
-            this.rdHetHang.Size = new System.Drawing.Size(88, 20);
+            this.rdHetHang.Size = new System.Drawing.Size(90, 20);
+
             this.rdHetHang.TabIndex = 56;
             this.rdHetHang.TabStop = true;
             this.rdHetHang.Text = "Hết hàng";
@@ -455,7 +462,8 @@ namespace quanlybangiay
             this.rdConHang.ForeColor = System.Drawing.Color.SlateGray;
             this.rdConHang.Location = new System.Drawing.Point(155, 273);
             this.rdConHang.Name = "rdConHang";
-            this.rdConHang.Size = new System.Drawing.Size(91, 20);
+            this.rdConHang.Size = new System.Drawing.Size(93, 20);
+
             this.rdConHang.TabIndex = 55;
             this.rdConHang.TabStop = true;
             this.rdConHang.Text = "Còn hàng";
@@ -1286,7 +1294,7 @@ namespace quanlybangiay
             // 
             // pic_kho
             // 
-            this.pic_kho.Image = ((System.Drawing.Image)(resources.GetObject("pic_kho.Image")));
+            this.pic_kho.Image = global::quanlybangiay.Properties.Resources.img__1_1;
             this.pic_kho.Location = new System.Drawing.Point(33, 65);
             this.pic_kho.Name = "pic_kho";
             this.pic_kho.Size = new System.Drawing.Size(200, 200);
@@ -1378,7 +1386,7 @@ namespace quanlybangiay
             this.tb_ten.Name = "tb_ten";
             this.tb_ten.Size = new System.Drawing.Size(261, 24);
             this.tb_ten.TabIndex = 26;
-            this.tb_ten.Text = "Tên giày";
+            this.tb_ten.Text = "TÊN GIÀY";
             this.tb_ten.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel12
@@ -1407,11 +1415,13 @@ namespace quanlybangiay
             // 
             // dtGV_Kiemkho
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.dtGV_Kiemkho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dtGV_Kiemkho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtGV_Kiemkho.AllowUserToResizeColumns = false;
+            this.dtGV_Kiemkho.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.dtGV_Kiemkho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtGV_Kiemkho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGV_Kiemkho.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtGV_Kiemkho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1426,30 +1436,6 @@ namespace quanlybangiay
             this.dtGV_Kiemkho.Size = new System.Drawing.Size(962, 538);
             this.dtGV_Kiemkho.TabIndex = 0;
             this.dtGV_Kiemkho.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtGV_Kiemkho_CellMouseClick);
-            // 
-            // ID_Giay
-            // 
-            this.ID_Giay.DataPropertyName = "ID_Giay";
-            this.ID_Giay.HeaderText = "ID Giày";
-            this.ID_Giay.Name = "ID_Giay";
-            // 
-            // TenGiay
-            // 
-            this.TenGiay.DataPropertyName = "TenGiay";
-            this.TenGiay.HeaderText = "Tên giày";
-            this.TenGiay.Name = "TenGiay";
-            // 
-            // HangGiay
-            // 
-            this.HangGiay.DataPropertyName = "HangGiay";
-            this.HangGiay.HeaderText = "Hãng giày";
-            this.HangGiay.Name = "HangGiay";
-            // 
-            // Size
-            // 
-            this.Size.DataPropertyName = "Size";
-            this.Size.HeaderText = "Size";
-            this.Size.Name = "Size";
             // 
             // panel11
             // 
@@ -1474,9 +1460,10 @@ namespace quanlybangiay
             // 
             // txt_IDgiayKHO
             // 
+            this.txt_IDgiayKHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_IDgiayKHO.Location = new System.Drawing.Point(666, 17);
             this.txt_IDgiayKHO.Name = "txt_IDgiayKHO";
-            this.txt_IDgiayKHO.Size = new System.Drawing.Size(189, 22);
+            this.txt_IDgiayKHO.Size = new System.Drawing.Size(189, 26);
             this.txt_IDgiayKHO.TabIndex = 56;
             // 
             // btn_timkiemKHO
@@ -1511,6 +1498,8 @@ namespace quanlybangiay
             // 
             // cb_sizeKHO
             // 
+            this.cb_sizeKHO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_sizeKHO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_sizeKHO.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cb_sizeKHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_sizeKHO.FormattingEnabled = true;
@@ -1521,6 +1510,8 @@ namespace quanlybangiay
             // 
             // cb_tenKHO
             // 
+            this.cb_tenKHO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_tenKHO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_tenKHO.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cb_tenKHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_tenKHO.FormattingEnabled = true;
@@ -1531,6 +1522,8 @@ namespace quanlybangiay
             // 
             // cb_hangKHO
             // 
+            this.cb_hangKHO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_hangKHO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_hangKHO.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cb_hangKHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_hangKHO.FormattingEnabled = true;
@@ -1685,6 +1678,7 @@ namespace quanlybangiay
             // 
             this.txtTongtien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtTongtien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTongtien.Enabled = false;
             this.txtTongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongtien.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtTongtien.Location = new System.Drawing.Point(195, 84);
@@ -1719,6 +1713,7 @@ namespace quanlybangiay
             // 
             this.txtSohoadon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtSohoadon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSohoadon.Enabled = false;
             this.txtSohoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSohoadon.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtSohoadon.Location = new System.Drawing.Point(195, 42);
@@ -1764,21 +1759,23 @@ namespace quanlybangiay
             // 
             // dtGV_Chitiethd
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.dtGV_Chitiethd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dtGV_Chitiethd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtGV_Chitiethd.AllowUserToResizeColumns = false;
+            this.dtGV_Chitiethd.AllowUserToResizeRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.dtGV_Chitiethd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtGV_Chitiethd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGV_Chitiethd.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGV_Chitiethd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGV_Chitiethd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtGV_Chitiethd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGV_Chitiethd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_HoaDon,
@@ -1791,36 +1788,6 @@ namespace quanlybangiay
             this.dtGV_Chitiethd.RowHeadersWidth = 51;
             this.dtGV_Chitiethd.Size = new System.Drawing.Size(1236, 406);
             this.dtGV_Chitiethd.TabIndex = 0;
-            // 
-            // ID_HoaDon
-            // 
-            this.ID_HoaDon.DataPropertyName = "ID_HoaDon";
-            this.ID_HoaDon.HeaderText = "ID Hoá đơn";
-            this.ID_HoaDon.Name = "ID_HoaDon";
-            // 
-            // TenKhachHang
-            // 
-            this.TenKhachHang.DataPropertyName = "TenKhachHang";
-            this.TenKhachHang.HeaderText = "Tên khách hàng";
-            this.TenKhachHang.Name = "TenKhachHang";
-            // 
-            // SoDienThoai
-            // 
-            this.SoDienThoai.DataPropertyName = "SoDienThoai";
-            this.SoDienThoai.HeaderText = "Số điện thoại";
-            this.SoDienThoai.Name = "SoDienThoai";
-            // 
-            // NgayTao
-            // 
-            this.NgayTao.DataPropertyName = "NgayTao";
-            this.NgayTao.HeaderText = "Ngày tạo";
-            this.NgayTao.Name = "NgayTao";
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.Name = "TongTien";
             // 
             // panel14
             // 
@@ -2107,7 +2074,7 @@ namespace quanlybangiay
             this.nu.Enabled = false;
             this.nu.Location = new System.Drawing.Point(354, 163);
             this.nu.Name = "nu";
-            this.nu.Size = new System.Drawing.Size(45, 20);
+            this.nu.Size = new System.Drawing.Size(44, 20);
             this.nu.TabIndex = 15;
             this.nu.TabStop = true;
             this.nu.Text = "Nữ";
@@ -2119,7 +2086,7 @@ namespace quanlybangiay
             this.Nam.Enabled = false;
             this.Nam.Location = new System.Drawing.Point(257, 163);
             this.Nam.Name = "Nam";
-            this.Nam.Size = new System.Drawing.Size(58, 20);
+            this.Nam.Size = new System.Drawing.Size(57, 20);
             this.Nam.TabIndex = 14;
             this.Nam.TabStop = true;
             this.Nam.Text = "Nam";
@@ -2226,6 +2193,78 @@ namespace quanlybangiay
             this.label34.Size = new System.Drawing.Size(117, 25);
             this.label34.TabIndex = 5;
             this.label34.Text = "Ngày sinh";
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.panel17);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(1312, 778);
+            this.panel18.TabIndex = 50;
+            // 
+            // ID_HoaDon
+            // 
+            this.ID_HoaDon.DataPropertyName = "ID_HoaDon";
+            this.ID_HoaDon.HeaderText = "ID Hoá đơn";
+            this.ID_HoaDon.Name = "ID_HoaDon";
+            this.ID_HoaDon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.DataPropertyName = "TenKhachHang";
+            this.TenKhachHang.HeaderText = "Tên khách hàng";
+            this.TenKhachHang.Name = "TenKhachHang";
+            this.TenKhachHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // NgayTao
+            // 
+            this.NgayTao.DataPropertyName = "NgayTao";
+            this.NgayTao.HeaderText = "Ngày tạo";
+            this.NgayTao.Name = "NgayTao";
+            this.NgayTao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.Name = "TongTien";
+            this.TongTien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ID_Giay
+            // 
+            this.ID_Giay.DataPropertyName = "ID_Giay";
+            this.ID_Giay.HeaderText = "ID Giày";
+            this.ID_Giay.Name = "ID_Giay";
+            this.ID_Giay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TenGiay
+            // 
+            this.TenGiay.DataPropertyName = "TenGiay";
+            this.TenGiay.HeaderText = "Tên giày";
+            this.TenGiay.Name = "TenGiay";
+            this.TenGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // HangGiay
+            // 
+            this.HangGiay.DataPropertyName = "HangGiay";
+            this.HangGiay.HeaderText = "Hãng giày";
+            this.HangGiay.Name = "HangGiay";
+            this.HangGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Size
+            // 
+            this.Size.DataPropertyName = "Size";
+            this.Size.HeaderText = "Size";
+            this.Size.Name = "Size";
+            this.Size.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // MainNV
             // 

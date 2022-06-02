@@ -61,6 +61,7 @@ namespace quanlybangiay.form
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.tb3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -80,6 +81,7 @@ namespace quanlybangiay.form
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.tb3);
             this.panel3.Controls.Add(this.tb_2);
             this.panel3.Controls.Add(this.txtDiaChi);
             this.panel3.Controls.Add(this.dateTimePicker1);
@@ -453,6 +455,16 @@ namespace quanlybangiay.form
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // tb3
+            // 
+            this.tb3.AutoSize = true;
+            this.tb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb3.ForeColor = System.Drawing.Color.Red;
+            this.tb3.Location = new System.Drawing.Point(206, 69);
+            this.tb3.Name = "tb3";
+            this.tb3.Size = new System.Drawing.Size(0, 13);
+            this.tb3.TabIndex = 173;
+            // 
             // DetailNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,5 +521,6 @@ namespace quanlybangiay.form
         private System.Windows.Forms.Label lb_notify;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label tb_2;
+        private System.Windows.Forms.Label tb3;
     }
 }

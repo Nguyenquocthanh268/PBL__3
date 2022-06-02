@@ -22,6 +22,7 @@ namespace quanlybangiay.form
         {
             InitializeComponent();
             ID = m;
+            dtgDetailHD.RowTemplate.Height = 30;
             GUI();
         }
 

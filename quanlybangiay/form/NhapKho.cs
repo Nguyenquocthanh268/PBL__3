@@ -20,6 +20,7 @@ namespace quanlybangiay.form
             IDGiay = ID;
             InitializeComponent();
             GUI();
+            dataGridView1.RowTemplate.Height = 30;
             show(IDGiay);
         }
 
@@ -29,7 +30,7 @@ namespace quanlybangiay.form
             if (txt_gia.Text == "" && txt_sln.Text == "")
             {
 
-                MessageBox.Show("Vui long dien day du !!!");
+                MessageBox.Show("Vui lòng điền thông tin đầy đủ !!!");
             }
             else
             {
@@ -56,7 +57,7 @@ namespace quanlybangiay.form
                     };
                     BLL_KhoGiay.Instance.NhapKho(g, k, n);
                     show(IDGiay);
-                    MessageBox.Show("Da nhap thanh cong !!!");
+                    MessageBox.Show("Đã nhập thành công !!!");
                 }catch (Exception ex)
                 {
                     MessageBox.Show("Nhập vào không hợp lệ");

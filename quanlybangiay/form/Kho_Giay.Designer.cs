@@ -88,6 +88,8 @@ namespace quanlybangiay.form
             // cbb_size
             // 
             this.cbb_size.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbb_size.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbb_size.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbb_size.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_size.FormattingEnabled = true;
             this.cbb_size.Location = new System.Drawing.Point(591, 27);
@@ -99,6 +101,8 @@ namespace quanlybangiay.form
             // cbb_hang
             // 
             this.cbb_hang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbb_hang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbb_hang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbb_hang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_hang.FormattingEnabled = true;
             this.cbb_hang.Location = new System.Drawing.Point(754, 27);
@@ -356,6 +360,8 @@ namespace quanlybangiay.form
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 

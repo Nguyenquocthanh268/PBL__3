@@ -73,11 +73,11 @@ namespace quanlybangiay.BLL.BLL_NV
         {
             if (ten == "")
             {
-                return (db.Giays.Where(p => p.HangGiay == hang).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.HangGiay.Contains(hang)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
             }
             else
             {
-                return (db.Giays.Where(p => p.HangGiay == hang && p.TenGiay.Contains(ten)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.HangGiay.Contains(hang) && p.TenGiay.Contains(ten)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
             }
 
         }
@@ -85,7 +85,7 @@ namespace quanlybangiay.BLL.BLL_NV
         {
             if (ten == "")
             {
-                return (db.Giays.Where(p => p.HangGiay == hang && p.Size == size).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.HangGiay.Contains(hang) && p.Size == size).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
             }
             else if (hang == "" && size == 0)
             {
@@ -93,7 +93,7 @@ namespace quanlybangiay.BLL.BLL_NV
             }
             else
             {
-                return (db.Giays.Where(p => p.Size == size && p.TenGiay.Contains(ten) && p.HangGiay == hang).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.Size == size && p.TenGiay.Contains(ten) && p.HangGiay.Contains(hang)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
             }
         }
         public dynamic search(string id, string ten, string hang, int size)

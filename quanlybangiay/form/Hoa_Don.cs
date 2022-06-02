@@ -20,6 +20,7 @@ namespace quanlybangiay.form
             cbbSearch.Items.AddRange((BLL_HD.Instance.CBBSearch().ToArray()));
             cbbSort.Items.AddRange((BLL_HD.Instance.CBBSort().ToArray()));
             cbbSearch.SelectedIndex = 0;
+            dtgHD.RowTemplate.Height = 40;
             //dateBegin 
             dateBegin.Value = BLL_HD.Instance.GetMinDate();
             dtgHD.DataSource = BLL_HD.Instance.Search(0, "", dateBegin.Value, dateEnd.Value);

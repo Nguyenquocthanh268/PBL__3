@@ -35,6 +35,12 @@ namespace quanlybangiay.form
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Giay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenGiay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.dt_end = new System.Windows.Forms.DateTimePicker();
@@ -58,12 +64,6 @@ namespace quanlybangiay.form
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Giay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenGiay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -117,6 +117,8 @@ namespace quanlybangiay.form
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -131,6 +133,48 @@ namespace quanlybangiay.form
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(935, 197);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Stt
+            // 
+            this.Stt.DataPropertyName = "Stt";
+            this.Stt.HeaderText = "Số thứ tự";
+            this.Stt.Name = "Stt";
+            this.Stt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ID_Giay
+            // 
+            this.ID_Giay.DataPropertyName = "ID_Giay";
+            this.ID_Giay.HeaderText = "ID Giày";
+            this.ID_Giay.Name = "ID_Giay";
+            this.ID_Giay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TenGiay
+            // 
+            this.TenGiay.DataPropertyName = "TenGiay";
+            this.TenGiay.HeaderText = "Tên giày";
+            this.TenGiay.Name = "TenGiay";
+            this.TenGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // SoLuongNhap
+            // 
+            this.SoLuongNhap.DataPropertyName = "SoLuongNhap";
+            this.SoLuongNhap.HeaderText = "Số lượng nhập";
+            this.SoLuongNhap.Name = "SoLuongNhap";
+            this.SoLuongNhap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // NgayNhap
+            // 
+            this.NgayNhap.DataPropertyName = "NgayNhap";
+            this.NgayNhap.HeaderText = "Ngày nhập";
+            this.NgayNhap.Name = "NgayNhap";
+            this.NgayNhap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // GiaNhap
+            // 
+            this.GiaNhap.DataPropertyName = "GiaNhap";
+            this.GiaNhap.HeaderText = "Giá nhập";
+            this.GiaNhap.Name = "GiaNhap";
+            this.GiaNhap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // panel7
             // 
@@ -396,48 +440,6 @@ namespace quanlybangiay.form
             this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 60;
             this.label5.Text = "Size";
-            // 
-            // Stt
-            // 
-            this.Stt.DataPropertyName = "Stt";
-            this.Stt.HeaderText = "Số thứ tự";
-            this.Stt.Name = "Stt";
-            this.Stt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ID_Giay
-            // 
-            this.ID_Giay.DataPropertyName = "ID_Giay";
-            this.ID_Giay.HeaderText = "ID Giày";
-            this.ID_Giay.Name = "ID_Giay";
-            this.ID_Giay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TenGiay
-            // 
-            this.TenGiay.DataPropertyName = "TenGiay";
-            this.TenGiay.HeaderText = "Tên giày";
-            this.TenGiay.Name = "TenGiay";
-            this.TenGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // SoLuongNhap
-            // 
-            this.SoLuongNhap.DataPropertyName = "SoLuongNhap";
-            this.SoLuongNhap.HeaderText = "Số lượng nhập";
-            this.SoLuongNhap.Name = "SoLuongNhap";
-            this.SoLuongNhap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // NgayNhap
-            // 
-            this.NgayNhap.DataPropertyName = "NgayNhap";
-            this.NgayNhap.HeaderText = "Ngày nhập";
-            this.NgayNhap.Name = "NgayNhap";
-            this.NgayNhap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // GiaNhap
-            // 
-            this.GiaNhap.DataPropertyName = "GiaNhap";
-            this.GiaNhap.HeaderText = "Giá nhập";
-            this.GiaNhap.Name = "GiaNhap";
-            this.GiaNhap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Nhap_kho
             // 
