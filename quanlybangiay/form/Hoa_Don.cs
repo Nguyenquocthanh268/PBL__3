@@ -44,7 +44,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn hóa đơn chỉnh sửa!");
+                MessageBox.Show("Vui lòng chọn hóa đơn !");
                 ShowDtg();
             }
         }

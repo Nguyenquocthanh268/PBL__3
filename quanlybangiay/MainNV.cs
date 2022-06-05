@@ -245,6 +245,12 @@ namespace quanlybangiay
                 txtTongtien.Text = "";
                 txtSohoadon.Text = "";
             }
+            if(tabControl1.SelectedIndex == 4)
+            {
+                txt_mkc.Text = "";
+                txt_mkm.Text = "";
+                txt_xacnhan.Text = "";
+            }
         }
 
 
@@ -615,9 +621,13 @@ namespace quanlybangiay
         //chon cell xem anh
         private void dtGV_Trangchu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string ID = dtGV_Trangchu.Rows[e.RowIndex].Cells["Mã giày"].FormattedValue.ToString();
-            pic_Giay.Image = BLL_KhoGiay.Instance.BytetoPicter(BLL_KhoGiay.Instance.GetGiayByID(ID).AnhSP);
-            txtNameGiay.Text = BLL_KhoGiay.Instance.GetGiayByID(ID).TenGiay;
+            try
+            {
+                string ID = dtGV_Trangchu.Rows[e.RowIndex].Cells["Mã giày"].FormattedValue.ToString();
+                pic_Giay.Image = BLL_KhoGiay.Instance.BytetoPicter(BLL_KhoGiay.Instance.GetGiayByID(ID).AnhSP);
+                txtNameGiay.Text = BLL_KhoGiay.Instance.GetGiayByID(ID).TenGiay;
+            }
+            catch (Exception ex) { }
         }
 
         //******************************************************************************************************

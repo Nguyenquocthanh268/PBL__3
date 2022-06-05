@@ -119,6 +119,7 @@ namespace quanlybangiay.form
 
                 DetailKhoGiay f = new DetailKhoGiay(ID, 3);
                 f.d = new DetailKhoGiay.Mydel(show);
+                f.d2 = new DetailKhoGiay.Mydel2(ResetCombo);
                 f.Show();
             }
             else

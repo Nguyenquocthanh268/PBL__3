@@ -375,22 +375,27 @@ namespace quanlybangiay.form
         private void cb_hang_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (index == 2)
+
             {
-                if (txtName.Text != "" && txtSize.Text != "")
+              
+                if(cb_hang.Text != "")
                 {
-                    if (index == 2)
+                    if (txtName.Text != "" && txtSize.Text != "")
                     {
-                        if (BLL_KhoGiay.Instance.check(txtIDGiay.Text) && cb_hang.Text != "")
+                        if (index == 2)
                         {
-                            MessageBox.Show("ID đã tồn tại ....");
-                            cb_hang.SelectedIndex = -1;
+                            if (BLL_KhoGiay.Instance.check(txtIDGiay.Text) && cb_hang.Text != "")
+                            {
+                                MessageBox.Show("ID đã tồn tại ....");
+                                cb_hang.SelectedIndex = -1;
+                            }
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng điền ID và size đầu tiên");
-                    cb_hang.Text = "";
+                    else
+                    {
+                        MessageBox.Show("Vui lòng điền ID và size đầu tiên");
+                        cb_hang.Text = "";
+                    }
                 }
             }
         }
