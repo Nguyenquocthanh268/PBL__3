@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using quanlybangiay.BLL;
+using quanlybangiay.BLL.BLL_NV;
 using quanlybangiay.DTO;
 namespace quanlybangiay
 {
@@ -51,6 +52,7 @@ namespace quanlybangiay
                         MainNV f = new MainNV(user, BLL_Login.Instance.GetTK(user).ID_NhanVien);
                         this.Hide();
                         f.Show();
+                        BLL_BanHang.Instance.DelAllData();
                     }
                 }
                 else
@@ -80,4 +82,5 @@ namespace quanlybangiay
             Application.Exit();
         }
     }
+
 }

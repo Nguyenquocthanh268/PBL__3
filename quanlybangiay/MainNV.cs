@@ -551,7 +551,7 @@ namespace quanlybangiay
         }
         public void ResetDataSP()
         {
-
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainNV));
             txtNameSP_BanHang.Text = "";
             txtHang_BanHang.Text = "";
             txtSize_BanHang.Text = "";
@@ -560,6 +560,9 @@ namespace quanlybangiay
             rdHetHang.Checked = false;
             rdConHang.ForeColor = Color.SlateGray;
             rdHetHang.ForeColor = Color.SlateGray;
+            but_AddGiay.Enabled = false;
+            txtNameGiay.Text = "Tên SP";
+            pic_Giay.Image = ((System.Drawing.Image)(resources.GetObject("pic_Giay.Image")));
         }
         //******************************************************************************************************
 
@@ -628,7 +631,7 @@ namespace quanlybangiay
             if (tb_Tienkhachdua.Text != "")
             {
 
-                if (Convert.ToDouble(tb_Tientralai.Text) > 0)
+                if (Convert.ToDouble(tb_Tientralai.Text) >= 0)
                 {
                     String s = "Bạn có xác nhận lưu hóa đơn và in chưa ??";
                     String s1 = "Xác nhận hóa đơn";
