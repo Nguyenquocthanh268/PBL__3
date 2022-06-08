@@ -333,6 +333,7 @@ namespace quanlybangiay
             // dtGV_Trangchu
             // 
             this.dtGV_Trangchu.AllowUserToAddRows = false;
+
             this.dtGV_Trangchu.AllowUserToResizeColumns = false;
             this.dtGV_Trangchu.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
@@ -375,6 +376,7 @@ namespace quanlybangiay
             // 
             this.txtNameGiay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtNameGiay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNameGiay.Enabled = false;
             this.txtNameGiay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameGiay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtNameGiay.Location = new System.Drawing.Point(3, 235);
@@ -1409,6 +1411,7 @@ namespace quanlybangiay
             // 
             // dtGV_Kiemkho
             // 
+
             this.dtGV_Kiemkho.AllowUserToResizeColumns = false;
             this.dtGV_Kiemkho.AllowUserToResizeRows = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
@@ -1416,6 +1419,7 @@ namespace quanlybangiay
             this.dtGV_Kiemkho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+
             this.dtGV_Kiemkho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGV_Kiemkho.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtGV_Kiemkho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1781,6 +1785,7 @@ namespace quanlybangiay
             // 
             // dtGV_Chitiethd
             // 
+
             this.dtGV_Chitiethd.AllowUserToResizeColumns = false;
             this.dtGV_Chitiethd.AllowUserToResizeRows = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
@@ -2259,8 +2264,10 @@ namespace quanlybangiay
             this.ClientSize = new System.Drawing.Size(1320, 798);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lý cửa hàng bán giày";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainNV_FormClosed);
             this.tabControl1.ResumeLayout(false);
