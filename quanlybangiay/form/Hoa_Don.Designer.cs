@@ -35,6 +35,12 @@ namespace quanlybangiay.form
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtgHD = new System.Windows.Forms.DataGridView();
+            this.ID_HoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnDetail = new System.Windows.Forms.Button();
             this.cbbSort = new System.Windows.Forms.ComboBox();
@@ -48,12 +54,6 @@ namespace quanlybangiay.form
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dateBegin = new System.Windows.Forms.DateTimePicker();
-            this.ID_HoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHD)).BeginInit();
             this.panel4.SuspendLayout();
@@ -76,6 +76,8 @@ namespace quanlybangiay.form
             // dtgHD
             // 
             this.dtgHD.AllowUserToAddRows = false;
+            this.dtgHD.AllowUserToResizeColumns = false;
+            this.dtgHD.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
             this.dtgHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -125,6 +127,48 @@ namespace quanlybangiay.form
             this.dtgHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgHD.Size = new System.Drawing.Size(832, 547);
             this.dtgHD.TabIndex = 10;
+            // 
+            // ID_HoaDon
+            // 
+            this.ID_HoaDon.DataPropertyName = "ID_HoaDon";
+            this.ID_HoaDon.HeaderText = "ID Hoá đơn";
+            this.ID_HoaDon.Name = "ID_HoaDon";
+            this.ID_HoaDon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.DataPropertyName = "TenKhachHang";
+            this.TenKhachHang.HeaderText = "Tên khách hàng";
+            this.TenKhachHang.Name = "TenKhachHang";
+            this.TenKhachHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // NgayTao
+            // 
+            this.NgayTao.DataPropertyName = "NgayTao";
+            this.NgayTao.HeaderText = "Ngày tạo đơn";
+            this.NgayTao.Name = "NgayTao";
+            this.NgayTao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.Name = "TongTien";
+            this.TongTien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ID_NhanVien
+            // 
+            this.ID_NhanVien.DataPropertyName = "ID_NhanVien";
+            this.ID_NhanVien.HeaderText = "ID Nhân viên";
+            this.ID_NhanVien.Name = "ID_NhanVien";
+            this.ID_NhanVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // panel4
             // 
@@ -305,48 +349,6 @@ namespace quanlybangiay.form
             this.dateBegin.Size = new System.Drawing.Size(204, 20);
             this.dateBegin.TabIndex = 84;
             this.dateBegin.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
-            // 
-            // ID_HoaDon
-            // 
-            this.ID_HoaDon.DataPropertyName = "ID_HoaDon";
-            this.ID_HoaDon.HeaderText = "ID Hoá đơn";
-            this.ID_HoaDon.Name = "ID_HoaDon";
-            this.ID_HoaDon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TenKhachHang
-            // 
-            this.TenKhachHang.DataPropertyName = "TenKhachHang";
-            this.TenKhachHang.HeaderText = "Tên khách hàng";
-            this.TenKhachHang.Name = "TenKhachHang";
-            this.TenKhachHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // SoDienThoai
-            // 
-            this.SoDienThoai.DataPropertyName = "SoDienThoai";
-            this.SoDienThoai.HeaderText = "Số điện thoại";
-            this.SoDienThoai.Name = "SoDienThoai";
-            this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // NgayTao
-            // 
-            this.NgayTao.DataPropertyName = "NgayTao";
-            this.NgayTao.HeaderText = "Ngày tạo đơn";
-            this.NgayTao.Name = "NgayTao";
-            this.NgayTao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.Name = "TongTien";
-            this.TongTien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ID_NhanVien
-            // 
-            this.ID_NhanVien.DataPropertyName = "ID_NhanVien";
-            this.ID_NhanVien.HeaderText = "ID Nhân viên";
-            this.ID_NhanVien.Name = "ID_NhanVien";
-            this.ID_NhanVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Hoa_Don
             // 

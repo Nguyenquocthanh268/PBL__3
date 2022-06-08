@@ -322,7 +322,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Menu;
@@ -336,6 +336,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
             this.pictureBox2.Image = global::quanlybangiay.Properties.Resources.kisspng_sneakers_shoe_computer_icons_footwear_vector_graph_prism_3_icon_5be165ccdc88b7_1167525215414983169033__4_;
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
