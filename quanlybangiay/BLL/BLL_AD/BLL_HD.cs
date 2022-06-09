@@ -76,18 +76,18 @@ namespace quanlybangiay.BLL.BLL_AD
             }
         }
 
-        public int GetChietkhauByID(string ID)
-        {
-           int value = 0;
-            foreach (CTKM i in db.CTKMs)
-            {
-                if (i.ID_KhuyenMai == ID)
-                {
-                    value = Convert.ToInt32(i.ChietKhau);
-                }
-            }
-            return value;
-        }
+        //public int GetChietkhauByID(string ID)
+        //{
+        //   int value = 0;
+        //    foreach (CTKM i in db.CTKMs)
+        //    {
+        //        if (i.ID_KhuyenMai == ID)
+        //        {
+        //            value = Convert.ToInt32(i.ChietKhau);
+        //        }
+        //    }
+        //    return value;
+        //}
 
         public DateTime GetMinDate()
         {

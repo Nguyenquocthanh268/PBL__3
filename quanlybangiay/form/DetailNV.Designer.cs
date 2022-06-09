@@ -31,6 +31,7 @@ namespace quanlybangiay.form
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tb3 = new System.Windows.Forms.Label();
             this.tb_2 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -61,7 +62,6 @@ namespace quanlybangiay.form
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.tb3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -104,6 +104,16 @@ namespace quanlybangiay.form
             this.panel3.Size = new System.Drawing.Size(984, 303);
             this.panel3.TabIndex = 126;
             // 
+            // tb3
+            // 
+            this.tb3.AutoSize = true;
+            this.tb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb3.ForeColor = System.Drawing.Color.Red;
+            this.tb3.Location = new System.Drawing.Point(206, 69);
+            this.tb3.Name = "tb3";
+            this.tb3.Size = new System.Drawing.Size(0, 13);
+            this.tb3.TabIndex = 173;
+            // 
             // tb_2
             // 
             this.tb_2.AutoSize = true;
@@ -139,7 +149,7 @@ namespace quanlybangiay.form
             this.radNu.Location = new System.Drawing.Point(779, 44);
             this.radNu.Margin = new System.Windows.Forms.Padding(2);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(42, 20);
+            this.radNu.Size = new System.Drawing.Size(43, 20);
             this.radNu.TabIndex = 165;
             this.radNu.TabStop = true;
             this.radNu.Text = "Nữ";
@@ -153,7 +163,7 @@ namespace quanlybangiay.form
             this.radNam.Location = new System.Drawing.Point(699, 44);
             this.radNam.Margin = new System.Windows.Forms.Padding(2);
             this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(54, 20);
+            this.radNam.Size = new System.Drawing.Size(55, 20);
             this.radNam.TabIndex = 166;
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
@@ -454,16 +464,6 @@ namespace quanlybangiay.form
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // tb3
-            // 
-            this.tb3.AutoSize = true;
-            this.tb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb3.ForeColor = System.Drawing.Color.Red;
-            this.tb3.Location = new System.Drawing.Point(206, 69);
-            this.tb3.Name = "tb3";
-            this.tb3.Size = new System.Drawing.Size(0, 13);
-            this.tb3.TabIndex = 173;
             // 
             // DetailNV
             // 

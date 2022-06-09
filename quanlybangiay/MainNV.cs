@@ -354,6 +354,7 @@ namespace quanlybangiay
         private void txtSdt_BanHang_Click(object sender, EventArgs e)
         {
             lbKTthongTin_BanHang.Text = "Nhập sđt có 10 số ";
+            lbKTthongTinID_BanHang.Text = "";
         }
 
         private void but_CheckKH_Click(object sender, EventArgs e)
@@ -409,6 +410,7 @@ namespace quanlybangiay
         private void txtSdt_TextChanged(object sender, EventArgs e)
         {
             lbKTthongTin_BanHang.Text = "";
+            ResetDataKH();
         }
         public void ResetDataKH()
         {
@@ -460,36 +462,44 @@ namespace quanlybangiay
         private void butCheckIDGiay_Click(object sender, EventArgs e)
         {
             ResetDataSP();
-            if (BLL_KhoGiay.Instance.check(txtIDGiay_BanHang.Text))
+            if(txtIDGiay_BanHang.Text != "")
             {
-                int Soluong = Convert.ToInt32(BLL_KhoGiay.Instance.GetGiay_INKho(txtIDGiay_BanHang.Text).SoLuongCon);
-                //but_AddGiay.Enabled = true;
-                Giay a = BLL_KhoGiay.Instance.GetGiayByID(txtIDGiay_BanHang.Text);
-                txtNameSP_BanHang.Text = a.TenGiay;
-                txtHang_BanHang.Text = a.HangGiay;
-                txtSize_BanHang.Text = Convert.ToString(a.Size);
-                //txtSL_BanHang.Text = Soluong.ToString();
-                int aa = BLL_BanHang.Instance.GetSLSP(txtIDGiay_BanHang.Text);
-                txtSL_BanHang.Text = Convert.ToString(Soluong - aa);
-                if (Convert.ToInt32(txtSL_BanHang.Text) > 0)
+                if (BLL_KhoGiay.Instance.check(txtIDGiay_BanHang.Text))
                 {
-                    rdConHang.Checked = true;
-                    rdConHang.ForeColor = Color.Green;
-                    rdHetHang.ForeColor = Color.SlateGray;
-                    but_AddGiay.Enabled = true;
+                    int Soluong = Convert.ToInt32(BLL_KhoGiay.Instance.GetGiay_INKho(txtIDGiay_BanHang.Text).SoLuongCon);
+                    //but_AddGiay.Enabled = true;
+                    Giay a = BLL_KhoGiay.Instance.GetGiayByID(txtIDGiay_BanHang.Text);
+                    txtNameSP_BanHang.Text = a.TenGiay;
+                    txtHang_BanHang.Text = a.HangGiay;
+                    txtSize_BanHang.Text = Convert.ToString(a.Size);
+                    //txtSL_BanHang.Text = Soluong.ToString();
+                    int aa = BLL_BanHang.Instance.GetSLSP(txtIDGiay_BanHang.Text);
+                    txtSL_BanHang.Text = Convert.ToString(Soluong - aa);
+                    if (Convert.ToInt32(txtSL_BanHang.Text) > 0)
+                    {
+                        rdConHang.Checked = true;
+                        rdConHang.ForeColor = Color.Green;
+                        rdHetHang.ForeColor = Color.SlateGray;
+                        but_AddGiay.Enabled = true;
+                    }
+                    else
+                    {
+                        rdHetHang.Checked = true;
+                        rdConHang.ForeColor = Color.SlateGray;
+                        rdHetHang.ForeColor = Color.Red;
+                        but_AddGiay.Enabled = false;
+                    }
                 }
                 else
                 {
-                    rdHetHang.Checked = true;
-                    rdConHang.ForeColor = Color.SlateGray;
-                    rdHetHang.ForeColor = Color.Red;
-                    but_AddGiay.Enabled = false;
+                    lbKTthongTinID_BanHang.Text = "ID giày không tồn tại...";
                 }
             }
             else
             {
-                lbKTthongTinID_BanHang.Text = "ID giày không tồn tại...";
+                lbKTthongTinID_BanHang.Text = "ID giày không được để trống";
             }
+            
         }
         private void txtIDGiay_BanHang_TextChanged(object sender, EventArgs e)
         {
@@ -502,7 +512,8 @@ namespace quanlybangiay
 
             if (txtSdt_BanHang.Text != "")
             {
-                if (BLL_QLKH.Instance.Check(txtSdt_BanHang.Text))
+                //if (BLL_QLKH.Instance.Check(txtSdt_BanHang.Text))
+                if (txtNameKH_BanHang.Text != "")
                 {
                     if (Convert.ToInt32(txtSL_BanHang.Text) > 0)
                     {
@@ -530,7 +541,7 @@ namespace quanlybangiay
                 }
                 else
                 {
-                    MessageBox.Show("Số điện thoại không tồn tại ...");
+                    MessageBox.Show("Vui lòng kiểm tra lại thông tin khách hàng...");
                 }
 
                 if (tb_Mahoadon.Text == "")
@@ -541,7 +552,7 @@ namespace quanlybangiay
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập thông tin khách hàng ...");
+                MessageBox.Show("Vui lòng nhập thông tin khách hàng...");
             }
         }
         public void ResetData()
@@ -592,7 +603,7 @@ namespace quanlybangiay
 
         private void butdel_Click(object sender, EventArgs e)
         {
-            int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
+            int Soluong;
             if (dtGV_Trangchu.SelectedRows.Count > 0)
             {
                 String s = "Bạn có muốn xóa mặt hàng ??";
@@ -607,18 +618,16 @@ namespace quanlybangiay
 
                         if ((txtIDGiay_BanHang.Text) == MaSP)
                         {
+                            Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
                             txtSL_BanHang.Text = Convert.ToString(Soluong);
                             rdConHang.Checked = true;
                             rdConHang.ForeColor = Color.Green;
                             rdHetHang.ForeColor = Color.SlateGray;
                             but_AddGiay.Enabled = true;
-
                         }
-
-
-
                         BLL_BanHang.Instance.DelSP(MaSP);
                     }
+                    ResetData();
                     ShowdtGV_Trangchu();
                 }
             }
@@ -650,6 +659,15 @@ namespace quanlybangiay
                 {
                     tb_Tientralai.Text = (Convert.ToDouble(tb_Tienkhachdua.Text) - Convert.ToDouble(tb_Thanhtien.Text)).ToString();
                 }
+                else
+                {
+                    if(tb_Tienkhachdua.Text !="")
+                    {
+                        MessageBox.Show("Dữ liệu nhập vào không hợp lệ");
+                        tb_Tienkhachdua.Text = "";
+                    }
+
+                }
             } catch(Exception ex)
             {
                 MessageBox.Show("Dữ liệu nhập vào không hợp lệ");
@@ -660,84 +678,92 @@ namespace quanlybangiay
         //Xuli diem tich luy : 100.000d ~ 1d ; DTL < 100d : giam 2% ;100d <= DTL < 200d :giam 5%; 200d <= DTL < 500d : giam 10%; DTL >= 500 : giam 20%
         private void butSAVE_Click(object sender, EventArgs e)
         {
-            if (tb_Tienkhachdua.Text != "")
+            if (tb_Tientralai.Text != "")
             {
-
-                if (Convert.ToDouble(tb_Tientralai.Text) >= 0)
+                if (tb_Tienkhachdua.Text != "")
                 {
-                    String s = "Bạn có xác nhận lưu hóa đơn và in chưa ??";
-                    String s1 = "Xác nhận hóa đơn";
-                    MessageBoxButtons ok = MessageBoxButtons.OKCancel;
-                    DialogResult d = MessageBox.Show(s, s1, ok);
-                    if (d == DialogResult.OK)
+
+                    if (Convert.ToDouble(tb_Tientralai.Text) >= 0)
                     {
-                        //List<string> idsp = new List<string>();
-
-                        string ID_HoaDon = BLL_BanHang.Instance.IDhoadon();
-                        if (BLL_QLKH.Instance.Check(txtSdt_BanHang.Text))
+                        String s = "Bạn có xác nhận lưu hóa đơn chưa ??";
+                        String s1 = "Xác nhận hóa đơn";
+                        MessageBoxButtons ok = MessageBoxButtons.OKCancel;
+                        DialogResult d = MessageBox.Show(s, s1, ok);
+                        if (d == DialogResult.OK)
                         {
+                            //List<string> idsp = new List<string>();
 
-                            KhachHang a = BLL_QLKH.Instance.Get1KH(txtSdt_BanHang.Text);
-                            int diem = (int)Convert.ToDouble(tb_Thanhtien.Text);
-                            a.DiemTichLuy += diem / 100000;
-                            BLL_QLKH.Instance.UpdateKH(a);
-
-                            {
-                                HoaDon hoadon = new HoaDon();
-                                hoadon.ID_HoaDon = ID_HoaDon;
-                                if(txtChietKhauCTKM_BanHang.Text != "")
-                                {
-                                    hoadon.chietKhauKM = Convert.ToInt32(txtChietKhauCTKM_BanHang.Text);
-                                }
-                                else
-                                {
-                                    hoadon.chietKhauKM = 0;
-                                }
-                                hoadon.SoDienThoai = txtSdt_BanHang.Text;
-                                hoadon.Thanhvien = Convert.ToInt32(txtSale_BanHang.Text);
-                                hoadon.NgayTao = DateTime.Now;
-                                hoadon.TongTien = Convert.ToDouble(tb_Thanhtien.Text);
-                                hoadon.ID_NhanVien = ID;
-                                if (cbbCTKM_BanHang.SelectedItem != null)
-                                    hoadon.ID_KhuyenMai = BLL_BanHang.Instance.GetID_KMByName(cbbCTKM_BanHang.SelectedItem.ToString());
-                                BLL_BanHang.Instance.AddHD(hoadon);
-                            }
-
-                            foreach (DataGridViewRow i in dtGV_Trangchu.Rows)
+                            string ID_HoaDon = BLL_BanHang.Instance.IDhoadon();
+                            if (BLL_QLKH.Instance.Check(txtSdt_BanHang.Text))
                             {
 
-                                string IDGiay = i.Cells["Mã giày"].Value.ToString();
-                                int Soluong = Convert.ToInt32(i.Cells["SL"].Value.ToString());
-                                ChiTietHoaDon chitiet = new ChiTietHoaDon
-                                {
-                                    ID_HoaDon = ID_HoaDon,
-                                    ID_Giay = IDGiay,
-                                    SoLuong = Soluong,
-                                    GiaBan = Convert.ToDouble(i.Cells["Giá(VNĐ)"].Value.ToString()),
-                                    GiaNhap = BLL_BanHang.Instance.GetGiaNhapByID(i.Cells["Mã giày"].Value.ToString())
-                                };
-                                //idsp.Add(IDGiay);
-                                BLL_BanHang.Instance.AddChiTietHD(chitiet);
-                                BLL_KhoGiay.Instance.UpdateKho(IDGiay, Soluong);
+                                KhachHang a = BLL_QLKH.Instance.Get1KH(txtSdt_BanHang.Text);
+                                int diem = (int)Convert.ToDouble(tb_Thanhtien.Text);
+                                a.DiemTichLuy += diem / 100000;
+                                BLL_QLKH.Instance.UpdateKH(a);
 
+                                {
+                                    HoaDon hoadon = new HoaDon();
+                                    hoadon.ID_HoaDon = ID_HoaDon;
+                                    if (txtChietKhauCTKM_BanHang.Text != "")
+                                    {
+                                        hoadon.chietKhauKM = Convert.ToInt32(txtChietKhauCTKM_BanHang.Text);
+                                    }
+                                    else
+                                    {
+                                        hoadon.chietKhauKM = 0;
+                                    }
+                                    hoadon.SoDienThoai = txtSdt_BanHang.Text;
+                                    hoadon.Thanhvien = Convert.ToInt32(txtSale_BanHang.Text);
+                                    hoadon.NgayTao = DateTime.Now;
+                                    hoadon.TongTien = Convert.ToDouble(tb_Thanhtien.Text);
+                                    hoadon.ID_NhanVien = ID;
+                                    if (cbbCTKM_BanHang.SelectedItem != null)
+                                        hoadon.ID_KhuyenMai = BLL_BanHang.Instance.GetID_KMByName(cbbCTKM_BanHang.SelectedItem.ToString());
+                                    BLL_BanHang.Instance.AddHD(hoadon);
+                                }
+
+                                foreach (DataGridViewRow i in dtGV_Trangchu.Rows)
+                                {
+
+                                    string IDGiay = i.Cells["Mã giày"].Value.ToString();
+                                    int Soluong = Convert.ToInt32(i.Cells["SL"].Value.ToString());
+                                    ChiTietHoaDon chitiet = new ChiTietHoaDon
+                                    {
+                                        ID_HoaDon = ID_HoaDon,
+                                        ID_Giay = IDGiay,
+                                        SoLuong = Soluong,
+                                        GiaBan = Convert.ToDouble(i.Cells["Giá(VNĐ)"].Value.ToString()),
+                                        GiaNhap = BLL_BanHang.Instance.GetGiaNhapByID(i.Cells["Mã giày"].Value.ToString())
+                                    };
+                                    //idsp.Add(IDGiay);
+                                    BLL_BanHang.Instance.AddChiTietHD(chitiet);
+                                    BLL_KhoGiay.Instance.UpdateKho(IDGiay, Soluong);
+
+                                }
+                                MessageBox.Show("Đã lưu hoá đơn!!!");
+                                ResetAllDataBanHang();
+                                //foreach(string i in idsp.Distinct())
+                                //{ 
+                                //}
                             }
-                            MessageBox.Show("Đã lưu và xuất hoá đơn!!!");
-                            ResetAllDataBanHang();
-                            //foreach(string i in idsp.Distinct())
-                            //{ 
-                            //}
                         }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số tiền khách đưa không hợp lệ...");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Số tiền khách đưa không hợp lệ...");
+                    MessageBox.Show("Vui lòng nhập số tiền khách đưa ...");
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập số tiền khách đưa ...");
+                MessageBox.Show("Không thể lưu do hóa đơn không hợp lệ, vui lòng kiểm tra lại ...");
             }
+
 
 
         }
@@ -763,6 +789,21 @@ namespace quanlybangiay
             tb_Tientralai.Text = "";
             tb_Mahoadon.Text = "";
             BLL_BanHang.Instance.DelAllData();
+        }
+
+        private void txtIDGiay_BanHang_Leave(object sender, EventArgs e)
+        {
+            lbKTthongTinID_BanHang.Text = "";
+        }
+
+        private void txtSdt_BanHang_Leave(object sender, EventArgs e)
+        {
+            lbKTthongTin_BanHang.Text = "";
+        }
+
+        private void txtIDGiay_BanHang_Click(object sender, EventArgs e)
+        {
+            lbKTthongTin_BanHang.Text = "";
         }
     }
 }
