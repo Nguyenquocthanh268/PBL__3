@@ -162,12 +162,6 @@ namespace quanlybangiay.BLL.BLL_AD
             }
             return data;
         }
-        public KhachHang Get1KH(string SDT)
-        {
-            DataPBL3 db = new DataPBL3();
-            KhachHang a = db.KhachHangs.Find(SDT);
-            return a;
-        }
         public string tachchuoi(string s)
         {
             string h = "";

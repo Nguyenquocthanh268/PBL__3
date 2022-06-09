@@ -44,10 +44,10 @@ namespace quanlybangiay.BLL.BLL_AD
         {
             return db.Khoes.Find(ID);
         }
-        public NhapKho GetNhapkho(string ID)
-        {
-            return (NhapKho)db.NhapKhoes.Where(p => p.ID_Giay == ID);
-        }
+        //public NhapKho GetNhapkho(string ID)
+        //{
+        //    return (NhapKho)db.NhapKhoes.Where(p => p.ID_Giay == ID);
+        //}
  
         public bool check(string ID)
         {
@@ -266,7 +266,7 @@ namespace quanlybangiay.BLL.BLL_AD
                 return (db.Giays.Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
             }
         }
-        public dynamic showAll()
+        public dynamic getAllGiay()
         {
             return (db.Giays.Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
         }

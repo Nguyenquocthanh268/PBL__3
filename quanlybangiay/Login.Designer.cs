@@ -37,12 +37,18 @@ namespace quanlybangiay
             this.txtuser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lb_MessageTK = new System.Windows.Forms.Label();
+            this.lb_MessageMK = new System.Windows.Forms.Label();
+            this.lb_Ms = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.lb_Ms);
+            this.panel1.Controls.Add(this.lb_MessageTK);
+            this.panel1.Controls.Add(this.lb_MessageMK);
             this.panel1.Controls.Add(this.btn_login);
             this.panel1.Controls.Add(this.txtpw);
             this.panel1.Controls.Add(this.label3);
@@ -62,7 +68,7 @@ namespace quanlybangiay
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.btn_login.Location = new System.Drawing.Point(92, 275);
+            this.btn_login.Location = new System.Drawing.Point(92, 280);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(400, 38);
             this.btn_login.TabIndex = 23;
@@ -78,6 +84,9 @@ namespace quanlybangiay
             this.txtpw.PasswordChar = '*';
             this.txtpw.Size = new System.Drawing.Size(400, 38);
             this.txtpw.TabIndex = 12;
+            this.txtpw.Click += new System.EventHandler(this.txtuser_Click);
+            this.txtpw.TextChanged += new System.EventHandler(this.txtpw_TextChanged);
+            this.txtpw.Leave += new System.EventHandler(this.txtpw_Leave);
             // 
             // label3
             // 
@@ -97,6 +106,9 @@ namespace quanlybangiay
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(400, 38);
             this.txtuser.TabIndex = 10;
+            this.txtuser.Click += new System.EventHandler(this.txtuser_Click);
+            this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
+            this.txtuser.Leave += new System.EventHandler(this.txtuser_Leave);
             // 
             // label2
             // 
@@ -119,6 +131,42 @@ namespace quanlybangiay
             this.label1.Size = new System.Drawing.Size(93, 24);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tài khoản";
+            // 
+            // lb_MessageTK
+            // 
+            this.lb_MessageTK.AutoSize = true;
+            this.lb_MessageTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_MessageTK.ForeColor = System.Drawing.Color.Red;
+            this.lb_MessageTK.Location = new System.Drawing.Point(89, 150);
+            this.lb_MessageTK.Name = "lb_MessageTK";
+            this.lb_MessageTK.Size = new System.Drawing.Size(151, 16);
+            this.lb_MessageTK.TabIndex = 173;
+            this.lb_MessageTK.Text = "*Vui lòng nhập tài khoản";
+            this.lb_MessageTK.Visible = false;
+            // 
+            // lb_MessageMK
+            // 
+            this.lb_MessageMK.AutoSize = true;
+            this.lb_MessageMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_MessageMK.ForeColor = System.Drawing.Color.Red;
+            this.lb_MessageMK.Location = new System.Drawing.Point(89, 237);
+            this.lb_MessageMK.Name = "lb_MessageMK";
+            this.lb_MessageMK.Size = new System.Drawing.Size(151, 16);
+            this.lb_MessageMK.TabIndex = 172;
+            this.lb_MessageMK.Text = "*Vui lòng nhập mật khẩu";
+            this.lb_MessageMK.Visible = false;
+            // 
+            // lb_Ms
+            // 
+            this.lb_Ms.AutoSize = true;
+            this.lb_Ms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Ms.ForeColor = System.Drawing.Color.Red;
+            this.lb_Ms.Location = new System.Drawing.Point(89, 237);
+            this.lb_Ms.Name = "lb_Ms";
+            this.lb_Ms.Size = new System.Drawing.Size(245, 16);
+            this.lb_Ms.TabIndex = 174;
+            this.lb_Ms.Text = "*Tài khoản hoặc mật khẩu không đúng...";
+            this.lb_Ms.Visible = false;
             // 
             // Login
             // 
@@ -148,5 +196,8 @@ namespace quanlybangiay
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Label lb_MessageTK;
+        private System.Windows.Forms.Label lb_MessageMK;
+        private System.Windows.Forms.Label lb_Ms;
     }
 }

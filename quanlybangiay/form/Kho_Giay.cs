@@ -32,7 +32,7 @@ namespace quanlybangiay.form
 
         public void show()
         {
-            dataGridView1.DataSource = BLL_KhoGiay.Instance.showAll();
+            dataGridView1.DataSource = BLL_KhoGiay.Instance.getAllGiay();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

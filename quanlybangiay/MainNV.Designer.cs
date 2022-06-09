@@ -523,7 +523,9 @@ namespace quanlybangiay
             this.txtIDGiay_BanHang.Name = "txtIDGiay_BanHang";
             this.txtIDGiay_BanHang.Size = new System.Drawing.Size(138, 29);
             this.txtIDGiay_BanHang.TabIndex = 46;
+            this.txtIDGiay_BanHang.Click += new System.EventHandler(this.txtIDGiay_BanHang_Click);
             this.txtIDGiay_BanHang.TextChanged += new System.EventHandler(this.txtIDGiay_BanHang_TextChanged);
+            this.txtIDGiay_BanHang.Leave += new System.EventHandler(this.txtIDGiay_BanHang_Leave);
             // 
             // txtSL_BanHang
             // 
@@ -886,6 +888,7 @@ namespace quanlybangiay
             this.txtSdt_BanHang.TabIndex = 1;
             this.txtSdt_BanHang.Click += new System.EventHandler(this.txtSdt_BanHang_Click);
             this.txtSdt_BanHang.TextChanged += new System.EventHandler(this.txtSdt_TextChanged);
+            this.txtSdt_BanHang.Leave += new System.EventHandler(this.txtSdt_BanHang_Leave);
             // 
             // label15
             // 
@@ -980,15 +983,15 @@ namespace quanlybangiay
             this.butSAVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.butSAVE.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(225)))));
             this.butSAVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butSAVE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSAVE.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butSAVE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
             this.butSAVE.Image = ((System.Drawing.Image)(resources.GetObject("butSAVE.Image")));
             this.butSAVE.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.butSAVE.Location = new System.Drawing.Point(290, 390);
+            this.butSAVE.Location = new System.Drawing.Point(303, 390);
             this.butSAVE.Name = "butSAVE";
-            this.butSAVE.Size = new System.Drawing.Size(165, 68);
+            this.butSAVE.Size = new System.Drawing.Size(152, 68);
             this.butSAVE.TabIndex = 48;
-            this.butSAVE.Text = "Lưu và In";
+            this.butSAVE.Text = "Lưu  ";
             this.butSAVE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.butSAVE.UseVisualStyleBackColor = false;
             this.butSAVE.Click += new System.EventHandler(this.butSAVE_Click);

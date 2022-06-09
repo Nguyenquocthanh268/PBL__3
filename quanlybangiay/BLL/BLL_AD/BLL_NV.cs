@@ -79,19 +79,19 @@ namespace quanlybangiay.BLL.BLL_AD
                                     .Select(p => p.Username).ToList();
         }
 
-        public TaiKhoan GetTKByIDNV(string ID)
-        {
-            TaiKhoan s = new TaiKhoan();
-            foreach (TaiKhoan i in db.TaiKhoans)
-            {
-                if (ID == i.ID_NhanVien)
-                {
-                    s = i;
-                    break;
-                }
-            }
-            return s;
-        }
+        //public TaiKhoan GetTKByIDNV(string ID)
+        //{
+        //    TaiKhoan s = new TaiKhoan();
+        //    foreach (TaiKhoan i in db.TaiKhoans)
+        //    {
+        //        if (ID == i.ID_NhanVien)
+        //        {
+        //            s = i;
+        //            break;
+        //        }
+        //    }
+        //    return s;
+        //}
 
         public void Execute(NhanVien s, TaiKhoan t)
         {
