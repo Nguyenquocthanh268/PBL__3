@@ -572,7 +572,7 @@ namespace quanlybangiay
         }
         public void ResetDataSP()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainNV));
+            //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainNV));
             txtNameSP_BanHang.Text = "";
             txtHang_BanHang.Text = "";
             txtSize_BanHang.Text = "";
