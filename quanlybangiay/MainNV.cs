@@ -251,6 +251,12 @@ namespace quanlybangiay
                 txt_mkm.Text = "";
                 txt_xacnhan.Text = "";
             }
+            if(tabControl1.SelectedIndex == 1)
+            {
+                txtSdtKhachHang.Text = "";
+                txtNameKhachHang.Text = "";
+                lbCheckSdt.Text = "";
+            }
         }
 
 
@@ -577,7 +583,7 @@ namespace quanlybangiay
             rdHetHang.ForeColor = Color.SlateGray;
             but_AddGiay.Enabled = false;
             txtNameGiay.Text = "Tên SP";
-            pic_Giay.Image = ((System.Drawing.Image)(resources.GetObject("pic_Giay.Image")));
+            pic_Giay.Image = global::quanlybangiay.Properties.Resources.img__1_1;
         }
         //******************************************************************************************************
 
