@@ -566,7 +566,7 @@ namespace quanlybangiay
         }
         public void ResetDataSP()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainNV));
+            //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainNV));
             txtNameSP_BanHang.Text = "";
             txtHang_BanHang.Text = "";
             txtSize_BanHang.Text = "";
@@ -577,7 +577,7 @@ namespace quanlybangiay
             rdHetHang.ForeColor = Color.SlateGray;
             but_AddGiay.Enabled = false;
             txtNameGiay.Text = "Tên SP";
-            pic_Giay.Image = ((System.Drawing.Image)(resources.GetObject("pic_Giay.Image")));
+            pic_Giay.Image = global::quanlybangiay.Properties.Resources.img__1_1;
         }
         //******************************************************************************************************
 
