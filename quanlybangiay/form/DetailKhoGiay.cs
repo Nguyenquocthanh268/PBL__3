@@ -51,7 +51,7 @@ namespace quanlybangiay.form
                     {
                         BLL_KhoGiay.Instance.ADD_nhapkho(getNhapKHO_Giay());
                     }
-                    MessageBox.Show("Đã cập nhật !!!");
+                    MessageBox.Show("Thực hiện thành công !");
                     d();
                     
                     this.Close();
@@ -76,7 +76,8 @@ namespace quanlybangiay.form
                 if (index == 1)
                 {
                     pictureBox7.Enabled = false;
-
+                    btn_load.Visible= false;
+                    label17.Visible=false;
                     //  txtHang.Enabled = false;
                     cb_hang.Enabled = false;
                     txtGiaBan.Enabled = false;
@@ -171,7 +172,7 @@ namespace quanlybangiay.form
             }
             catch (Exception e)
             {
-                MessageBox.Show("Nhập vào không hợp lệ");
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
                 return null;
             }
         }
@@ -191,7 +192,7 @@ namespace quanlybangiay.form
             }
             catch (Exception e)
             {
-                MessageBox.Show("Nhập vào không hợp lệ");
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
                 return null;
             }
         }
@@ -216,7 +217,7 @@ namespace quanlybangiay.form
             }
             catch (Exception e)
             {
-                MessageBox.Show("Nhập vào không hợp lệ");
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
                 return null;
             }
         }
@@ -386,7 +387,7 @@ namespace quanlybangiay.form
                         {
                             if (BLL_KhoGiay.Instance.check(txtIDGiay.Text) && cb_hang.Text != "")
                             {
-                                MessageBox.Show("ID đã tồn tại ....");
+                                MessageBox.Show("ID giày đã tồn tại ....");
                                 cb_hang.SelectedIndex = -1;
                             }
                         }
@@ -400,6 +401,18 @@ namespace quanlybangiay.form
             }
         }
 
-       
+        private void btn_load_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            PictureBox ptr = new PictureBox();
+            string fileName = null;
+            dlg.Filter = "Select files(*.jpg;*.png)|*.jpg;*png";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                fileName = dlg.FileName;
+                pictureBox7.Image = Image.FromFile(fileName.ToString());
+                pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
     }
 }

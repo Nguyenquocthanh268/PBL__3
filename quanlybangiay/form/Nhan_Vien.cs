@@ -93,12 +93,14 @@ namespace quanlybangiay.form
                         string ID = i.Cells["ID_NhanVien"].Value.ToString();
                         BLL_NV.Instance.Delete(ID);
                     }
+                    ShowDtg();
+                    MessageBox.Show("Xóa thành công !");
                 }
             } else
             {
                 MessageBox.Show("Vui lòng chọn nhân viên muốn xoá!");
             }
-            ShowDtg();
+           
         }
 
         private void btnSort_Click(object sender, EventArgs e)
@@ -111,7 +113,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn Item ...");
+                MessageBox.Show("Vui lòng chọn thuộc tính sắp xếp !");
             }
         
         }

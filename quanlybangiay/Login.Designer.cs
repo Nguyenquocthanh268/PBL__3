@@ -31,20 +31,23 @@ namespace quanlybangiay
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_Ms = new System.Windows.Forms.Label();
+            this.lb_MessageTK = new System.Windows.Forms.Label();
+            this.lb_MessageMK = new System.Windows.Forms.Label();
             this.btn_login = new System.Windows.Forms.Button();
             this.txtpw = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtuser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lb_MessageTK = new System.Windows.Forms.Label();
-            this.lb_MessageMK = new System.Windows.Forms.Label();
-            this.lb_Ms = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.panel1.Controls.Add(this.lb_Ms);
             this.panel1.Controls.Add(this.lb_MessageTK);
@@ -55,14 +58,52 @@ namespace quanlybangiay
             this.panel1.Controls.Add(this.txtuser);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(584, 361);
             this.panel1.TabIndex = 0;
             // 
+            // lb_Ms
+            // 
+            this.lb_Ms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lb_Ms.AutoSize = true;
+            this.lb_Ms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Ms.ForeColor = System.Drawing.Color.Red;
+            this.lb_Ms.Location = new System.Drawing.Point(89, 237);
+            this.lb_Ms.Name = "lb_Ms";
+            this.lb_Ms.Size = new System.Drawing.Size(244, 16);
+            this.lb_Ms.TabIndex = 174;
+            this.lb_Ms.Text = "*Tài khoản hoặc mật khẩu không đúng...";
+            this.lb_Ms.Visible = false;
+            // 
+            // lb_MessageTK
+            // 
+            this.lb_MessageTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lb_MessageTK.AutoSize = true;
+            this.lb_MessageTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_MessageTK.ForeColor = System.Drawing.Color.Red;
+            this.lb_MessageTK.Location = new System.Drawing.Point(89, 150);
+            this.lb_MessageTK.Name = "lb_MessageTK";
+            this.lb_MessageTK.Size = new System.Drawing.Size(150, 16);
+            this.lb_MessageTK.TabIndex = 173;
+            this.lb_MessageTK.Text = "*Vui lòng nhập tài khoản";
+            this.lb_MessageTK.Visible = false;
+            // 
+            // lb_MessageMK
+            // 
+            this.lb_MessageMK.AutoSize = true;
+            this.lb_MessageMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_MessageMK.ForeColor = System.Drawing.Color.Red;
+            this.lb_MessageMK.Location = new System.Drawing.Point(89, 237);
+            this.lb_MessageMK.Name = "lb_MessageMK";
+            this.lb_MessageMK.Size = new System.Drawing.Size(150, 16);
+            this.lb_MessageMK.TabIndex = 172;
+            this.lb_MessageMK.Text = "*Vui lòng nhập mật khẩu";
+            this.lb_MessageMK.Visible = false;
+            // 
             // btn_login
             // 
+            this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.btn_login.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(225)))));
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -78,6 +119,7 @@ namespace quanlybangiay
             // 
             // txtpw
             // 
+            this.txtpw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpw.Location = new System.Drawing.Point(92, 196);
             this.txtpw.Name = "txtpw";
@@ -90,6 +132,7 @@ namespace quanlybangiay
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
@@ -101,6 +144,7 @@ namespace quanlybangiay
             // 
             // txtuser
             // 
+            this.txtuser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.Location = new System.Drawing.Point(92, 109);
             this.txtuser.Name = "txtuser";
@@ -112,6 +156,7 @@ namespace quanlybangiay
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
@@ -123,6 +168,7 @@ namespace quanlybangiay
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
@@ -131,42 +177,6 @@ namespace quanlybangiay
             this.label1.Size = new System.Drawing.Size(93, 24);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tài khoản";
-            // 
-            // lb_MessageTK
-            // 
-            this.lb_MessageTK.AutoSize = true;
-            this.lb_MessageTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_MessageTK.ForeColor = System.Drawing.Color.Red;
-            this.lb_MessageTK.Location = new System.Drawing.Point(89, 150);
-            this.lb_MessageTK.Name = "lb_MessageTK";
-            this.lb_MessageTK.Size = new System.Drawing.Size(151, 16);
-            this.lb_MessageTK.TabIndex = 173;
-            this.lb_MessageTK.Text = "*Vui lòng nhập tài khoản";
-            this.lb_MessageTK.Visible = false;
-            // 
-            // lb_MessageMK
-            // 
-            this.lb_MessageMK.AutoSize = true;
-            this.lb_MessageMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_MessageMK.ForeColor = System.Drawing.Color.Red;
-            this.lb_MessageMK.Location = new System.Drawing.Point(89, 237);
-            this.lb_MessageMK.Name = "lb_MessageMK";
-            this.lb_MessageMK.Size = new System.Drawing.Size(151, 16);
-            this.lb_MessageMK.TabIndex = 172;
-            this.lb_MessageMK.Text = "*Vui lòng nhập mật khẩu";
-            this.lb_MessageMK.Visible = false;
-            // 
-            // lb_Ms
-            // 
-            this.lb_Ms.AutoSize = true;
-            this.lb_Ms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ms.ForeColor = System.Drawing.Color.Red;
-            this.lb_Ms.Location = new System.Drawing.Point(89, 237);
-            this.lb_Ms.Name = "lb_Ms";
-            this.lb_Ms.Size = new System.Drawing.Size(245, 16);
-            this.lb_Ms.TabIndex = 174;
-            this.lb_Ms.Text = "*Tài khoản hoặc mật khẩu không đúng...";
-            this.lb_Ms.Visible = false;
             // 
             // Login
             // 

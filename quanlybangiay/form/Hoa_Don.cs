@@ -94,7 +94,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn Item ...");
+                MessageBox.Show("Vui lòng chọn thuộc tính sắp xếp !");
             }
             
         }

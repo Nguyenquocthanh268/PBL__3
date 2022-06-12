@@ -76,20 +76,34 @@ namespace quanlybangiay
             string mkc = txt_mkc.Text;
             string mkm = txt_mkm.Text;
             string nlmk = txt_xacnhan.Text;
-            if (BLL_Login.Instance.checkMK(mkm))
+            if (mkc != "" && mkm != "" && nlmk != "")
             {
-                if (BLL_Login.Instance.Update(USer, mkc, mkm, nlmk))
+                if (BLL_Login.Instance.checkMK(mkm))
                 {
-                    MessageBox.Show("Đổi thành công");
+                    if (BLL_Login.Instance.Kt(mkc, USer))
+                    {
+                        if (BLL_Login.Instance.Update(USer, mkc, mkm, nlmk))
+                        {
+                            MessageBox.Show("Đổi thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng kiểm tra lại MK");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mật khẩu cũ không chính xác !");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Kiểm tra lại MK");
+                    MessageBox.Show("Mật khẩu của bạn ít hơn 6 ký tự !");
                 }
             }
             else
             {
-                MessageBox.Show("Mật khẩu của bạn ít hơn 6 ký tự vui lòng kiểm tra lại !");
+                MessageBox.Show("vui lòng điền đầy đủ thông tin !");
             }
         }
 
@@ -117,7 +131,7 @@ namespace quanlybangiay
         //Form Kiem Kho
         public void LoadCBBKHO()
         {
-            foreach (string i in BLL_KiemkhoNV.Instance.size().Distinct())
+            foreach (string i in BLL_KiemkhoNV.Instance.SapxepSize(BLL_KiemkhoNV.Instance.size()).Distinct())
             {
                 cb_sizeKHO.Items.Add(i);
             }
@@ -226,6 +240,11 @@ namespace quanlybangiay
                 cb_hangKHO.SelectedIndex = -1;
                 cb_sizeKHO.SelectedIndex = -1;
                 cb_tenKHO.SelectedIndex = -1;
+                cb_tenKHO.Items.Clear();
+                foreach (string i in BLL_KiemkhoNV.Instance.ten().Distinct())
+                {
+                    cb_tenKHO.Items.Add(i);
+                }
                 dtGV_Kiemkho.DataSource = null;
                 tb_ten.Text = "TÊN GIÀY";
                 pic_kho.Image= global::quanlybangiay.Properties.Resources.img__1_1;
@@ -804,6 +823,19 @@ namespace quanlybangiay
         private void txtIDGiay_BanHang_Click(object sender, EventArgs e)
         {
             lbKTthongTin_BanHang.Text = "";
+        }
+
+        private void cb_hangKHO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cb_hangKHO.SelectedIndex >= 0)
+            {
+                string hang = cb_hangKHO.SelectedItem.ToString();
+                cb_tenKHO.Items.Clear();
+                foreach (string i in BLL_KiemkhoNV.Instance.TenOfHang(hang).Distinct())
+                {
+                    cb_tenKHO.Items.Add(i);
+                }
+            }
         }
     }
 }

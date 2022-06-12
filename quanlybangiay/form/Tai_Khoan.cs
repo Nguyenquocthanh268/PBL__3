@@ -26,20 +26,34 @@ namespace quanlybangiay.form
             string mkc = txt_mkc.Text;
             string mkm = txt_mkm.Text;
             string nlmk = txt_nlmk.Text;
-            if (BLL_Login.Instance.checkMK(mkm))
+            if(mkc !="" && mkm !="" && nlmk != "")
             {
-                if (BLL_Login.Instance.Update(ID, mkc, mkm, nlmk))
+                if (BLL_Login.Instance.checkMK(mkm))
                 {
-                    MessageBox.Show("Đổi thành công");
+                    if (BLL_Login.Instance.Kt( mkc,ID))
+                    {
+                        if (BLL_Login.Instance.Update(ID, mkc, mkm, nlmk))
+                        {
+                            MessageBox.Show("Đổi thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng kiểm tra lại MK");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mật khẩu cũ không chính xác !");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Kiểm tra lại MK");
+                    MessageBox.Show("Mật khẩu của bạn ít hơn 6 ký tự !");
                 }
             }
             else
             {
-                MessageBox.Show("Mật khẩu của bạn ít hơn 6 ký tự vui lòng kiểm tra lại !");
+                MessageBox.Show("vui lòng điền đầy đủ thông tin !");
             }
            
 
