@@ -36,7 +36,36 @@ namespace quanlybangiay.BLL.BLL_NV
             }
             return k;
         }
-
+        public List<string> SapxepSize(List<string> l)
+        {
+            List<string> s = new List<string>();
+            for (int i = 0; i < l.Count - 1; i++)
+            {
+                for (int j = i + 1; j < l.Count; j++)
+                {
+                    if (Convert.ToInt32(l[i]) > Convert.ToInt32(l[j]))
+                    {
+                        String temp = l[i];
+                        l[i] = l[j];
+                        l[j] = temp;
+                    }
+                }
+            }
+            s = l;
+            return s;
+        }
+        public List<string> TenOfHang(string s)
+        {
+            List<string> data = new List<string>();
+            foreach (Giay i in db.Giays)
+            {
+                if (i.HangGiay == s)
+                {
+                    data.Add(i.TenGiay);
+                }
+            }
+            return data;
+        }
         public List<string> size()
         {
             List<string> l = new List<string>();

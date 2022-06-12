@@ -149,7 +149,7 @@ namespace quanlybangiay.form
             this.radNu.Location = new System.Drawing.Point(779, 44);
             this.radNu.Margin = new System.Windows.Forms.Padding(2);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(43, 20);
+            this.radNu.Size = new System.Drawing.Size(42, 20);
             this.radNu.TabIndex = 165;
             this.radNu.TabStop = true;
             this.radNu.Text = "Nữ";
@@ -163,7 +163,7 @@ namespace quanlybangiay.form
             this.radNam.Location = new System.Drawing.Point(699, 44);
             this.radNam.Margin = new System.Windows.Forms.Padding(2);
             this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(55, 20);
+            this.radNam.Size = new System.Drawing.Size(54, 20);
             this.radNam.TabIndex = 166;
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
@@ -460,6 +460,7 @@ namespace quanlybangiay.form
             this.label17.Size = new System.Drawing.Size(98, 20);
             this.label17.TabIndex = 151;
             this.label17.Text = "Thêm ảnh";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // openFileDialog1
             // 

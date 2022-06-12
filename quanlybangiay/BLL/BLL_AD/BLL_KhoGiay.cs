@@ -215,7 +215,25 @@ namespace quanlybangiay.BLL.BLL_AD
             }
             return k;
         }
-     
+        public List<string> SapxepSize(List<string> l)
+        {
+            List<string> s = new List<string>();
+            for(int i = 0; i < l.Count-1; i++)
+            {
+                for(int j = i + 1; j < l.Count; j++)
+                {
+                    if (Convert.ToInt32(l[i]) > Convert.ToInt32(l[j]))
+                    {
+                        String temp =l[i];
+                        l[i] = l[j];
+                        l[j] = temp;
+                    }
+                }
+            }
+            s = l;
+            return s;
+        }
+      
         public dynamic searh_Size(string ten, int size)
         {
             if(ten == "")

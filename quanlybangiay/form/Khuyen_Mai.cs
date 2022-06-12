@@ -60,7 +60,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn dòng cần Edit");
+                MessageBox.Show("Vui lòng chọn CTKM cần cập nhật !");
             }
         }
 
@@ -93,14 +93,15 @@ namespace quanlybangiay.form
                 if (getCTKM() != null)
                 {
                     BLL_CTKM.Instance.ExcuteDB(getCTKM());
-                    MessageBox.Show("Đã cập nhật chương trình khuyến mãi !!!");
                     Show(0, "");
+                    MessageBox.Show("Đã thực hiện thành công !!!");
+                    
                     Khoa();
                 }
             }
             else
             {
-                MessageBox.Show("Điền thông tin đầy đủ");
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin !");
             }
 
 
@@ -183,12 +184,14 @@ namespace quanlybangiay.form
 
 
                     }
+                    Show(0, "");
+                    MessageBox.Show("Xóa thành công !!!");
                 }
-                Show(0, "");
+                
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn dòng cần xóa");
+                MessageBox.Show("Vui lòng chọn CTKM cần xóa !");
             }
         }
 
@@ -201,7 +204,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn Item...");
+                MessageBox.Show("Vui lòng chọn thuộc tính sắp xếp !");
             }
 
         }

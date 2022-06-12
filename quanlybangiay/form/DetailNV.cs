@@ -180,6 +180,7 @@ namespace quanlybangiay.form
             OpenFileDialog dlg = new OpenFileDialog();
             PictureBox ptr = new PictureBox();
             string fileName = null;
+            dlg.Filter = "Select files(*.jpg;*.png)|*.jpg;*png";
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 fileName = dlg.FileName;
@@ -251,6 +252,11 @@ namespace quanlybangiay.form
             {
                 tb_2.Text = "Vui Lòng Kiểm tra lại SĐT";
             }
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

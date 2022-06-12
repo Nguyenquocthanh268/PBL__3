@@ -144,15 +144,15 @@ namespace quanlybangiay.BLL.BLL_AD
         {
             if (index == 0)
             {
-                return (db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien }).OrderBy(p => p.TenKhachHang)).ToList();
+                return (db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien, p.ID_NhanVien }).OrderBy(p => p.TenKhachHang)).ToList();
             }
             else if (index == 1)
             {
-                return (db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien }).OrderBy(p => p.NgayTao)).ToList();
+                return (db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien, p.ID_NhanVien }).OrderBy(p => p.NgayTao)).ToList();
             }
             else
             {
-                return (db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien }).OrderBy(p => p.TongTien)).ToList();
+                return (db.HoaDons.Select(p => new { p.ID_HoaDon, p.KhachHang.TenKhachHang, p.SoDienThoai, p.NgayTao, p.TongTien, p.ID_NhanVien }).OrderBy(p => p.TongTien)).ToList();
             }
 
         }

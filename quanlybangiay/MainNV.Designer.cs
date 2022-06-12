@@ -479,7 +479,7 @@ namespace quanlybangiay
             this.rdHetHang.ForeColor = System.Drawing.Color.SlateGray;
             this.rdHetHang.Location = new System.Drawing.Point(265, 272);
             this.rdHetHang.Name = "rdHetHang";
-            this.rdHetHang.Size = new System.Drawing.Size(88, 20);
+            this.rdHetHang.Size = new System.Drawing.Size(87, 20);
             this.rdHetHang.TabIndex = 56;
             this.rdHetHang.TabStop = true;
             this.rdHetHang.Text = "Hết hàng";
@@ -493,7 +493,7 @@ namespace quanlybangiay
             this.rdConHang.ForeColor = System.Drawing.Color.SlateGray;
             this.rdConHang.Location = new System.Drawing.Point(155, 273);
             this.rdConHang.Name = "rdConHang";
-            this.rdConHang.Size = new System.Drawing.Size(91, 20);
+            this.rdConHang.Size = new System.Drawing.Size(90, 20);
             this.rdConHang.TabIndex = 55;
             this.rdConHang.TabStop = true;
             this.rdConHang.Text = "Còn hàng";
@@ -1619,6 +1619,7 @@ namespace quanlybangiay
             this.cb_hangKHO.Name = "cb_hangKHO";
             this.cb_hangKHO.Size = new System.Drawing.Size(189, 28);
             this.cb_hangKHO.TabIndex = 42;
+            this.cb_hangKHO.SelectedIndexChanged += new System.EventHandler(this.cb_hangKHO_SelectedIndexChanged);
             // 
             // label42
             // 
@@ -2216,7 +2217,7 @@ namespace quanlybangiay
             this.nu.Enabled = false;
             this.nu.Location = new System.Drawing.Point(354, 163);
             this.nu.Name = "nu";
-            this.nu.Size = new System.Drawing.Size(45, 20);
+            this.nu.Size = new System.Drawing.Size(44, 20);
             this.nu.TabIndex = 15;
             this.nu.TabStop = true;
             this.nu.Text = "Nữ";
@@ -2228,7 +2229,7 @@ namespace quanlybangiay
             this.Nam.Enabled = false;
             this.Nam.Location = new System.Drawing.Point(257, 163);
             this.Nam.Name = "Nam";
-            this.Nam.Size = new System.Drawing.Size(58, 20);
+            this.Nam.Size = new System.Drawing.Size(57, 20);
             this.Nam.TabIndex = 14;
             this.Nam.TabStop = true;
             this.Nam.Text = "Nam";

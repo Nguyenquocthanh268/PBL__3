@@ -57,7 +57,7 @@ namespace quanlybangiay.form
                     };
                     BLL_KhoGiay.Instance.NhapKho(g, k, n);
                     show(IDGiay);
-                    MessageBox.Show("Đã nhập thành công !!!");
+                    MessageBox.Show("Nhập kho thành công !!!");
                 }catch (Exception ex)
                 {
                     MessageBox.Show("Nhập vào không hợp lệ");

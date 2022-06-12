@@ -18,7 +18,7 @@ namespace quanlybangiay.form
             InitializeComponent();
             cbb_sort.Items.AddRange(BLL_KhoGiay.Instance.CBBsort().ToArray());
             dataGridView1.RowTemplate.Height = 40;
-            foreach (string i in BLL_KhoGiay.Instance.CBBsize().Distinct())
+            foreach (string i in BLL_KhoGiay.Instance.SapxepSize(BLL_KhoGiay.Instance.CBBsize()).Distinct())
             {
                 cbb_size.Items.Add(i);
             }
@@ -124,7 +124,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn giày chỉnh sửa!");
+                MessageBox.Show("Vui lòng chọn giày cần chỉnh sửa !");
 
             }
         }
@@ -144,13 +144,16 @@ namespace quanlybangiay.form
                         string ID = i.Cells["ID_Giay"].Value.ToString();
                         BLL_KhoGiay.Instance.Delete(ID);
                     }
+                   
+                    show();
+                    MessageBox.Show("Xóa thành công!");
                 }
             }
             else
             {
                 MessageBox.Show("Vui lòng chọn giày muốn xoá!");
             }
-            show();
+            
           
     }
 
@@ -165,7 +168,7 @@ namespace quanlybangiay.form
         }
         else
         {
-            MessageBox.Show("Vui lòng chọn giày để nhập!");
+            MessageBox.Show("Vui lòng chọn giày cần nhập kho !");
 
         }
     }
@@ -179,7 +182,7 @@ namespace quanlybangiay.form
         }
         else
         {
-            MessageBox.Show("Vui lòng chọn Item!");
+            MessageBox.Show("Vui lòng chọn thuộc tính sắp xếp !");
         }
 
     }
@@ -187,7 +190,7 @@ namespace quanlybangiay.form
         {
             cbb_hang.Items.Clear();
             cbb_size.Items.Clear();
-            foreach (string i in BLL_KhoGiay.Instance.CBBsize().Distinct())
+            foreach (string i in BLL_KhoGiay.Instance.SapxepSize(BLL_KhoGiay.Instance.CBBsize()).Distinct())
             {
                 cbb_size.Items.Add(i);
             }

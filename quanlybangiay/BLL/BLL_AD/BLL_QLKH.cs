@@ -30,7 +30,7 @@ namespace quanlybangiay.BLL.BLL_AD
             DataPBL3 db = new DataPBL3();
             if(A == 1)
             {
-                var l1 = db.KhachHangs.Where(p => p.SoDienThoai.Contains(txt)).Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy });
+                var l1 = db.KhachHangs.Where(p => p.SoDienThoai==txt).Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy });
                 return l1.ToList();
             }
             else if (A == 2)

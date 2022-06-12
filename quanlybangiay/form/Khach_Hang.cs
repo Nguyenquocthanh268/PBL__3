@@ -62,26 +62,35 @@ namespace quanlybangiay.form
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (tbName.Text != "") {
+            if ( tbSdt.Text !="") {
                 if (dataGridView1.SelectedRows.Count == 1)
                 {
-                    KhachHang s = new KhachHang
+                  if(tbName.Text != "")
                     {
-                        SoDienThoai = tbSdt.Text.ToString(),
-                        TenKhachHang = tbName.Text.ToString(),
-                        DiemTichLuy = Convert.ToInt32(tbDiemTL.Text.ToString()),
-                    };
-                    BLL_QLKH.Instance.UpdateKH(s);
-                    Show();
+                        KhachHang s = new KhachHang
+                        {
+                            SoDienThoai = tbSdt.Text.ToString(),
+                            TenKhachHang = tbName.Text.ToString(),
+                            DiemTichLuy = Convert.ToInt32(tbDiemTL.Text.ToString()),
+                        };
+                        BLL_QLKH.Instance.UpdateKH(s);
+                        Show();
+                        MessageBox.Show("Cập nhật thành công !");
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("*Vui lòng điền đầy đủ thông tin ");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("*Vui lòng chọn 1 khách hàng để cập nhật thông tin ...");
+                    MessageBox.Show("Vui lòng chọn khách hàng cần cập nhật !");
                 }
             }
             else
             {
-                MessageBox.Show("*Vui lòng chọn 1 khách hàng để cập nhật thông tin ...");
+                MessageBox.Show("Vui lòng chọn khách hàng cần cập nhật !");
             }
         }
 
@@ -100,12 +109,15 @@ namespace quanlybangiay.form
                         String Sdt = i.Cells["SoDienThoai"].Value.ToString();
                         BLL_QLKH.Instance.DelKH(Sdt);
                     }
+                    Show();
+                    MessageBox.Show("Xóa thành công");
+                    
                 }
-                Show();
+               
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn dòng cần Xóa !!!");
+                MessageBox.Show("Vui lòng chọn khách hàng cần xóa !");
             }
         }
 
@@ -117,7 +129,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn Item ...");
+                MessageBox.Show("Vui lòng chọn thuộc tính sắp xếp !");
             }
         }
 
