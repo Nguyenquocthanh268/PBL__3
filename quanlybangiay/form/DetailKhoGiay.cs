@@ -46,16 +46,24 @@ namespace quanlybangiay.form
                 if (getGiay() != null && getKhoGiay() != null && getNhapKHO_Giay() != null)
                 {
 
-                    BLL_KhoGiay.Instance.Excute(getGiay(), getKhoGiay());
-                    if (Convert.ToInt32(txtSLNhap.Text) > 0 && index == 2)
+                    if (BLL_KhoGiay.Instance.CheckSizeOFTen(txtName.Text, txtSize.Text))
                     {
-                        BLL_KhoGiay.Instance.ADD_nhapkho(getNhapKHO_Giay());
+                        BLL_KhoGiay.Instance.Excute(getGiay(), getKhoGiay());
+                        if (Convert.ToInt32(txtSLNhap.Text) > 0 && index == 2)
+                        {
+                            BLL_KhoGiay.Instance.ADD_nhapkho(getNhapKHO_Giay());
+                        }
+                        MessageBox.Show("Thực hiện thành công !");
+                        d();
+
+                        this.Close();
+                        d2();
                     }
-                    MessageBox.Show("Thực hiện thành công !");
-                    d();
-                    
-                    this.Close();
-                    d2();
+                    else
+                    {
+                        MessageBox.Show("Giày đã tồn tại Size ");
+                        txtSize.Text = "";
+                    }
                 }
             }
             else
@@ -97,7 +105,7 @@ namespace quanlybangiay.form
                     txtName.Enabled = true;
                     txtSize.Enabled = true;
                     //  txtHang.Enabled = true;
-                    cb_hang.Enabled = true;
+                    cb_hang.Enabled = false;
                     cb_hang.BackColor = Color.FromArgb(255, 255, 255);
                     txtGiaBan.BackColor = Color.FromArgb(255, 255, 255);
                     txtName.BackColor = Color.FromArgb(255, 255, 255);
@@ -222,20 +230,7 @@ namespace quanlybangiay.form
             }
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-            if (txtSize.Text != "" && index == 2)
-            {
-                txtSize.Enabled = true;
-                txtName.Enabled = true;
-
-                if (txtName.Text.Length == 6)
-                {
-                    txtIDGiay.Text = BLL_KhoGiay.Instance.ID_giay(txtName.Text, txtSize.Text);
-                }
-
-            }
-        }
+      
 
 
 
@@ -302,17 +297,7 @@ namespace quanlybangiay.form
                 if (Convert.ToInt32(txtSize.Text) > 0)
                 {
                     tb_1.Text = "";
-                    if (txtName.Text != "" && index == 2)
-                    {
-                        txtSize.Enabled = true;
-                        txtName.Enabled = true;
-
-                        if (txtSize.Text.Length == 2)
-                        {
-                            txtIDGiay.Text = BLL_KhoGiay.Instance.ID_giay(txtName.Text, txtSize.Text);
-                        }
-
-                    }
+                  
                 }
 
 
@@ -373,33 +358,7 @@ namespace quanlybangiay.form
             }
         }
 
-        private void cb_hang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (index == 2)
-
-            {
-              
-                if(cb_hang.Text != "")
-                {
-                    if (txtName.Text != "" && txtSize.Text != "")
-                    {
-                        if (index == 2)
-                        {
-                            if (BLL_KhoGiay.Instance.check(txtIDGiay.Text) && cb_hang.Text != "")
-                            {
-                                MessageBox.Show("ID giày đã tồn tại ....");
-                                cb_hang.SelectedIndex = -1;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Vui lòng điền ID và size đầu tiên");
-                        cb_hang.Text = "";
-                    }
-                }
-            }
-        }
+       
 
         private void btn_load_Click(object sender, EventArgs e)
         {
@@ -413,6 +372,11 @@ namespace quanlybangiay.form
                 pictureBox7.Image = Image.FromFile(fileName.ToString());
                 pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+        }
+
+        private void cb_hang_Leave(object sender, EventArgs e)
+        {
+            txtIDGiay.Text = BLL_KhoGiay.Instance.RangeIDgiay(cb_hang.Text);
         }
     }
 }

@@ -456,7 +456,7 @@ namespace quanlybangiay
             DateTime d = DateTime.Now;
             //cbbCTKM_BanHang.Items.AddRange(BLL_BanHang.Instance.GetCBBKhuyenmai(d,a).Distinct().ToArray());
             cbbCTKM_BanHang.Items.AddRange(BLL_BanHang.Instance.GetCBBKhuyenmai(d).Distinct().ToArray());
-
+            cb_ID_banghang.Items.AddRange(BLL_BanHang.Instance.getID().ToArray());
         }
         private void cbbCTKM_BanHang_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -481,18 +481,18 @@ namespace quanlybangiay
         private void butCheckIDGiay_Click(object sender, EventArgs e)
         {
             ResetDataSP();
-            if(txtIDGiay_BanHang.Text != "")
+            if(cb_ID_banghang.Text != "")
             {
-                if (BLL_KhoGiay.Instance.check(txtIDGiay_BanHang.Text))
+                if (BLL_KhoGiay.Instance.check(cb_ID_banghang.Text))
                 {
-                    int Soluong = Convert.ToInt32(BLL_KhoGiay.Instance.GetGiay_INKho(txtIDGiay_BanHang.Text).SoLuongCon);
+                    int Soluong = Convert.ToInt32(BLL_KhoGiay.Instance.GetGiay_INKho(cb_ID_banghang.Text).SoLuongCon);
                     //but_AddGiay.Enabled = true;
-                    Giay a = BLL_KhoGiay.Instance.GetGiayByID(txtIDGiay_BanHang.Text);
+                    Giay a = BLL_KhoGiay.Instance.GetGiayByID(cb_ID_banghang.Text);
                     txtNameSP_BanHang.Text = a.TenGiay;
                     txtHang_BanHang.Text = a.HangGiay;
                     txtSize_BanHang.Text = Convert.ToString(a.Size);
                     //txtSL_BanHang.Text = Soluong.ToString();
-                    int aa = BLL_BanHang.Instance.GetSLSP(txtIDGiay_BanHang.Text);
+                    int aa = BLL_BanHang.Instance.GetSLSP(cb_ID_banghang.Text);
                     txtSL_BanHang.Text = Convert.ToString(Soluong - aa);
                     if (Convert.ToInt32(txtSL_BanHang.Text) > 0)
                     {
@@ -527,7 +527,7 @@ namespace quanlybangiay
 
         private void but_AddGiay_Click(object sender, EventArgs e)
         {
-            int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
+            int Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(cb_ID_banghang.Text).SoLuongCon);
 
             if (txtSdt_BanHang.Text != "")
             {
@@ -536,10 +536,10 @@ namespace quanlybangiay
                 {
                     if (Convert.ToInt32(txtSL_BanHang.Text) > 0)
                     {
-                        BLL_BanHang.Instance.AddDL(txtIDGiay_BanHang.Text, txtHang_BanHang.Text, txtNameSP_BanHang.Text, Convert.ToInt32(txtSize_BanHang.Text), BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text), 1, BLL_KhoGiay.Instance.GetGiaBanGiayByID(txtIDGiay_BanHang.Text) * 1);
+                        BLL_BanHang.Instance.AddDL(cb_ID_banghang.Text, txtHang_BanHang.Text, txtNameSP_BanHang.Text, Convert.ToInt32(txtSize_BanHang.Text), BLL_KhoGiay.Instance.GetGiaBanGiayByID(cb_ID_banghang.Text), 1, BLL_KhoGiay.Instance.GetGiaBanGiayByID(cb_ID_banghang.Text) * 1);
                         ResetData();
                         //but_AddGiay.Enabled = false;
-                        int a = BLL_BanHang.Instance.GetSLSP(txtIDGiay_BanHang.Text);
+                        int a = BLL_BanHang.Instance.GetSLSP(cb_ID_banghang.Text);
                         txtSL_BanHang.Text = Convert.ToString(Soluong - a);
                         if (Convert.ToInt32(txtSL_BanHang.Text) == 0)
                         {
@@ -635,9 +635,9 @@ namespace quanlybangiay
                     {
                         String MaSP = i.Cells["Mã giày"].Value.ToString();
 
-                        if ((txtIDGiay_BanHang.Text) == MaSP)
+                        if ((cb_ID_banghang.Text) == MaSP)
                         {
-                            Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(txtIDGiay_BanHang.Text).SoLuongCon);
+                            Soluong = Convert.ToInt32(BLL_BanHang.Instance.GetGiay_Kho(cb_ID_banghang.Text).SoLuongCon);
                             txtSL_BanHang.Text = Convert.ToString(Soluong);
                             rdConHang.Checked = true;
                             rdConHang.ForeColor = Color.Green;
@@ -796,7 +796,7 @@ namespace quanlybangiay
             txtSale_BanHang.Text = "";
             cbbCTKM_BanHang.SelectedItem = null;
             txtChietKhauCTKM_BanHang.Text = "";
-            txtIDGiay_BanHang.Text = "";
+            cb_ID_banghang.Text = "";
             pic_Giay.Image= global::quanlybangiay.Properties.Resources.img__1_1;
             txtNameGiay.Text = "TÊN SP";
             ResetDataSP();
