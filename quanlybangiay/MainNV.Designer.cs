@@ -58,7 +58,6 @@ namespace quanlybangiay
             this.rdHetHang = new System.Windows.Forms.RadioButton();
             this.rdConHang = new System.Windows.Forms.RadioButton();
             this.butCheckIDGiay = new System.Windows.Forms.Button();
-            this.txtIDGiay_BanHang = new System.Windows.Forms.TextBox();
             this.txtSL_BanHang = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -208,6 +207,7 @@ namespace quanlybangiay
             this.label35 = new System.Windows.Forms.Label();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
+            this.cb_ID_banghang = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -438,11 +438,11 @@ namespace quanlybangiay
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.panel4.Controls.Add(this.cb_ID_banghang);
             this.panel4.Controls.Add(this.lbKTthongTinID_BanHang);
             this.panel4.Controls.Add(this.rdHetHang);
             this.panel4.Controls.Add(this.rdConHang);
             this.panel4.Controls.Add(this.butCheckIDGiay);
-            this.panel4.Controls.Add(this.txtIDGiay_BanHang);
             this.panel4.Controls.Add(this.txtSL_BanHang);
             this.panel4.Controls.Add(this.label25);
             this.panel4.Controls.Add(this.label24);
@@ -514,18 +514,6 @@ namespace quanlybangiay
             this.butCheckIDGiay.Text = "Kiểm tra";
             this.butCheckIDGiay.UseVisualStyleBackColor = false;
             this.butCheckIDGiay.Click += new System.EventHandler(this.butCheckIDGiay_Click);
-            // 
-            // txtIDGiay_BanHang
-            // 
-            this.txtIDGiay_BanHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIDGiay_BanHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDGiay_BanHang.Location = new System.Drawing.Point(108, 72);
-            this.txtIDGiay_BanHang.Name = "txtIDGiay_BanHang";
-            this.txtIDGiay_BanHang.Size = new System.Drawing.Size(138, 29);
-            this.txtIDGiay_BanHang.TabIndex = 46;
-            this.txtIDGiay_BanHang.Click += new System.EventHandler(this.txtIDGiay_BanHang_Click);
-            this.txtIDGiay_BanHang.TextChanged += new System.EventHandler(this.txtIDGiay_BanHang_TextChanged);
-            this.txtIDGiay_BanHang.Leave += new System.EventHandler(this.txtIDGiay_BanHang_Leave);
             // 
             // txtSL_BanHang
             // 
@@ -2337,6 +2325,17 @@ namespace quanlybangiay
             this.label34.TabIndex = 5;
             this.label34.Text = "Ngày sinh";
             // 
+            // cb_ID_banghang
+            // 
+            this.cb_ID_banghang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_ID_banghang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_ID_banghang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_ID_banghang.FormattingEnabled = true;
+            this.cb_ID_banghang.Location = new System.Drawing.Point(108, 72);
+            this.cb_ID_banghang.Name = "cb_ID_banghang";
+            this.cb_ID_banghang.Size = new System.Drawing.Size(152, 28);
+            this.cb_ID_banghang.TabIndex = 57;
+            // 
             // MainNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2554,7 +2553,6 @@ namespace quanlybangiay
         private System.Windows.Forms.RadioButton rdHetHang;
         private System.Windows.Forms.RadioButton rdConHang;
         private System.Windows.Forms.Button butCheckIDGiay;
-        private System.Windows.Forms.TextBox txtIDGiay_BanHang;
         private System.Windows.Forms.TextBox txtSL_BanHang;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
@@ -2582,6 +2580,7 @@ namespace quanlybangiay
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pic_Giay;
         private System.Windows.Forms.TextBox txtNameGiay;
+        private System.Windows.Forms.ComboBox cb_ID_banghang;
     }
 }
 

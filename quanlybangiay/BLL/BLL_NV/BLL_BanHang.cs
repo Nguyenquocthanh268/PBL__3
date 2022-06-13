@@ -205,7 +205,14 @@ namespace quanlybangiay.BLL.BLL_NV
             
         }
 
-       
+       public List<string> getID()
+        {
+            List<string> list = new List<string>();
+            foreach(Giay s in db.Giays) {
+                list.Add(s.ID_Giay);
+            }
+            return list;
+        }
 
         public bool checkSDT(string s)
         {

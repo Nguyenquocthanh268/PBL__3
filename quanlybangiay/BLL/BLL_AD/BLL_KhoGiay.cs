@@ -215,6 +215,7 @@ namespace quanlybangiay.BLL.BLL_AD
             }
             return k;
         }
+
         public List<string> SapxepSize(List<string> l)
         {
             List<string> s = new List<string>();
@@ -234,6 +235,97 @@ namespace quanlybangiay.BLL.BLL_AD
             return s;
         }
       
+        public Boolean CheckSizeOFTen(String ten,String size)
+        {
+            int dem = 0;
+           List<Giay> l = new List<Giay>();
+           foreach(Giay i in db.Giays)
+            {
+                if(i.TenGiay == ten)
+                {
+                    l.Add(i);
+                }
+            }
+           foreach(Giay i in l)
+            {
+                if(i.Size == Convert.ToInt32(size))
+                {
+                    dem++;
+                }
+            }
+           if(dem == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public string tachchuoi(string s)
+        {
+            string h = "";
+            char[] a = s.ToArray();
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] >= 48 && a[i] <= 57)
+                {
+                    h += a[i];
+                }
+            }
+            return h;
+        }
+        public string Laychuoi(string s)
+        {
+            string h = "";
+            char[] a = s.ToArray();
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] >= 65 && a[i] <= 90)
+                {
+                    h += a[i];
+                }
+            }
+            return h;
+        }
+        public string  RangeIDgiay(string Hang)
+        {
+            string id = "0";
+            List<Giay> l = new List<Giay>();
+            List<string> data = new List<string>();
+            foreach (Giay i in db.Giays)
+            {
+                if (Laychuoi(i.ID_Giay).ToLower() == Hang.ToLower())
+                {
+                     l.Add(i);
+                 
+                }
+            }
+
+            foreach (Giay i in l)
+            {
+                data.Add(tachchuoi(i.ID_Giay));
+            }
+            foreach (string s in data)
+            {
+                if (Convert.ToInt32(s) > Convert.ToInt32(id))
+                {
+                    id = s;
+                }
+            }
+            if (Convert.ToInt32(id) <= 8)
+            {
+                return Convert.ToString(Hang.ToUpper() + "00" + Convert.ToString(Convert.ToInt32(id) + 1));
+            }
+            else if (Convert.ToInt32(id) >= 9 && Convert.ToInt32(id) <= 98)
+            {
+                return Convert.ToString(Hang.ToUpper() + "0" + Convert.ToString(Convert.ToInt32(id) + 1));
+            }
+            else
+            {
+                return Convert.ToString(Hang.ToUpper() + Convert.ToString(Convert.ToInt32(id) + 1));
+            }
+        }
         public dynamic searh_Size(string ten, int size)
         {
             if(ten == "")

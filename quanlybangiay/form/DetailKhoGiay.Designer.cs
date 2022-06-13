@@ -48,6 +48,8 @@ namespace quanlybangiay.form
             this.txtGiaNhap = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_load = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
             this.cb_hang = new System.Windows.Forms.ComboBox();
             this.tb_1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -58,8 +60,6 @@ namespace quanlybangiay.form
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btn_load = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -303,6 +303,35 @@ namespace quanlybangiay.form
             this.panel2.Size = new System.Drawing.Size(984, 278);
             this.panel2.TabIndex = 0;
             // 
+            // btn_load
+            // 
+            this.btn_load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.btn_load.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_load.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btn_load.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_load.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_load.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
+            this.btn_load.Location = new System.Drawing.Point(123, 226);
+            this.btn_load.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_load.Name = "btn_load";
+            this.btn_load.Size = new System.Drawing.Size(101, 30);
+            this.btn_load.TabIndex = 171;
+            this.btn_load.Text = "Tải lên";
+            this.btn_load.UseVisualStyleBackColor = false;
+            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.Info;
+            this.label17.Location = new System.Drawing.Point(20, 230);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(98, 20);
+            this.label17.TabIndex = 170;
+            this.label17.Text = "Thêm ảnh";
+            // 
             // cb_hang
             // 
             this.cb_hang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -314,7 +343,7 @@ namespace quanlybangiay.form
             this.cb_hang.Name = "cb_hang";
             this.cb_hang.Size = new System.Drawing.Size(145, 28);
             this.cb_hang.TabIndex = 63;
-            this.cb_hang.SelectedIndexChanged += new System.EventHandler(this.cb_hang_SelectedIndexChanged);
+            this.cb_hang.Leave += new System.EventHandler(this.cb_hang_Leave);
             // 
             // tb_1
             // 
@@ -336,7 +365,6 @@ namespace quanlybangiay.form
             this.txtName.Size = new System.Drawing.Size(145, 26);
             this.txtName.TabIndex = 59;
             this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label2
             // 
@@ -416,35 +444,6 @@ namespace quanlybangiay.form
             this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 60;
             this.label5.Text = "Size";
-            // 
-            // btn_load
-            // 
-            this.btn_load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
-            this.btn_load.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_load.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btn_load.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
-            this.btn_load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_load.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_load.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(128)))), ((int)(((byte)(144)))));
-            this.btn_load.Location = new System.Drawing.Point(123, 226);
-            this.btn_load.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_load.Name = "btn_load";
-            this.btn_load.Size = new System.Drawing.Size(101, 30);
-            this.btn_load.TabIndex = 171;
-            this.btn_load.Text = "Tải lên";
-            this.btn_load.UseVisualStyleBackColor = false;
-            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.Info;
-            this.label17.Location = new System.Drawing.Point(20, 230);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(98, 20);
-            this.label17.TabIndex = 170;
-            this.label17.Text = "Thêm ảnh";
             // 
             // DetailKhoGiay
             // 
