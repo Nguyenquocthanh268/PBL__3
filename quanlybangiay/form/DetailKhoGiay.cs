@@ -20,6 +20,7 @@ namespace quanlybangiay.form
         public Mydel2 d2 { get; set; }
         public String IDGiay { get; set; }
         private int index;
+        public string size { get; set; }
         public DetailKhoGiay(String id, int i)
         {
             InitializeComponent();
@@ -29,6 +30,10 @@ namespace quanlybangiay.form
             foreach (string k in BLL_KhoGiay.Instance.CBBhang().Distinct())
             {
                 cb_hang.Items.Add(k);
+            }
+            if(index == 3)
+            {
+                size=txtSize.Text;
             }
         }
 
@@ -46,8 +51,7 @@ namespace quanlybangiay.form
                 if (getGiay() != null && getKhoGiay() != null && getNhapKHO_Giay() != null)
                 {
 
-                    if (BLL_KhoGiay.Instance.CheckSizeOFTen(txtName.Text, txtSize.Text))
-                    {
+                   
                         BLL_KhoGiay.Instance.Excute(getGiay(), getKhoGiay());
                         if (Convert.ToInt32(txtSLNhap.Text) > 0 && index == 2)
                         {
@@ -58,12 +62,7 @@ namespace quanlybangiay.form
 
                         this.Close();
                         d2();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Giày đã tồn tại Size ");
-                        txtSize.Text = "";
-                    }
+                 
                 }
             }
             else
@@ -138,19 +137,7 @@ namespace quanlybangiay.form
             }
 
         }
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFile = new OpenFileDialog();
-            PictureBox p = sender as PictureBox;
-            if (p != null)
-            {
-                openFile.Filter = "(*.png) | *.png";
-                if (openFile.ShowDialog() == DialogResult.OK)
-                {
-                    p.Image = Image.FromFile(openFile.FileName);
-                }
-            }
-        }
+     
         private Giay getGiay()
         {
             try
@@ -281,33 +268,44 @@ namespace quanlybangiay.form
             {
                 txtSLNhap.Text = "0";
             }
+  
         }
 
         private void txtSize_TextChanged(object sender, EventArgs e)
         {
 
-            try
+            
+             
+           if(txtName.Text != "")
             {
-
-                if (txtSize.Text == "")
+                try
                 {
 
+                    if (txtSize.Text == "")
+                    {
+
+                    }
+                    else
+                    if (Convert.ToInt32(txtSize.Text) > 0)
+                    {
+                        tb_1.Text = "";
+
+                    }
+
                 }
-                else
-                if (Convert.ToInt32(txtSize.Text) > 0)
+                catch (Exception k)
                 {
-                    tb_1.Text = "";
-                  
+                    tb_1.Text = "Chỉ nhập kí tự 0-9";
+                    txtSize.Text = "";
+
                 }
 
-
             }
-            catch (Exception k)
+            else
             {
-                tb_1.Text = "Chỉ nhập kí tự 0-9";
-                txtSize.Text = "";
-
+                MessageBox.Show("Vui lòng nhập tên giày !");
             }
+
         }
 
         private void txtGiaNhap_TextChanged(object sender, EventArgs e)
@@ -377,6 +375,37 @@ namespace quanlybangiay.form
         private void cb_hang_Leave(object sender, EventArgs e)
         {
             txtIDGiay.Text = BLL_KhoGiay.Instance.RangeIDgiay(cb_hang.Text);
+        }
+
+        private void txtSize_Leave(object sender, EventArgs e)
+        {
+            if (index == 2)
+            {
+                if (BLL_KhoGiay.Instance.CheckSizeOFTen(txtName.Text, txtSize.Text))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Giày đã tồn tại size");
+                    txtSize.Text = "";
+                }
+            }
+            if(index == 3)
+            {
+                if(size != txtSize.Text)
+                {
+                    if (BLL_KhoGiay.Instance.CheckSizeOFTen(txtName.Text, txtSize.Text))
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Giày đã tồn tại size");
+                        txtSize.Text = "";
+                    }
+                }
+            }
         }
     }
 }

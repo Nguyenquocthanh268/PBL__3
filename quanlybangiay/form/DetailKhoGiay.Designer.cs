@@ -433,6 +433,7 @@ namespace quanlybangiay.form
             this.txtSize.TabIndex = 61;
             this.txtSize.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSize_MouseClick);
             this.txtSize.TextChanged += new System.EventHandler(this.txtSize_TextChanged);
+            this.txtSize.Leave += new System.EventHandler(this.txtSize_Leave);
             // 
             // label5
             // 
