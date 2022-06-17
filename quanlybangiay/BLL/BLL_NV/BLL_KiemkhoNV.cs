@@ -66,6 +66,18 @@ namespace quanlybangiay.BLL.BLL_NV
             }
             return data;
         }
+        public List<string> SizeOfTen(string s)
+        {
+            List<string> data = new List<string>();
+            foreach (Giay i in db.Giays)
+            {
+                if (i.TenGiay == s)
+                {
+                    data.Add(Convert.ToString((int)i.Size));
+                }
+            }
+            return data;
+        }
         public List<string> size()
         {
             List<string> l = new List<string>();
