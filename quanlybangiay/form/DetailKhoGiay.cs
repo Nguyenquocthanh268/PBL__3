@@ -381,19 +381,7 @@ namespace quanlybangiay.form
         {
             if (index == 2)
             {
-                if (BLL_KhoGiay.Instance.CheckSizeOFTen(txtName.Text, txtSize.Text))
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("Giày đã tồn tại size");
-                    txtSize.Text = "";
-                }
-            }
-            if(index == 3)
-            {
-                if(size != txtSize.Text)
+                if(txtSize.Text != "")
                 {
                     if (BLL_KhoGiay.Instance.CheckSizeOFTen(txtName.Text, txtSize.Text))
                     {
@@ -403,6 +391,24 @@ namespace quanlybangiay.form
                     {
                         MessageBox.Show("Giày đã tồn tại size");
                         txtSize.Text = "";
+                    }
+                }
+            }
+            if(index == 3)
+            {
+                if(size != txtSize.Text)
+                {
+                    if (txtSize.Text != "")
+                    {
+                        if (BLL_KhoGiay.Instance.CheckSizeOFTen(txtName.Text, txtSize.Text))
+                        {
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Giày đã tồn tại size");
+                            txtSize.Text = "";
+                        }
                     }
                 }
             }

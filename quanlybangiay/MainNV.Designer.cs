@@ -54,6 +54,7 @@ namespace quanlybangiay
             this.txtNameGiay = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cb_ID_banghang = new System.Windows.Forms.ComboBox();
             this.lbKTthongTinID_BanHang = new System.Windows.Forms.Label();
             this.rdHetHang = new System.Windows.Forms.RadioButton();
             this.rdConHang = new System.Windows.Forms.RadioButton();
@@ -207,7 +208,6 @@ namespace quanlybangiay
             this.label35 = new System.Windows.Forms.Label();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.cb_ID_banghang = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -460,6 +460,17 @@ namespace quanlybangiay
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(373, 350);
             this.panel4.TabIndex = 29;
+            // 
+            // cb_ID_banghang
+            // 
+            this.cb_ID_banghang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_ID_banghang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_ID_banghang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_ID_banghang.FormattingEnabled = true;
+            this.cb_ID_banghang.Location = new System.Drawing.Point(108, 72);
+            this.cb_ID_banghang.Name = "cb_ID_banghang";
+            this.cb_ID_banghang.Size = new System.Drawing.Size(152, 28);
+            this.cb_ID_banghang.TabIndex = 57;
             // 
             // lbKTthongTinID_BanHang
             // 
@@ -1595,6 +1606,7 @@ namespace quanlybangiay
             this.cb_tenKHO.Name = "cb_tenKHO";
             this.cb_tenKHO.Size = new System.Drawing.Size(189, 28);
             this.cb_tenKHO.TabIndex = 43;
+            this.cb_tenKHO.SelectedIndexChanged += new System.EventHandler(this.cb_tenKHO_SelectedIndexChanged);
             // 
             // cb_hangKHO
             // 
@@ -2324,17 +2336,6 @@ namespace quanlybangiay
             this.label34.Size = new System.Drawing.Size(117, 25);
             this.label34.TabIndex = 5;
             this.label34.Text = "Ngày sinh";
-            // 
-            // cb_ID_banghang
-            // 
-            this.cb_ID_banghang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cb_ID_banghang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cb_ID_banghang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_ID_banghang.FormattingEnabled = true;
-            this.cb_ID_banghang.Location = new System.Drawing.Point(108, 72);
-            this.cb_ID_banghang.Name = "cb_ID_banghang";
-            this.cb_ID_banghang.Size = new System.Drawing.Size(152, 28);
-            this.cb_ID_banghang.TabIndex = 57;
             // 
             // MainNV
             // 

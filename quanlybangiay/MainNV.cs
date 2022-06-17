@@ -245,6 +245,11 @@ namespace quanlybangiay
                 {
                     cb_tenKHO.Items.Add(i);
                 }
+                cb_sizeKHO.Items.Clear();
+                foreach(string i in BLL_KiemkhoNV.Instance.size().Distinct())
+                {
+                    cb_sizeKHO.Items.Add(i);
+                }
                 dtGV_Kiemkho.DataSource = null;
                 tb_ten.Text = "TÊN GIÀY";
                 pic_kho.Image= global::quanlybangiay.Properties.Resources.img__1_1;
@@ -834,6 +839,19 @@ namespace quanlybangiay
                 foreach (string i in BLL_KiemkhoNV.Instance.TenOfHang(hang).Distinct())
                 {
                     cb_tenKHO.Items.Add(i);
+                }
+            }
+        }
+
+        private void cb_tenKHO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cb_tenKHO.SelectedIndex >= 0)
+            {
+                string ten = cb_tenKHO.SelectedItem.ToString();
+                cb_sizeKHO.Items.Clear();
+                foreach(string i in BLL_KiemkhoNV.Instance.SizeOfTen(ten).Distinct())
+                {
+                    cb_sizeKHO.Items.Add(i);
                 }
             }
         }
