@@ -37,7 +37,7 @@ namespace quanlybangiay.form
             }
             else
             {
-                txtTen_KH.Text = "KHÁCH HÀNG BỊ XÓA";
+                txtTen_KH.Text = "KHÁCH HÀNG";
             }
             if (BLL_NV.Instance.GetNVByID(s.ID_NhanVien) != null)
             {
@@ -45,15 +45,19 @@ namespace quanlybangiay.form
             }
             else
             {
-                txtTen_NV.Text= "NHÂN VIÊN BỊ XÓA";
+                txtTen_NV.Text= "NHÂN VIÊN";
             }
             if(s.ID_KhuyenMai != null)
             {
                 txt_IDKM.Text = s.ID_KhuyenMai.ToString();
             }
+            else if (s.ID_KhuyenMai == null && s.chietKhauKM !=null)
+            {
+                txt_IDKM.Text = "CTKM";
+            }
             else
             {
-                txt_IDKM.Text = " CTKM";
+                txt_IDKM.Text = "";
             }
            if(s.chietKhauKM != null)
             {
