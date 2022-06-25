@@ -469,6 +469,7 @@ namespace quanlybangiay.form
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
@@ -521,21 +522,21 @@ namespace quanlybangiay.form
             // 
             // ID_KhuyenMai
             // 
-            this.ID_KhuyenMai.DataPropertyName = "ID_KhuyenMai";
+            this.ID_KhuyenMai.DataPropertyName = "ID";
             this.ID_KhuyenMai.HeaderText = "ID Khuyến mãi";
             this.ID_KhuyenMai.Name = "ID_KhuyenMai";
             this.ID_KhuyenMai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // TenCT
             // 
-            this.TenCT.DataPropertyName = "TenCT";
+            this.TenCT.DataPropertyName = "Ten";
             this.TenCT.HeaderText = "Tên chương trình";
             this.TenCT.Name = "TenCT";
             this.TenCT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ChietKhau
             // 
-            this.ChietKhau.DataPropertyName = "ChietKhau";
+            this.ChietKhau.DataPropertyName = "chietkhau";
             this.ChietKhau.HeaderText = "Chiết khấu";
             this.ChietKhau.Name = "ChietKhau";
             this.ChietKhau.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;

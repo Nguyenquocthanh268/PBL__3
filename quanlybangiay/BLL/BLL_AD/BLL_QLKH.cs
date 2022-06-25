@@ -25,22 +25,22 @@ namespace quanlybangiay.BLL.BLL_AD
         {
 
         }
-        public dynamic GetKH(int A, string txt = "")
+        public List<khachhang_view> GetKH(int A, string txt = "")
         {
             DataPBL3 db = new DataPBL3();
             if(A == 1)
             {
-                var l1 = db.KhachHangs.Where(p => p.SoDienThoai==txt).Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy });
+                var l1 = db.KhachHangs.Where(p => p.SoDienThoai==txt).Select(p => new khachhang_view {TenKH= p.TenKhachHang,sdt= p.SoDienThoai,ngaydk=(DateTime) p.NgayDangKy,diemtichluy=(int) p.DiemTichLuy });
                 return l1.ToList();
             }
             else if (A == 2)
             {
-                var l1 = db.KhachHangs.Where(p => p.TenKhachHang.Contains(txt)).Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy });
+                var l1 = db.KhachHangs.Where(p => p.TenKhachHang.Contains(txt)).Select(p => new khachhang_view { TenKH = p.TenKhachHang, sdt = p.SoDienThoai, ngaydk = (DateTime)p.NgayDangKy, diemtichluy = (int)p.DiemTichLuy });
                 return l1.ToList();
             }
             else
             {
-                var l1 = db.KhachHangs.Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy });
+                var l1 = db.KhachHangs.Select(p => new khachhang_view { TenKH = p.TenKhachHang, sdt = p.SoDienThoai, ngaydk = (DateTime)p.NgayDangKy, diemtichluy = (int)p.DiemTichLuy });
                 return l1.ToList();
             }
         }
@@ -65,22 +65,22 @@ namespace quanlybangiay.BLL.BLL_AD
             db.KhachHangs.Remove(s);
             db.SaveChanges();
         }
-        public dynamic sortKH(int indexcbbView, string txtSearch, int indexcbbSort)
+        public List<khachhang_view> sortKH(int indexcbbView, string txtSearch, int indexcbbSort)
         {
             DataPBL3 db = new DataPBL3();
             if (indexcbbSort == 0)
             {
-                var l1 = db.KhachHangs.Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy }).OrderBy(p => p.SoDienThoai);
+                var l1 = db.KhachHangs.Select(p => new khachhang_view { TenKH = p.TenKhachHang, sdt = p.SoDienThoai, ngaydk = (DateTime)p.NgayDangKy, diemtichluy = (int)p.DiemTichLuy }).OrderBy(p => p.sdt);
                 return l1.ToList();
             }
             else if (indexcbbSort == 1)
             {
-                var l1 = db.KhachHangs.Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy }).OrderBy(p => p.TenKhachHang);
+                var l1 = db.KhachHangs.Select(p => new khachhang_view { TenKH = p.TenKhachHang, sdt = p.SoDienThoai, ngaydk = (DateTime)p.NgayDangKy, diemtichluy = (int)p.DiemTichLuy }).OrderBy(p => p.TenKH);
                 return l1.ToList();
             }
             else if (indexcbbSort == 2)
             {
-                var l1 = db.KhachHangs.Select(p => new { p.TenKhachHang, p.SoDienThoai, p.NgayDangKy, p.DiemTichLuy }).OrderBy(p => p.DiemTichLuy);
+                var l1 = db.KhachHangs.Select(p => new khachhang_view { TenKH = p.TenKhachHang, sdt = p.SoDienThoai, ngaydk = (DateTime)p.NgayDangKy, diemtichluy = (int)p.DiemTichLuy }).OrderBy(p => p.diemtichluy);
                 return l1.ToList();
             }
             else

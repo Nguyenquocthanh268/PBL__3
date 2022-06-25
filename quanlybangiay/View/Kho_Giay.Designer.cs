@@ -360,6 +360,7 @@ namespace quanlybangiay.form
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
@@ -412,28 +413,29 @@ namespace quanlybangiay.form
             // 
             // ID_Giay
             // 
-            this.ID_Giay.DataPropertyName = "ID_Giay";
+            this.ID_Giay.DataPropertyName = "ID";
             this.ID_Giay.HeaderText = "ID Giày";
             this.ID_Giay.Name = "ID_Giay";
+            this.ID_Giay.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ID_Giay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // TenGiay
             // 
-            this.TenGiay.DataPropertyName = "TenGiay";
+            this.TenGiay.DataPropertyName = "Name";
             this.TenGiay.HeaderText = "Tên giày";
             this.TenGiay.Name = "TenGiay";
             this.TenGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // HangGiay
             // 
-            this.HangGiay.DataPropertyName = "HangGiay";
+            this.HangGiay.DataPropertyName = "Hang";
             this.HangGiay.HeaderText = "Hãng giày";
             this.HangGiay.Name = "HangGiay";
             this.HangGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Size
             // 
-            this.Size.DataPropertyName = "Size";
+            this.Size.DataPropertyName = "size";
             this.Size.HeaderText = "Size";
             this.Size.Name = "Size";
             this.Size.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;

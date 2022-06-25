@@ -331,6 +331,7 @@ namespace quanlybangiay.form
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
@@ -384,28 +385,28 @@ namespace quanlybangiay.form
             // 
             // TenKhachHang
             // 
-            this.TenKhachHang.DataPropertyName = "TenKhachHang";
+            this.TenKhachHang.DataPropertyName = "TenKH";
             this.TenKhachHang.HeaderText = "Tên khách hàng";
             this.TenKhachHang.Name = "TenKhachHang";
             this.TenKhachHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // SoDienThoai
             // 
-            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.DataPropertyName = "sdt";
             this.SoDienThoai.HeaderText = "Số điện thoại";
             this.SoDienThoai.Name = "SoDienThoai";
             this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // NgayDangKy
             // 
-            this.NgayDangKy.DataPropertyName = "NgayDangKy";
+            this.NgayDangKy.DataPropertyName = "ngaydk";
             this.NgayDangKy.HeaderText = "Ngày đăng ký";
             this.NgayDangKy.Name = "NgayDangKy";
             this.NgayDangKy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // DiemTichLuy
             // 
-            this.DiemTichLuy.DataPropertyName = "DiemTichLuy";
+            this.DiemTichLuy.DataPropertyName = "diemtichluy";
             this.DiemTichLuy.HeaderText = "Điểm tích luỹ";
             this.DiemTichLuy.Name = "DiemTichLuy";
             this.DiemTichLuy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
