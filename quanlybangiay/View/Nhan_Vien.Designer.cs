@@ -184,6 +184,7 @@ namespace quanlybangiay.form
             // 
             // dtgNV
             // 
+            this.dtgNV.AllowUserToAddRows = false;
             this.dtgNV.AllowUserToResizeColumns = false;
             this.dtgNV.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(33)))), ((int)(((byte)(75)))));
@@ -235,21 +236,21 @@ namespace quanlybangiay.form
             // 
             // ID_NhanVien
             // 
-            this.ID_NhanVien.DataPropertyName = "ID_NhanVien";
+            this.ID_NhanVien.DataPropertyName = "ID";
             this.ID_NhanVien.HeaderText = "ID Nhân viên";
             this.ID_NhanVien.Name = "ID_NhanVien";
             this.ID_NhanVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // TenNhanVien
             // 
-            this.TenNhanVien.DataPropertyName = "TenNhanVien";
+            this.TenNhanVien.DataPropertyName = "Name";
             this.TenNhanVien.HeaderText = "Tên nhân viên";
             this.TenNhanVien.Name = "TenNhanVien";
             this.TenNhanVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // SoDienThoai
             // 
-            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.DataPropertyName = "sdt";
             this.SoDienThoai.HeaderText = "Số điện thoại";
             this.SoDienThoai.Name = "SoDienThoai";
             this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;

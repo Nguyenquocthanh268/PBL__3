@@ -98,60 +98,60 @@ namespace quanlybangiay.BLL.BLL_NV
             return k;
         }
 
-        public dynamic searh_Size(string ten, int size)
+        public List<GiayView> searh_Size(string ten, int size)
         {
             if (ten == "")
             {
-                return (db.Giays.Where(p => p.Size == size).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.Size == size).Select(p => new GiayView{ID= p.ID_Giay,Name= p.TenGiay,Hang= p.HangGiay,size=(int) p.Size })).ToList();
             }
             else
             {
-                return (db.Giays.Where(p => p.Size == size && p.TenGiay.Contains(ten)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.Size == size && p.TenGiay.Contains(ten)).Select(p => new GiayView { ID = p.ID_Giay, Name = p.TenGiay, Hang = p.HangGiay, size = (int)p.Size })).ToList();
             }
         }
     
-        public dynamic search_Hang(string ten, string hang)
+        public List<GiayView> search_Hang(string ten, string hang)
         {
             if (ten == "")
             {
-                return (db.Giays.Where(p => p.HangGiay.Contains(hang)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.HangGiay.Contains(hang)).Select(p => new GiayView { ID = p.ID_Giay, Name = p.TenGiay, Hang = p.HangGiay, size = (int)p.Size })).ToList();
             }
             else
             {
-                return (db.Giays.Where(p => p.HangGiay.Contains(hang) && p.TenGiay.Contains(ten)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.HangGiay.Contains(hang) && p.TenGiay.Contains(ten)).Select(p => new GiayView { ID = p.ID_Giay, Name = p.TenGiay, Hang = p.HangGiay, size = (int)p.Size })).ToList();
             }
 
         }
-        public dynamic search_Size_Hang(string ten, string hang, int size)
+        public List<GiayView> search_Size_Hang(string ten, string hang, int size)
         {
             if (ten == "")
             {
-                return (db.Giays.Where(p => p.HangGiay.Contains(hang) && p.Size == size).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.HangGiay.Contains(hang) && p.Size == size).Select(p => new GiayView { ID = p.ID_Giay, Name = p.TenGiay, Hang = p.HangGiay, size = (int)p.Size })).ToList();
             }
             else if (hang == "" && size == 0)
             {
-                return (db.Giays.Where(p => p.TenGiay.Contains(ten)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.TenGiay.Contains(ten)).Select(p => new GiayView { ID = p.ID_Giay, Name = p.TenGiay, Hang = p.HangGiay, size = (int)p.Size })).ToList();
             }
             else
             {
-                return (db.Giays.Where(p => p.Size == size && p.TenGiay.Contains(ten) && p.HangGiay.Contains(hang)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.Size == size && p.TenGiay.Contains(ten) && p.HangGiay.Contains(hang)).Select(p => new GiayView { ID = p.ID_Giay, Name = p.TenGiay, Hang = p.HangGiay, size = (int)p.Size })).ToList();
             }
         }
-        public dynamic search(string id, string ten, string hang, int size)
+        public List<GiayView> search(string id, string ten, string hang, int size)
         {
             if (ten == "" && hang == "" && size == 0)
             {
-                return (db.Giays.Where(p => p.ID_Giay.Contains(id)).Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Where(p => p.ID_Giay.Contains(id)).Select(p => new GiayView { ID = p.ID_Giay, Name = p.TenGiay, Hang = p.HangGiay, size = (int)p.Size })).ToList();
             }
 
             else
             {
-                return (db.Giays.Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+                return (db.Giays.Select(p => new GiayView { ID = p.ID_Giay, Name = p.TenGiay, Hang = p.HangGiay, size = (int)p.Size })).ToList();
             }
         }
-        public dynamic showAll()
+        public List<GiayView> showAll()
         {
-            return (db.Giays.Select(p => new { p.ID_Giay, p.TenGiay, p.HangGiay, p.Size })).ToList();
+            return (db.Giays.Select(p => new GiayView { ID = p.ID_Giay, Name = p.TenGiay, Hang = p.HangGiay, size = (int)p.Size })).ToList();
         }
     }
 }

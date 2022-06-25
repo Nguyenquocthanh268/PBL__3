@@ -116,9 +116,9 @@ namespace quanlybangiay.BLL.BLL_AD
             db.SaveChanges();
         }
 
-        public dynamic ShowAll()
+        public List<NV_view> ShowAll()
         {
-            return (db.NhanViens.Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai })).ToList();
+            return (db.NhanViens.Select(p => new NV_view{ID= p.ID_NhanVien,Name= p.TenNhanVien,sdt= p.SoDienThoai })).ToList();
         }
 
         public void Delete(string ID)
@@ -133,37 +133,37 @@ namespace quanlybangiay.BLL.BLL_AD
             db.SaveChanges();
 
         }
-        public dynamic Sort(string txt, int index)
+        public List<NV_view> Sort(string txt, int index)
         {
             if(index == 0)
             {
-                return (db.NhanViens.Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai }).OrderBy(p => p.ID_NhanVien)).ToList();
+                return (db.NhanViens.Select(p => new NV_view { ID = p.ID_NhanVien, Name = p.TenNhanVien, sdt = p.SoDienThoai }).OrderBy(p => p.ID)).ToList();
             }
             else
             {
-                return (db.NhanViens.Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai }).OrderBy(p => p.TenNhanVien)).ToList();
+                return (db.NhanViens.Select(p => new NV_view { ID = p.ID_NhanVien, Name = p.TenNhanVien, sdt = p.SoDienThoai }).OrderBy(p => p.Name)).ToList();
             }
             
         }
 
 
-        public dynamic Search(int index, string txt)
+        public List<NV_view> Search(int index, string txt)
         {
             if (index == 0)
             {
-                return (db.NhanViens.Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai })).ToList();
+                return (db.NhanViens.Select(p => new NV_view { ID = p.ID_NhanVien, Name = p.TenNhanVien, sdt = p.SoDienThoai })).ToList();
             }
             else if (index == 1)
             {
-                return db.NhanViens.Where(p => p.ID_NhanVien.Contains(txt)).Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai }).ToList();
+                return db.NhanViens.Where(p => p.ID_NhanVien.Contains(txt)).Select(p => new NV_view { ID = p.ID_NhanVien, Name = p.TenNhanVien, sdt = p.SoDienThoai }).ToList();
             }
             else if (index == 2)
             {
-                return db.NhanViens.Where(p => p.TenNhanVien.Contains(txt)).Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai }).ToList();
+                return db.NhanViens.Where(p => p.TenNhanVien.Contains(txt)).Select(p => new NV_view { ID = p.ID_NhanVien, Name = p.TenNhanVien, sdt = p.SoDienThoai }).ToList();
             }
             else
             {
-                return (db.NhanViens.Select(p => new { p.ID_NhanVien, p.TenNhanVien, p.SoDienThoai })).ToList();
+                return (db.NhanViens.Select(p => new NV_view { ID = p.ID_NhanVien, Name = p.TenNhanVien, sdt = p.SoDienThoai })).ToList();
             }
         }
 

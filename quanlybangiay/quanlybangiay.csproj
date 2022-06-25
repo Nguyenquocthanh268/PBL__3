@@ -91,15 +91,18 @@
     <Compile Include="DTO\CTKM.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\CTKM_view.cs" />
     <Compile Include="DTO\Giay.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\GiayView.cs" />
     <Compile Include="DTO\HoaDon.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\KhachHang.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\khachhang_view.cs" />
     <Compile Include="DTO\Kho.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
@@ -109,6 +112,7 @@
     <Compile Include="DTO\NhapKho.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\NV_view.cs" />
     <Compile Include="DTO\QuanLiBanGiay.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
