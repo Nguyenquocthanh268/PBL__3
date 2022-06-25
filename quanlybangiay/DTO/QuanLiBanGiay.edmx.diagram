@@ -4,21 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="80b1387263694088a02acbcc2775bd85" Name="Diagram1" ZoomLevel="81">
+      <Diagram DiagramId="88d5423a8c794e54a89b2b6b99963beb" Name="Diagram1">
+        <EntityTypeShape EntityType="DataPBL3Model.ChiTietHoaDon" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.CTKM" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
-
-        <EntityTypeShape EntityType="DataPBL3Model.ChiTietHoaDon" Width="1.5" PointX="8.25" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.Giay" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.HoaDon" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataPBL3Model.KhachHang" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataPBL3Model.Kho" Width="1.5" PointX="6.375" PointY="7.25" IsExpanded="true" />
-
+        <EntityTypeShape EntityType="DataPBL3Model.KhachHang" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataPBL3Model.Kho" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="DataPBL3Model.NhanVien" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataPBL3Model.NhapKho" Width="1.5" PointX="11.125" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataPBL3Model.TaiKhoan" Width="1.5" PointX="0.5" PointY="10.25" IsExpanded="true" />
-        <AssociationConnector Association="DataPBL3Model.fk_khuyenmai" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DataPBL3Model.NhapKho" Width="1.5" PointX="7.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataPBL3Model.TaiKhoan" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
         <AssociationConnector Association="DataPBL3Model.fk_chitiethoadon" ManuallyRouted="false" />
         <AssociationConnector Association="DataPBL3Model.fk_giay" ManuallyRouted="false" />
+        <AssociationConnector Association="DataPBL3Model.fk_khuyenmai" ManuallyRouted="false" />
         <AssociationConnector Association="DataPBL3Model.fk_kho" ManuallyRouted="false" />
         <AssociationConnector Association="DataPBL3Model.fk_khachhang" ManuallyRouted="false" />
         <AssociationConnector Association="DataPBL3Model.fk_nhanvien" ManuallyRouted="false" />
