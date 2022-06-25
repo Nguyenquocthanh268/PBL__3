@@ -83,9 +83,8 @@
     <Compile Include="BLL\BLL_Login.cs" />
     <Compile Include="BLL\BLL_NV\BLL_BanHang.cs" />
     <Compile Include="BLL\BLL_NV\BLL_KiemkhoNV.cs" />
-    <Compile Include="DataSP.cs" />
+    <Compile Include="BLL\DataSP.cs" />
     <Compile Include="BLL\BLL_NV\BLL_NV_HoaDon.cs" />
-    <Compile Include="DB_Helper.cs" />
     <Compile Include="DTO\ChiTietHoaDon.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
@@ -128,159 +127,150 @@
     <Compile Include="DTO\TaiKhoan.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
-    <Compile Include="MainQL.cs">
+    <Compile Include="View\MainQL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainQL.Designer.cs">
+    <Compile Include="View\MainQL.Designer.cs">
       <DependentUpon>MainQL.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\DetailHoaDon.cs">
+    <Compile Include="View\DetailHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\DetailHoaDon.Designer.cs">
+    <Compile Include="View\DetailHoaDon.Designer.cs">
       <DependentUpon>DetailHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\DetailKH.cs">
+    <Compile Include="View\DetailKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\DetailKH.Designer.cs">
+    <Compile Include="View\DetailKH.Designer.cs">
       <DependentUpon>DetailKH.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\DetailKhachHang.cs">
+    <Compile Include="View\DetailKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\DetailKhachHang.Designer.cs">
+    <Compile Include="View\DetailKhachHang.Designer.cs">
       <DependentUpon>DetailKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\DetailKhoGiay.cs">
+    <Compile Include="View\DetailKhoGiay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\DetailKhoGiay.Designer.cs">
+    <Compile Include="View\DetailKhoGiay.Designer.cs">
       <DependentUpon>DetailKhoGiay.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\DetailNV.cs">
+    <Compile Include="View\DetailNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\DetailNV.Designer.cs">
+    <Compile Include="View\DetailNV.Designer.cs">
       <DependentUpon>DetailNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\Doanh_Thu.cs">
+    <Compile Include="View\Doanh_Thu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\Doanh_Thu.Designer.cs">
+    <Compile Include="View\Doanh_Thu.Designer.cs">
       <DependentUpon>Doanh_Thu.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\hoadon.cs">
+    <Compile Include="View\Hoa_Don.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\hoadon.Designer.cs">
-      <DependentUpon>hoadon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\Hoa_Don.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\Hoa_Don.Designer.cs">
+    <Compile Include="View\Hoa_Don.Designer.cs">
       <DependentUpon>Hoa_Don.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\Khach_Hang.cs">
+    <Compile Include="View\Khach_Hang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\Khach_Hang.Designer.cs">
+    <Compile Include="View\Khach_Hang.Designer.cs">
       <DependentUpon>Khach_Hang.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\Kho_Giay.cs">
+    <Compile Include="View\Kho_Giay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\Kho_Giay.Designer.cs">
+    <Compile Include="View\Kho_Giay.Designer.cs">
       <DependentUpon>Kho_Giay.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\Khuyen_Mai.cs">
+    <Compile Include="View\Khuyen_Mai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\Khuyen_Mai.Designer.cs">
+    <Compile Include="View\Khuyen_Mai.Designer.cs">
       <DependentUpon>Khuyen_Mai.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\Nhan_Vien.cs">
+    <Compile Include="View\Nhan_Vien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\Nhan_Vien.Designer.cs">
+    <Compile Include="View\Nhan_Vien.Designer.cs">
       <DependentUpon>Nhan_Vien.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\NhapKho.cs">
+    <Compile Include="View\NhapKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\NhapKho.Designer.cs">
+    <Compile Include="View\NhapKho.Designer.cs">
       <DependentUpon>NhapKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\Tai_Khoan.cs">
+    <Compile Include="View\Tai_Khoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\Tai_Khoan.Designer.cs">
+    <Compile Include="View\Tai_Khoan.Designer.cs">
       <DependentUpon>Tai_Khoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="View\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainNV.cs">
+    <Compile Include="View\MainNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainNV.Designer.cs">
+    <Compile Include="View\MainNV.Designer.cs">
       <DependentUpon>MainNV.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainQL.resx">
+    <EmbeddedResource Include="View\MainQL.resx">
       <DependentUpon>MainQL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\DetailHoaDon.resx">
+    <EmbeddedResource Include="View\DetailHoaDon.resx">
       <DependentUpon>DetailHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\DetailKH.resx">
+    <EmbeddedResource Include="View\DetailKH.resx">
       <DependentUpon>DetailKH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\DetailKhachHang.resx">
+    <EmbeddedResource Include="View\DetailKhachHang.resx">
       <DependentUpon>DetailKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\DetailKhoGiay.resx">
+    <EmbeddedResource Include="View\DetailKhoGiay.resx">
       <DependentUpon>DetailKhoGiay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\DetailNV.resx">
+    <EmbeddedResource Include="View\DetailNV.resx">
       <DependentUpon>DetailNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\Doanh_Thu.resx">
+    <EmbeddedResource Include="View\Doanh_Thu.resx">
       <DependentUpon>Doanh_Thu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\hoadon.resx">
-      <DependentUpon>hoadon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form\Hoa_Don.resx">
+    <EmbeddedResource Include="View\Hoa_Don.resx">
       <DependentUpon>Hoa_Don.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\Khach_Hang.resx">
+    <EmbeddedResource Include="View\Khach_Hang.resx">
       <DependentUpon>Khach_Hang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\Kho_Giay.resx">
+    <EmbeddedResource Include="View\Kho_Giay.resx">
       <DependentUpon>Kho_Giay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\Khuyen_Mai.resx">
+    <EmbeddedResource Include="View\Khuyen_Mai.resx">
       <DependentUpon>Khuyen_Mai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\Nhan_Vien.resx">
+    <EmbeddedResource Include="View\Nhan_Vien.resx">
       <DependentUpon>Nhan_Vien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\NhapKho.resx">
+    <EmbeddedResource Include="View\NhapKho.resx">
       <DependentUpon>NhapKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\Tai_Khoan.resx">
+    <EmbeddedResource Include="View\Tai_Khoan.resx">
       <DependentUpon>Tai_Khoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainNV.resx">
+    <EmbeddedResource Include="View\MainNV.resx">
       <DependentUpon>MainNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -420,9 +410,7 @@
   <ItemGroup>
     <None Include="Resources\shop-giay-sneaker-cmt8-2.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View_main\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
@@ -451,6 +439,10 @@
     <None Include="Resources\icons8-tick-box-48.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\img %281%291.png" />
+    <None Include="Resources\img %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DTO\QuanLiBanGiay.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
@@ -461,8 +453,6 @@
       <DependentUpon>QuanLiBanGiay.edmx</DependentUpon>
       <LastGenOutput>QuanLiBanGiay.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\img %281%291.png" />
-    <None Include="Resources\img %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

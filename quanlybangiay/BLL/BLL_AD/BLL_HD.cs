@@ -54,7 +54,7 @@ namespace quanlybangiay.BLL.BLL_AD
         public dynamic GetChiTietHDByID(string ID)
         {
             return db.ChiTietHoaDons.Where(p => p.ID_HoaDon == ID)
-                                    .Select(p => new { p.Giay.TenGiay, p.Giay.HangGiay, p.Giay.Size, p.SoLuong,p.GiaNhap, p.Giay.GiaBan }).ToList();
+                                    .Select(p => new { p.Giay.TenGiay, p.Giay.HangGiay, p.Giay.Size, p.SoLuong,p.Giay.GiaNhap, p.Giay.GiaBan }).ToList();
         }
 
         public dynamic GetID_Giay(string ID)

@@ -18,7 +18,6 @@ namespace quanlybangiay.DTO
         public string ID_Giay { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<double> GiaBan { get; set; }
-        public Nullable<double> GiaNhap { get; set; }
     
         public virtual HoaDon HoaDon { get; set; }
         public virtual Giay Giay { get; set; }

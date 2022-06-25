@@ -148,7 +148,7 @@ namespace quanlybangiay.BLL.BLL_NV
                 ID_Giay = s.ID_Giay,
                 SoLuong = s.SoLuong,
                 GiaBan = s.GiaBan,
-                GiaNhap = s.GiaNhap
+               
             };
             db.ChiTietHoaDons.Add(a);
             db.SaveChanges();

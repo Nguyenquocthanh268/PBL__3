@@ -758,7 +758,7 @@ namespace quanlybangiay
                                         ID_Giay = IDGiay,
                                         SoLuong = Soluong,
                                         GiaBan = Convert.ToDouble(i.Cells["Giá(VNĐ)"].Value.ToString()),
-                                        GiaNhap = BLL_BanHang.Instance.GetGiaNhapByID(i.Cells["Mã giày"].Value.ToString())
+                                        
                                     };
                                     //idsp.Add(IDGiay);
                                     BLL_BanHang.Instance.AddChiTietHD(chitiet);
