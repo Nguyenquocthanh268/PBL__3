@@ -233,6 +233,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\DetailKH.resx">
       <DependentUpon>DetailKH.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DetailKhachHang.resx">
       <DependentUpon>DetailKhachHang.cs</DependentUpon>
