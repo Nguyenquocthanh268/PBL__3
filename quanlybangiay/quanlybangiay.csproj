@@ -91,15 +91,18 @@
     <Compile Include="DTO\CTKM.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\CTKM_view.cs" />
     <Compile Include="DTO\Giay.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\GiayView.cs" />
     <Compile Include="DTO\HoaDon.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\KhachHang.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\khachhang_view.cs" />
     <Compile Include="DTO\Kho.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
@@ -109,6 +112,7 @@
     <Compile Include="DTO\NhapKho.cs">
       <DependentUpon>QuanLiBanGiay.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\NV_view.cs" />
     <Compile Include="DTO\QuanLiBanGiay.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,18 +142,6 @@
     </Compile>
     <Compile Include="View\DetailHoaDon.Designer.cs">
       <DependentUpon>DetailHoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\DetailKH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\DetailKH.Designer.cs">
-      <DependentUpon>DetailKH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\DetailKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\DetailKhachHang.Designer.cs">
-      <DependentUpon>DetailKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DetailKhoGiay.cs">
       <SubType>Form</SubType>
@@ -230,13 +222,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\DetailHoaDon.resx">
       <DependentUpon>DetailHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\DetailKH.resx">
-      <DependentUpon>DetailKH.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\DetailKhachHang.resx">
-      <DependentUpon>DetailKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DetailKhoGiay.resx">
       <DependentUpon>DetailKhoGiay.cs</DependentUpon>

@@ -29,6 +29,7 @@ namespace quanlybangiay
             d1 = new DataTable();
             d1.Columns.AddRange(new DataColumn[]
             {
+               
                 new DataColumn{ColumnName = "Mã giày",DataType =typeof(string)},
                 new DataColumn{ColumnName = "Hãng",DataType =typeof(string)},
                 new DataColumn{ColumnName = "Tên SP",DataType =typeof(string)},

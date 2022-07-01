@@ -43,23 +43,23 @@ namespace quanlybangiay.BLL.BLL_AD
             list.Add("Ngày kết thúc");
             return list;
         }
-        public dynamic search(int index,string s)
+        public List<CTKM_view> search(int index,string s)
         {
             DataPBL3 db = new DataPBL3();
             
           if(index ==1)
             {
 
-                return (db.CTKMs.Where(p => p.ID_KhuyenMai.Contains(s)).Select(p => new { p.ID_KhuyenMai, p.TenCT, p.ChietKhau })).ToList();
+                return (db.CTKMs.Where(p => p.ID_KhuyenMai.Contains(s)).Select(p => new CTKM_view{ID= p.ID_KhuyenMai,Ten= p.TenCT,chietkhau=(int) p.ChietKhau })).ToList();
             }
             else if(index ==2)
             {
 
-                return (db.CTKMs.Where(p => p.TenCT.Contains(s)).Select(p => new { p.ID_KhuyenMai, p.TenCT, p.ChietKhau })).ToList();
+                return (db.CTKMs.Where(p => p.TenCT.Contains(s)).Select(p => new CTKM_view { ID = p.ID_KhuyenMai, Ten = p.TenCT, chietkhau = (int)p.ChietKhau })).ToList();
             }
             else
             {
-                return (db.CTKMs.Select(p => new { p.ID_KhuyenMai, p.TenCT, p.ChietKhau })).ToList();
+                return (db.CTKMs.Select(p => new CTKM_view { ID = p.ID_KhuyenMai, Ten = p.TenCT, chietkhau = (int)p.ChietKhau })).ToList();
             }
          
         }
@@ -124,7 +124,7 @@ namespace quanlybangiay.BLL.BLL_AD
             db.SaveChanges();
 
         }
-        public dynamic sort(int index)
+        public List<CTKM_view> sort(int index)
         {
             DataPBL3 db = new DataPBL3();
            if(index == 0)
@@ -132,15 +132,14 @@ namespace quanlybangiay.BLL.BLL_AD
                 return (
                from p in db.CTKMs
                orderby p.ChietKhau
-               select new { p.ID_KhuyenMai, p.TenCT, p.ChietKhau }
-               ).ToList();
+               select new CTKM_view{ ID = p.ID_KhuyenMai,Ten = p.TenCT,chietkhau = (int)p.ChietKhau }).ToList();
             }
             else if(index == 1)
             {
                 return (
                               from p in db.CTKMs
                               orderby p.NgayBatDau
-                              select new { p.ID_KhuyenMai, p.TenCT, p.ChietKhau }
+                              select new CTKM_view { ID = p.ID_KhuyenMai, Ten = p.TenCT, chietkhau = (int)p.ChietKhau }
                               ).ToList();
             }
             else
@@ -148,7 +147,7 @@ namespace quanlybangiay.BLL.BLL_AD
                 return (
                               from p in db.CTKMs
                               orderby p.NgayKetThuc
-                              select new { p.ID_KhuyenMai, p.TenCT, p.ChietKhau }
+                              select new CTKM_view { ID = p.ID_KhuyenMai, Ten = p.TenCT, chietkhau = (int)p.ChietKhau }
                               ).ToList();
             }
         }

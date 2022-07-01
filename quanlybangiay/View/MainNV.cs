@@ -303,7 +303,13 @@ namespace quanlybangiay
             DateTime begin = dateBegin.Value;
             DateTime end = dateEnd.Value;
             dtGV_Chitiethd.DataSource = BLL_NV_HD.Instance.Search(ID, begin, end);
-            
+            if (dtGV_Chitiethd.Rows.Count >= 1)
+            {
+                for(int i = 0; i < dtGV_Chitiethd.Rows.Count; i++)
+                {
+                    dtGV_Chitiethd.Rows[i].Cells["STT"].Value = (i + 1);
+                }
+            }
             txtSohoadon.Text = dtGV_Chitiethd.Rows.Count.ToString();
             foreach (DataGridViewRow dr in dtGV_Chitiethd.Rows)
             {
