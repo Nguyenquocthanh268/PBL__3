@@ -416,6 +416,7 @@ namespace quanlybangiay.form
             this.ID_Giay.DataPropertyName = "ID";
             this.ID_Giay.HeaderText = "ID Giày";
             this.ID_Giay.Name = "ID_Giay";
+            this.ID_Giay.ReadOnly = true;
             this.ID_Giay.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ID_Giay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -424,6 +425,7 @@ namespace quanlybangiay.form
             this.TenGiay.DataPropertyName = "Name";
             this.TenGiay.HeaderText = "Tên giày";
             this.TenGiay.Name = "TenGiay";
+            this.TenGiay.ReadOnly = true;
             this.TenGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // HangGiay
@@ -431,6 +433,7 @@ namespace quanlybangiay.form
             this.HangGiay.DataPropertyName = "Hang";
             this.HangGiay.HeaderText = "Hãng giày";
             this.HangGiay.Name = "HangGiay";
+            this.HangGiay.ReadOnly = true;
             this.HangGiay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Size
@@ -438,6 +441,7 @@ namespace quanlybangiay.form
             this.Size.DataPropertyName = "size";
             this.Size.HeaderText = "Size";
             this.Size.Name = "Size";
+            this.Size.ReadOnly = true;
             this.Size.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Kho_Giay
