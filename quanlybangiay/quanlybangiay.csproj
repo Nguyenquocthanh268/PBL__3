@@ -143,18 +143,6 @@
     <Compile Include="View\DetailHoaDon.Designer.cs">
       <DependentUpon>DetailHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\DetailKH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\DetailKH.Designer.cs">
-      <DependentUpon>DetailKH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\DetailKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\DetailKhachHang.Designer.cs">
-      <DependentUpon>DetailKhachHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\DetailKhoGiay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,12 +222,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\DetailHoaDon.resx">
       <DependentUpon>DetailHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\DetailKH.resx">
-      <DependentUpon>DetailKH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\DetailKhachHang.resx">
-      <DependentUpon>DetailKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DetailKhoGiay.resx">
       <DependentUpon>DetailKhoGiay.cs</DependentUpon>

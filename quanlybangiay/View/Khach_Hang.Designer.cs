@@ -54,11 +54,11 @@ namespace quanlybangiay.form
             this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemTichLuy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -383,34 +383,6 @@ namespace quanlybangiay.form
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // TenKhachHang
-            // 
-            this.TenKhachHang.DataPropertyName = "TenKH";
-            this.TenKhachHang.HeaderText = "Tên khách hàng";
-            this.TenKhachHang.Name = "TenKhachHang";
-            this.TenKhachHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // SoDienThoai
-            // 
-            this.SoDienThoai.DataPropertyName = "sdt";
-            this.SoDienThoai.HeaderText = "Số điện thoại";
-            this.SoDienThoai.Name = "SoDienThoai";
-            this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // NgayDangKy
-            // 
-            this.NgayDangKy.DataPropertyName = "ngaydk";
-            this.NgayDangKy.HeaderText = "Ngày đăng ký";
-            this.NgayDangKy.Name = "NgayDangKy";
-            this.NgayDangKy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // DiemTichLuy
-            // 
-            this.DiemTichLuy.DataPropertyName = "diemtichluy";
-            this.DiemTichLuy.HeaderText = "Điểm tích luỹ";
-            this.DiemTichLuy.Name = "DiemTichLuy";
-            this.DiemTichLuy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(70)))));
@@ -423,6 +395,38 @@ namespace quanlybangiay.form
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 678);
             this.panel1.TabIndex = 9;
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.DataPropertyName = "TenKH";
+            this.TenKhachHang.HeaderText = "Tên khách hàng";
+            this.TenKhachHang.Name = "TenKhachHang";
+            this.TenKhachHang.ReadOnly = true;
+            this.TenKhachHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "sdt";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.ReadOnly = true;
+            this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // NgayDangKy
+            // 
+            this.NgayDangKy.DataPropertyName = "ngaydk";
+            this.NgayDangKy.HeaderText = "Ngày đăng ký";
+            this.NgayDangKy.Name = "NgayDangKy";
+            this.NgayDangKy.ReadOnly = true;
+            this.NgayDangKy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DiemTichLuy
+            // 
+            this.DiemTichLuy.DataPropertyName = "diemtichluy";
+            this.DiemTichLuy.HeaderText = "Điểm tích luỹ";
+            this.DiemTichLuy.Name = "DiemTichLuy";
+            this.DiemTichLuy.ReadOnly = true;
+            this.DiemTichLuy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Khach_Hang
             // 

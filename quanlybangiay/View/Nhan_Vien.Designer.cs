@@ -42,14 +42,14 @@ namespace quanlybangiay.form
             this.btnDetail = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtgNV = new System.Windows.Forms.DataGridView();
-            this.ID_NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.cbbSearch = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.ID_NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNV)).BeginInit();
@@ -234,27 +234,6 @@ namespace quanlybangiay.form
             this.dtgNV.Size = new System.Drawing.Size(832, 547);
             this.dtgNV.TabIndex = 10;
             // 
-            // ID_NhanVien
-            // 
-            this.ID_NhanVien.DataPropertyName = "ID";
-            this.ID_NhanVien.HeaderText = "ID Nhân viên";
-            this.ID_NhanVien.Name = "ID_NhanVien";
-            this.ID_NhanVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TenNhanVien
-            // 
-            this.TenNhanVien.DataPropertyName = "Name";
-            this.TenNhanVien.HeaderText = "Tên nhân viên";
-            this.TenNhanVien.Name = "TenNhanVien";
-            this.TenNhanVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // SoDienThoai
-            // 
-            this.SoDienThoai.DataPropertyName = "sdt";
-            this.SoDienThoai.HeaderText = "Số điện thoại";
-            this.SoDienThoai.Name = "SoDienThoai";
-            this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -321,6 +300,30 @@ namespace quanlybangiay.form
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1045, 72);
             this.panel5.TabIndex = 5;
+            // 
+            // ID_NhanVien
+            // 
+            this.ID_NhanVien.DataPropertyName = "ID";
+            this.ID_NhanVien.HeaderText = "ID Nhân viên";
+            this.ID_NhanVien.Name = "ID_NhanVien";
+            this.ID_NhanVien.ReadOnly = true;
+            this.ID_NhanVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TenNhanVien
+            // 
+            this.TenNhanVien.DataPropertyName = "Name";
+            this.TenNhanVien.HeaderText = "Tên nhân viên";
+            this.TenNhanVien.Name = "TenNhanVien";
+            this.TenNhanVien.ReadOnly = true;
+            this.TenNhanVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "sdt";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.ReadOnly = true;
+            this.SoDienThoai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Nhan_Vien
             // 

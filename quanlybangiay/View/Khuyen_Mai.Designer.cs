@@ -63,10 +63,10 @@ namespace quanlybangiay.form
             this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ID_KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChietKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -520,27 +520,6 @@ namespace quanlybangiay.form
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
-            // ID_KhuyenMai
-            // 
-            this.ID_KhuyenMai.DataPropertyName = "ID";
-            this.ID_KhuyenMai.HeaderText = "ID Khuyến mãi";
-            this.ID_KhuyenMai.Name = "ID_KhuyenMai";
-            this.ID_KhuyenMai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TenCT
-            // 
-            this.TenCT.DataPropertyName = "Ten";
-            this.TenCT.HeaderText = "Tên chương trình";
-            this.TenCT.Name = "TenCT";
-            this.TenCT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ChietKhau
-            // 
-            this.ChietKhau.DataPropertyName = "chietkhau";
-            this.ChietKhau.HeaderText = "Chiết khấu";
-            this.ChietKhau.Name = "ChietKhau";
-            this.ChietKhau.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
@@ -549,6 +528,30 @@ namespace quanlybangiay.form
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 678);
             this.panel1.TabIndex = 10;
+            // 
+            // ID_KhuyenMai
+            // 
+            this.ID_KhuyenMai.DataPropertyName = "ID";
+            this.ID_KhuyenMai.HeaderText = "ID Khuyến mãi";
+            this.ID_KhuyenMai.Name = "ID_KhuyenMai";
+            this.ID_KhuyenMai.ReadOnly = true;
+            this.ID_KhuyenMai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TenCT
+            // 
+            this.TenCT.DataPropertyName = "Ten";
+            this.TenCT.HeaderText = "Tên chương trình";
+            this.TenCT.Name = "TenCT";
+            this.TenCT.ReadOnly = true;
+            this.TenCT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ChietKhau
+            // 
+            this.ChietKhau.DataPropertyName = "chietkhau";
+            this.ChietKhau.HeaderText = "Chiết khấu";
+            this.ChietKhau.Name = "ChietKhau";
+            this.ChietKhau.ReadOnly = true;
+            this.ChietKhau.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Khuyen_Mai
             // 
